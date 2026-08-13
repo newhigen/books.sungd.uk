@@ -1,24 +1,24 @@
 {
  "updatedAt": "2026-08-13",
- "total": 169,
+ "total": 140,
  "services": [
   {
    "id": "ridi",
    "name": "리디북스",
    "kind": "ebook",
-   "count": 32
+   "count": 12
   },
   {
    "id": "kyobo",
    "name": "교보 sam",
    "kind": "ebook",
-   "count": 39
+   "count": 31
   },
   {
    "id": "kindle",
    "name": "킨들",
    "kind": "ebook",
-   "count": 11
+   "count": 10
   },
   {
    "id": "google",
@@ -28,10 +28,6 @@
   }
  ],
  "fields": [
-  {
-   "name": "신앙",
-   "count": 29
-  },
   {
    "name": "개발",
    "count": 25
@@ -129,8 +125,8 @@
    "addedAt": "",
    "similar": [
     48,
-    93,
-    121,
+    92,
+    112,
     0,
     4,
     5
@@ -238,8 +234,8 @@
    "readAt": "2026-05",
    "addedAt": "",
    "similar": [
-    82,
-    92,
+    81,
+    91,
     69,
     0,
     4,
@@ -316,10 +312,10 @@
    "similar": [
     57,
     30,
-    89,
+    88,
     46,
     55,
-    104
+    101
    ]
   },
   {
@@ -348,7 +344,7 @@
     32,
     3,
     75,
-    121
+    112
    ]
   },
   {
@@ -371,7 +367,7 @@
     14,
     40,
     78,
-    128,
+    118,
     50
    ]
   },
@@ -423,7 +419,7 @@
     22,
     23,
     50,
-    85,
+    84,
     17
    ]
   },
@@ -447,7 +443,7 @@
     14,
     40,
     78,
-    128,
+    118,
     50
    ]
   },
@@ -474,8 +470,8 @@
     13,
     40,
     78,
-    81,
-    128
+    80,
+    118
    ]
   },
   {
@@ -501,8 +497,8 @@
     56,
     61,
     79,
-    84,
-    107
+    83,
+    104
    ]
   },
   {
@@ -547,12 +543,12 @@
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
-    121,
-    88,
-    91,
+    112,
+    87,
+    90,
+    95,
     96,
-    97,
-    102
+    99
    ]
   },
   {
@@ -576,8 +572,8 @@
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
+    95,
     96,
-    97,
     32,
     49,
     51,
@@ -605,10 +601,10 @@
    "addedAt": "",
    "similar": [
     61,
-    109,
-    159,
+    106,
+    130,
     79,
-    107,
+    104,
     15
    ]
   },
@@ -628,7 +624,7 @@
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
-    153,
+    124,
     0,
     4,
     5,
@@ -657,8 +653,8 @@
     22,
     23,
     50,
-    85,
-    83
+    84,
+    82
    ]
   },
   {
@@ -683,8 +679,8 @@
     21,
     23,
     50,
-    85,
-    83
+    84,
+    82
    ]
   },
   {
@@ -708,8 +704,8 @@
     21,
     22,
     50,
-    85,
-    83
+    84,
+    82
    ]
   },
   {
@@ -733,9 +729,9 @@
    "similar": [
     70,
     77,
-    101,
-    103,
-    112
+    98,
+    100,
+    108
    ]
   },
   {
@@ -851,7 +847,7 @@
     75,
     35,
     3,
-    121,
+    112,
     12
    ]
   },
@@ -876,10 +872,10 @@
    "similar": [
     8,
     57,
-    89,
+    88,
     46,
     55,
-    100
+    97
    ]
   },
   {
@@ -905,7 +901,7 @@
     3,
     34,
     59,
-    100
+    97
    ]
   },
   {
@@ -933,8 +929,8 @@
     49,
     51,
     60,
-    96,
-    97
+    95,
+    96
    ]
   },
   {
@@ -982,9 +978,9 @@
    "addedAt": "",
    "similar": [
     59,
-    108,
-    100,
-    153,
+    105,
+    97,
+    124,
     0,
     1
    ]
@@ -1040,11 +1036,11 @@
    "addedAt": "",
    "similar": [
     9,
-    86,
+    85,
     32,
     1,
     48,
-    93
+    92
    ]
   },
   {
@@ -1123,7 +1119,7 @@
     1,
     48,
     75,
-    121,
+    112,
     3,
     9
    ]
@@ -1148,7 +1144,7 @@
     13,
     14,
     78,
-    128,
+    118,
     50
    ]
   },
@@ -1298,7 +1294,7 @@
     30,
     55,
     57,
-    89
+    88
    ]
   },
   {
@@ -1347,8 +1343,8 @@
    "addedAt": "",
    "similar": [
     1,
-    93,
-    121,
+    92,
+    112,
     17,
     39,
     36
@@ -1376,12 +1372,12 @@
    "readAt": "2025-09",
    "addedAt": "",
    "similar": [
-    110,
+    107,
     18,
     32,
     51,
     60,
-    96
+    95
    ]
   },
   {
@@ -1406,8 +1402,8 @@
     21,
     22,
     23,
-    85,
-    83
+    84,
+    82
    ]
   },
   {
@@ -1431,8 +1427,8 @@
     32,
     49,
     60,
-    96,
-    97
+    95,
+    96
    ]
   },
   {
@@ -1451,10 +1447,10 @@
    "readAt": "2025-08",
    "addedAt": "",
    "similar": [
-    92,
+    91,
     29,
     75,
-    94,
+    93,
     0,
     4
    ]
@@ -1526,8 +1522,8 @@
     30,
     46,
     57,
-    89,
-    100
+    88,
+    97
    ]
   },
   {
@@ -1550,9 +1546,9 @@
    "readAt": "2025-07",
    "addedAt": "",
    "similar": [
-    107,
+    104,
     79,
-    159,
+    130,
     15,
     19,
     61
@@ -1578,10 +1574,10 @@
    "similar": [
     8,
     30,
-    89,
+    88,
     46,
     55,
-    100
+    97
    ]
   },
   {
@@ -1633,9 +1629,9 @@
    "addedAt": "",
    "similar": [
     34,
-    108,
-    100,
-    153,
+    105,
+    97,
+    124,
     0,
     1
    ]
@@ -1661,8 +1657,8 @@
     32,
     49,
     51,
-    96,
-    97
+    95,
+    96
    ]
   },
   {
@@ -1686,12 +1682,12 @@
    "readAt": "2025-05",
    "addedAt": "",
    "similar": [
-    159,
+    130,
     19,
-    109,
+    106,
     63,
     79,
-    107
+    104
    ]
   },
   {
@@ -1736,7 +1732,7 @@
    "addedAt": "",
    "similar": [
     61,
-    159,
+    130,
     7,
     15,
     19,
@@ -1872,7 +1868,7 @@
    "readAt": "2025-03",
    "addedAt": "",
    "similar": [
-    103
+    100
    ]
   },
   {
@@ -1894,9 +1890,9 @@
    "readAt": "2025-03",
    "addedAt": "",
    "similar": [
-    92,
+    91,
     5,
-    82,
+    81,
     0,
     4,
     33
@@ -1918,12 +1914,12 @@
    "readAt": "2025-03",
    "addedAt": "",
    "similar": [
-    101,
-    105,
+    98,
+    102,
     24,
     77,
-    103,
-    112
+    100,
+    108
    ]
   },
   {
@@ -1946,9 +1942,9 @@
    "addedAt": "",
    "similar": [
     74,
-    105,
-    131,
-    103,
+    102,
+    120,
+    100,
     6,
     8
    ]
@@ -1995,12 +1991,12 @@
    "readAt": "2025-02",
    "addedAt": "",
    "similar": [
-    128,
-    153,
-    126,
-    81,
+    118,
     124,
-    10
+    80,
+    115,
+    10,
+    13
    ]
   },
   {
@@ -2021,9 +2017,9 @@
    "readAt": "2025-02",
    "addedAt": "",
    "similar": [
-    105,
+    102,
     71,
-    131,
+    120,
     6,
     8,
     11
@@ -2049,10 +2045,10 @@
    "readAt": "2025-02",
    "addedAt": "",
    "similar": [
-    92,
-    94,
+    91,
+    93,
     29,
-    121,
+    112,
     39,
     69
    ]
@@ -2091,9 +2087,9 @@
    "similar": [
     24,
     70,
-    101,
-    103,
-    112
+    98,
+    100,
+    108
    ]
   },
   {
@@ -2116,7 +2112,7 @@
     13,
     14,
     40,
-    128,
+    118,
     50
    ]
   },
@@ -2146,38 +2142,12 @@
    "readAt": "2024-12",
    "addedAt": "",
    "similar": [
-    84,
-    107,
-    159,
+    83,
+    104,
+    130,
     19,
     56,
     61
-   ]
-  },
-  {
-   "title": "오늘을 사는 이유",
-   "author": "오스 기니스, 홍병룡",
-   "englishTitle": "Carpe Diem Redeemed",
-   "cover": "https://image.aladin.co.kr/product/24012/11/cover500/8932817561_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=240121199",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "간증/영적성장"
-   ],
-   "sources": [],
-   "read": true,
-   "readAt": "2024-12",
-   "addedAt": "",
-   "similar": [
-    118,
-    137,
-    138,
-    139,
-    140,
-    141
    ]
   },
   {
@@ -2200,9 +2170,9 @@
    "similar": [
     14,
     73,
+    115,
+    118,
     124,
-    128,
-    153,
     22
    ]
   },
@@ -2226,7 +2196,7 @@
    "addedAt": "",
    "similar": [
     5,
-    92,
+    91,
     69,
     0,
     4,
@@ -2255,7 +2225,7 @@
    "readAt": "2024-09",
    "addedAt": "",
    "similar": [
-    94,
+    93,
     12,
     21,
     22,
@@ -2287,7 +2257,7 @@
    "addedAt": "",
    "similar": [
     79,
-    107,
+    104,
     15,
     19,
     56,
@@ -2318,7 +2288,7 @@
     22,
     23,
     50,
-    83
+    82
    ]
   },
   {
@@ -2342,8 +2312,8 @@
     32,
     1,
     48,
-    93,
-    121
+    92,
+    112
    ]
   },
   {
@@ -2364,12 +2334,12 @@
    "readAt": "2024-06",
    "addedAt": "",
    "similar": [
-    92,
-    162,
+    91,
+    133,
     5,
     69,
-    82,
-    95
+    81,
+    94
    ]
   },
   {
@@ -2390,12 +2360,12 @@
    "readAt": "2024-05",
    "addedAt": "",
    "similar": [
-    154,
-    167,
+    125,
+    138,
     17,
-    91,
-    96,
-    97
+    90,
+    95,
+    96
    ]
   },
   {
@@ -2421,7 +2391,7 @@
     57,
     46,
     55,
-    100
+    97
    ]
   },
   {
@@ -2442,8 +2412,8 @@
    "readAt": "2024-03",
    "addedAt": "",
    "similar": [
-    110,
-    164,
+    107,
+    135,
     18,
     28,
     32,
@@ -2468,11 +2438,11 @@
    "addedAt": "",
    "similar": [
     17,
-    88,
+    87,
+    95,
     96,
-    97,
-    102,
-    123
+    99,
+    114
    ]
   },
   {
@@ -2498,9 +2468,9 @@
    "similar": [
     5,
     69,
-    82,
-    87,
-    162,
+    81,
+    86,
+    133,
     75
    ]
   },
@@ -2528,10 +2498,10 @@
    "similar": [
     1,
     48,
-    121,
+    112,
     17,
     36,
-    86
+    85
    ]
   },
   {
@@ -2555,11 +2525,11 @@
    "addedAt": "",
    "similar": [
     75,
-    92,
-    83,
+    91,
+    82,
     69,
-    87,
-    162
+    86,
+    133
    ]
   },
   {
@@ -2585,10 +2555,10 @@
    "addedAt": "",
    "similar": [
     5,
-    82,
-    87,
-    92,
-    162,
+    81,
+    86,
+    91,
+    133,
     18
    ]
   },
@@ -2613,12 +2583,12 @@
    "readAt": "2022-07",
    "addedAt": "",
    "similar": [
-    97,
+    96,
     18,
-    129,
-    154,
-    164,
-    165
+    119,
+    125,
+    135,
+    136
    ]
   },
   {
@@ -2647,74 +2617,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    96,
-    154,
+    95,
+    125,
     18,
-    129,
-    164,
-    165
-   ]
-  },
-  {
-   "title": "관계의 걸림돌 극복하기",
-   "author": "이관직",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/10783/78/cover500/895312834x_1.jpg",
-   "publisher": "두란노서원",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=107837820",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 목회/신학",
-    "상담/치유"
-   ],
-   "sources": [
-    {
-     "id": "kyobo",
-     "link": ""
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    118,
-    111,
-    113,
-    120,
-    139,
-    141
-   ]
-  },
-  {
-   "title": "그리스도인의 정체성",
-   "author": "오스왈드 챔버스, 스데반 황",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/13941/21/cover500/8977823870_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=139412178",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "신앙생활일반"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/2225323/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    117,
     119,
-    120,
-    132,
-    141,
-    149
+    135,
+    136
    ]
   },
   {
@@ -2742,7 +2650,7 @@
    "similar": [
     34,
     59,
-    108,
+    105,
     8,
     30,
     31
@@ -2772,8 +2680,8 @@
     70,
     24,
     77,
-    103,
-    112
+    100,
+    108
    ]
   },
   {
@@ -2800,12 +2708,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    147,
-    154,
-    123,
-    127,
+    122,
+    125,
+    114,
+    117,
     17,
-    88
+    87
    ]
   },
   {
@@ -2836,7 +2744,7 @@
     24,
     70,
     77,
-    101
+    98
    ]
   },
   {
@@ -2894,7 +2802,7 @@
    "similar": [
     74,
     71,
-    131,
+    120,
     70,
     6,
     8
@@ -2954,8 +2862,8 @@
     79,
     19,
     61,
-    109,
-    159
+    106,
+    130
    ]
   },
   {
@@ -2985,8 +2893,8 @@
    "similar": [
     34,
     59,
-    100,
-    153,
+    97,
+    124,
     0,
     1
    ]
@@ -3018,10 +2926,10 @@
    "similar": [
     19,
     61,
-    125,
-    159,
+    116,
+    130,
     79,
-    107
+    104
    ]
   },
   {
@@ -3049,43 +2957,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    129,
-    164,
-    165,
+    119,
+    135,
+    136,
     49,
     18,
     32
-   ]
-  },
-  {
-   "title": "무신론 기자, 크리스천 과학자에게 따지다",
-   "author": "우종학",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/4880/60/cover500/8932813752_1.jpg",
-   "publisher": "IVP",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=48806011",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 목회/신학",
-    "신학일반"
-   ],
-   "sources": [
-    {
-     "id": "kyobo",
-     "link": ""
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    120,
-    142,
-    146,
-    98,
-    113,
-    118
    ]
   },
   {
@@ -3113,39 +2990,8 @@
     24,
     70,
     77,
-    101,
-    103
-   ]
-  },
-  {
-   "title": "복음 안에서 발견한 참된 자유",
-   "author": "팀 켈러",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/34047/15/cover500/k792931279_1.jpg",
-   "publisher": "복있는사람",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340471562",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 목회/신학",
-    "설교/성경연구"
-   ],
-   "sources": [
-    {
-     "id": "kyobo",
-     "link": ""
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    139,
-    141,
-    142,
-    146,
-    136,
-    137
+    98,
+    100
    ]
   },
   {
@@ -3193,7 +3039,7 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    121,
+    112,
     17,
     1,
     3,
@@ -3232,138 +3078,6 @@
    ]
   },
   {
-   "title": "새가족반",
-   "author": "이정규",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/36028/57/cover500/k502037123_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360285729",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "신앙생활일반",
-    "기독교(개신교) 교회",
-    "성경공부교재",
-    "새신자"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/2761506/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    99,
-    119,
-    120,
-    132,
-    141,
-    149
-   ]
-  },
-  {
-   "title": "성경으로 불안 극복하기",
-   "author": "이관직",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/11797/31/cover500/895312963x_1.jpg",
-   "publisher": "두란노서원",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=117973148",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 목회/신학",
-    "상담/치유",
-    "기독교(개신교) 신앙생활",
-    "간증/영적성장"
-   ],
-   "sources": [
-    {
-     "id": "kyobo",
-     "link": ""
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    98,
-    139,
-    141,
-    146,
-    140,
-    152
-   ]
-  },
-  {
-   "title": "순전한 기독교",
-   "author": "C. S. 루이스, 장경철",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/17718/45/cover500/8936513265_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=177184523",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "신앙생활일반"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/6015839/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    120,
-    99,
-    117,
-    132,
-    141,
-    149
-   ]
-  },
-  {
-   "title": "스크루테이프의 편지",
-   "author": "C. S. 루이스, 김선형",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/17560/38/cover500/8936513192_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=175603868",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "신앙생활일반",
-    "기독교 문학",
-    "기독교(개신교) 목회/신학",
-    "신학일반"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/6015872/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    119,
-    141,
-    146,
-    99,
-    111,
-    117
-   ]
-  },
-  {
    "title": "스프린트",
    "author": "제이크 냅, 존 제라츠키",
    "englishTitle": "",
@@ -3393,8 +3107,8 @@
     1,
     48,
     75,
-    93,
-    115
+    92,
+    110
    ]
   },
   {
@@ -3423,12 +3137,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
+    95,
     96,
-    97,
-    129,
-    147,
-    154,
-    164
+    119,
+    122,
+    125,
+    135
    ]
   },
   {
@@ -3453,12 +3167,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    102,
-    127,
+    99,
+    117,
     17,
-    88,
-    91,
-    96
+    87,
+    90,
+    95
    ]
   },
   {
@@ -3486,11 +3200,11 @@
    "addedAt": "",
    "similar": [
     73,
-    81,
-    128,
-    153,
-    126,
-    10
+    80,
+    118,
+    124,
+    10,
+    13
    ]
   },
   {
@@ -3516,46 +3230,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    109,
+    106,
     15,
     19,
     56,
     61,
     79
-   ]
-  },
-  {
-   "title": "연애 신학",
-   "author": "권율",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/24682/84/cover500/k412631598_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=246828433",
-   "field": "신앙",
-   "tags": [
-    "심리학/정신분석학",
-    "교양 심리학",
-    "인간관계",
-    "남녀관계",
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/3217718/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    80,
-    99,
-    117,
-    118,
-    119,
-    120
    ]
   },
   {
@@ -3580,12 +3260,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    102,
-    123,
+    99,
+    114,
     17,
-    88,
-    91,
-    96
+    87,
+    90,
+    95
    ]
   },
   {
@@ -3612,11 +3292,11 @@
    "addedAt": "",
    "similar": [
     73,
-    153,
-    126,
+    124,
     10,
     13,
-    14
+    14,
+    40
    ]
   },
   {
@@ -3645,43 +3325,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    164,
-    165,
+    135,
+    136,
+    95,
     96,
-    97,
-    110,
-    147
-   ]
-  },
-  {
-   "title": "위험한 기도",
-   "author": "김영봉",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/2683/45/cover500/8932812942_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=26834557",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "예배/기도/묵상(QT)"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/3846613/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    140,
-    80,
-    99,
-    117,
-    118,
-    119
+    107,
+    122
    ]
   },
   {
@@ -3710,41 +3359,10 @@
    "similar": [
     71,
     74,
-    105,
+    102,
     6,
     8,
     11
-   ]
-  },
-  {
-   "title": "제임스 패커의 하나님의 인도",
-   "author": "제임스 패커, 캐롤린 나이스트롬",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/204/58/cover500/8904157528_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2045878",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "신앙생활일반"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/1487163/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    99,
-    117,
-    119,
-    120,
-    141,
-    149
    ]
   },
   {
@@ -3766,424 +3384,6 @@
    "readAt": "",
    "addedAt": "",
    "similar": []
-  },
-  {
-   "title": "크리스천의 성 토크",
-   "author": "박수웅",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/31832/8/cover500/8953144965_1.jpg",
-   "publisher": "두란노서원",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=318320896",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "사랑/결혼"
-   ],
-   "sources": [
-    {
-     "id": "kyobo",
-     "link": ""
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    135,
-    136,
-    118,
-    140,
-    152,
-    80
-   ]
-  },
-  {
-   "title": "크리스천의 연애",
-   "author": "박수웅",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/32008/16/cover500/8953145139_1.jpg",
-   "publisher": "두란노서원",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320081658",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "사랑/결혼"
-   ],
-   "sources": [
-    {
-     "id": "kyobo",
-     "link": ""
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    134,
-    136,
-    118,
-    140,
-    152,
-    80
-   ]
-  },
-  {
-   "title": "팀 켈러, 결혼을 말하다",
-   "author": "팀 켈러, 캐시 켈러",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/4140/69/cover500/8953120500_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=41406915",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "부부생활/자녀양육",
-    "사랑/결혼"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/1551441/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    137,
-    138,
-    139,
-    140,
-    141,
-    143
-   ]
-  },
-  {
-   "title": "팀 켈러, 고통에 답하다",
-   "author": "팀 켈러, 최종훈",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/13402/14/cover500/8953130581_3.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=134021436",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "간증/영적성장"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/1496385/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    138,
-    139,
-    140,
-    141,
-    143,
-    144
-   ]
-  },
-  {
-   "title": "팀 켈러, 당신을 위한 갈라디아서",
-   "author": "팀 켈러, 윤종석",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/14983/19/cover500/8953131685_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=149831991",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "간증/영적성장"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/1673062/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    137,
-    139,
-    140,
-    141,
-    143,
-    144
-   ]
-  },
-  {
-   "title": "팀 켈러, 당신을 위한 로마서",
-   "author": "팀 켈러, 김건우",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/5021/89/cover500/8953121213_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=50218970",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 목회/신학",
-    "설교/성경연구",
-    "기독교(개신교) 신앙생활",
-    "간증/영적성장"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/55927/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    141,
-    146,
-    113,
-    137,
-    138,
-    140
-   ]
-  },
-  {
-   "title": "팀 켈러의 기도",
-   "author": "팀 켈러",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/5987/9/cover500/8953122147_1.jpg",
-   "publisher": "두란노서원",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=59870938",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "예배/기도/묵상(QT)",
-    "간증/영적성장"
-   ],
-   "sources": [
-    {
-     "id": "kyobo",
-     "link": ""
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    137,
-    138,
-    139,
-    141,
-    143,
-    144
-   ]
-  },
-  {
-   "title": "팀 켈러의 내가 만든 신",
-   "author": "팀 켈러, 윤종석",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/10904/21/cover500/8953128285_3.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=109042167",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "간증/영적성장",
-    "기독교(개신교) 목회/신학",
-    "설교/성경연구",
-    "신앙생활일반"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/1551607/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    139,
-    146,
-    113,
-    137,
-    138,
-    140
-   ]
-  },
-  {
-   "title": "팀 켈러의 답이 되는 기독교",
-   "author": "팀 켈러, 윤종석",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/13119/67/cover500/8953130298_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=131196721",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 목회/신학",
-    "신학일반",
-    "기독교의 이해"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/1560758/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    146,
-    113,
-    139,
-    141,
-    111,
-    120
-   ]
-  },
-  {
-   "title": "팀 켈러의 예수, 예수",
-   "author": "팀 켈러, 윤종석",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/12370/32/cover500/895312994x_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=123703299",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "간증/영적성장"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/1571450/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    137,
-    138,
-    139,
-    140,
-    141,
-    144
-   ]
-  },
-  {
-   "title": "팀 켈러의 인생 베이직",
-   "author": "팀 켈러, 윤종석",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/35987/7/cover500/8953150418_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=359870768",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "간증/영적성장"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/3240537/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    137,
-    138,
-    139,
-    140,
-    141,
-    143
-   ]
-  },
-  {
-   "title": "팀 켈러의 일과 영성",
-   "author": "Timothy Keller",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/3332/59/cover500/8953119901_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=33325998",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "간증/영적성장",
-    "리더십/직업관/재물론"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/2228894/"
-    },
-    {
-     "id": "kindle",
-     "link": "https://www.amazon.com/dp/B007T8R18K"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    80,
-    118,
-    137,
-    138,
-    139,
-    140
-   ]
-  },
-  {
-   "title": "팀 켈러의 탕부 하나님",
-   "author": "팀 켈러, 윤종석",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/8716/84/cover500/8953125782_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=87168498",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "간증/영적성장",
-    "기독교(개신교) 목회/신학",
-    "신학일반"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/55970/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    139,
-    141,
-    137,
-    138,
-    140,
-    142
-   ]
   },
   {
    "title": "파이썬 알고리즘 인터뷰",
@@ -4211,12 +3411,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    129,
-    154,
-    164,
+    119,
+    125,
+    135,
+    95,
     96,
-    97,
-    102
+    99
    ]
   },
   {
@@ -4238,135 +3438,6 @@
    "readAt": "",
    "addedAt": "",
    "similar": []
-  },
-  {
-   "title": "풍성한 삶으로의 초대",
-   "author": "김형국",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/18685/93/cover500/k782635664_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=186859354",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "신앙생활일반",
-    "기독교 교육",
-    "기독교(개신교) 선교/전도"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/2311744/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    150,
-    99,
-    117,
-    119,
-    120,
-    132
-   ]
-  },
-  {
-   "title": "풍성한 삶의 첫걸음",
-   "author": "김형국",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/10565/45/cover500/k312530435_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=105654566",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "간증/영적성장",
-    "기독교 교육",
-    "기독교(개신교) 교회",
-    "교회교육"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/2311743/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    149,
-    80,
-    117,
-    118,
-    137,
-    138
-   ]
-  },
-  {
-   "title": "하나님을 탐닉하라",
-   "author": "마이클 존 큐직, 정성욱",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/2199/82/cover500/8936509527_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=21998282",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "간증/영적성장"
-   ],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/1493997/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    80,
-    118,
-    137,
-    138,
-    139,
-    140
-   ]
-  },
-  {
-   "title": "하나님을 하나님 되게",
-   "author": "J. D. 그리어",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/15151/34/cover500/8953131499_1.jpg",
-   "publisher": "두란노서원",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=151513445",
-   "field": "신앙",
-   "tags": [
-    "기독교(개신교)",
-    "기독교(개신교) 신앙생활",
-    "간증/영적성장"
-   ],
-   "sources": [
-    {
-     "id": "kyobo",
-     "link": ""
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": [
-    118,
-    140,
-    80,
-    137,
-    138,
-    139
-   ]
   },
   {
    "title": "행복 전환 연습",
@@ -4396,8 +3467,8 @@
     34,
     59,
     73,
-    108,
-    128,
+    105,
+    118,
     0
    ]
   },
@@ -4427,12 +3498,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    97,
     96,
-    129,
-    147,
-    164,
-    165
+    95,
+    119,
+    122,
+    135,
+    136
    ]
   },
   {
@@ -4522,11 +3593,11 @@
    "addedAt": "",
    "similar": [
     17,
-    88,
-    91,
+    87,
+    90,
+    95,
     96,
-    97,
-    102
+    99
    ]
   },
   {
@@ -4558,9 +3629,9 @@
     61,
     19,
     79,
-    109,
+    106,
     56,
-    107
+    104
    ]
   },
   {
@@ -4627,12 +3698,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    87,
-    92,
+    86,
+    91,
     5,
     69,
-    82,
-    95
+    81,
+    94
    ]
   },
   {
@@ -4681,12 +3752,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    129,
+    119,
+    95,
     96,
-    97,
-    147,
-    154,
-    165
+    122,
+    125,
+    136
    ]
   },
   {
@@ -4714,12 +3785,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    129,
+    119,
+    95,
     96,
-    97,
-    154,
-    164,
-    110
+    125,
+    135,
+    107
    ]
   },
   {
@@ -4765,12 +3836,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    88,
-    154,
+    87,
+    125,
     17,
-    91,
-    96,
-    97
+    90,
+    95,
+    96
    ]
   },
   {

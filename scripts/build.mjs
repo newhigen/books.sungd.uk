@@ -213,6 +213,21 @@ for (const book of books.values()) {
   book.tags = tags.slice(0, 6)
 }
 
+// ---- 감출 것 빼기 ----
+// data/hidden.json 에 적힌 분야·제목은 공개 데이터에 싣지 않는다. 화면에서 가리는 게
+// 아니라 파일에서 빠지므로, 받아보더라도 흔적이 없다.
+const HIDDEN = join(repo, 'data', 'hidden.json')
+const hidden = existsSync(HIDDEN) ? JSON.parse(readFileSync(HIDDEN, 'utf8')) : {}
+const hidFields = new Set(hidden.fields || [])
+const hidTitles = new Set(hidden.titles || [])
+let hiddenCount = 0
+for (const [key, b] of books) {
+  if (hidFields.has(b.field) || hidTitles.has(b.title)) {
+    books.delete(key)
+    hiddenCount++
+  }
+}
+
 // ---- 출력 ----
 const all = [...books.values()].map((b) => ({
   title: b.title,
@@ -281,6 +296,7 @@ const out = {
 }
 writeFileSync(OUT, JSON.stringify(out, null, 1) + '\n')
 
+if (hiddenCount) console.log(`  (감춘 책 ${hiddenCount}권 — 공개 데이터에서 빠짐)`)
 const unknown = all.filter((b) => !b.sources.length).length
 console.log(`${all.length}권 → data/library.json`)
 console.log(services.map((s) => `  ${s.name} ${s.count}`).join('\n') || '  (수집된 서비스 없음)')
