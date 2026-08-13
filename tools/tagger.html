@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>태그 붙이기</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='5' y='8' width='6' height='16' rx='2.5' fill='%231e1c19'/%3E%3Crect x='13' y='8' width='6' height='16' rx='2.5' fill='%23c9c9c4'/%3E%3Crect x='21' y='8' width='6' height='16' rx='2.5' fill='%238c3b4a'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500&display=swap" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#141414;--sec:#3d3d3a;--muted:#6a6a66;--faint:#9b9b96;
+      --rule:#f2f2f0;--rule2:#e5e5e2;--acc:#8c3b4a;--acc-bg:#fbf2f4;
+      --sans:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;
+      --mono:'Google Sans Code',ui-monospace,Menlo,monospace}
+html{color-scheme:light}
+body{background:#fff;color:var(--ink);font-family:var(--sans);font-size:12.5px;line-height:1.45;
+     -webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 16px 40px}
+button,input,select{font-family:inherit;letter-spacing:inherit}
+
+.top{display:flex;align-items:center;gap:10px;padding-bottom:9px;border-bottom:1px solid var(--rule2)}
+h1{font-size:15px;font-weight:800;letter-spacing:-.03em}
+.tabs{display:flex;gap:2px;margin-left:8px}
+.tab{border:0;background:none;font-size:12.5px;color:var(--muted);padding:5px 10px;cursor:pointer;
+     border-radius:6px}
+.tab:hover{color:var(--ink);background:#fafaf9}
+.tab.on{color:var(--ink);font-weight:750;background:var(--acc-bg)}
+.st{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--faint)}
+.save{border:1px solid var(--ink);background:var(--ink);color:#fff;font-size:12px;padding:5px 12px;
+      border-radius:6px;cursor:pointer}
+.save.dirty{background:var(--acc);border-color:var(--acc)}
+.save:disabled{opacity:.45;cursor:default}
+
+.bar{display:flex;align-items:center;gap:7px;padding:11px 0 9px}
+.bar input[type=search]{flex:1;border:1px solid var(--rule2);border-radius:7px;padding:6px 10px;
+                        font-size:12.5px;outline:none;min-width:0}
+.bar input[type=search]:focus{border-color:var(--acc)}
+.bar select{border:1px solid var(--rule2);border-radius:7px;padding:5px 7px;font-size:12px;
+            color:var(--sec);background:#fff}
+
+/* 목록 */
+table{width:100%;border-collapse:collapse}
+td{padding:7px 8px 7px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+tr.hit td{background:var(--acc-bg)}
+.c-cv{width:30px}
+.c-cv img{width:26px;border-radius:2px;display:block}
+.c-cv .ph{width:26px;height:39px;border-radius:2px;background:#eceae7}
+.c-b{width:33%}
+.c-b b{font-size:12.5px;font-weight:650;letter-spacing:-.02em;display:block;line-height:1.3}
+.c-b span{font-size:11px;color:var(--faint)}
+.c-t{width:auto}
+.tag{display:inline-flex;align-items:center;gap:4px;border:1px solid var(--rule2);border-radius:6px;
+     padding:2px 5px 2px 7px;font-size:11.5px;margin:0 3px 3px 0;background:#fff}
+.tag.new{border-color:var(--acc);color:var(--acc);background:var(--acc-bg)}
+.tag b{font-weight:600}
+.tag i{font-style:normal;color:var(--faint);cursor:pointer;font-size:12px;line-height:1}
+.tag i:hover{color:var(--acc)}
+.addt{border:1px dashed var(--rule2);border-radius:6px;padding:2px 8px;font-size:11.5px;
+      color:var(--muted);background:none;cursor:pointer}
+.addt:hover{border-color:var(--acc);color:var(--acc)}
+.tin{border:1px solid var(--acc);border-radius:6px;padding:2px 6px;font-size:11.5px;width:118px;
+     outline:none}
+.rare{color:var(--acc)}
+/* 메모 — 사이트에는 안 나간다. 나에게 주는 지시를 적는 자리 */
+.c-m{width:34px;text-align:right}
+.memo{border:0;background:none;cursor:pointer;font-size:11px;color:var(--faint);padding:2px 4px;
+      border-radius:5px}
+.memo:hover{color:var(--acc);background:var(--acc-bg)}
+.memo.has{color:var(--acc);font-weight:700}
+tr.memoopen td{border-bottom:0}
+tr.memorow td{padding:0 8px 8px 0}
+tr.memorow textarea{width:100%;border:1px solid var(--acc);border-radius:7px;padding:7px 9px;
+                    font-family:inherit;font-size:12px;line-height:1.5;resize:vertical;min-height:52px;
+                    outline:none}
+tr.memorow .mh{font-size:11px;color:var(--faint);margin:3px 0 0}
+
+/* 태그 정리 */
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:6px}
+.tgi{display:flex;align-items:center;gap:6px;border:1px solid var(--rule2);border-radius:7px;
+     padding:6px 8px}
+.tgi.few{border-color:#e8d5da;background:#fdf9fa}
+.tgi .nm{font-weight:650;font-size:12px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tgi .n{font-family:var(--mono);font-size:11px;color:var(--acc)}
+.tgi button{border:0;background:none;color:var(--faint);cursor:pointer;font-size:11px;padding:1px 3px}
+.tgi button:hover{color:var(--acc)}
+.hint{font-size:11.5px;color:var(--muted);margin:8px 0 12px}
+.hint b{color:var(--ink)}
+
+/* 책 추가 */
+.add{max-width:560px}
+.add label{display:block;font-size:11.5px;color:var(--muted);margin:11px 0 3px}
+.add input[type=text]{width:100%;border:1px solid var(--rule2);border-radius:7px;padding:7px 10px;
+                      font-size:12.5px;outline:none}
+.add input:focus{border-color:var(--acc)}
+.srcs{display:flex;flex-wrap:wrap;gap:4px}
+.srcs button{border:1px solid var(--rule2);background:#fff;border-radius:6px;padding:4px 9px;
+             font-size:11.5px;cursor:pointer;color:var(--sec)}
+.srcs button.on{border-color:var(--acc);background:var(--acc-bg);color:var(--acc);font-weight:650}
+.found{display:flex;gap:10px;border:1px solid var(--rule2);border-radius:8px;padding:9px;margin-top:10px}
+.found img{width:44px;border-radius:2px}
+.found .ft{font-weight:650;font-size:12.5px}
+.found .fa{font-size:11.5px;color:var(--muted)}
+.go{border:1px solid var(--ink);background:var(--ink);color:#fff;font-size:12px;padding:6px 13px;
+    border-radius:7px;cursor:pointer;margin-top:12px}
+.msg{font-size:11.5px;color:var(--acc);margin-top:8px;min-height:16px}
+.pane{display:none}
+.pane.on{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="top">
+  <h1>태그 붙이기</h1>
+  <div class="tabs">
+    <button class="tab on" data-p="list">책 목록</button>
+    <button class="tab" data-p="tags">태그 정리</button>
+    <button class="tab" data-p="add">책 추가</button>
+  </div>
+  <span class="st" id="st"></span>
+  <button class="save" id="save" disabled>저장</button>
+</div>
+
+<!-- 책 목록 -->
+<section class="pane on" data-p="list">
+  <div class="bar">
+    <input type="search" id="q" placeholder="제목·저자·태그 검색" autocomplete="off" />
+    <select id="filter">
+      <option value="all">전체</option>
+      <option value="untouched">아직 안 고친 것</option>
+      <option value="notag">태그 없는 것</option>
+      <option value="rare">드문 태그가 붙은 것</option>
+      <option value="memo">메모 있는 것</option>
+    </select>
+    <select id="sort">
+      <option value="recent">최근 읽은 순</option>
+      <option value="title">제목 순</option>
+      <option value="tagcount">태그 적은 순</option>
+    </select>
+  </div>
+  <table><tbody id="rows"></tbody></table>
+</section>
+
+<!-- 태그 정리 -->
+<section class="pane" data-p="tags">
+  <div class="hint">책 수가 적은 태그는 <b>붉은 칸</b>으로 보인다. 이름을 바꾸거나 다른 태그에 합치거나
+    지운다. 합칠 때는 옮겨 갈 태그 이름을 적으면 된다.</div>
+  <div class="tg" id="tglist"></div>
+</section>
+
+<!-- 책 추가 -->
+<section class="pane add" data-p="add">
+  <div class="hint">제목을 넣고 <b>찾기</b>를 누르면 알라딘에서 표지·저자를 가져온다.
+    어디에 있는지 고르고 담으면 <code>sources/manual.json</code> 에 들어간다.</div>
+  <label>제목</label>
+  <input type="text" id="atitle" placeholder="예: 함께 자라기" />
+  <label>어디에 있나</label>
+  <div class="srcs" id="asrcs"></div>
+  <label>태그 (쉼표로 여러 개)</label>
+  <input type="text" id="atags" placeholder="예: 개발, 애자일" />
+  <div id="afound"></div>
+  <button class="go" id="asearch">찾기</button>
+  <button class="go" id="aadd" style="background:var(--acc);border-color:var(--acc)">담기</button>
+  <div class="msg" id="amsg"></div>
+</section>
+
+</div>
+<script>
+const $ = (s) => document.querySelector(s)
+const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))
+const SERVICES = [
+  ['paper', '종이책'], ['ridi', '리디북스'], ['kyobo', '교보 sam'], ['kindle', '킨들'],
+  ['google', '구글 북스'], ['pdf', 'PDF'], ['library', '도서관'], ['company', '회사'],
+]
+
+let BOOKS = []          // 화면에 보이는 책
+let TAGS = {}           // 제목 → [태그]
+let NOTES = {}          // 제목 → 메모 (사이트에 안 나감, 나에게 주는 지시)
+let SUGGEST = {}        // 제목 → 추천 태그
+let touched = new Set() // 사람이 손댄 책
+let dirty = false
+
+const rare = () => {
+  const c = counts()
+  return new Set(Object.keys(c).filter((t) => c[t] <= 2))
+}
+function counts() {
+  const c = {}
+  for (const list of Object.values(TAGS)) for (const t of list) c[t] = (c[t] || 0) + 1
+  return c
+}
+function markDirty() {
+  dirty = true
+  const b = $('#save')
+  b.disabled = false
+  b.classList.add('dirty')
+  b.textContent = '저장'
+}
+
+// ── 목록 ──
+function visible() {
+  const q = $('#q').value.trim().toLowerCase()
+  const f = $('#filter').value
+  const R = rare()
+  let list = BOOKS.filter((b) => {
+    const tags = TAGS[b.title] || []
+    if (f === 'untouched' && touched.has(b.title)) return false
+    if (f === 'notag' && tags.length) return false
+    if (f === 'rare' && !tags.some((t) => R.has(t))) return false
+    if (f === 'memo' && !(NOTES[b.title] || '').trim()) return false
+    if (!q) return true
+    return (b.title + ' ' + b.author + ' ' + tags.join(' ')).toLowerCase().includes(q)
+  })
+  const s = $('#sort').value
+  if (s === 'title') list.sort((a, b) => a.title.localeCompare(b.title, 'ko'))
+  else if (s === 'tagcount') list.sort((a, b) => (TAGS[a.title] || []).length - (TAGS[b.title] || []).length)
+  return list
+}
+
+function drawList() {
+  const R = rare()
+  const list = visible()
+  $('#rows').innerHTML = list.map((b) => {
+    const tags = TAGS[b.title] || []
+    const sug = SUGGEST[b.title] || []
+    return `<tr data-t="${esc(b.title)}" class="${touched.has(b.title) ? 'hit' : ''}">
+      <td class="c-cv">${b.cover ? `<img src="${esc(b.cover)}" alt="" loading="lazy">` : '<div class="ph"></div>'}</td>
+      <td class="c-b"><b>${esc(b.title)}</b><span>${esc(b.author || '')}</span></td>
+      <td class="c-t">
+        ${tags.map((t) => `<span class="tag${sug.includes(t) ? '' : ' new'}"><b class="${R.has(t) ? 'rare' : ''}">${esc(t)}</b><i data-del="${esc(t)}">×</i></span>`).join('')}
+        <button class="addt" data-add>+ 태그</button>
+      </td>
+      <td class="c-m"><button class="memo${(NOTES[b.title] || '').trim() ? ' has' : ''}" data-memo title="메모">✎</button></td>
+    </tr>
+    ${openMemo.has(b.title) ? `<tr class="memorow" data-m="${esc(b.title)}">
+      <td></td><td colspan="3"><textarea placeholder="이 책을 어떻게 할지 적어 줘. 예: 회사에서 빌린 책 · 표지가 다른 판이다 · 이거랑 저거는 같은 책">${esc(NOTES[b.title] || '')}</textarea>
+      <div class="mh">사이트에는 안 나간다. 저장하면 data/notes.json 에 남고 내가 읽는다.</div></td>
+    </tr>` : ''}`
+  }).join('')
+  const memoN = Object.values(NOTES).filter((v) => (v || '').trim()).length
+  $('#st').textContent = `${list.length}권 보임 · 손댄 것 ${touched.size} · 태그 ${Object.keys(counts()).length}종`
+    + (memoN ? ` · 메모 ${memoN}` : '')
+}
+
+const openMemo = new Set()
+
+$('#rows').addEventListener('input', (e) => {
+  const tr = e.target.closest('tr.memorow')
+  if (!tr) return
+  NOTES[tr.dataset.m] = e.target.value
+  markDirty()
+})
+
+$('#rows').addEventListener('click', (e) => {
+  const tr = e.target.closest('tr')
+  if (!tr) return
+  const title = tr.dataset.t
+  if (e.target.closest('[data-memo]')) {
+    openMemo.has(title) ? openMemo.delete(title) : openMemo.add(title)
+    drawList()
+    const ta = document.querySelector(`tr.memorow[data-m="${CSS.escape(title)}"] textarea`)
+    if (ta) { ta.focus(); ta.selectionStart = ta.value.length }
+    return
+  }
+  const del = e.target.closest('[data-del]')
+  if (del) {
+    TAGS[title] = (TAGS[title] || []).filter((t) => t !== del.dataset.del)
+    touched.add(title); markDirty(); drawList(); return
+  }
+  if (e.target.closest('[data-add]')) {
+    const btn = e.target.closest('[data-add]')
+    const inp = document.createElement('input')
+    inp.className = 'tin'
+    inp.setAttribute('list', 'alltags')
+    inp.placeholder = '태그 + 엔터'
+    btn.replaceWith(inp)
+    inp.focus()
+    const done = (keep) => {
+      const v = inp.value.trim()
+      if (keep && v) {
+        TAGS[title] = [...new Set([...(TAGS[title] || []), v])]
+        touched.add(title); markDirty()
+      }
+      drawList()
+    }
+    inp.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Enter') done(true)
+      else if (ev.key === 'Escape') done(false)
+    })
+    inp.addEventListener('blur', () => done(true))
+  }
+})
+;['#q', '#filter', '#sort'].forEach((s) => $(s).addEventListener('input', drawList))
+
+// ── 태그 정리 ──
+function drawTags() {
+  const c = counts()
+  const sorted = Object.entries(c).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ko'))
+  $('#tglist').innerHTML = sorted.map(([t, n]) =>
+    `<div class="tgi${n <= 2 ? ' few' : ''}">
+      <span class="nm">${esc(t)}</span><span class="n">${n}</span>
+      <button data-ren="${esc(t)}">이름</button>
+      <button data-mrg="${esc(t)}">합치기</button>
+      <button data-del="${esc(t)}">지우기</button>
+    </div>`).join('')
+}
+$('#tglist').addEventListener('click', (e) => {
+  const b = e.target.closest('button')
+  if (!b) return
+  const [kind, tag] = b.dataset.ren ? ['ren', b.dataset.ren]
+    : b.dataset.mrg ? ['mrg', b.dataset.mrg] : ['del', b.dataset.del]
+  if (kind === 'del') {
+    for (const k of Object.keys(TAGS)) TAGS[k] = TAGS[k].filter((t) => t !== tag)
+  } else {
+    const to = window.prompt(kind === 'ren' ? `"${tag}" 을 무엇으로 바꿀까` : `"${tag}" 을 어느 태그에 합칠까`, tag)
+    if (!to || !to.trim()) return
+    const v = to.trim()
+    for (const k of Object.keys(TAGS)) TAGS[k] = [...new Set(TAGS[k].map((t) => (t === tag ? v : t)))]
+  }
+  markDirty(); drawTags(); drawList()
+})
+
+// ── 책 추가 ──
+$('#asrcs').innerHTML = SERVICES.map(([id, nm]) => `<button data-s="${id}">${nm}</button>`).join('')
+$('#asrcs').addEventListener('click', (e) => {
+  const b = e.target.closest('button')
+  if (b) b.classList.toggle('on')
+})
+let foundBook = null
+$('#asearch').addEventListener('click', async () => {
+  const q = $('#atitle').value.trim()
+  if (!q) return
+  $('#amsg').textContent = '찾는 중…'
+  const r = await fetch('/api/search?q=' + encodeURIComponent(q)).then((x) => x.json())
+  foundBook = r.found
+  if (!foundBook) { $('#amsg').textContent = '못 찾았다. 제목만으로 담아도 된다.'; $('#afound').innerHTML = ''; return }
+  $('#amsg').textContent = ''
+  $('#afound').innerHTML = `<div class="found">
+    ${foundBook.cover ? `<img src="${esc(foundBook.cover)}">` : ''}
+    <div><div class="ft">${esc(foundBook.title)}</div>
+    <div class="fa">${esc(foundBook.author)} · ${esc(foundBook.publisher || '')}</div></div></div>`
+})
+$('#aadd').addEventListener('click', async () => {
+  const title = (foundBook?.title || $('#atitle').value).trim()
+  if (!title) return
+  const srcs = [...$('#asrcs').querySelectorAll('.on')].map((b) => b.dataset.s)
+  if (!srcs.length) { $('#amsg').textContent = '어디에 있는지 하나는 골라야 한다'; return }
+  const body = { title, author: foundBook?.author || '', cover: foundBook?.cover || '',
+                 publisher: foundBook?.publisher || '', link: foundBook?.aladin || '', sources: srcs }
+  const r = await fetch('/api/add', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+                                      body: JSON.stringify({ ...body, service: srcs[0] }) }).then((x) => x.json())
+  if (r.error) { $('#amsg').textContent = r.error; return }
+  const tags = $('#atags').value.split(',').map((s) => s.trim()).filter(Boolean)
+  if (tags.length) { TAGS[title] = tags; touched.add(title); markDirty() }
+  $('#amsg').textContent = `담았다 (manual.json ${r.count}권). node scripts/build.mjs 로 반영한다.`
+  $('#atitle').value = ''; $('#atags').value = ''; $('#afound').innerHTML = ''; foundBook = null
+})
+
+// ── 저장 ──
+$('#save').addEventListener('click', async () => {
+  const b = $('#save')
+  b.textContent = '저장 중…'
+  const r = await fetch('/api/tags', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+                                       body: JSON.stringify({ tags: TAGS, notes: NOTES }) }).then((x) => x.json())
+  if (r.ok) {
+    dirty = false
+    b.classList.remove('dirty'); b.disabled = true; b.textContent = '저장됨'
+  } else b.textContent = '실패'
+})
+window.addEventListener('beforeunload', (e) => { if (dirty) e.preventDefault() })
+
+// ── 탭 ──
+document.querySelector('.tabs').addEventListener('click', (e) => {
+  const t = e.target.closest('.tab')
+  if (!t) return
+  document.querySelectorAll('.tab').forEach((x) => x.classList.toggle('on', x === t))
+  document.querySelectorAll('.pane').forEach((p) => p.classList.toggle('on', p.dataset.p === t.dataset.p))
+  if (t.dataset.p === 'tags') drawTags()
+})
+
+// ── 시작 ──
+Promise.all([
+  fetch('/data/library.json?v=' + Date.now()).then((r) => r.json()),
+  fetch('/data/tags-suggested.json?v=' + Date.now()).then((r) => r.json()),
+  fetch('/data/tags.json?v=' + Date.now()).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+  fetch('/data/notes.json?v=' + Date.now()).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+]).then(([lib, sug, saved, notes]) => {
+  NOTES = notes || {}
+  BOOKS = lib.books
+  SUGGEST = sug
+  for (const b of BOOKS) {
+    TAGS[b.title] = saved[b.title] ? [...saved[b.title]] : [...(sug[b.title] || [])]
+    if (saved[b.title]) touched.add(b.title)
+  }
+  const dl = document.createElement('datalist')
+  dl.id = 'alltags'
+  document.body.appendChild(dl)
+  const refreshList = () => {
+    dl.innerHTML = Object.keys(counts()).map((t) => `<option value="${esc(t)}">`).join('')
+  }
+  refreshList()
+  setInterval(refreshList, 3000)
+  drawList()
+})
+</script>
+</body>
+</html>

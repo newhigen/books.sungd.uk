@@ -1,1 +1,4 @@
 .DS_Store
+
+# 태그 화면이 저장하는 것 — notes 는 나에게 주는 지시라 커밋하지 않는다
+data/notes.json
