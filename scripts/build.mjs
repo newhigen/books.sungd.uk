@@ -164,12 +164,53 @@ for (const book of books.values()) {
   if (!book.aladin) book.aladin = c.aladin || ''
 }
 
-// 분야·태그를 붙인다
+// ---- 분야 정하기 ----
+// 알라딘은 책 하나를 여러 분류에 건다. 그중 첫 번째를 그냥 쓰면 '차곡차곡 글쓰기' 가
+// 저자 때문에 컴퓨터/모바일 로 가고 '디자인 구구단' 이 그래픽 툴 책이 된다.
+// 그래서 서점 진열 이름 대신, 경로에 담긴 말로 내 분야를 고른다. 위에 있는 규칙이 이긴다.
+const FIELD_RULES = [
+  ['신앙', /기독교|개신교|천주교|종교|신앙|성경/],
+  ['디자인', /디자인|그래픽|웹디자인|UI|UX|타이포/],
+  ['글쓰기·읽기', /글쓰기|책읽기|독서/],
+  ['개발', /프로그래밍|컴퓨터 ?공학|소프트웨어|웹 ?개발|데이터베이스|인공지능|머신러닝|알고리즘|운영체제|네트워크|모바일 ?프로그/],
+  // '인문학' 안에 '문학' 이 들어 있어서, 인문을 문학보다 먼저 본다
+  ['인문·심리', /인문|철학|심리|정신분석|교양/],
+  ['문학', /소설|희곡|시집|고전문학|세계의 문학|테마문학|한국문학|외국문학|문학론|서양현대고전|동양고전/],
+  ['에세이', /에세이/],
+  ['일·경영', /경영|비즈니스|창업|리더십|마케팅|세일즈|투자|재테크|경제|간부학|직장/],
+  ['자기계발', /자기계발|성공|시간관리|정보관리|인간관계|화술|협상|설득|창의|두뇌계발|취업|진로|공부법|학습/],
+  ['역사·사회', /역사|사회|정치|법학/],
+  ['건강·생활', /건강|다이어트|운동|요리|살림|육아|취미|반려/],
+  ['여행', /여행/],
+  ['과학', /과학|수학|물리|생물/],
+]
+// 분야가 아니라 서점 진열 코너인 것들 — 분야를 정할 때도 태그에도 넣지 않는다
+const SHELF_ONLY = /추천도서|베스트셀러|대학교재|전문서적|청소년|외부\/전문기관|한국출판문화|우수출|^\d{4}년$/
+
+const overridePath = join(repo, 'data', 'field-overrides.json')
+const overrides = existsSync(overridePath) ? JSON.parse(readFileSync(overridePath, 'utf8')) : {}
+
+function decideField(paths) {
+  const words = paths.flat().filter((n) => !SHELF_ONLY.test(n))
+  for (const [name, re] of FIELD_RULES) {
+    if (words.some((w) => re.test(w))) return name
+  }
+  return ''
+}
+
 for (const book of books.values()) {
   const c = cats[book.title]
   if (!c) continue
-  if (!book.field) book.field = c.field || ''
-  if (!book.tags || !book.tags.length) book.tags = c.tags || []
+  const paths = (c.paths || []).filter((p) => !p.some((n) => SHELF_ONLY.test(n)))
+  book.field = overrides[book.title] || decideField(paths.length ? paths : c.paths || [])
+  // 태그는 경로의 아래 칸들 — 진열 코너 이름은 뺀다
+  const tags = []
+  for (const p of paths) {
+    for (const n of p.slice(1)) {
+      if (!tags.includes(n) && !SHELF_ONLY.test(n)) tags.push(n)
+    }
+  }
+  book.tags = tags.slice(0, 6)
 }
 
 // ---- 출력 ----

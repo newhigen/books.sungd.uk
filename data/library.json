@@ -29,63 +29,55 @@
  ],
  "fields": [
   {
-   "name": "컴퓨터/모바일",
-   "count": 30
+   "name": "신앙",
+   "count": 29
+  },
+  {
+   "name": "개발",
+   "count": 25
   },
   {
    "name": "자기계발",
-   "count": 28
+   "count": 22
   },
   {
-   "name": "종교/역학",
-   "count": 28
-  },
-  {
-   "name": "인문학",
-   "count": 17
-  },
-  {
-   "name": "소설/시/희곡",
-   "count": 13
+   "name": "인문·심리",
+   "count": 16
   },
   {
    "name": "에세이",
-   "count": 10
+   "count": 15
   },
   {
-   "name": "경제경영",
+   "name": "문학",
+   "count": 13
+  },
+  {
+   "name": "일·경영",
+   "count": 12
+  },
+  {
+   "name": "글쓰기·읽기",
    "count": 9
   },
   {
-   "name": "건강/취미",
-   "count": 7
+   "name": "건강·생활",
+   "count": 6
   },
   {
-   "name": "예술/대중문화",
+   "name": "역사·사회",
    "count": 3
   },
   {
-   "name": "여행",
-   "count": 3
-  },
-  {
-   "name": "과학",
-   "count": 3
-  },
-  {
-   "name": "사회과학",
+   "name": "디자인",
    "count": 2
   },
   {
-   "name": "역사",
+   "name": "여행",
    "count": 1
   },
   {
-   "name": "요리/살림",
-   "count": 1
-  },
-  {
-   "name": "외국어",
+   "name": "과학",
    "count": 1
   }
  ],
@@ -110,9 +102,9 @@
     4,
     5,
     33,
-    34,
     37,
-    38
+    38,
+    41
    ]
   },
   {
@@ -122,7 +114,7 @@
    "cover": "https://image.aladin.co.kr/product/38959/46/cover500/k762137312_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=389594657",
-   "field": "경제경영",
+   "field": "일·경영",
    "tags": [
     "기업 경영",
     "경영전략/혁신",
@@ -137,11 +129,11 @@
    "addedAt": "",
    "similar": [
     48,
-    35,
     93,
     121,
     0,
-    4
+    4,
+    5
    ]
   },
   {
@@ -151,7 +143,7 @@
    "cover": "https://image.aladin.co.kr/product/34360/88/cover500/k182932901_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=343608885",
-   "field": "컴퓨터/모바일",
+   "field": "디자인",
    "tags": [
     "그래픽/멀티미디어",
     "그래픽 일반",
@@ -165,12 +157,7 @@
    "readAt": "2026-06",
    "addedAt": "",
    "similar": [
-    62,
-    9,
-    12,
-    17,
-    18,
-    28
+    62
    ]
   },
   {
@@ -180,7 +167,7 @@
    "cover": "https://image.aladin.co.kr/product/33117/27/cover500/k122937122_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=331172752",
-   "field": "자기계발",
+   "field": "일·경영",
    "tags": [
     "협상/설득/화술",
     "화술",
@@ -197,9 +184,9 @@
     26,
     27,
     31,
+    9,
     29,
-    75,
-    9
+    75
    ]
   },
   {
@@ -222,9 +209,9 @@
     0,
     5,
     33,
-    34,
     37,
-    38
+    38,
+    41
    ]
   },
   {
@@ -239,9 +226,7 @@
     "성공",
     "성공학",
     "시간관리/정보관리",
-    "시간관리",
-    "알라딘 독자 선정 올해의 책",
-    "2019년"
+    "시간관리"
    ],
    "sources": [
     {
@@ -283,7 +268,7 @@
     45,
     8,
     30,
-    55
+    44
    ]
   },
   {
@@ -293,12 +278,10 @@
    "cover": "https://image.aladin.co.kr/product/21292/13/cover500/8936438034_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=212921347",
-   "field": "소설/시/희곡",
+   "field": "문학",
    "tags": [
     "한국소설",
-    "2000년대 이후 한국소설",
-    "국내 문학상",
-    "창비신인소설상"
+    "2000년대 이후 한국소설"
    ],
    "sources": [],
    "read": true,
@@ -334,8 +317,8 @@
     57,
     30,
     89,
+    46,
     55,
-    100,
     104
    ]
   },
@@ -346,7 +329,7 @@
    "cover": "https://image.aladin.co.kr/product/2274/9/cover500/8966260659_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=22740964",
-   "field": "컴퓨터/모바일",
+   "field": "일·경영",
    "tags": [
     "e비즈니스/창업",
     "디지털 문화",
@@ -361,11 +344,11 @@
    "addedAt": "",
    "similar": [
     36,
-    32,
     29,
-    12,
+    32,
     3,
-    35
+    75,
+    121
    ]
   },
   {
@@ -375,7 +358,7 @@
    "cover": "https://image.aladin.co.kr/product/33990/7/cover500/k722930546_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=339900718",
-   "field": "인문학",
+   "field": "인문·심리",
    "tags": [
     "교양 인문학"
    ],
@@ -387,9 +370,9 @@
     13,
     14,
     40,
-    50,
     78,
-    128
+    128,
+    50
    ]
   },
   {
@@ -414,7 +397,7 @@
     58,
     8,
     30,
-    55
+    44
    ]
   },
   {
@@ -424,7 +407,7 @@
    "cover": "https://image.aladin.co.kr/product/35498/53/cover500/8966264662_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=354985363",
-   "field": "컴퓨터/모바일",
+   "field": "글쓰기·읽기",
    "tags": [
     "프로그래밍 개발/방법론",
     "프로그래밍 기초/개발 방법론",
@@ -436,12 +419,12 @@
    "readAt": "2026-04",
    "addedAt": "",
    "similar": [
-    17,
+    21,
+    22,
+    23,
+    50,
     85,
-    88,
-    91,
-    96,
-    97
+    17
    ]
   },
   {
@@ -451,7 +434,7 @@
    "cover": "https://image.aladin.co.kr/product/22872/85/cover500/k912636841_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=228728501",
-   "field": "인문학",
+   "field": "인문·심리",
    "tags": [
     "교양 인문학"
    ],
@@ -463,9 +446,9 @@
     10,
     14,
     40,
-    50,
     78,
-    128
+    128,
+    50
    ]
   },
   {
@@ -475,26 +458,24 @@
    "cover": "https://image.aladin.co.kr/product/33148/4/cover500/8934971355_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=331480497",
-   "field": "인문학",
+   "field": "인문·심리",
    "tags": [
     "교양 인문학",
     "인문 에세이",
     "철학 일반",
-    "교양 철학",
-    "외부/전문기관 추천도서",
-    "세종도서 교양부문 선정도서"
+    "교양 철학"
    ],
    "sources": [],
    "read": true,
    "readAt": "2026-04",
    "addedAt": "",
    "similar": [
-    78,
     10,
     13,
-    22,
     40,
-    50
+    78,
+    81,
+    128
    ]
   },
   {
@@ -504,14 +485,12 @@
    "cover": "https://image.aladin.co.kr/product/39990/29/cover500/k822130836_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399902905",
-   "field": "소설/시/희곡",
+   "field": "문학",
    "tags": [
     "일본소설",
     "1950년대 이후 일본소설",
     "세계의 문학",
-    "일본문학",
-    "해외 문학상",
-    "아쿠타가와상"
+    "일본문학"
    ],
    "sources": [],
    "read": true,
@@ -533,7 +512,7 @@
    "cover": "https://image.aladin.co.kr/product/35585/77/cover500/k712036793_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355857744",
-   "field": "사회과학",
+   "field": "역사·사회",
    "tags": [
     "법과 생활",
     "헌법"
@@ -543,6 +522,7 @@
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
+    47,
     53
    ]
   },
@@ -553,7 +533,7 @@
    "cover": "https://image.aladin.co.kr/product/31704/71/cover500/k982833687_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317047184",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "프로그래밍 개발/방법론",
     "프로그래밍 기초/개발 방법론",
@@ -568,11 +548,11 @@
    "addedAt": "",
    "similar": [
     121,
-    12,
     88,
     91,
     96,
-    97
+    97,
+    102
    ]
   },
   {
@@ -582,7 +562,7 @@
    "cover": "https://image.aladin.co.kr/product/38535/91/cover500/k092135330_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385359128",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "컴퓨터 공학",
     "소프트웨어 공학",
@@ -611,7 +591,7 @@
    "cover": "https://image.aladin.co.kr/product/37686/72/cover500/8937464721_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=376867245",
-   "field": "소설/시/희곡",
+   "field": "문학",
    "tags": [
     "러시아소설",
     "서양고전문학",
@@ -650,10 +630,10 @@
    "similar": [
     153,
     0,
-    3,
     4,
     5,
-    26
+    26,
+    27
    ]
   },
   {
@@ -663,7 +643,7 @@
    "cover": "https://image.aladin.co.kr/product/11160/18/cover500/k072531089_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=111601879",
-   "field": "인문학",
+   "field": "글쓰기·읽기",
    "tags": [
     "책읽기/글쓰기",
     "글쓰기"
@@ -673,10 +653,10 @@
    "readAt": "2026-02",
    "addedAt": "",
    "similar": [
+    12,
     22,
     23,
     50,
-    12,
     85,
     83
    ]
@@ -688,7 +668,7 @@
    "cover": "https://image.aladin.co.kr/product/11807/4/cover500/k552531429_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=118070490",
-   "field": "인문학",
+   "field": "글쓰기·읽기",
    "tags": [
     "책읽기/글쓰기",
     "글쓰기",
@@ -699,12 +679,12 @@
    "readAt": "2026-02",
    "addedAt": "",
    "similar": [
+    12,
     21,
     23,
     50,
-    12,
     85,
-    14
+    83
    ]
   },
   {
@@ -714,7 +694,7 @@
    "cover": "https://image.aladin.co.kr/product/28376/87/cover500/k642835600_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=283768718",
-   "field": "인문학",
+   "field": "글쓰기·읽기",
    "tags": [
     "책읽기/글쓰기",
     "글쓰기"
@@ -724,10 +704,10 @@
    "readAt": "2026-02",
    "addedAt": "",
    "similar": [
+    12,
     21,
     22,
     50,
-    12,
     85,
     83
    ]
@@ -739,7 +719,7 @@
    "cover": "https://image.aladin.co.kr/product/33995/2/cover500/k392930645_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=339950299",
-   "field": "예술/대중문화",
+   "field": "건강·생활",
    "tags": [
     "사진",
     "사진 실기",
@@ -751,8 +731,11 @@
    "readAt": "2026-02",
    "addedAt": "",
    "similar": [
-    39,
-    44
+    70,
+    77,
+    101,
+    103,
+    112
    ]
   },
   {
@@ -787,9 +770,9 @@
    "readAt": "2026-02",
    "addedAt": "",
    "similar": [
-    3,
     27,
     31,
+    3,
     0,
     4,
     5
@@ -812,9 +795,9 @@
    "readAt": "2026-02",
    "addedAt": "",
    "similar": [
-    3,
     26,
     31,
+    3,
     0,
     4,
     5
@@ -827,7 +810,7 @@
    "cover": "https://image.aladin.co.kr/product/36769/7/cover500/8966264816_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=367690703",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "인공지능",
     "성공",
@@ -838,12 +821,12 @@
    "readAt": "2026-01",
    "addedAt": "",
    "similar": [
+    35,
     0,
     1,
     4,
     5,
-    33,
-    34
+    33
    ]
   },
   {
@@ -853,7 +836,7 @@
    "cover": "https://image.aladin.co.kr/product/2274/7/cover500/8966260667_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=22740732",
-   "field": "자기계발",
+   "field": "일·경영",
    "tags": [
     "창의적사고/두뇌계발",
     "CEO/비즈니스맨을 위한 능력계발",
@@ -864,12 +847,12 @@
    "readAt": "2026-01",
    "addedAt": "",
    "similar": [
-    75,
     9,
+    75,
     35,
     3,
-    52,
-    92
+    121,
+    12
    ]
   },
   {
@@ -894,9 +877,9 @@
     8,
     57,
     89,
+    46,
     55,
-    100,
-    46
+    100
    ]
   },
   {
@@ -917,12 +900,12 @@
    "readAt": "2026-01",
    "addedAt": "",
    "similar": [
-    3,
     26,
     27,
+    3,
     34,
     59,
-    108
+    100
    ]
   },
   {
@@ -932,7 +915,7 @@
    "cover": "https://image.aladin.co.kr/product/37840/18/cover500/k512033705_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=378401803",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "컴퓨터 공학",
     "소프트웨어 공학",
@@ -946,12 +929,12 @@
    "readAt": "2026-01",
    "addedAt": "",
    "similar": [
-    9,
     18,
     49,
     51,
     60,
-    96
+    96,
+    97
    ]
   },
   {
@@ -974,9 +957,9 @@
     0,
     4,
     5,
-    34,
     37,
-    38
+    38,
+    41
    ]
   },
   {
@@ -986,7 +969,7 @@
    "cover": "https://image.aladin.co.kr/product/18828/9/cover500/8968061513_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=188280906",
-   "field": "자기계발",
+   "field": "인문·심리",
    "tags": [
     "성공",
     "성공학",
@@ -1000,10 +983,10 @@
    "similar": [
     59,
     108,
+    100,
+    153,
     0,
-    4,
-    5,
-    33
+    1
    ]
   },
   {
@@ -1013,7 +996,7 @@
    "cover": "https://image.aladin.co.kr/product/26565/83/cover500/8965402913_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=265658321",
-   "field": "경제경영",
+   "field": "개발",
    "tags": [
     "CEO/비즈니스맨을 위한 능력계발",
     "성공학/경력관리",
@@ -1027,11 +1010,11 @@
    "readAt": "2025-12",
    "addedAt": "",
    "similar": [
-    1,
+    28,
     0,
+    1,
     4,
     5,
-    28,
     29
    ]
   },
@@ -1042,7 +1025,7 @@
    "cover": "https://image.aladin.co.kr/product/31733/79/cover500/k012833095_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317337987",
-   "field": "경제경영",
+   "field": "일·경영",
    "tags": [
     "기업 경영",
     "조직/인력/성과관리",
@@ -1087,8 +1070,8 @@
     4,
     5,
     33,
-    34,
-    38
+    38,
+    41
    ]
   },
   {
@@ -1112,8 +1095,8 @@
     4,
     5,
     33,
-    34,
-    37
+    37,
+    41
    ]
   },
   {
@@ -1123,7 +1106,7 @@
    "cover": "https://image.aladin.co.kr/product/32776/97/cover500/k502936287_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=327769788",
-   "field": "예술/대중문화",
+   "field": "글쓰기·읽기",
    "tags": [
     "예술/대중문화의 이해",
     "미학/예술이론",
@@ -1152,7 +1135,7 @@
    "cover": "https://image.aladin.co.kr/product/33809/20/cover500/k062930585_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=338092098",
-   "field": "인문학",
+   "field": "인문·심리",
    "tags": [
     "교양 인문학"
    ],
@@ -1164,9 +1147,9 @@
     10,
     13,
     14,
-    50,
     78,
-    128
+    128,
+    50
    ]
   },
   {
@@ -1190,8 +1173,8 @@
     4,
     5,
     33,
-    34,
-    37
+    37,
+    38
    ]
   },
   {
@@ -1215,8 +1198,8 @@
     4,
     5,
     33,
-    34,
-    37
+    37,
+    38
    ]
   },
   {
@@ -1241,7 +1224,7 @@
    "cover": "https://image.aladin.co.kr/product/29110/98/cover500/k052837263_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=291109856",
-   "field": "예술/대중문화",
+   "field": "에세이",
    "tags": [
     "미술",
     "화집",
@@ -1255,8 +1238,11 @@
    "addedAt": "",
    "similar": [
     45,
-    24,
-    39
+    6,
+    8,
+    11,
+    30,
+    46
    ]
   },
   {
@@ -1294,7 +1280,7 @@
    "cover": "https://image.aladin.co.kr/product/17675/63/cover500/k972534610_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=176756346",
-   "field": "여행",
+   "field": "에세이",
    "tags": [
     "미국여행",
     "미국여행 에세이",
@@ -1310,9 +1296,9 @@
     64,
     8,
     30,
-    47,
     55,
-    57
+    57,
+    89
    ]
   },
   {
@@ -1322,7 +1308,7 @@
    "cover": "https://image.aladin.co.kr/product/32091/45/cover500/k162834197_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320914582",
-   "field": "역사",
+   "field": "역사·사회",
    "tags": [
     "아메리카사",
     "미국/캐나다사",
@@ -1334,7 +1320,9 @@
    "readAt": "2025-09",
    "addedAt": "",
    "similar": [
-    46
+    46,
+    16,
+    53
    ]
   },
   {
@@ -1344,7 +1332,7 @@
    "cover": "https://image.aladin.co.kr/product/31088/38/cover500/k742831839_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310883870",
-   "field": "경제경영",
+   "field": "일·경영",
    "tags": [
     "기업 경영",
     "경영전략/혁신",
@@ -1373,13 +1361,10 @@
    "cover": "https://image.aladin.co.kr/product/17597/74/cover500/8966262333_1.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=175977462",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "컴퓨터 공학",
-    "소프트웨어 공학",
-    "외부/전문기관 추천도서",
-    "한국출판문화산업진흥원 우수출..",
-    "2018년"
+    "소프트웨어 공학"
    ],
    "sources": [
     {
@@ -1406,7 +1391,7 @@
    "cover": "https://image.aladin.co.kr/product/15683/56/cover500/k112533130_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=156835614",
-   "field": "인문학",
+   "field": "글쓰기·읽기",
    "tags": [
     "교양 인문학",
     "책읽기/글쓰기",
@@ -1417,12 +1402,12 @@
    "readAt": "2025-08",
    "addedAt": "",
    "similar": [
+    12,
     21,
     22,
     23,
-    12,
     85,
-    10
+    83
    ]
   },
   {
@@ -1432,7 +1417,7 @@
    "cover": "https://image.aladin.co.kr/product/97/91/cover500/8991268099_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=979171",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "컴퓨터 공학",
     "소프트웨어 공학"
@@ -1466,12 +1451,12 @@
    "readAt": "2025-08",
    "addedAt": "",
    "similar": [
+    92,
     29,
     75,
-    92,
     94,
     0,
-    3
+    4
    ]
   },
   {
@@ -1481,7 +1466,7 @@
    "cover": "https://image.aladin.co.kr/product/34795/55/cover500/k762933228_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=347955545",
-   "field": "사회과학",
+   "field": "역사·사회",
    "tags": [
     "정치학/외교학/행정학",
     "각국정치사정/정치사",
@@ -1492,7 +1477,8 @@
    "readAt": "2025-08",
    "addedAt": "",
    "similar": [
-    16
+    16,
+    47
    ]
   },
   {
@@ -1516,8 +1502,8 @@
     4,
     5,
     33,
-    34,
-    37
+    37,
+    38
    ]
   },
   {
@@ -1538,10 +1524,10 @@
    "similar": [
     8,
     30,
+    46,
     57,
     89,
-    100,
-    46
+    100
    ]
   },
   {
@@ -1551,7 +1537,7 @@
    "cover": "https://image.aladin.co.kr/product/36387/54/cover500/k702039674_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=363875410",
-   "field": "소설/시/희곡",
+   "field": "문학",
    "tags": [
     "독일소설",
     "세계의 문학",
@@ -1583,10 +1569,7 @@
    "tags": [
     "한국에세이",
     "명사에세이",
-    "문인에세이",
-    "알라딘 독자 선정 올해의 책",
-    "2025년",
-    "올해의 책 TOP 10"
+    "문인에세이"
    ],
    "sources": [],
    "read": true,
@@ -1596,7 +1579,7 @@
     8,
     30,
     89,
-    104,
+    46,
     55,
     100
    ]
@@ -1627,7 +1610,7 @@
     45,
     8,
     30,
-    55
+    44
    ]
   },
   {
@@ -1637,7 +1620,7 @@
    "cover": "https://image.aladin.co.kr/product/1781/7/cover500/8952766016_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=17810770",
-   "field": "자기계발",
+   "field": "인문·심리",
    "tags": [
     "인간관계",
     "교양심리학",
@@ -1651,10 +1634,10 @@
    "similar": [
     34,
     108,
+    100,
+    153,
     0,
-    4,
-    5,
-    33
+    1
    ]
   },
   {
@@ -1664,7 +1647,7 @@
    "cover": "https://image.aladin.co.kr/product/35307/22/cover500/k312035179_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353072248",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "컴퓨터 공학",
     "소프트웨어 공학"
@@ -1689,7 +1672,7 @@
    "cover": "https://image.aladin.co.kr/product/4164/0/cover500/8976041488_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=41640064",
-   "field": "소설/시/희곡",
+   "field": "문학",
    "tags": [
     "추리/미스터리소설",
     "영미 추리/미스터리소설",
@@ -1718,7 +1701,7 @@
    "cover": "https://image.aladin.co.kr/product/4927/43/cover500/8966261213_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49274393",
-   "field": "컴퓨터/모바일",
+   "field": "디자인",
    "tags": [
     "웹디자인/홈페이지",
     "웹기획",
@@ -1731,12 +1714,7 @@
    "readAt": "2025-04",
    "addedAt": "",
    "similar": [
-    2,
-    9,
-    12,
-    17,
-    18,
-    28
+    2
    ]
   },
   {
@@ -1746,7 +1724,7 @@
    "cover": "https://image.aladin.co.kr/product/35/9/cover500/8938201015_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=350931",
-   "field": "소설/시/희곡",
+   "field": "문학",
    "tags": [
     "추리/미스터리소설",
     "영미 추리/미스터리소설",
@@ -1772,7 +1750,7 @@
    "cover": "https://image.aladin.co.kr/product/13686/32/cover500/k062532611_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=136863291",
-   "field": "여행",
+   "field": "인문·심리",
    "tags": [
     "유럽여행",
     "유럽여행 에세이",
@@ -1787,7 +1765,11 @@
    "addedAt": "",
    "similar": [
     46,
-    66
+    10,
+    13,
+    14,
+    34,
+    40
    ]
   },
   {
@@ -1797,7 +1779,7 @@
    "cover": "https://image.aladin.co.kr/product/35493/29/cover500/k012035556_1.jpg",
    "publisher": "김영사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=354932983",
-   "field": "과학",
+   "field": "인문·심리",
    "tags": [
     "기초과학/교양과학",
     "뇌과학",
@@ -1816,9 +1798,12 @@
    "readAt": "2025-04",
    "addedAt": "",
    "similar": [
-    68,
-    103,
-    95
+    10,
+    13,
+    14,
+    34,
+    40,
+    59
    ]
   },
   {
@@ -1844,10 +1829,7 @@
    "read": true,
    "readAt": "2025-04",
    "addedAt": "",
-   "similar": [
-    46,
-    64
-   ]
+   "similar": []
   },
   {
    "title": "80:20 학습법",
@@ -1870,8 +1852,8 @@
     4,
     5,
     33,
-    34,
-    37
+    37,
+    38
    ]
   },
   {
@@ -1883,23 +1865,14 @@
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=184006846",
    "field": "과학",
    "tags": [
-    "의학",
-    "외부/전문기관 추천도서",
-    "한국과학창의재단 우수과학도서",
-    "2019년",
-    "대학/일반"
+    "의학"
    ],
    "sources": [],
    "read": true,
    "readAt": "2025-03",
    "addedAt": "",
    "similar": [
-    103,
-    5,
-    14,
-    49,
-    78,
-    102
+    103
    ]
   },
   {
@@ -1936,7 +1909,7 @@
    "cover": "https://image.aladin.co.kr/product/30655/42/cover500/8956994412_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=306554256",
-   "field": "건강/취미",
+   "field": "건강·생활",
    "tags": [
     "헬스/피트니스"
    ],
@@ -1945,12 +1918,12 @@
    "readAt": "2025-03",
    "addedAt": "",
    "similar": [
-    105,
     101,
-    71,
-    74,
+    105,
+    24,
     77,
-    131
+    103,
+    112
    ]
   },
   {
@@ -1960,7 +1933,7 @@
    "cover": "https://image.aladin.co.kr/product/32920/41/cover500/k902936837_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329204106",
-   "field": "건강/취미",
+   "field": "에세이",
    "tags": [
     "건강정보",
     "건강에세이/건강정보",
@@ -1976,8 +1949,8 @@
     105,
     131,
     103,
-    70,
-    77
+    6,
+    8
    ]
   },
   {
@@ -1987,7 +1960,7 @@
    "cover": "https://image.aladin.co.kr/product/34009/78/cover500/k772931867_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340097859",
-   "field": "경제경영",
+   "field": "일·경영",
    "tags": [
     "경제학/경제일반",
     "화폐/금융/재정"
@@ -1998,11 +1971,11 @@
    "addedAt": "",
    "similar": [
     1,
-    35,
+    3,
+    9,
+    29,
     36,
-    48,
-    86,
-    93
+    48
    ]
   },
   {
@@ -2012,7 +1985,7 @@
    "cover": "https://image.aladin.co.kr/product/31478/24/cover500/k002832522_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=314782464",
-   "field": "인문학",
+   "field": "인문·심리",
    "tags": [
     "심리학/정신분석학",
     "교양 심리학"
@@ -2022,9 +1995,9 @@
    "readAt": "2025-02",
    "addedAt": "",
    "similar": [
-    126,
     128,
     153,
+    126,
     81,
     124,
     10
@@ -2037,7 +2010,7 @@
    "cover": "https://image.aladin.co.kr/product/39597/61/cover500/k862130770_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=395976130",
-   "field": "건강/취미",
+   "field": "에세이",
    "tags": [
     "다이어트",
     "건강정보",
@@ -2051,9 +2024,9 @@
     105,
     71,
     131,
-    70,
-    77,
-    101
+    6,
+    8,
+    11
    ]
   },
   {
@@ -2063,7 +2036,7 @@
    "cover": "https://image.aladin.co.kr/product/90/36/cover500/8995737069_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=903605",
-   "field": "자기계발",
+   "field": "일·경영",
    "tags": [
     "창의적사고/두뇌계발",
     "CEO/비즈니스맨을 위한 능력계발",
@@ -2079,9 +2052,9 @@
     92,
     94,
     29,
-    69,
-    87,
-    162
+    121,
+    39,
+    69
    ]
   },
   {
@@ -2106,7 +2079,7 @@
    "cover": "https://image.aladin.co.kr/product/7113/79/cover500/k842434790_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=71137981",
-   "field": "건강/취미",
+   "field": "건강·생활",
    "tags": [
     "구기",
     "기타"
@@ -2116,12 +2089,11 @@
    "readAt": "2025-01",
    "addedAt": "",
    "similar": [
+    24,
     70,
-    71,
-    74,
     101,
-    105,
-    131
+    103,
+    112
    ]
   },
   {
@@ -2131,24 +2103,21 @@
    "cover": "https://image.aladin.co.kr/product/14799/66/cover500/8932473803_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=147996667",
-   "field": "인문학",
+   "field": "인문·심리",
    "tags": [
-    "교양 인문학",
-    "외부/전문기관 추천도서",
-    "청소년이 직접 추천하는 청소년..",
-    "2019"
+    "교양 인문학"
    ],
    "sources": [],
    "read": true,
    "readAt": "2025-01",
    "addedAt": "",
    "similar": [
-    14,
     10,
     13,
+    14,
     40,
-    50,
-    128
+    128,
+    50
    ]
   },
   {
@@ -2158,7 +2127,7 @@
    "cover": "https://image.aladin.co.kr/product/6865/38/cover500/8998046660_1.jpg",
    "publisher": "더클래식",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=68653840",
-   "field": "소설/시/희곡",
+   "field": "문학",
    "tags": [
     "프랑스소설",
     "서양고전문학",
@@ -2192,7 +2161,7 @@
    "cover": "https://image.aladin.co.kr/product/24012/11/cover500/8932817561_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=240121199",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -2218,7 +2187,7 @@
    "cover": "https://image.aladin.co.kr/product/38224/38/cover500/8936812629_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382243812",
-   "field": "인문학",
+   "field": "인문·심리",
    "tags": [
     "심리학/정신분석학",
     "이론 심리학",
@@ -2230,11 +2199,11 @@
    "addedAt": "",
    "similar": [
     14,
-    22,
     73,
     124,
-    126,
-    128
+    128,
+    153,
+    22
    ]
   },
   {
@@ -2271,7 +2240,7 @@
    "cover": "https://image.aladin.co.kr/product/29563/46/cover500/k762837255_2.jpg",
    "publisher": "위즈덤하우스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=295634618",
-   "field": "인문학",
+   "field": "글쓰기·읽기",
    "tags": [
     "책읽기/글쓰기",
     "책읽기"
@@ -2287,11 +2256,11 @@
    "addedAt": "",
    "similar": [
     94,
+    12,
     21,
     22,
     23,
-    50,
-    12
+    50
    ]
   },
   {
@@ -2301,7 +2270,7 @@
    "cover": "https://image.aladin.co.kr/product/37480/63/cover500/k932032019_1.jpg",
    "publisher": "민음사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374806339",
-   "field": "소설/시/희곡",
+   "field": "문학",
    "tags": [
     "프랑스소설",
     "세계의 문학",
@@ -2332,7 +2301,7 @@
    "cover": "https://image.aladin.co.kr/product/32221/5/cover500/8993784787_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=322210531",
-   "field": "컴퓨터/모바일",
+   "field": "글쓰기·읽기",
    "tags": [
     "스마트폰/태블릿/SNS",
     "SNS",
@@ -2359,7 +2328,7 @@
    "cover": "https://image.aladin.co.kr/product/4313/29/cover500/8966261108_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=43132954",
-   "field": "경제경영",
+   "field": "일·경영",
    "tags": [
     "기업 경영",
     "조직/인력/성과관리"
@@ -2399,8 +2368,8 @@
     162,
     5,
     69,
-    75,
-    82
+    82,
+    95
    ]
   },
   {
@@ -2410,7 +2379,7 @@
    "cover": "https://image.aladin.co.kr/product/33708/44/cover500/k472930471_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337084402",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "프로그래밍 개발/방법론",
     "프로그래밍 기초/개발 방법론",
@@ -2421,8 +2390,8 @@
    "readAt": "2024-05",
    "addedAt": "",
    "similar": [
+    154,
     167,
-    12,
     17,
     91,
     96,
@@ -2450,9 +2419,9 @@
     8,
     30,
     57,
+    46,
     55,
-    100,
-    46
+    100
    ]
   },
   {
@@ -2462,7 +2431,7 @@
    "cover": "https://image.aladin.co.kr/product/33375/15/cover500/8966264352_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=333751539",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "인공지능",
     "컴퓨터 공학",
@@ -2488,7 +2457,7 @@
    "cover": "https://image.aladin.co.kr/product/20957/29/cover500/k512636276_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=209572978",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "프로그래밍 개발/방법론",
     "프로그래밍 기초/개발 방법론"
@@ -2498,12 +2467,12 @@
    "readAt": "2024-02",
    "addedAt": "",
    "similar": [
-    12,
     17,
     88,
     96,
     97,
-    102
+    102,
+    123
    ]
   },
   {
@@ -2530,9 +2499,9 @@
     5,
     69,
     82,
-    75,
     87,
-    162
+    162,
+    75
    ]
   },
   {
@@ -2542,7 +2511,7 @@
    "cover": "https://image.aladin.co.kr/product/30369/69/cover500/k822839859_1.jpg",
    "publisher": "북스톤",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=303696963",
-   "field": "경제경영",
+   "field": "일·경영",
    "tags": [
     "기업 경영",
     "경영전략/혁신"
@@ -2572,14 +2541,13 @@
    "cover": "https://image.aladin.co.kr/product/39164/94/cover500/k752138963_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=391649440",
-   "field": "인문학",
+   "field": "글쓰기·읽기",
    "tags": [
     "책읽기/글쓰기",
     "책읽기",
     "시간관리/정보관리",
     "정보관리",
-    "창의적사고/두뇌계발",
-    "청소년 인문/사회"
+    "창의적사고/두뇌계발"
    ],
    "sources": [],
    "read": true,
@@ -2631,7 +2599,7 @@
    "cover": "https://image.aladin.co.kr/product/29689/33/cover500/k962838585_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=296893356",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "컴퓨터 공학",
     "소프트웨어 공학",
@@ -2647,10 +2615,10 @@
    "similar": [
     97,
     18,
-    164,
     129,
-    12,
-    17
+    154,
+    164,
+    165
    ]
   },
   {
@@ -2660,7 +2628,7 @@
    "cover": "https://image.aladin.co.kr/product/31673/39/cover500/k032833674_1.jpg",
    "publisher": "한빛미디어",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=316733978",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "컴퓨터 공학",
     "소프트웨어 공학",
@@ -2680,11 +2648,11 @@
    "addedAt": "",
    "similar": [
     96,
-    18,
-    164,
-    129,
     154,
-    12
+    18,
+    129,
+    164,
+    165
    ]
   },
   {
@@ -2694,7 +2662,7 @@
    "cover": "https://image.aladin.co.kr/product/10783/78/cover500/895312834x_1.jpg",
    "publisher": "두란노서원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=107837820",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 목회/신학",
@@ -2725,7 +2693,7 @@
    "cover": "https://image.aladin.co.kr/product/13941/21/cover500/8977823870_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=139412178",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -2756,7 +2724,7 @@
    "cover": "https://image.aladin.co.kr/product/37535/62/cover500/8901297841_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375356292",
-   "field": "에세이",
+   "field": "인문·심리",
    "tags": [
     "한국에세이",
     "인간관계",
@@ -2777,7 +2745,7 @@
     108,
     8,
     30,
-    55
+    31
    ]
   },
   {
@@ -2787,7 +2755,7 @@
    "cover": "https://image.aladin.co.kr/product/49/50/cover500/895757462x_1.jpg",
    "publisher": "랜덤하우스코리아",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=495064",
-   "field": "건강/취미",
+   "field": "건강·생활",
    "tags": [
     "헬스/피트니스"
    ],
@@ -2802,11 +2770,10 @@
    "addedAt": "",
    "similar": [
     70,
-    71,
-    74,
+    24,
     77,
-    105,
-    131
+    103,
+    112
    ]
   },
   {
@@ -2816,14 +2783,12 @@
    "cover": "https://image.aladin.co.kr/product/31790/64/cover500/8966263992_1.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317906454",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "프로그래밍 개발/방법론",
     "프로그래밍 기초/개발 방법론",
     "프로그래밍 언어",
-    "프로그래밍 언어 기타",
-    "외부/전문기관 추천도서",
-    "세종도서 학술 선정도서"
+    "프로그래밍 언어 기타"
    ],
    "sources": [
     {
@@ -2835,12 +2800,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
+    147,
+    154,
     123,
     127,
-    12,
     17,
-    88,
-    91
+    88
    ]
   },
   {
@@ -2850,7 +2815,7 @@
    "cover": "https://image.aladin.co.kr/product/34558/45/cover500/k572933165_1.jpg",
    "publisher": "글항아리",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345584561",
-   "field": "과학",
+   "field": "건강·생활",
    "tags": [
     "의학",
     "질병치료와 예방",
@@ -2868,7 +2833,10 @@
    "similar": [
     68,
     71,
-    65
+    24,
+    70,
+    77,
+    101
    ]
   },
   {
@@ -2878,13 +2846,10 @@
    "cover": "https://image.aladin.co.kr/product/29566/59/cover500/k702837352_2.jpg",
    "publisher": "열림원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=295665964",
-   "field": "소설/시/희곡",
+   "field": "문학",
    "tags": [
     "시",
-    "한국시",
-    "알라딘 독자 선정 올해의 책",
-    "2022년",
-    "올해의 책 TOP 10"
+    "한국시"
    ],
    "sources": [
     {
@@ -2896,12 +2861,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    57,
     8,
-    5,
     7,
     15,
-    19
+    19,
+    56,
+    61
    ]
   },
   {
@@ -2911,7 +2876,7 @@
    "cover": "https://image.aladin.co.kr/product/15831/44/cover500/895699336x_1.jpg",
    "publisher": "한문화",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=158314436",
-   "field": "건강/취미",
+   "field": "에세이",
    "tags": [
     "다이어트",
     "건강정보",
@@ -2931,8 +2896,8 @@
     71,
     131,
     70,
-    77,
-    101
+    6,
+    8
    ]
   },
   {
@@ -2962,7 +2927,7 @@
    "cover": "https://image.aladin.co.kr/product/26/0/cover500/s452139198_1.jpg",
    "publisher": "민음사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=260084",
-   "field": "소설/시/희곡",
+   "field": "문학",
    "tags": [
     "독일소설",
     "서양고전문학",
@@ -3000,7 +2965,7 @@
    "cover": "https://image.aladin.co.kr/product/20945/79/cover500/s652933016_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=209457983",
-   "field": "자기계발",
+   "field": "인문·심리",
    "tags": [
     "인간관계",
     "성공",
@@ -3020,10 +2985,10 @@
    "similar": [
     34,
     59,
+    100,
+    153,
     0,
-    4,
-    5,
-    33
+    1
    ]
   },
   {
@@ -3033,7 +2998,7 @@
    "cover": "https://image.aladin.co.kr/product/4922/52/cover500/8932916802_1.jpg",
    "publisher": "시공사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49225289",
-   "field": "소설/시/희곡",
+   "field": "문학",
    "tags": [
     "스페인/중남미소설",
     "서양고전문학",
@@ -3066,14 +3031,13 @@
    "cover": "https://image.aladin.co.kr/product/35522/24/cover500/8966264638_2.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355222458",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "인공지능",
     "컴퓨터 공학",
     "소프트웨어 공학",
     "자료구조/알고리즘",
-    "컴퓨터공학/전산학 개론",
-    "외부/전문기관 추천도서"
+    "컴퓨터공학/전산학 개론"
    ],
    "sources": [
     {
@@ -3085,12 +3049,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    49,
+    129,
     164,
     165,
+    49,
     18,
-    32,
-    51
+    32
    ]
   },
   {
@@ -3100,7 +3064,7 @@
    "cover": "https://image.aladin.co.kr/product/4880/60/cover500/8932813752_1.jpg",
    "publisher": "IVP",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=48806011",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 목회/신학",
@@ -3131,7 +3095,7 @@
    "cover": "https://image.aladin.co.kr/product/39356/43/cover500/k972138633_1.jpg",
    "publisher": "서울문화사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=393564333",
-   "field": "요리/살림",
+   "field": "건강·생활",
    "tags": [
     "생활요리",
     "전문가/연예인/블로거 요리"
@@ -3145,7 +3109,13 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    24,
+    70,
+    77,
+    101,
+    103
+   ]
   },
   {
    "title": "복음 안에서 발견한 참된 자유",
@@ -3154,7 +3124,7 @@
    "cover": "https://image.aladin.co.kr/product/34047/15/cover500/k792931279_1.jpg",
    "publisher": "복있는사람",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340471562",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 목회/신학",
@@ -3185,7 +3155,7 @@
    "cover": "https://image.aladin.co.kr/product/30788/81/cover500/k382831366_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=307888132",
-   "field": "컴퓨터/모바일",
+   "field": "",
    "tags": [
     "PC/게임/디지털 카메라",
     "초보자를 위한 컴퓨터 책"
@@ -3199,14 +3169,7 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": [
-    2,
-    9,
-    12,
-    17,
-    18,
-    28
-   ]
+   "similar": []
   },
   {
    "title": "빌드(BUILD) 창조의 과정",
@@ -3215,7 +3178,7 @@
    "cover": "https://image.aladin.co.kr/product/35109/65/cover500/k982934606_2.jpg",
    "publisher": "비즈니스북스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351096536",
-   "field": "경제경영",
+   "field": "일·경영",
    "tags": [
     "기업/경영자 스토리",
     "국외 기업/경영자"
@@ -3233,9 +3196,9 @@
     121,
     17,
     1,
-    35,
-    36,
-    48
+    3,
+    9,
+    29
    ]
   },
   {
@@ -3264,8 +3227,8 @@
     4,
     5,
     33,
-    34,
-    37
+    37,
+    38
    ]
   },
   {
@@ -3275,7 +3238,7 @@
    "cover": "https://image.aladin.co.kr/product/36028/57/cover500/k502037123_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360285729",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -3309,7 +3272,7 @@
    "cover": "https://image.aladin.co.kr/product/11797/31/cover500/895312963x_1.jpg",
    "publisher": "두란노서원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=117973148",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 목회/신학",
@@ -3342,7 +3305,7 @@
    "cover": "https://image.aladin.co.kr/product/17718/45/cover500/8936513265_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=177184523",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -3373,7 +3336,7 @@
    "cover": "https://image.aladin.co.kr/product/17560/38/cover500/8936513192_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=175603868",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -3407,7 +3370,7 @@
    "cover": "https://image.aladin.co.kr/product/7492/5/cover500/8934975954_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=74920583",
-   "field": "경제경영",
+   "field": "일·경영",
    "tags": [
     "기업/경영자 스토리",
     "국외 기업/경영자",
@@ -3429,9 +3392,9 @@
     17,
     1,
     48,
+    75,
     93,
-    115,
-    32
+    115
    ]
   },
   {
@@ -3441,7 +3404,7 @@
    "cover": "https://image.aladin.co.kr/product/37515/89/cover500/8966264964_1.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375158996",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "OS/Networking",
     "네트워크 보안/해킹",
@@ -3475,7 +3438,7 @@
    "cover": "https://image.aladin.co.kr/product/28878/64/cover500/8966263364_1.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=288786463",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "프로그래밍 개발/방법론",
     "프로그래밍 기초/개발 방법론"
@@ -3492,10 +3455,10 @@
    "similar": [
     102,
     127,
-    12,
     17,
     88,
-    91
+    91,
+    96
    ]
   },
   {
@@ -3505,7 +3468,7 @@
    "cover": "https://image.aladin.co.kr/product/4958/83/cover500/8937834863_1.jpg",
    "publisher": "와이즈베리",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49588358",
-   "field": "인문학",
+   "field": "인문·심리",
    "tags": [
     "심리학/정신분석학",
     "뇌과학/인지심리학",
@@ -3524,9 +3487,9 @@
    "similar": [
     73,
     81,
-    126,
     128,
     153,
+    126,
     10
    ]
   },
@@ -3537,7 +3500,7 @@
    "cover": "https://image.aladin.co.kr/product/39702/10/cover500/k022130492_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=397021013",
-   "field": "소설/시/희곡",
+   "field": "문학",
    "tags": [
     "스페인/중남미소설",
     "세계의 문학",
@@ -3568,7 +3531,7 @@
    "cover": "https://image.aladin.co.kr/product/24682/84/cover500/k412631598_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=246828433",
-   "field": "인문학",
+   "field": "신앙",
    "tags": [
     "심리학/정신분석학",
     "교양 심리학",
@@ -3587,12 +3550,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    73,
-    128,
-    153,
     80,
     99,
-    108
+    117,
+    118,
+    119,
+    120
    ]
   },
   {
@@ -3602,7 +3565,7 @@
    "cover": "https://image.aladin.co.kr/product/37459/68/cover500/s312032723_1.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374596836",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "프로그래밍 개발/방법론",
     "프로그래밍 기초/개발 방법론"
@@ -3619,10 +3582,10 @@
    "similar": [
     102,
     123,
-    12,
     17,
     88,
-    91
+    91,
+    96
    ]
   },
   {
@@ -3632,7 +3595,7 @@
    "cover": "https://image.aladin.co.kr/product/34762/68/cover500/k342933922_1.jpg",
    "publisher": "북라이프",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=347626896",
-   "field": "인문학",
+   "field": "인문·심리",
    "tags": [
     "교양 인문학",
     "심리학/정신분석학",
@@ -3649,8 +3612,8 @@
    "addedAt": "",
    "similar": [
     73,
-    126,
     153,
+    126,
     10,
     13,
     14
@@ -3663,14 +3626,14 @@
    "cover": "https://image.aladin.co.kr/product/39952/0/cover500/k422130420_1.jpg",
    "publisher": "골든래빗(주)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399520031",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "프로그래밍 개발/방법론",
     "프로그래밍 기초/개발 방법론",
-    "공학계열",
-    "컴퓨터공학",
-    "알고리즘",
-    "컴퓨터 공학"
+    "컴퓨터 공학",
+    "소프트웨어 공학",
+    "자료구조/알고리즘",
+    "컴퓨터공학/전산학 개론"
    ],
    "sources": [
     {
@@ -3682,12 +3645,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    147,
-    154,
+    164,
+    165,
     96,
     97,
-    164,
-    165
+    110,
+    147
    ]
   },
   {
@@ -3697,7 +3660,7 @@
    "cover": "https://image.aladin.co.kr/product/2683/45/cover500/8932812942_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=26834557",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -3728,7 +3691,7 @@
    "cover": "https://image.aladin.co.kr/product/35197/33/cover500/k622934529_1.jpg",
    "publisher": "퍼스트펭귄",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351973338",
-   "field": "건강/취미",
+   "field": "에세이",
    "tags": [
     "건강정보",
     "건강에세이/건강정보",
@@ -3748,9 +3711,9 @@
     71,
     74,
     105,
-    70,
-    77,
-    101
+    6,
+    8,
+    11
    ]
   },
   {
@@ -3760,7 +3723,7 @@
    "cover": "https://image.aladin.co.kr/product/204/58/cover500/8904157528_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2045878",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -3811,7 +3774,7 @@
    "cover": "https://image.aladin.co.kr/product/31832/8/cover500/8953144965_1.jpg",
    "publisher": "두란노서원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=318320896",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -3842,7 +3805,7 @@
    "cover": "https://image.aladin.co.kr/product/32008/16/cover500/8953145139_1.jpg",
    "publisher": "두란노서원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320081658",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -3873,7 +3836,7 @@
    "cover": "https://image.aladin.co.kr/product/4140/69/cover500/8953120500_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=41406915",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -3905,7 +3868,7 @@
    "cover": "https://image.aladin.co.kr/product/13402/14/cover500/8953130581_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=134021436",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -3936,7 +3899,7 @@
    "cover": "https://image.aladin.co.kr/product/14983/19/cover500/8953131685_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=149831991",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -3967,7 +3930,7 @@
    "cover": "https://image.aladin.co.kr/product/5021/89/cover500/8953121213_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=50218970",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 목회/신학",
@@ -4000,7 +3963,7 @@
    "cover": "https://image.aladin.co.kr/product/5987/9/cover500/8953122147_1.jpg",
    "publisher": "두란노서원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=59870938",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -4032,7 +3995,7 @@
    "cover": "https://image.aladin.co.kr/product/10904/21/cover500/8953128285_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=109042167",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -4066,7 +4029,7 @@
    "cover": "https://image.aladin.co.kr/product/13119/67/cover500/8953130298_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=131196721",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 목회/신학",
@@ -4098,7 +4061,7 @@
    "cover": "https://image.aladin.co.kr/product/12370/32/cover500/895312994x_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=123703299",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -4129,7 +4092,7 @@
    "cover": "https://image.aladin.co.kr/product/35987/7/cover500/8953150418_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=359870768",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -4160,7 +4123,7 @@
    "cover": "https://image.aladin.co.kr/product/3332/59/cover500/8953119901_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=33325998",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -4196,7 +4159,7 @@
    "cover": "https://image.aladin.co.kr/product/8716/84/cover500/8953125782_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=87168498",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -4229,14 +4192,14 @@
    "cover": "https://image.aladin.co.kr/product/24549/58/cover500/k822631873_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=245495826",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "컴퓨터 공학",
     "자료구조/알고리즘",
-    "공학계열",
-    "컴퓨터공학",
-    "알고리즘",
-    "프로그래밍 개발/방법론"
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론",
+    "프로그래밍 언어",
+    "파이썬"
    ],
    "sources": [
     {
@@ -4251,9 +4214,9 @@
     129,
     154,
     164,
-    165,
     96,
-    97
+    97,
+    102
    ]
   },
   {
@@ -4283,7 +4246,7 @@
    "cover": "https://image.aladin.co.kr/product/18685/93/cover500/k782635664_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=186859354",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -4316,7 +4279,7 @@
    "cover": "https://image.aladin.co.kr/product/10565/45/cover500/k312530435_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=105654566",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -4350,7 +4313,7 @@
    "cover": "https://image.aladin.co.kr/product/2199/82/cover500/8936509527_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=21998282",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -4381,7 +4344,7 @@
    "cover": "https://image.aladin.co.kr/product/15151/34/cover500/8953131499_1.jpg",
    "publisher": "두란노서원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=151513445",
-   "field": "종교/역학",
+   "field": "신앙",
    "tags": [
     "기독교(개신교)",
     "기독교(개신교) 신앙생활",
@@ -4412,7 +4375,7 @@
    "cover": "https://image.aladin.co.kr/product/32054/88/cover500/k652834687_1.jpg",
    "publisher": "마인드빌딩",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320548892",
-   "field": "인문학",
+   "field": "인문·심리",
    "tags": [
     "심리학/정신분석학",
     "교양 심리학",
@@ -4430,12 +4393,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
+    34,
+    59,
     73,
-    126,
+    108,
     128,
-    0,
-    1,
-    4
+    0
    ]
   },
   {
@@ -4445,14 +4408,14 @@
    "cover": "https://image.aladin.co.kr/product/29089/24/cover500/k212837767_1.jpg",
    "publisher": "한빛미디어",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=290892473",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "프로그래밍 개발/방법론",
     "객체지향 프로그래밍/UML",
-    "공학계열",
-    "컴퓨터공학",
-    "컴퓨터공학/전산학 개론",
-    "컴퓨터 공학"
+    "컴퓨터 공학",
+    "소프트웨어 공학",
+    "프로그래밍 기초/개발 방법론",
+    "프로그래밍 언어"
    ],
    "sources": [
     {
@@ -4464,12 +4427,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
+    97,
+    96,
     129,
     147,
-    165,
-    97,
-    88,
-    96
+    164,
+    165
    ]
   },
   {
@@ -4519,7 +4482,7 @@
    "cover": "https://image.aladin.co.kr/product/87/27/cover500/8971724471_2.jpg",
    "publisher": "더클래식",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=872721",
-   "field": "외국어",
+   "field": "",
    "tags": [
     "영어독해"
    ],
@@ -4543,7 +4506,7 @@
    "cover": "https://image.aladin.co.kr/product/741/54/cover500/8991268803_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=7415431",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "프로그래밍 개발/방법론",
     "프로그래밍 기초/개발 방법론"
@@ -4558,12 +4521,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    12,
     17,
     88,
     91,
     96,
-    97
+    97,
+    102
    ]
   },
   {
@@ -4573,7 +4536,7 @@
    "cover": "https://image.aladin.co.kr/product/880/10/cover500/8949707314_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=8801063",
-   "field": "소설/시/희곡",
+   "field": "문학",
    "tags": [
     "영미소설",
     "서양고전문학",
@@ -4668,8 +4631,8 @@
     92,
     5,
     69,
-    75,
-    82
+    82,
+    95
    ]
   },
   {
@@ -4699,7 +4662,7 @@
    "cover": "https://image.aladin.co.kr/product/31975/62/cover500/k242834363_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=319756283",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "컴퓨터 공학",
     "자료구조/알고리즘",
@@ -4718,12 +4681,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
+    129,
     96,
     97,
-    110,
-    129,
     147,
-    12
+    154,
+    165
    ]
   },
   {
@@ -4733,14 +4696,13 @@
    "cover": "https://image.aladin.co.kr/product/36167/97/cover500/k622038191_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361679771",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "컴퓨터 공학",
     "소프트웨어 공학",
-    "공학계열",
-    "컴퓨터공학",
-    "운영체제/소프트웨어 공학",
-    "컴퓨터공학/전산학 개론"
+    "컴퓨터공학/전산학 개론",
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론"
    ],
    "sources": [
     {
@@ -4752,12 +4714,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    154,
-    110,
     129,
-    147,
-    18,
-    32
+    96,
+    97,
+    154,
+    164,
+    110
    ]
   },
   {
@@ -4787,7 +4749,7 @@
    "cover": "https://image.aladin.co.kr/product/23618/61/cover500/k932638523_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=236186172",
-   "field": "컴퓨터/모바일",
+   "field": "개발",
    "tags": [
     "프로그래밍 개발/방법론",
     "프로그래밍 기초/개발 방법론",
@@ -4804,7 +4766,7 @@
    "addedAt": "",
    "similar": [
     88,
-    12,
+    154,
     17,
     91,
     96,
