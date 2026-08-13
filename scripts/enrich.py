@@ -25,11 +25,15 @@ def norm(s):
     return s.lower()
 
 
+HINTS = json.loads((REPO / "data" / "search-hints.json").read_text()) if (REPO / "data" / "search-hints.json").exists() else {}
+
+
 def short(title):
     """부제와 기호를 떼어 검색어를 줄인다. 원제와 같으면 빈 문자열."""
     t = re.split(r"[:：]", title)[0]
-    t = re.sub(r"\([^)]*\)", " ", t)
+    t = re.sub(r"\([^)]*\)|\[[^\]]*\]", " ", t)
     t = re.sub(r"[&/·,]", " ", t)
+    t = re.sub(r"\s*\d+\s*권$", "", t)
     t = " ".join(t.split())
     return "" if t == title else t
 
@@ -40,9 +44,11 @@ def fetch(title):
     with urllib.request.urlopen(req, timeout=20) as r:
         html = r.read().decode("utf-8", "replace")
 
-    # 검색 결과는 ss_book_box 단위. 첫 상자에서 제목·저자·표지를 뽑는다.
+    # 검색 결과는 ss_book_box 단위. 여러 상자를 보고 제목이 가장 잘 맞는 것을 고른다.
+    # (첫 상자만 보면 "노트의 품격" 을 찾는데 "어른의 품격을 채우는 100일 필사 노트" 가 잡힌다)
     boxes = html.split("ss_book_box")[1:]
-    for box in boxes[:3]:
+    cands = []
+    for box in boxes[:6]:
         # 속성 순서가 페이지마다 달라서 태그를 먼저 잡고 href 를 그 안에서 찾는다
         m = re.search(r"<a([^>]*bo3[^>]*)>(.*?)</a>", box, re.S)
         if not m:
@@ -53,14 +59,28 @@ def fetch(title):
         cover = re.search(r"https://image\.aladin\.co\.kr/product/\d+/\d+/cover\w*/[^\"']+?\.jpg", box)
         authors = re.findall(r"AuthorSearch[^>]*>([^<]+)</a>", box)
         pub = re.search(r"PublisherSearch[^>]*>([^<]+)</a>", box)
-        return {
+        cands.append({
             "title": found,
             "author": ", ".join(a.strip() for a in authors[:2]),
             "publisher": (pub.group(1).strip() if pub else ""),
             "cover": (cover.group(0).replace("cover200", "cover500") if cover else ""),
             "aladin": ("https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=" + item.group(1)) if item else "",
-        }
-    return None
+        })
+
+    if not cands:
+        return None
+
+    want = norm(title)
+    def score(c):
+        r = SequenceMatcher(None, want, norm(c["title"])).ratio()
+        # 찾는 제목이 결과 제목에 통째로 들어가면 부제가 붙은 같은 책으로 본다
+        if want and want in norm(c["title"]):
+            r = max(r, 0.85)
+        return r
+
+    best = max(cands, key=score)
+    best["match"] = round(score(best), 2)
+    return best
 
 
 def main():
@@ -82,8 +102,10 @@ def main():
     for i, b in enumerate(todo, 1):
         title = b["title"]
         got = None
-        for attempt in (title, short(title)):
-            if not attempt or (got and not got.get("uncertain")):
+        for attempt in (HINTS.get(title, ""), title, short(title)):
+            if not attempt:
+                continue          # 손으로 정한 검색어가 없을 뿐이니 다음 후보로
+            if got and not got.get("uncertain"):
                 break
             try:
                 cand = fetch(attempt)
@@ -92,9 +114,7 @@ def main():
                 cand = None
             if not cand:
                 continue
-            score = SequenceMatcher(None, norm(title), norm(cand["title"])).ratio()
-            cand["match"] = round(score, 2)
-            if score < 0.6:
+            if cand["match"] < 0.6:
                 cand["uncertain"] = True
             if not got or cand["match"] > got.get("match", 0):
                 got = cand
