@@ -65,7 +65,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14
 .tab.on i{color:var(--acc)}
 .tab.empty{color:var(--ink-3)}
 .bar{display:flex;align-items:center;gap:10px;padding:14px 0 4px;font-size:12.5px;color:var(--ink-3)}
-.bar select{margin-left:auto;border:1px solid var(--border);background:var(--surface);color:var(--muted);
+.bar select{border:1px solid var(--border);background:var(--surface);color:var(--muted);
             border-radius:7px;padding:4px 7px;font-family:inherit;font-size:12.5px;cursor:pointer}
 
 /* ── 책 그리드 ── */
@@ -109,6 +109,20 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14
 .where a,.where span{font-size:12.5px;color:var(--acc);text-decoration:none;border-bottom:1px solid transparent}
 .where a:hover{border-bottom-color:currentColor}
 .tnum{font-family:var(--mono);font-size:12.5px}
+.tags{display:flex;flex-wrap:wrap;gap:4px 0}
+.tags button{border:0;background:none;font-family:inherit;font-size:12.5px;color:var(--muted);
+             cursor:pointer;padding:0}
+.tags button:hover{color:var(--acc)}
+.tags button:not(:last-child)::after{content:'·';color:var(--ink-3);margin:0 7px}
+.simil{margin-top:18px}
+.simil h4{font-size:12.5px;color:var(--ink-3);font-weight:500;margin-bottom:9px}
+.simil-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;min-width:0}
+.simil-row button{border:0;background:none;padding:0;cursor:pointer;font-family:inherit;
+                  color:inherit;text-align:left;min-width:0}
+.simil-row .cv{width:100%}
+.simil-row .st{font-size:11px;line-height:1.3;margin-top:5px;color:var(--muted);letter-spacing:-.02em;
+               display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.simil-row button:hover .st{color:var(--text)}
 .close{margin-top:16px;width:100%;border:1px solid var(--border);background:var(--surface2);color:var(--muted);
        border-radius:9px;padding:9px;font-family:inherit;font-size:13px;cursor:pointer}
 .close:hover{color:var(--text);border-color:var(--line-strong)}
@@ -137,7 +151,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14
     <input class="search" id="q" type="search" placeholder="제목·저자 검색" autocomplete="off" />
     <nav class="tabs" id="tabs"></nav>
     <div class="bar">
-      <span id="shown"></span>
+      <span id="shown" style="margin-right:auto"></span>
+      <select id="field" aria-label="분야"><option value="">분야 전체</option></select>
       <select id="sort" aria-label="정렬">
         <option value="recent">최근 순</option>
         <option value="title">제목 순</option>
@@ -176,7 +191,7 @@ const placeholder = (b) =>
 const coverHTML = (b) =>
   b.cover ? `<img src="${esc(b.cover)}" alt="" loading="lazy" onerror="this.parentNode.innerHTML=this.dataset.ph" data-ph='${placeholder(b).replace(/'/g,"&#39;")}' />` : placeholder(b)
 
-const state = { filter: 'all', sort: 'recent', q: '' }
+const state = { filter: 'all', sort: 'recent', q: '', field: '' }
 let DATA = { books: [], services: [], updatedAt: '' }
 
 const monthLabel = (m) => (m ? m.replace(/^(\d{4})-(\d{2})$/, '$1년 $2월').replace('년 0', '년 ') : '')
@@ -190,6 +205,7 @@ function visible() {
   return DATA.books.filter((b) => {
     if (state.filter === 'none' && b.sources.length) return false
     if (state.filter !== 'all' && state.filter !== 'none' && !b.sources.some((s) => s.id === state.filter)) return false
+    if (state.field && b.field !== state.field) return false
     if (!q) return true
     return (b.title + ' ' + b.author + ' ' + b.englishTitle + ' ' + b.publisher).toLowerCase().includes(q)
   })
@@ -218,6 +234,7 @@ function render() {
 }
 
 function openBook(b) {
+  const simil = (b.similar || []).map((i) => DATA.books[i]).filter(Boolean).slice(0, 4)
   const where = b.sources.length
     ? b.sources.map((s) => s.link
         ? `<a href="${esc(s.link)}" target="_blank" rel="noopener">${esc(serviceName(s.id))}</a>`
@@ -236,8 +253,15 @@ function openBook(b) {
     <dl class="rows">
       <div class="row"><dt>어디에</dt><dd class="where">${where}</dd></div>
       <div class="row"><dt>읽음</dt><dd class="tnum">${b.read ? (monthLabel(b.readAt) || '읽음') : '아직'}</dd></div>
+      ${b.field ? `<div class="row"><dt>분야</dt><dd>${esc(b.field)}</dd></div>` : ''}
+      ${b.tags?.length ? `<div class="row"><dt>태그</dt><dd class="tags">${b.tags.map((t) => `<button data-tag="${esc(t)}">${esc(t)}</button>`).join('')}</dd></div>` : ''}
       ${b.aladin ? `<div class="row"><dt>책 정보</dt><dd class="where"><a href="${esc(b.aladin)}" target="_blank" rel="noopener">알라딘</a></dd></div>` : ''}
     </dl>
+    ${simil.length ? `<div class="simil"><h4>비슷한 책</h4><div class="simil-row">${simil.map((s) => `
+      <button data-go="${DATA.books.indexOf(s)}">
+        <div class="cv">${coverHTML(s)}</div>
+        <div class="st">${esc(s.title)}</div>
+      </button>`).join('')}</div></div>` : ''}
     <button class="close">닫기</button>`
   $('#sheet').classList.add('on')
 }
@@ -250,6 +274,20 @@ $('#grid').addEventListener('click', (e) => {
   if (el) openBook(DATA.books[+el.dataset.i])
 })
 $('#sheet').addEventListener('click', (e) => {
+  const tag = e.target.closest('[data-tag]')
+  if (tag) {
+    state.q = tag.dataset.tag
+    $('#q').value = state.q
+    closeBook()
+    render()
+    return
+  }
+  const go = e.target.closest('[data-go]')
+  if (go) {
+    openBook(DATA.books[+go.dataset.go])
+    $('#card').scrollTop = 0
+    return
+  }
   if (e.target === $('#sheet') || e.target.classList.contains('close')) closeBook()
 })
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBook() })
@@ -285,6 +323,9 @@ fetch('data/library.json?v=' + Date.now())
       const t = e.target.closest('.tab')
       if (t) { state.filter = t.dataset.f; render() }
     })
+    $('#field').innerHTML = '<option value="">분야 전체</option>' +
+      (d.fields || []).map((f) => `<option value="${esc(f.name)}">${esc(f.name)} ${f.count}</option>`).join('')
+    $('#field').addEventListener('change', (e) => { state.field = e.target.value; render() })
     $('#count').textContent = `${d.total}권`
     $('#updated').textContent = `${d.updatedAt} 갱신`
     if (!d.services.length) {

@@ -83,6 +83,10 @@ function loadSources() {
 const COVERS = join(repo, 'data', 'covers.json')
 const covers = existsSync(COVERS) ? JSON.parse(readFileSync(COVERS, 'utf8')) : {}
 
+// ---- 분야·태그 (scripts/categorize.py 가 만든 캐시) ----
+const CATS = join(repo, 'data', 'categories.json')
+const cats = existsSync(CATS) ? JSON.parse(readFileSync(CATS, 'utf8')) : {}
+
 // ---- 병합 ----
 const books = new Map() // key → 책
 
@@ -160,6 +164,14 @@ for (const book of books.values()) {
   if (!book.aladin) book.aladin = c.aladin || ''
 }
 
+// 분야·태그를 붙인다
+for (const book of books.values()) {
+  const c = cats[book.title]
+  if (!c) continue
+  if (!book.field) book.field = c.field || ''
+  if (!book.tags || !book.tags.length) book.tags = c.tags || []
+}
+
 // ---- 출력 ----
 const all = [...books.values()].map((b) => ({
   title: b.title,
@@ -168,6 +180,8 @@ const all = [...books.values()].map((b) => ({
   cover: b.cover || '',
   publisher: b.publisher || '',
   aladin: b.aladin || '',
+  field: b.field || '',
+  tags: b.tags || [],
   sources: b.sources,
   read: !!b.read,
   readAt: b.readAt || '',
@@ -182,6 +196,27 @@ all.sort((x, y) => {
   return x.title.localeCompare(y.title, 'ko')
 })
 
+// ---- 비슷한 책 ----
+// 화면에서 매번 재는 대신 여기서 미리 골라 둔다. 겹치는 것이 많을수록 높은 점수.
+const SCORE = { tag: 3, field: 2, author: 4, publisher: 1 }
+const firstAuthor = (a) => String(a || '').split(/[,;·]/)[0].trim()
+
+all.forEach((b, i) => {
+  const scored = []
+  for (let j = 0; j < all.length; j++) {
+    if (j === i) continue
+    const o = all[j]
+    let n = 0
+    for (const t of b.tags) if (o.tags.includes(t)) n += SCORE.tag
+    if (b.field && b.field === o.field) n += SCORE.field
+    if (b.author && firstAuthor(b.author) === firstAuthor(o.author)) n += SCORE.author
+    if (b.publisher && b.publisher === o.publisher) n += SCORE.publisher
+    if (n > 0) scored.push([n, j])
+  }
+  scored.sort((x, y) => y[0] - x[0])
+  b.similar = scored.slice(0, 6).map(([, j]) => j)
+})
+
 const used = new Set(all.flatMap((b) => b.sources.map((s) => s.id)))
 const services = [
   ...SERVICES.filter((s) => used.has(s.id)),
@@ -190,10 +225,17 @@ const services = [
     .map((id) => ({ id, name: id, kind: 'ebook' })),
 ].map((s) => ({ ...s, count: all.filter((b) => b.sources.some((x) => x.id === s.id)).length }))
 
+const fieldCount = {}
+for (const b of all) if (b.field) fieldCount[b.field] = (fieldCount[b.field] || 0) + 1
+const fields = Object.entries(fieldCount)
+  .sort((a, b) => b[1] - a[1])
+  .map(([name, count]) => ({ name, count }))
+
 const out = {
   updatedAt: new Date().toISOString().slice(0, 10),
   total: all.length,
   services,
+  fields,
   books: all,
 }
 writeFileSync(OUT, JSON.stringify(out, null, 1) + '\n')

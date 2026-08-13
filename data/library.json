@@ -27,6 +27,68 @@
    "count": 2
   }
  ],
+ "fields": [
+  {
+   "name": "컴퓨터/모바일",
+   "count": 30
+  },
+  {
+   "name": "자기계발",
+   "count": 28
+  },
+  {
+   "name": "종교/역학",
+   "count": 28
+  },
+  {
+   "name": "인문학",
+   "count": 17
+  },
+  {
+   "name": "소설/시/희곡",
+   "count": 13
+  },
+  {
+   "name": "에세이",
+   "count": 10
+  },
+  {
+   "name": "경제경영",
+   "count": 9
+  },
+  {
+   "name": "건강/취미",
+   "count": 7
+  },
+  {
+   "name": "예술/대중문화",
+   "count": 3
+  },
+  {
+   "name": "여행",
+   "count": 3
+  },
+  {
+   "name": "과학",
+   "count": 3
+  },
+  {
+   "name": "사회과학",
+   "count": 2
+  },
+  {
+   "name": "역사",
+   "count": 1
+  },
+  {
+   "name": "요리/살림",
+   "count": 1
+  },
+  {
+   "name": "외국어",
+   "count": 1
+  }
+ ],
  "books": [
   {
    "title": "그만 배우기의 기술",
@@ -35,10 +97,23 @@
    "cover": "https://image.aladin.co.kr/product/38541/58/cover500/k812135439_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385415808",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-06",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    4,
+    5,
+    33,
+    34,
+    37,
+    38
+   ]
   },
   {
    "title": "더 기버 1",
@@ -47,10 +122,27 @@
    "cover": "https://image.aladin.co.kr/product/38959/46/cover500/k762137312_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=389594657",
+   "field": "경제경영",
+   "tags": [
+    "기업 경영",
+    "경영전략/혁신",
+    "마케팅/세일즈",
+    "마케팅/브랜드",
+    "성공",
+    "성공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-06",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    48,
+    35,
+    93,
+    121,
+    0,
+    4
+   ]
   },
   {
    "title": "디자인 구구단",
@@ -59,10 +151,27 @@
    "cover": "https://image.aladin.co.kr/product/34360/88/cover500/k182932901_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=343608885",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "그래픽/멀티미디어",
+    "그래픽 일반",
+    "디자인/공예",
+    "디자인이론/비평/역사",
+    "디자인이야기/디자이너/디자인 실기",
+    "웹디자인/홈페이지"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-06",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    62,
+    9,
+    12,
+    17,
+    18,
+    28
+   ]
   },
   {
    "title": "횡설수설하지 않고 정확하게 설명하는 법",
@@ -71,10 +180,27 @@
    "cover": "https://image.aladin.co.kr/product/33117/27/cover500/k122937122_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=331172752",
+   "field": "자기계발",
+   "tags": [
+    "협상/설득/화술",
+    "화술",
+    "CEO/비즈니스맨을 위한 능력계발",
+    "화술/협상/프레젠테이션",
+    "설득",
+    "협상"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-06",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    26,
+    27,
+    31,
+    29,
+    75,
+    9
+   ]
   },
   {
    "title": "누가 내 치즈를 옮겼을까?",
@@ -83,10 +209,23 @@
    "cover": "https://image.aladin.co.kr/product/5917/28/cover500/8980104804_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=59172854",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-05",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    0,
+    5,
+    33,
+    34,
+    37,
+    38
+   ]
   },
   {
    "title": "아주 작은 습관의 힘",
@@ -95,6 +234,15 @@
    "cover": "https://image.aladin.co.kr/product/37944/74/cover500/k672033454_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379447436",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학",
+    "시간관리/정보관리",
+    "시간관리",
+    "알라딘 독자 선정 올해의 책",
+    "2019년"
+   ],
    "sources": [
     {
      "id": "google",
@@ -103,7 +251,15 @@
    ],
    "read": true,
    "readAt": "2026-05",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    82,
+    92,
+    69,
+    0,
+    4,
+    33
+   ]
   },
   {
    "title": "이렇게 작지만 확실한 행복",
@@ -112,10 +268,23 @@
    "cover": "https://image.aladin.co.kr/product/34082/41/cover500/8970125930_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340824147",
+   "field": "에세이",
+   "tags": [
+    "사진/그림 에세이",
+    "외국에세이"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-05",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    58,
+    11,
+    45,
+    8,
+    30,
+    55
+   ]
   },
   {
    "title": "일의 기쁨과 슬픔",
@@ -124,10 +293,25 @@
    "cover": "https://image.aladin.co.kr/product/21292/13/cover500/8936438034_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=212921347",
+   "field": "소설/시/희곡",
+   "tags": [
+    "한국소설",
+    "2000년대 이후 한국소설",
+    "국내 문학상",
+    "창비신인소설상"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-05",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    15,
+    19,
+    56,
+    61,
+    63,
+    79
+   ]
   },
   {
    "title": "좋다고 하니까 나도 좋다",
@@ -136,10 +320,24 @@
    "cover": "https://image.aladin.co.kr/product/17860/2/cover500/8926366308_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=178600244",
+   "field": "에세이",
+   "tags": [
+    "한국에세이",
+    "명사에세이",
+    "문인에세이"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-05",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    57,
+    30,
+    89,
+    55,
+    100,
+    104
+   ]
   },
   {
    "title": "테크니컬 리더",
@@ -148,10 +346,27 @@
    "cover": "https://image.aladin.co.kr/product/2274/9/cover500/8966260659_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=22740964",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "e비즈니스/창업",
+    "디지털 문화",
+    "CEO/비즈니스맨을 위한 능력계발",
+    "간부학/리더십",
+    "리더십",
+    "e-비즈니스/온라인 창업"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-05",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    36,
+    32,
+    29,
+    12,
+    3,
+    35
+   ]
   },
   {
    "title": "건축가의 공간 일기",
@@ -160,10 +375,22 @@
    "cover": "https://image.aladin.co.kr/product/33990/7/cover500/k722930546_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=339900718",
+   "field": "인문학",
+   "tags": [
+    "교양 인문학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-04",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    13,
+    14,
+    40,
+    50,
+    78,
+    128
+   ]
   },
   {
    "title": "소란스러운 세상 속 혼자를 위한 책",
@@ -172,10 +399,23 @@
    "cover": "https://image.aladin.co.kr/product/26249/45/cover500/k572738481_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=262494588",
+   "field": "에세이",
+   "tags": [
+    "사진/그림 에세이",
+    "외국에세이"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-04",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    6,
+    45,
+    58,
+    8,
+    30,
+    55
+   ]
   },
   {
    "title": "와인버그에게 배우는 차곡차곡 글쓰기",
@@ -184,10 +424,25 @@
    "cover": "https://image.aladin.co.kr/product/35498/53/cover500/8966264662_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=354985363",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론",
+    "책읽기/글쓰기",
+    "글쓰기"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-04",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    17,
+    85,
+    88,
+    91,
+    96,
+    97
+   ]
   },
   {
    "title": "지적 대화를 위한 넓고 얕은 지식 2",
@@ -196,10 +451,22 @@
    "cover": "https://image.aladin.co.kr/product/22872/85/cover500/k912636841_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=228728501",
+   "field": "인문학",
+   "tags": [
+    "교양 인문학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-04",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    10,
+    14,
+    40,
+    50,
+    78,
+    128
+   ]
   },
   {
    "title": "철학은 날씨를 바꾼다",
@@ -208,10 +475,27 @@
    "cover": "https://image.aladin.co.kr/product/33148/4/cover500/8934971355_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=331480497",
+   "field": "인문학",
+   "tags": [
+    "교양 인문학",
+    "인문 에세이",
+    "철학 일반",
+    "교양 철학",
+    "외부/전문기관 추천도서",
+    "세종도서 교양부문 선정도서"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-04",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    78,
+    10,
+    13,
+    22,
+    40,
+    50
+   ]
   },
   {
    "title": "괴테는 모든 것을 말했다",
@@ -220,10 +504,27 @@
    "cover": "https://image.aladin.co.kr/product/39990/29/cover500/k822130836_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399902905",
+   "field": "소설/시/희곡",
+   "tags": [
+    "일본소설",
+    "1950년대 이후 일본소설",
+    "세계의 문학",
+    "일본문학",
+    "해외 문학상",
+    "아쿠타가와상"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-03",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    19,
+    56,
+    61,
+    79,
+    84,
+    107
+   ]
   },
   {
    "title": "대한민국 헌법",
@@ -232,10 +533,18 @@
    "cover": "https://image.aladin.co.kr/product/35585/77/cover500/k712036793_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355857744",
+   "field": "사회과학",
+   "tags": [
+    "법과 생활",
+    "헌법"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-03",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    53
+   ]
   },
   {
    "title": "데이터 과학자 원칙",
@@ -244,10 +553,27 @@
    "cover": "https://image.aladin.co.kr/product/31704/71/cover500/k982833687_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317047184",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론",
+    "기업 경영",
+    "경영전략/혁신",
+    "세무/재무/회계",
+    "기업/경영자 스토리"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-03",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    121,
+    12,
+    88,
+    91,
+    96,
+    97
+   ]
   },
   {
    "title": "미니멀리즘 프로그래머",
@@ -256,10 +582,27 @@
    "cover": "https://image.aladin.co.kr/product/38535/91/cover500/k092135330_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385359128",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "컴퓨터 공학",
+    "소프트웨어 공학",
+    "시간관리/정보관리",
+    "시간관리",
+    "취업/진로/유망직업",
+    "국내 진학/취업"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-03",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    96,
+    97,
+    32,
+    49,
+    51,
+    60
+   ]
   },
   {
    "title": "사람은 무엇으로 사는가",
@@ -268,10 +611,26 @@
    "cover": "https://image.aladin.co.kr/product/37686/72/cover500/8937464721_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=376867245",
+   "field": "소설/시/희곡",
+   "tags": [
+    "러시아소설",
+    "서양고전문학",
+    "서양근대문학",
+    "세계의 문학",
+    "러시아문학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-03",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    61,
+    109,
+    159,
+    79,
+    107,
+    15
+   ]
   },
   {
    "title": "실패는 나침반이다",
@@ -280,10 +639,22 @@
    "cover": "https://image.aladin.co.kr/product/33486/40/cover500/k992938254_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=334864077",
+   "field": "자기계발",
+   "tags": [
+    "행복론"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-03",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    153,
+    0,
+    3,
+    4,
+    5,
+    26
+   ]
   },
   {
    "title": "100일 글쓰기 곰사람 프로젝트",
@@ -292,10 +663,23 @@
    "cover": "https://image.aladin.co.kr/product/11160/18/cover500/k072531089_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=111601879",
+   "field": "인문학",
+   "tags": [
+    "책읽기/글쓰기",
+    "글쓰기"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-02",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    22,
+    23,
+    50,
+    12,
+    85,
+    83
+   ]
   },
   {
    "title": "글쓰기로 나를 찾다",
@@ -304,10 +688,24 @@
    "cover": "https://image.aladin.co.kr/product/11807/4/cover500/k552531429_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=118070490",
+   "field": "인문학",
+   "tags": [
+    "책읽기/글쓰기",
+    "글쓰기",
+    "인문 에세이"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-02",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    21,
+    23,
+    50,
+    12,
+    85,
+    14
+   ]
   },
   {
    "title": "글쓰기와 메타포",
@@ -316,10 +714,23 @@
    "cover": "https://image.aladin.co.kr/product/28376/87/cover500/k642835600_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=283768718",
+   "field": "인문학",
+   "tags": [
+    "책읽기/글쓰기",
+    "글쓰기"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-02",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    21,
+    22,
+    50,
+    12,
+    85,
+    83
+   ]
   },
   {
    "title": "내 인생을 빛내줄 스마트폰 사진",
@@ -328,10 +739,21 @@
    "cover": "https://image.aladin.co.kr/product/33995/2/cover500/k392930645_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=339950299",
+   "field": "예술/대중문화",
+   "tags": [
+    "사진",
+    "사진 실기",
+    "취미기타",
+    "사진/비디오 촬영"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-02",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    39,
+    44
+   ]
   },
   {
    "title": "논리적으로 말하는 테크닉",
@@ -340,10 +762,13 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "field": "",
+   "tags": [],
    "sources": [],
    "read": true,
    "readAt": "2026-02",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "모든 관계는 말투에서 시작된다",
@@ -352,10 +777,23 @@
    "cover": "https://image.aladin.co.kr/product/17251/48/cover500/8960863858_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=172514897",
+   "field": "자기계발",
+   "tags": [
+    "협상/설득/화술",
+    "화술"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-02",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    3,
+    27,
+    31,
+    0,
+    4,
+    5
+   ]
   },
   {
    "title": "이쁘게 말하는 당신이 좋다",
@@ -364,10 +802,23 @@
    "cover": "https://image.aladin.co.kr/product/16257/61/cover500/k672533245_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=162576111",
+   "field": "자기계발",
+   "tags": [
+    "협상/설득/화술",
+    "화술"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-02",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    3,
+    26,
+    31,
+    0,
+    4,
+    5
+   ]
   },
   {
    "title": "#100일챌린지",
@@ -376,10 +827,24 @@
    "cover": "https://image.aladin.co.kr/product/36769/7/cover500/8966264816_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=367690703",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "인공지능",
+    "성공",
+    "성공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-01",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    0,
+    1,
+    4,
+    5,
+    33,
+    34
+   ]
   },
   {
    "title": "대체 뭐가 문제야",
@@ -388,10 +853,24 @@
    "cover": "https://image.aladin.co.kr/product/2274/7/cover500/8966260667_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=22740732",
+   "field": "자기계발",
+   "tags": [
+    "창의적사고/두뇌계발",
+    "CEO/비즈니스맨을 위한 능력계발",
+    "성공학/경력관리"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-01",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    75,
+    9,
+    35,
+    3,
+    52,
+    92
+   ]
   },
   {
    "title": "요리를 한다는 것",
@@ -400,10 +879,25 @@
    "cover": "https://image.aladin.co.kr/product/36568/61/cover500/k872039245_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=365686101",
+   "field": "에세이",
+   "tags": [
+    "명사에세이",
+    "기타 명사에세이",
+    "음식에세이",
+    "한국에세이"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-01",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    8,
+    57,
+    89,
+    55,
+    100,
+    46
+   ]
   },
   {
    "title": "우주인들이 인간관계로 스트레스받을 때 우주정거장에서 가장 많이 읽은 대화책",
@@ -412,10 +906,24 @@
    "cover": "https://image.aladin.co.kr/product/27757/1/cover500/8950996944_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=277570173",
+   "field": "자기계발",
+   "tags": [
+    "협상/설득/화술",
+    "화술",
+    "인간관계"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-01",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    3,
+    26,
+    27,
+    34,
+    59,
+    108
+   ]
   },
   {
    "title": "일 잘하는 엔지니어의 생각 기법",
@@ -424,10 +932,27 @@
    "cover": "https://image.aladin.co.kr/product/37840/18/cover500/k512033705_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=378401803",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "컴퓨터 공학",
+    "소프트웨어 공학",
+    "기업 경영",
+    "조직/인력/성과관리",
+    "CEO/비즈니스맨을 위한 능력계발",
+    "간부학/리더십"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-01",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    9,
+    18,
+    49,
+    51,
+    60,
+    96
+   ]
   },
   {
    "title": "진짜 좋아하는 일만 하고 사는 법",
@@ -436,10 +961,23 @@
    "cover": "https://image.aladin.co.kr/product/33280/38/cover500/k432938978_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332803864",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2026-01",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    0,
+    4,
+    5,
+    34,
+    37,
+    38
+   ]
   },
   {
    "title": "노 하드 필링스",
@@ -448,10 +986,25 @@
    "cover": "https://image.aladin.co.kr/product/18828/9/cover500/8968061513_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=188280906",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학",
+    "인간관계",
+    "교양심리학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-12",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    59,
+    108,
+    0,
+    4,
+    5,
+    33
+   ]
   },
   {
    "title": "데이터 문해력",
@@ -460,10 +1013,27 @@
    "cover": "https://image.aladin.co.kr/product/26565/83/cover500/8965402913_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=265658321",
+   "field": "경제경영",
+   "tags": [
+    "CEO/비즈니스맨을 위한 능력계발",
+    "성공학/경력관리",
+    "트렌드/미래전망",
+    "인공지능/빅데이터",
+    "성공",
+    "성공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-12",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    1,
+    0,
+    4,
+    5,
+    28,
+    29
+   ]
   },
   {
    "title": "리크루터의 채용 실무 가이드",
@@ -472,10 +1042,27 @@
    "cover": "https://image.aladin.co.kr/product/31733/79/cover500/k012833095_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317337987",
+   "field": "경제경영",
+   "tags": [
+    "기업 경영",
+    "조직/인력/성과관리",
+    "e-비즈니스",
+    "리더십",
+    "e비즈니스/창업",
+    "e-비즈니스/온라인 창업"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-12",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    9,
+    86,
+    32,
+    1,
+    48,
+    93
+   ]
   },
   {
    "title": "실패를 생각하지 않는 연습",
@@ -484,10 +1071,25 @@
    "cover": "https://image.aladin.co.kr/product/34426/19/cover500/k812932026_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=344261992",
+   "field": "자기계발",
+   "tags": [
+    "힐링",
+    "마음 다스리기",
+    "성공",
+    "성공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-12",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    0,
+    4,
+    5,
+    33,
+    34,
+    38
+   ]
   },
   {
    "title": "애플에서는 단순하게 일합니다",
@@ -496,10 +1098,23 @@
    "cover": "https://image.aladin.co.kr/product/34040/97/cover500/8925574977_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340409751",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-11",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    0,
+    4,
+    5,
+    33,
+    34,
+    37
+   ]
   },
   {
    "title": "에디토리얼 씽킹",
@@ -508,10 +1123,27 @@
    "cover": "https://image.aladin.co.kr/product/32776/97/cover500/k502936287_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=327769788",
+   "field": "예술/대중문화",
+   "tags": [
+    "예술/대중문화의 이해",
+    "미학/예술이론",
+    "마케팅/세일즈",
+    "마케팅/브랜드",
+    "CEO/비즈니스맨을 위한 능력계발",
+    "기획/정보/문서관리"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-11",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    1,
+    48,
+    75,
+    121,
+    3,
+    9
+   ]
   },
   {
    "title": "완벽에 관하여",
@@ -520,10 +1152,22 @@
    "cover": "https://image.aladin.co.kr/product/33809/20/cover500/k062930585_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=338092098",
+   "field": "인문학",
+   "tags": [
+    "교양 인문학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-11",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    10,
+    13,
+    14,
+    50,
+    78,
+    128
+   ]
   },
   {
    "title": "일을 잘한다는 것",
@@ -532,10 +1176,23 @@
    "cover": "https://image.aladin.co.kr/product/26023/31/cover500/8901248166_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=260233162",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-11",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    0,
+    4,
+    5,
+    33,
+    34,
+    37
+   ]
   },
   {
    "title": "자기만의 트랙",
@@ -544,10 +1201,23 @@
    "cover": "https://image.aladin.co.kr/product/30908/56/cover500/k472831588_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=309085697",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-11",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    0,
+    4,
+    5,
+    33,
+    34,
+    37
+   ]
   },
   {
    "title": "The Tech Resume Inside Out",
@@ -556,10 +1226,13 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "field": "",
+   "tags": [],
    "sources": [],
    "read": true,
    "readAt": "2025-10",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "그림들",
@@ -568,10 +1241,23 @@
    "cover": "https://image.aladin.co.kr/product/29110/98/cover500/k052837263_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=291109856",
+   "field": "예술/대중문화",
+   "tags": [
+    "미술",
+    "화집",
+    "예술에세이",
+    "미술에세이",
+    "미술 이야기"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-09",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    45,
+    24,
+    39
+   ]
   },
   {
    "title": "나는 메트로폴리탄 미술관의 경비원입니다",
@@ -580,10 +1266,26 @@
    "cover": "https://image.aladin.co.kr/product/37231/18/cover500/8901297450_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372311844",
+   "field": "에세이",
+   "tags": [
+    "외국에세이",
+    "예술에세이",
+    "미술에세이",
+    "미술",
+    "미술 이야기"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-09",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    44,
+    6,
+    11,
+    58,
+    8,
+    30
+   ]
   },
   {
    "title": "뉴욕에게 묻다",
@@ -592,10 +1294,26 @@
    "cover": "https://image.aladin.co.kr/product/17675/63/cover500/k972534610_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=176756346",
+   "field": "여행",
+   "tags": [
+    "미국여행",
+    "미국여행 에세이",
+    "여행에세이",
+    "해외여행에세이",
+    "한국에세이"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-09",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    64,
+    8,
+    30,
+    47,
+    55,
+    57
+   ]
   },
   {
    "title": "뉴욕은 어떻게 뉴욕이 됐을까?",
@@ -604,10 +1322,20 @@
    "cover": "https://image.aladin.co.kr/product/32091/45/cover500/k162834197_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320914582",
+   "field": "역사",
+   "tags": [
+    "아메리카사",
+    "미국/캐나다사",
+    "미국여행",
+    "미국여행 가이드북"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-09",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    46
+   ]
   },
   {
    "title": "디테일의 발견",
@@ -616,10 +1344,27 @@
    "cover": "https://image.aladin.co.kr/product/31088/38/cover500/k742831839_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310883870",
+   "field": "경제경영",
+   "tags": [
+    "기업 경영",
+    "경영전략/혁신",
+    "마케팅/세일즈",
+    "마케팅/브랜드",
+    "기획/보고",
+    "기획"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-09",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    1,
+    93,
+    121,
+    17,
+    39,
+    36
+   ]
   },
   {
    "title": "함께 자라기",
@@ -628,6 +1373,14 @@
    "cover": "https://image.aladin.co.kr/product/17597/74/cover500/8966262333_1.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=175977462",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "컴퓨터 공학",
+    "소프트웨어 공학",
+    "외부/전문기관 추천도서",
+    "한국출판문화산업진흥원 우수출..",
+    "2018년"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -636,7 +1389,15 @@
    ],
    "read": true,
    "readAt": "2025-09",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    110,
+    18,
+    32,
+    51,
+    60,
+    96
+   ]
   },
   {
    "title": "노트의 품격",
@@ -645,10 +1406,24 @@
    "cover": "https://image.aladin.co.kr/product/15683/56/cover500/k112533130_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=156835614",
+   "field": "인문학",
+   "tags": [
+    "교양 인문학",
+    "책읽기/글쓰기",
+    "글쓰기"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-08",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    21,
+    22,
+    23,
+    12,
+    85,
+    10
+   ]
   },
   {
    "title": "린 소프트웨어 개발",
@@ -657,10 +1432,23 @@
    "cover": "https://image.aladin.co.kr/product/97/91/cover500/8991268099_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=979171",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "컴퓨터 공학",
+    "소프트웨어 공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-08",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    18,
+    32,
+    49,
+    60,
+    96,
+    97
+   ]
   },
   {
    "title": "실용주의 사고와 학습",
@@ -669,10 +1457,22 @@
    "cover": "https://image.aladin.co.kr/product/6872/94/cover500/k832434173_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=68729431",
+   "field": "자기계발",
+   "tags": [
+    "창의적사고/두뇌계발"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-08",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    29,
+    75,
+    92,
+    94,
+    0,
+    3
+   ]
   },
   {
    "title": "안다는 착각",
@@ -681,10 +1481,19 @@
    "cover": "https://image.aladin.co.kr/product/34795/55/cover500/k762933228_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=347955545",
+   "field": "사회과학",
+   "tags": [
+    "정치학/외교학/행정학",
+    "각국정치사정/정치사",
+    "미국"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-08",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    16
+   ]
   },
   {
    "title": "완벽한 선택은 없다",
@@ -693,10 +1502,23 @@
    "cover": "https://image.aladin.co.kr/product/36412/40/cover500/k392039891_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364124045",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-08",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    0,
+    4,
+    5,
+    33,
+    34,
+    37
+   ]
   },
   {
    "title": "INFJ 의사의 병원 일기",
@@ -705,10 +1527,22 @@
    "cover": "https://image.aladin.co.kr/product/36817/55/cover500/k322030103_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=368175533",
+   "field": "에세이",
+   "tags": [
+    "한국에세이"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-08",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    8,
+    30,
+    57,
+    89,
+    100,
+    46
+   ]
   },
   {
    "title": "내게 남은 스물다섯 번의 계절",
@@ -717,10 +1551,26 @@
    "cover": "https://image.aladin.co.kr/product/36387/54/cover500/k702039674_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=363875410",
+   "field": "소설/시/희곡",
+   "tags": [
+    "독일소설",
+    "세계의 문학",
+    "독일문학",
+    "테마문학",
+    "영화소설"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-07",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    107,
+    79,
+    159,
+    15,
+    19,
+    61
+   ]
   },
   {
    "title": "단 한 번의 삶",
@@ -729,10 +1579,27 @@
    "cover": "https://image.aladin.co.kr/product/36114/12/cover500/s602038067_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361141292",
+   "field": "에세이",
+   "tags": [
+    "한국에세이",
+    "명사에세이",
+    "문인에세이",
+    "알라딘 독자 선정 올해의 책",
+    "2025년",
+    "올해의 책 TOP 10"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-07",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    8,
+    30,
+    89,
+    104,
+    55,
+    100
+   ]
   },
   {
    "title": "달리기를 말할 때 내가 하고 싶은 이야기",
@@ -741,6 +1608,10 @@
    "cover": "https://image.aladin.co.kr/product/302/5/cover500/8970128336_3.jpg",
    "publisher": "문학사상",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=3020589",
+   "field": "에세이",
+   "tags": [
+    "외국에세이"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -749,7 +1620,15 @@
    ],
    "read": true,
    "readAt": "2025-07",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    6,
+    11,
+    45,
+    8,
+    30,
+    55
+   ]
   },
   {
    "title": "왜 나는 항상 결심만 할까?",
@@ -758,10 +1637,25 @@
    "cover": "https://image.aladin.co.kr/product/1781/7/cover500/8952766016_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=17810770",
+   "field": "자기계발",
+   "tags": [
+    "인간관계",
+    "교양심리학",
+    "성공",
+    "성공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-07",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    34,
+    108,
+    0,
+    4,
+    5,
+    33
+   ]
   },
   {
    "title": "무엇이 1등 팀을 만드는가?",
@@ -770,10 +1664,23 @@
    "cover": "https://image.aladin.co.kr/product/35307/22/cover500/k312035179_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353072248",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "컴퓨터 공학",
+    "소프트웨어 공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-06",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    18,
+    32,
+    49,
+    51,
+    96,
+    97
+   ]
   },
   {
    "title": "진홍색 연구",
@@ -782,10 +1689,27 @@
    "cover": "https://image.aladin.co.kr/product/4164/0/cover500/8976041488_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=41640064",
+   "field": "소설/시/희곡",
+   "tags": [
+    "추리/미스터리소설",
+    "영미 추리/미스터리소설",
+    "서양고전문학",
+    "서양근대문학",
+    "세계의 문학",
+    "영국문학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-05",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    159,
+    19,
+    109,
+    63,
+    79,
+    107
+   ]
   },
   {
    "title": "(사용자를) 생각하게 하지 마!",
@@ -794,10 +1718,26 @@
    "cover": "https://image.aladin.co.kr/product/4927/43/cover500/8966261213_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49274393",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "웹디자인/홈페이지",
+    "웹기획",
+    "그래픽/멀티미디어",
+    "그래픽 일반",
+    "웹디자인 기타"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-04",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    2,
+    9,
+    12,
+    17,
+    18,
+    28
+   ]
   },
   {
    "title": "그리고 아무도 없었다",
@@ -806,10 +1746,24 @@
    "cover": "https://image.aladin.co.kr/product/35/9/cover500/8938201015_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=350931",
+   "field": "소설/시/희곡",
+   "tags": [
+    "추리/미스터리소설",
+    "영미 추리/미스터리소설",
+    "영미소설"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-04",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    61,
+    159,
+    7,
+    15,
+    19,
+    56
+   ]
   },
   {
    "title": "나 홀로 유럽",
@@ -818,10 +1772,23 @@
    "cover": "https://image.aladin.co.kr/product/13686/32/cover500/k062532611_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=136863291",
+   "field": "여행",
+   "tags": [
+    "유럽여행",
+    "유럽여행 에세이",
+    "교양만화",
+    "실용만화",
+    "여행에세이",
+    "해외여행에세이"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-04",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    46,
+    66
+   ]
   },
   {
    "title": "모든 것은 예측 가능하다",
@@ -830,6 +1797,15 @@
    "cover": "https://image.aladin.co.kr/product/35493/29/cover500/k012035556_1.jpg",
    "publisher": "김영사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=354932983",
+   "field": "과학",
+   "tags": [
+    "기초과학/교양과학",
+    "뇌과학",
+    "뇌과학 일반",
+    "수학",
+    "쉽게 배우는 수학",
+    "확률/통계학"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -838,7 +1814,12 @@
    ],
    "read": true,
    "readAt": "2025-04",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    68,
+    103,
+    95
+   ]
   },
   {
    "title": "주문하신 대만 간식 나왔습니다",
@@ -847,6 +1828,13 @@
    "cover": "https://image.aladin.co.kr/product/33663/70/cover500/k882939627_1.jpg",
    "publisher": "책밥",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336637033",
+   "field": "여행",
+   "tags": [
+    "홍콩/대만/마카오여행",
+    "홍콩/대만/마카오여행 가이드북",
+    "테마여행",
+    "맛집여행"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -855,7 +1843,11 @@
    ],
    "read": true,
    "readAt": "2025-04",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    46,
+    64
+   ]
   },
   {
    "title": "80:20 학습법",
@@ -864,10 +1856,23 @@
    "cover": "https://image.aladin.co.kr/product/35577/46/cover500/k842036086_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355774608",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-03",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    0,
+    4,
+    5,
+    33,
+    34,
+    37
+   ]
   },
   {
    "title": "우리는 왜 잠을 자야할까",
@@ -876,10 +1881,26 @@
    "cover": "https://image.aladin.co.kr/product/18400/68/cover500/s652834191_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=184006846",
+   "field": "과학",
+   "tags": [
+    "의학",
+    "외부/전문기관 추천도서",
+    "한국과학창의재단 우수과학도서",
+    "2019년",
+    "대학/일반"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-03",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    103,
+    5,
+    14,
+    49,
+    78,
+    102
+   ]
   },
   {
    "title": "책 잘 읽는 방법",
@@ -888,10 +1909,25 @@
    "cover": "https://image.aladin.co.kr/product/13377/93/cover500/k082532104_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=133779316",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학",
+    "시간관리/정보관리",
+    "정보관리"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-03",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    92,
+    5,
+    82,
+    0,
+    4,
+    33
+   ]
   },
   {
    "title": "헬스는 쪼렙입니다만",
@@ -900,10 +1936,22 @@
    "cover": "https://image.aladin.co.kr/product/30655/42/cover500/8956994412_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=306554256",
+   "field": "건강/취미",
+   "tags": [
+    "헬스/피트니스"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-03",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    105,
+    101,
+    71,
+    74,
+    77,
+    131
+   ]
   },
   {
    "title": "현직 약사가 알려주는 영양제 특강",
@@ -912,10 +1960,25 @@
    "cover": "https://image.aladin.co.kr/product/32920/41/cover500/k902936837_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329204106",
+   "field": "건강/취미",
+   "tags": [
+    "건강정보",
+    "건강에세이/건강정보",
+    "질병치료와 예방",
+    "기타질병"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-03",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    74,
+    105,
+    131,
+    103,
+    70,
+    77
+   ]
   },
   {
    "title": "더 머니북",
@@ -924,10 +1987,23 @@
    "cover": "https://image.aladin.co.kr/product/34009/78/cover500/k772931867_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340097859",
+   "field": "경제경영",
+   "tags": [
+    "경제학/경제일반",
+    "화폐/금융/재정"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-02",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    1,
+    35,
+    36,
+    48,
+    86,
+    93
+   ]
   },
   {
    "title": "불안한 완벽주의자를 위한 책",
@@ -936,10 +2012,23 @@
    "cover": "https://image.aladin.co.kr/product/31478/24/cover500/k002832522_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=314782464",
+   "field": "인문학",
+   "tags": [
+    "심리학/정신분석학",
+    "교양 심리학"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-02",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    126,
+    128,
+    153,
+    81,
+    124,
+    10
+   ]
   },
   {
    "title": "비만코드",
@@ -948,10 +2037,24 @@
    "cover": "https://image.aladin.co.kr/product/39597/61/cover500/k862130770_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=395976130",
+   "field": "건강/취미",
+   "tags": [
+    "다이어트",
+    "건강정보",
+    "건강에세이/건강정보"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-02",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    105,
+    71,
+    131,
+    70,
+    77,
+    101
+   ]
   },
   {
    "title": "정리의 기술",
@@ -960,10 +2063,26 @@
    "cover": "https://image.aladin.co.kr/product/90/36/cover500/8995737069_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=903605",
+   "field": "자기계발",
+   "tags": [
+    "창의적사고/두뇌계발",
+    "CEO/비즈니스맨을 위한 능력계발",
+    "기획/정보/문서관리",
+    "시간관리/정보관리",
+    "정보관리"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-02",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    92,
+    94,
+    29,
+    69,
+    87,
+    162
+   ]
   },
   {
    "title": "그림으로 배우는 HTTP & Network Basics",
@@ -972,10 +2091,13 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "field": "",
+   "tags": [],
    "sources": [],
    "read": true,
    "readAt": "2025-01",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "아티스트의 탁구 노트",
@@ -984,10 +2106,23 @@
    "cover": "https://image.aladin.co.kr/product/7113/79/cover500/k842434790_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=71137981",
+   "field": "건강/취미",
+   "tags": [
+    "구기",
+    "기타"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-01",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    70,
+    71,
+    74,
+    101,
+    105,
+    131
+   ]
   },
   {
    "title": "어디서 살 것인가: 우리가 살고 싶은 곳의 기준을 바꾸다",
@@ -996,10 +2131,25 @@
    "cover": "https://image.aladin.co.kr/product/14799/66/cover500/8932473803_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=147996667",
+   "field": "인문학",
+   "tags": [
+    "교양 인문학",
+    "외부/전문기관 추천도서",
+    "청소년이 직접 추천하는 청소년..",
+    "2019"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2025-01",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    14,
+    10,
+    13,
+    40,
+    50,
+    128
+   ]
   },
   {
    "title": "어린 왕자(한글판)",
@@ -1008,6 +2158,15 @@
    "cover": "https://image.aladin.co.kr/product/6865/38/cover500/8998046660_1.jpg",
    "publisher": "더클래식",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=68653840",
+   "field": "소설/시/희곡",
+   "tags": [
+    "프랑스소설",
+    "서양고전문학",
+    "서양현대고전",
+    "세계의 문학",
+    "프랑스문학",
+    "테마문학"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1016,7 +2175,15 @@
    ],
    "read": true,
    "readAt": "2024-12",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    84,
+    107,
+    159,
+    19,
+    56,
+    61
+   ]
   },
   {
    "title": "오늘을 사는 이유",
@@ -1025,10 +2192,24 @@
    "cover": "https://image.aladin.co.kr/product/24012/11/cover500/8932817561_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=240121199",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "간증/영적성장"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2024-12",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    118,
+    137,
+    138,
+    139,
+    140,
+    141
+   ]
   },
   {
    "title": "죽음의 수용소에서",
@@ -1037,10 +2218,24 @@
    "cover": "https://image.aladin.co.kr/product/38224/38/cover500/8936812629_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382243812",
+   "field": "인문학",
+   "tags": [
+    "심리학/정신분석학",
+    "이론 심리학",
+    "인문 에세이"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2024-11",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    14,
+    22,
+    73,
+    124,
+    126,
+    128
+   ]
   },
   {
    "title": "1만 시간의 재발견",
@@ -1049,10 +2244,25 @@
    "cover": "https://image.aladin.co.kr/product/8632/15/cover500/k312535674_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86321510",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학",
+    "시간관리/정보관리",
+    "시간관리"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2024-10",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    5,
+    92,
+    69,
+    0,
+    4,
+    33
+   ]
   },
   {
    "title": "이동진 독서법",
@@ -1061,6 +2271,11 @@
    "cover": "https://image.aladin.co.kr/product/29563/46/cover500/k762837255_2.jpg",
    "publisher": "위즈덤하우스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=295634618",
+   "field": "인문학",
+   "tags": [
+    "책읽기/글쓰기",
+    "책읽기"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1069,7 +2284,15 @@
    ],
    "read": true,
    "readAt": "2024-09",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    94,
+    21,
+    22,
+    23,
+    50,
+    12
+   ]
   },
   {
    "title": "이방인",
@@ -1078,6 +2301,12 @@
    "cover": "https://image.aladin.co.kr/product/37480/63/cover500/k932032019_1.jpg",
    "publisher": "민음사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374806339",
+   "field": "소설/시/희곡",
+   "tags": [
+    "프랑스소설",
+    "세계의 문학",
+    "프랑스문학"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1086,7 +2315,15 @@
    ],
    "read": true,
    "readAt": "2024-09",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    79,
+    107,
+    15,
+    19,
+    56,
+    61
+   ]
   },
   {
    "title": "제텔카스텐",
@@ -1095,10 +2332,25 @@
    "cover": "https://image.aladin.co.kr/product/32221/5/cover500/8993784787_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=322210531",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "스마트폰/태블릿/SNS",
+    "SNS",
+    "책읽기/글쓰기",
+    "글쓰기"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2024-09",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    12,
+    21,
+    22,
+    23,
+    50,
+    83
+   ]
   },
   {
    "title": "피플웨어",
@@ -1107,10 +2359,23 @@
    "cover": "https://image.aladin.co.kr/product/4313/29/cover500/8966261108_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=43132954",
+   "field": "경제경영",
+   "tags": [
+    "기업 경영",
+    "조직/인력/성과관리"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2024-08",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    36,
+    32,
+    1,
+    48,
+    93,
+    121
+   ]
   },
   {
    "title": "딥 워크",
@@ -1119,10 +2384,24 @@
    "cover": "https://image.aladin.co.kr/product/10672/44/cover500/8937434083_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=106724468",
+   "field": "자기계발",
+   "tags": [
+    "시간관리/정보관리",
+    "시간관리",
+    "정보관리"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2024-06",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    92,
+    162,
+    5,
+    69,
+    75,
+    82
+   ]
   },
   {
    "title": "Tidy First?",
@@ -1131,10 +2410,24 @@
    "cover": "https://image.aladin.co.kr/product/33708/44/cover500/k472930471_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337084402",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론",
+    "객체지향 프로그래밍/UML"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2024-05",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    167,
+    12,
+    17,
+    91,
+    96,
+    97
+   ]
   },
   {
    "title": "내가 한 말을 내가 오해하지 않기로",
@@ -1143,10 +2436,24 @@
    "cover": "https://image.aladin.co.kr/product/33038/40/cover500/k562937688_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330384053",
+   "field": "에세이",
+   "tags": [
+    "명사에세이",
+    "방송연예인에세이",
+    "한국에세이"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2024-04",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    8,
+    30,
+    57,
+    55,
+    100,
+    46
+   ]
   },
   {
    "title": "가상 면접 사례로 배우는 머신러닝 시스템 설계 기초",
@@ -1155,10 +2462,24 @@
    "cover": "https://image.aladin.co.kr/product/33375/15/cover500/8966264352_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=333751539",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "인공지능",
+    "컴퓨터 공학",
+    "데이터베이스 개론"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2024-03",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    110,
+    164,
+    18,
+    28,
+    32,
+    49
+   ]
   },
   {
    "title": "개발자의 글쓰기",
@@ -1167,10 +2488,23 @@
    "cover": "https://image.aladin.co.kr/product/20957/29/cover500/k512636276_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=209572978",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2024-02",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    12,
+    17,
+    88,
+    96,
+    97,
+    102
+   ]
   },
   {
    "title": "거인의 노트",
@@ -1179,10 +2513,27 @@
    "cover": "https://image.aladin.co.kr/product/38221/28/cover500/k772034422_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382212819",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학",
+    "시간관리/정보관리",
+    "시간관리",
+    "정보관리",
+    "창의적사고/두뇌계발"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2024-02",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    5,
+    69,
+    82,
+    75,
+    87,
+    162
+   ]
   },
   {
    "title": "유난한 도전",
@@ -1191,6 +2542,11 @@
    "cover": "https://image.aladin.co.kr/product/30369/69/cover500/k822839859_1.jpg",
    "publisher": "북스톤",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=303696963",
+   "field": "경제경영",
+   "tags": [
+    "기업 경영",
+    "경영전략/혁신"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1199,7 +2555,15 @@
    ],
    "read": true,
    "readAt": "2023-12",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    1,
+    48,
+    121,
+    17,
+    36,
+    86
+   ]
   },
   {
    "title": "진작 이렇게 책을 읽었더라면",
@@ -1208,10 +2572,27 @@
    "cover": "https://image.aladin.co.kr/product/39164/94/cover500/k752138963_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=391649440",
+   "field": "인문학",
+   "tags": [
+    "책읽기/글쓰기",
+    "책읽기",
+    "시간관리/정보관리",
+    "정보관리",
+    "창의적사고/두뇌계발",
+    "청소년 인문/사회"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2023-04",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    75,
+    92,
+    83,
+    69,
+    87,
+    162
+   ]
   },
   {
    "title": "메이크 타임",
@@ -1220,6 +2601,11 @@
    "cover": "https://image.aladin.co.kr/product/18979/66/cover500/8934995254_1.jpg",
    "publisher": "김영사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=189796678",
+   "field": "자기계발",
+   "tags": [
+    "시간관리/정보관리",
+    "시간관리"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1228,7 +2614,15 @@
    ],
    "read": true,
    "readAt": "2022-10",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    5,
+    82,
+    87,
+    92,
+    162,
+    18
+   ]
   },
   {
    "title": "이팩티브 엔지니어",
@@ -1237,10 +2631,27 @@
    "cover": "https://image.aladin.co.kr/product/29689/33/cover500/k962838585_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=296893356",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "컴퓨터 공학",
+    "소프트웨어 공학",
+    "취업/진로/유망직업",
+    "국내 진학/취업",
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론"
+   ],
    "sources": [],
    "read": true,
    "readAt": "2022-07",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    97,
+    18,
+    164,
+    129,
+    12,
+    17
+   ]
   },
   {
    "title": "개발자를 넘어 기술 리더로 가는 길",
@@ -1249,6 +2660,15 @@
    "cover": "https://image.aladin.co.kr/product/31673/39/cover500/k032833674_1.jpg",
    "publisher": "한빛미디어",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=316733978",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "컴퓨터 공학",
+    "소프트웨어 공학",
+    "취업/진로/유망직업",
+    "국내 진학/취업",
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1257,7 +2677,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    96,
+    18,
+    164,
+    129,
+    154,
+    12
+   ]
   },
   {
    "title": "관계의 걸림돌 극복하기",
@@ -1266,6 +2694,12 @@
    "cover": "https://image.aladin.co.kr/product/10783/78/cover500/895312834x_1.jpg",
    "publisher": "두란노서원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=107837820",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 목회/신학",
+    "상담/치유"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1274,7 +2708,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    118,
+    111,
+    113,
+    120,
+    139,
+    141
+   ]
   },
   {
    "title": "그리스도인의 정체성",
@@ -1283,6 +2725,12 @@
    "cover": "https://image.aladin.co.kr/product/13941/21/cover500/8977823870_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=139412178",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "신앙생활일반"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1291,7 +2739,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    117,
+    119,
+    120,
+    132,
+    141,
+    149
+   ]
   },
   {
    "title": "기분이 태도가 되지 않게",
@@ -1300,6 +2756,12 @@
    "cover": "https://image.aladin.co.kr/product/37535/62/cover500/8901297841_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375356292",
+   "field": "에세이",
+   "tags": [
+    "한국에세이",
+    "인간관계",
+    "교양심리학"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1308,7 +2770,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    34,
+    59,
+    108,
+    8,
+    30,
+    55
+   ]
   },
   {
    "title": "남자 몸 만들기 4주 혁명",
@@ -1317,6 +2787,10 @@
    "cover": "https://image.aladin.co.kr/product/49/50/cover500/895757462x_1.jpg",
    "publisher": "랜덤하우스코리아",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=495064",
+   "field": "건강/취미",
+   "tags": [
+    "헬스/피트니스"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1325,7 +2799,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    70,
+    71,
+    74,
+    77,
+    105,
+    131
+   ]
   },
   {
    "title": "내 코드가 그렇게 이상한가요? [무료특별판]",
@@ -1334,6 +2816,15 @@
    "cover": "https://image.aladin.co.kr/product/31790/64/cover500/8966263992_1.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317906454",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론",
+    "프로그래밍 언어",
+    "프로그래밍 언어 기타",
+    "외부/전문기관 추천도서",
+    "세종도서 학술 선정도서"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1342,7 +2833,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    123,
+    127,
+    12,
+    17,
+    88,
+    91
+   ]
   },
   {
    "title": "내가 알던 사람",
@@ -1351,6 +2850,12 @@
    "cover": "https://image.aladin.co.kr/product/34558/45/cover500/k572933165_1.jpg",
    "publisher": "글항아리",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345584561",
+   "field": "과학",
+   "tags": [
+    "의학",
+    "질병치료와 예방",
+    "중풍과 치매"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1359,7 +2864,12 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    68,
+    71,
+    65
+   ]
   },
   {
    "title": "너무 잘하려고 애쓰지 마라",
@@ -1368,6 +2878,14 @@
    "cover": "https://image.aladin.co.kr/product/29566/59/cover500/k702837352_2.jpg",
    "publisher": "열림원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=295665964",
+   "field": "소설/시/희곡",
+   "tags": [
+    "시",
+    "한국시",
+    "알라딘 독자 선정 올해의 책",
+    "2022년",
+    "올해의 책 TOP 10"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1376,7 +2894,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    57,
+    8,
+    5,
+    7,
+    15,
+    19
+   ]
   },
   {
    "title": "다이어트의 정석",
@@ -1385,6 +2911,12 @@
    "cover": "https://image.aladin.co.kr/product/15831/44/cover500/895699336x_1.jpg",
    "publisher": "한문화",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=158314436",
+   "field": "건강/취미",
+   "tags": [
+    "다이어트",
+    "건강정보",
+    "건강에세이/건강정보"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1393,7 +2925,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    74,
+    71,
+    131,
+    70,
+    77,
+    101
+   ]
   },
   {
    "title": "더 나은 선택",
@@ -1402,6 +2942,8 @@
    "cover": "",
    "publisher": "규장",
    "aladin": "",
+   "field": "",
+   "tags": [],
    "sources": [
     {
      "id": "kyobo",
@@ -1410,7 +2952,8 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "데미안",
@@ -1419,6 +2962,15 @@
    "cover": "https://image.aladin.co.kr/product/26/0/cover500/s452139198_1.jpg",
    "publisher": "민음사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=260084",
+   "field": "소설/시/희곡",
+   "tags": [
+    "독일소설",
+    "서양고전문학",
+    "서양현대고전",
+    "위대한 작가들",
+    "세계의 문학",
+    "독일문학"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1431,7 +2983,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    56,
+    79,
+    19,
+    61,
+    109,
+    159
+   ]
   },
   {
    "title": "데일 카네기 인간관계론 (50만부 돌파 초판 무삭제 완역본)",
@@ -1440,6 +3000,14 @@
    "cover": "https://image.aladin.co.kr/product/20945/79/cover500/s652933016_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=209457983",
+   "field": "자기계발",
+   "tags": [
+    "인간관계",
+    "성공",
+    "성공학",
+    "교양심리학",
+    "남녀관계"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1448,7 +3016,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    34,
+    59,
+    0,
+    4,
+    5,
+    33
+   ]
   },
   {
    "title": "돈키호테",
@@ -1457,6 +3033,14 @@
    "cover": "https://image.aladin.co.kr/product/4922/52/cover500/8932916802_1.jpg",
    "publisher": "시공사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49225289",
+   "field": "소설/시/희곡",
+   "tags": [
+    "스페인/중남미소설",
+    "서양고전문학",
+    "서양근대문학",
+    "세계의 문학",
+    "스페인/중남미문학"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1465,7 +3049,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    19,
+    61,
+    125,
+    159,
+    79,
+    107
+   ]
   },
   {
    "title": "머신 러닝 마스터 클래스 (무료특별판)",
@@ -1474,6 +3066,15 @@
    "cover": "https://image.aladin.co.kr/product/35522/24/cover500/8966264638_2.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355222458",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "인공지능",
+    "컴퓨터 공학",
+    "소프트웨어 공학",
+    "자료구조/알고리즘",
+    "컴퓨터공학/전산학 개론",
+    "외부/전문기관 추천도서"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1482,7 +3083,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    49,
+    164,
+    165,
+    18,
+    32,
+    51
+   ]
   },
   {
    "title": "무신론 기자, 크리스천 과학자에게 따지다",
@@ -1491,6 +3100,12 @@
    "cover": "https://image.aladin.co.kr/product/4880/60/cover500/8932813752_1.jpg",
    "publisher": "IVP",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=48806011",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 목회/신학",
+    "신학일반"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1499,7 +3114,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    120,
+    142,
+    146,
+    98,
+    113,
+    118
+   ]
   },
   {
    "title": "백종원이 추천하는 집밥 메뉴 54",
@@ -1508,6 +3131,11 @@
    "cover": "https://image.aladin.co.kr/product/39356/43/cover500/k972138633_1.jpg",
    "publisher": "서울문화사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=393564333",
+   "field": "요리/살림",
+   "tags": [
+    "생활요리",
+    "전문가/연예인/블로거 요리"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1516,7 +3144,8 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "복음 안에서 발견한 참된 자유",
@@ -1525,6 +3154,12 @@
    "cover": "https://image.aladin.co.kr/product/34047/15/cover500/k792931279_1.jpg",
    "publisher": "복있는사람",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340471562",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 목회/신학",
+    "설교/성경연구"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1533,7 +3168,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    139,
+    141,
+    142,
+    146,
+    136,
+    137
+   ]
   },
   {
    "title": "부모님을 위한 컴퓨터 무작정 따라하기",
@@ -1542,6 +3185,11 @@
    "cover": "https://image.aladin.co.kr/product/30788/81/cover500/k382831366_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=307888132",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "PC/게임/디지털 카메라",
+    "초보자를 위한 컴퓨터 책"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1550,7 +3198,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    2,
+    9,
+    12,
+    17,
+    18,
+    28
+   ]
   },
   {
    "title": "빌드(BUILD) 창조의 과정",
@@ -1559,6 +3215,11 @@
    "cover": "https://image.aladin.co.kr/product/35109/65/cover500/k982934606_2.jpg",
    "publisher": "비즈니스북스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351096536",
+   "field": "경제경영",
+   "tags": [
+    "기업/경영자 스토리",
+    "국외 기업/경영자"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1567,7 +3228,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    121,
+    17,
+    1,
+    35,
+    36,
+    48
+   ]
   },
   {
    "title": "빠르게 실패하기",
@@ -1576,6 +3245,11 @@
    "cover": "https://image.aladin.co.kr/product/35301/77/cover500/k022035973_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353017744",
+   "field": "자기계발",
+   "tags": [
+    "성공",
+    "성공학"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1584,7 +3258,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    0,
+    4,
+    5,
+    33,
+    34,
+    37
+   ]
   },
   {
    "title": "새가족반",
@@ -1593,6 +3275,15 @@
    "cover": "https://image.aladin.co.kr/product/36028/57/cover500/k502037123_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360285729",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "신앙생활일반",
+    "기독교(개신교) 교회",
+    "성경공부교재",
+    "새신자"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1601,7 +3292,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    99,
+    119,
+    120,
+    132,
+    141,
+    149
+   ]
   },
   {
    "title": "성경으로 불안 극복하기",
@@ -1610,6 +3309,14 @@
    "cover": "https://image.aladin.co.kr/product/11797/31/cover500/895312963x_1.jpg",
    "publisher": "두란노서원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=117973148",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 목회/신학",
+    "상담/치유",
+    "기독교(개신교) 신앙생활",
+    "간증/영적성장"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1618,7 +3325,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    98,
+    139,
+    141,
+    146,
+    140,
+    152
+   ]
   },
   {
    "title": "순전한 기독교",
@@ -1627,6 +3342,12 @@
    "cover": "https://image.aladin.co.kr/product/17718/45/cover500/8936513265_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=177184523",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "신앙생활일반"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1635,7 +3356,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    120,
+    99,
+    117,
+    132,
+    141,
+    149
+   ]
   },
   {
    "title": "스크루테이프의 편지",
@@ -1644,6 +3373,15 @@
    "cover": "https://image.aladin.co.kr/product/17560/38/cover500/8936513192_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=175603868",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "신앙생활일반",
+    "기독교 문학",
+    "기독교(개신교) 목회/신학",
+    "신학일반"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1652,7 +3390,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    119,
+    141,
+    146,
+    99,
+    111,
+    117
+   ]
   },
   {
    "title": "스프린트",
@@ -1661,6 +3407,15 @@
    "cover": "https://image.aladin.co.kr/product/7492/5/cover500/8934975954_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=74920583",
+   "field": "경제경영",
+   "tags": [
+    "기업/경영자 스토리",
+    "국외 기업/경영자",
+    "기업 경영",
+    "경영전략/혁신",
+    "CEO/비즈니스맨을 위한 능력계발",
+    "기획/정보/문서관리"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1669,7 +3424,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    17,
+    1,
+    48,
+    93,
+    115,
+    32
+   ]
   },
   {
    "title": "시스템 성능 엔지니어링(무료특별판)",
@@ -1678,6 +3441,15 @@
    "cover": "https://image.aladin.co.kr/product/37515/89/cover500/8966264964_1.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375158996",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "OS/Networking",
+    "네트워크 보안/해킹",
+    "컴퓨터 공학",
+    "네트워크/데이터 통신",
+    "프로그래밍 개발/방법론",
+    "리눅스/유닉스 프로그래밍"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1686,7 +3458,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    96,
+    97,
+    129,
+    147,
+    154,
+    164
+   ]
   },
   {
    "title": "실용주의 프로그래머(20주년 기념판)",
@@ -1695,6 +3475,11 @@
    "cover": "https://image.aladin.co.kr/product/28878/64/cover500/8966263364_1.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=288786463",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1703,7 +3488,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    102,
+    127,
+    12,
+    17,
+    88,
+    91
+   ]
   },
   {
    "title": "어떻게 공부할 것인가",
@@ -1712,6 +3505,13 @@
    "cover": "https://image.aladin.co.kr/product/4958/83/cover500/8937834863_1.jpg",
    "publisher": "와이즈베리",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49588358",
+   "field": "인문학",
+   "tags": [
+    "심리학/정신분석학",
+    "뇌과학/인지심리학",
+    "교육학",
+    "교육 일반"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1720,7 +3520,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    73,
+    81,
+    126,
+    128,
+    153,
+    10
+   ]
   },
   {
    "title": "연금술사",
@@ -1729,6 +3537,12 @@
    "cover": "https://image.aladin.co.kr/product/39702/10/cover500/k022130492_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=397021013",
+   "field": "소설/시/희곡",
+   "tags": [
+    "스페인/중남미소설",
+    "세계의 문학",
+    "스페인/중남미문학"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1737,7 +3551,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    109,
+    15,
+    19,
+    56,
+    61,
+    79
+   ]
   },
   {
    "title": "연애 신학",
@@ -1746,6 +3568,15 @@
    "cover": "https://image.aladin.co.kr/product/24682/84/cover500/k412631598_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=246828433",
+   "field": "인문학",
+   "tags": [
+    "심리학/정신분석학",
+    "교양 심리학",
+    "인간관계",
+    "남녀관계",
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1754,7 +3585,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    73,
+    128,
+    153,
+    80,
+    99,
+    108
+   ]
   },
   {
    "title": "오래된 인터뷰, 개발자의 미래를 긷다 1 (무료특별판)",
@@ -1763,6 +3602,11 @@
    "cover": "https://image.aladin.co.kr/product/37459/68/cover500/s312032723_1.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374596836",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1771,7 +3615,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    102,
+    123,
+    12,
+    17,
+    88,
+    91
+   ]
   },
   {
    "title": "완벽이라는 중독",
@@ -1780,6 +3632,12 @@
    "cover": "https://image.aladin.co.kr/product/34762/68/cover500/k342933922_1.jpg",
    "publisher": "북라이프",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=347626896",
+   "field": "인문학",
+   "tags": [
+    "교양 인문학",
+    "심리학/정신분석학",
+    "교양 심리학"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1788,7 +3646,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    73,
+    126,
+    153,
+    10,
+    13,
+    14
+   ]
   },
   {
    "title": "요즘 우아한 개발",
@@ -1797,6 +3663,15 @@
    "cover": "https://image.aladin.co.kr/product/39952/0/cover500/k422130420_1.jpg",
    "publisher": "골든래빗(주)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399520031",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론",
+    "공학계열",
+    "컴퓨터공학",
+    "알고리즘",
+    "컴퓨터 공학"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1805,7 +3680,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    147,
+    154,
+    96,
+    97,
+    164,
+    165
+   ]
   },
   {
    "title": "위험한 기도",
@@ -1814,6 +3697,12 @@
    "cover": "https://image.aladin.co.kr/product/2683/45/cover500/8932812942_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=26834557",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "예배/기도/묵상(QT)"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1822,7 +3711,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    140,
+    80,
+    99,
+    117,
+    118,
+    119
+   ]
   },
   {
    "title": "자세를 펴면 인생이 펴집니다",
@@ -1831,6 +3728,13 @@
    "cover": "https://image.aladin.co.kr/product/35197/33/cover500/k622934529_1.jpg",
    "publisher": "퍼스트펭귄",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351973338",
+   "field": "건강/취미",
+   "tags": [
+    "건강정보",
+    "건강에세이/건강정보",
+    "건강운동",
+    "요가/체조/스트레칭"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1839,7 +3743,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    71,
+    74,
+    105,
+    70,
+    77,
+    101
+   ]
   },
   {
    "title": "제임스 패커의 하나님의 인도",
@@ -1848,6 +3760,12 @@
    "cover": "https://image.aladin.co.kr/product/204/58/cover500/8904157528_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2045878",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "신앙생활일반"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1856,7 +3774,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    99,
+    117,
+    119,
+    120,
+    141,
+    149
+   ]
   },
   {
    "title": "지적 대화를 위한 30분 고전",
@@ -1865,6 +3791,8 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "field": "",
+   "tags": [],
    "sources": [
     {
      "id": "ridi",
@@ -1873,7 +3801,8 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "크리스천의 성 토크",
@@ -1882,6 +3811,12 @@
    "cover": "https://image.aladin.co.kr/product/31832/8/cover500/8953144965_1.jpg",
    "publisher": "두란노서원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=318320896",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "사랑/결혼"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1890,7 +3825,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    135,
+    136,
+    118,
+    140,
+    152,
+    80
+   ]
   },
   {
    "title": "크리스천의 연애",
@@ -1899,6 +3842,12 @@
    "cover": "https://image.aladin.co.kr/product/32008/16/cover500/8953145139_1.jpg",
    "publisher": "두란노서원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320081658",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "사랑/결혼"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1907,7 +3856,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    134,
+    136,
+    118,
+    140,
+    152,
+    80
+   ]
   },
   {
    "title": "팀 켈러, 결혼을 말하다",
@@ -1916,6 +3873,13 @@
    "cover": "https://image.aladin.co.kr/product/4140/69/cover500/8953120500_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=41406915",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "부부생활/자녀양육",
+    "사랑/결혼"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1924,7 +3888,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    137,
+    138,
+    139,
+    140,
+    141,
+    143
+   ]
   },
   {
    "title": "팀 켈러, 고통에 답하다",
@@ -1933,6 +3905,12 @@
    "cover": "https://image.aladin.co.kr/product/13402/14/cover500/8953130581_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=134021436",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "간증/영적성장"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1941,7 +3919,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    138,
+    139,
+    140,
+    141,
+    143,
+    144
+   ]
   },
   {
    "title": "팀 켈러, 당신을 위한 갈라디아서",
@@ -1950,6 +3936,12 @@
    "cover": "https://image.aladin.co.kr/product/14983/19/cover500/8953131685_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=149831991",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "간증/영적성장"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1958,7 +3950,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    137,
+    139,
+    140,
+    141,
+    143,
+    144
+   ]
   },
   {
    "title": "팀 켈러, 당신을 위한 로마서",
@@ -1967,6 +3967,14 @@
    "cover": "https://image.aladin.co.kr/product/5021/89/cover500/8953121213_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=50218970",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 목회/신학",
+    "설교/성경연구",
+    "기독교(개신교) 신앙생활",
+    "간증/영적성장"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -1975,7 +3983,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    141,
+    146,
+    113,
+    137,
+    138,
+    140
+   ]
   },
   {
    "title": "팀 켈러의 기도",
@@ -1984,6 +4000,13 @@
    "cover": "https://image.aladin.co.kr/product/5987/9/cover500/8953122147_1.jpg",
    "publisher": "두란노서원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=59870938",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "예배/기도/묵상(QT)",
+    "간증/영적성장"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -1992,7 +4015,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    137,
+    138,
+    139,
+    141,
+    143,
+    144
+   ]
   },
   {
    "title": "팀 켈러의 내가 만든 신",
@@ -2001,6 +4032,15 @@
    "cover": "https://image.aladin.co.kr/product/10904/21/cover500/8953128285_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=109042167",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "간증/영적성장",
+    "기독교(개신교) 목회/신학",
+    "설교/성경연구",
+    "신앙생활일반"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -2009,7 +4049,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    139,
+    146,
+    113,
+    137,
+    138,
+    140
+   ]
   },
   {
    "title": "팀 켈러의 답이 되는 기독교",
@@ -2018,6 +4066,13 @@
    "cover": "https://image.aladin.co.kr/product/13119/67/cover500/8953130298_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=131196721",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 목회/신학",
+    "신학일반",
+    "기독교의 이해"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -2026,7 +4081,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    146,
+    113,
+    139,
+    141,
+    111,
+    120
+   ]
   },
   {
    "title": "팀 켈러의 예수, 예수",
@@ -2035,6 +4098,12 @@
    "cover": "https://image.aladin.co.kr/product/12370/32/cover500/895312994x_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=123703299",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "간증/영적성장"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -2043,7 +4112,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    137,
+    138,
+    139,
+    140,
+    141,
+    144
+   ]
   },
   {
    "title": "팀 켈러의 인생 베이직",
@@ -2052,6 +4129,12 @@
    "cover": "https://image.aladin.co.kr/product/35987/7/cover500/8953150418_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=359870768",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "간증/영적성장"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -2060,7 +4143,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    137,
+    138,
+    139,
+    140,
+    141,
+    143
+   ]
   },
   {
    "title": "팀 켈러의 일과 영성",
@@ -2069,6 +4160,13 @@
    "cover": "https://image.aladin.co.kr/product/3332/59/cover500/8953119901_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=33325998",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "간증/영적성장",
+    "리더십/직업관/재물론"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -2081,7 +4179,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    80,
+    118,
+    137,
+    138,
+    139,
+    140
+   ]
   },
   {
    "title": "팀 켈러의 탕부 하나님",
@@ -2090,6 +4196,14 @@
    "cover": "https://image.aladin.co.kr/product/8716/84/cover500/8953125782_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=87168498",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "간증/영적성장",
+    "기독교(개신교) 목회/신학",
+    "신학일반"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -2098,7 +4212,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    139,
+    141,
+    137,
+    138,
+    140,
+    142
+   ]
   },
   {
    "title": "파이썬 알고리즘 인터뷰",
@@ -2107,6 +4229,15 @@
    "cover": "https://image.aladin.co.kr/product/24549/58/cover500/k822631873_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=245495826",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "컴퓨터 공학",
+    "자료구조/알고리즘",
+    "공학계열",
+    "컴퓨터공학",
+    "알고리즘",
+    "프로그래밍 개발/방법론"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -2115,7 +4246,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    129,
+    154,
+    164,
+    165,
+    96,
+    97
+   ]
   },
   {
    "title": "포프TV 1권",
@@ -2124,6 +4263,8 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "field": "",
+   "tags": [],
    "sources": [
     {
      "id": "ridi",
@@ -2132,7 +4273,8 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "풍성한 삶으로의 초대",
@@ -2141,6 +4283,14 @@
    "cover": "https://image.aladin.co.kr/product/18685/93/cover500/k782635664_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=186859354",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "신앙생활일반",
+    "기독교 교육",
+    "기독교(개신교) 선교/전도"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -2149,7 +4299,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    150,
+    99,
+    117,
+    119,
+    120,
+    132
+   ]
   },
   {
    "title": "풍성한 삶의 첫걸음",
@@ -2158,6 +4316,15 @@
    "cover": "https://image.aladin.co.kr/product/10565/45/cover500/k312530435_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=105654566",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "간증/영적성장",
+    "기독교 교육",
+    "기독교(개신교) 교회",
+    "교회교육"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -2166,7 +4333,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    149,
+    80,
+    117,
+    118,
+    137,
+    138
+   ]
   },
   {
    "title": "하나님을 탐닉하라",
@@ -2175,6 +4350,12 @@
    "cover": "https://image.aladin.co.kr/product/2199/82/cover500/8936509527_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=21998282",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "간증/영적성장"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -2183,7 +4364,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    80,
+    118,
+    137,
+    138,
+    139,
+    140
+   ]
   },
   {
    "title": "하나님을 하나님 되게",
@@ -2192,6 +4381,12 @@
    "cover": "https://image.aladin.co.kr/product/15151/34/cover500/8953131499_1.jpg",
    "publisher": "두란노서원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=151513445",
+   "field": "종교/역학",
+   "tags": [
+    "기독교(개신교)",
+    "기독교(개신교) 신앙생활",
+    "간증/영적성장"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -2200,7 +4395,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    118,
+    140,
+    80,
+    137,
+    138,
+    139
+   ]
   },
   {
    "title": "행복 전환 연습",
@@ -2209,6 +4412,14 @@
    "cover": "https://image.aladin.co.kr/product/32054/88/cover500/k652834687_1.jpg",
    "publisher": "마인드빌딩",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320548892",
+   "field": "인문학",
+   "tags": [
+    "심리학/정신분석학",
+    "교양 심리학",
+    "성공",
+    "성공학",
+    "행복론"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -2217,7 +4428,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    73,
+    126,
+    128,
+    0,
+    1,
+    4
+   ]
   },
   {
    "title": "헤드 퍼스트 디자인 패턴",
@@ -2226,6 +4445,15 @@
    "cover": "https://image.aladin.co.kr/product/29089/24/cover500/k212837767_1.jpg",
    "publisher": "한빛미디어",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=290892473",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "프로그래밍 개발/방법론",
+    "객체지향 프로그래밍/UML",
+    "공학계열",
+    "컴퓨터공학",
+    "컴퓨터공학/전산학 개론",
+    "컴퓨터 공학"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -2234,7 +4462,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    129,
+    147,
+    165,
+    97,
+    88,
+    96
+   ]
   },
   {
    "title": "A Philosophy of Software Design, 2nd Edition",
@@ -2243,6 +4479,8 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "field": "",
+   "tags": [],
    "sources": [
     {
      "id": "kindle",
@@ -2251,7 +4489,8 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "A System for Writing",
@@ -2260,6 +4499,8 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "field": "",
+   "tags": [],
    "sources": [
     {
      "id": "kindle",
@@ -2268,7 +4509,8 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "Animal Farm",
@@ -2277,6 +4519,10 @@
    "cover": "https://image.aladin.co.kr/product/87/27/cover500/8971724471_2.jpg",
    "publisher": "더클래식",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=872721",
+   "field": "외국어",
+   "tags": [
+    "영어독해"
+   ],
    "sources": [
     {
      "id": "kyobo",
@@ -2285,7 +4531,10 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    79
+   ]
   },
   {
    "title": "Apprenticeship Patterns",
@@ -2294,6 +4543,11 @@
    "cover": "https://image.aladin.co.kr/product/741/54/cover500/8991268803_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=7415431",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론"
+   ],
    "sources": [
     {
      "id": "kindle",
@@ -2302,7 +4556,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    12,
+    17,
+    88,
+    91,
+    96,
+    97
+   ]
   },
   {
    "title": "David Copperfield",
@@ -2311,6 +4573,15 @@
    "cover": "https://image.aladin.co.kr/product/880/10/cover500/8949707314_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=8801063",
+   "field": "소설/시/희곡",
+   "tags": [
+    "영미소설",
+    "서양고전문학",
+    "서양근대문학",
+    "세계의 문학",
+    "영국문학",
+    "테마문학"
+   ],
    "sources": [
     {
      "id": "kindle",
@@ -2319,7 +4590,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    61,
+    19,
+    79,
+    109,
+    56,
+    107
+   ]
   },
   {
    "title": "Designing Data-Intensive Applications",
@@ -2328,6 +4607,8 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "field": "",
+   "tags": [],
    "sources": [
     {
      "id": "kindle",
@@ -2336,7 +4617,8 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "Designing Machine Learning Systems",
@@ -2345,6 +4627,8 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "field": "",
+   "tags": [],
    "sources": [
     {
      "id": "kindle",
@@ -2353,7 +4637,8 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "Getting Things Done",
@@ -2362,6 +4647,13 @@
    "cover": "https://image.aladin.co.kr/product/8683/83/cover500/8934975288_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86838333",
+   "field": "자기계발",
+   "tags": [
+    "정리/심플라이프",
+    "시간관리/정보관리",
+    "시간관리",
+    "정보관리"
+   ],
    "sources": [
     {
      "id": "google",
@@ -2370,7 +4662,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    87,
+    92,
+    5,
+    69,
+    75,
+    82
+   ]
   },
   {
    "title": "Meta-Leadership",
@@ -2379,6 +4679,8 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "field": "",
+   "tags": [],
    "sources": [
     {
      "id": "kindle",
@@ -2387,7 +4689,8 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "MLOps 실전 가이드",
@@ -2396,6 +4699,15 @@
    "cover": "https://image.aladin.co.kr/product/31975/62/cover500/k242834363_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=319756283",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "컴퓨터 공학",
+    "자료구조/알고리즘",
+    "데이터베이스 개론",
+    "소프트웨어 공학",
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론"
+   ],
    "sources": [
     {
      "id": "ridi",
@@ -2404,7 +4716,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    96,
+    97,
+    110,
+    129,
+    147,
+    12
+   ]
   },
   {
    "title": "Modern Software Engineering",
@@ -2413,6 +4733,15 @@
    "cover": "https://image.aladin.co.kr/product/36167/97/cover500/k622038191_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361679771",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "컴퓨터 공학",
+    "소프트웨어 공학",
+    "공학계열",
+    "컴퓨터공학",
+    "운영체제/소프트웨어 공학",
+    "컴퓨터공학/전산학 개론"
+   ],
    "sources": [
     {
      "id": "kindle",
@@ -2421,7 +4750,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    154,
+    110,
+    129,
+    147,
+    18,
+    32
+   ]
   },
   {
    "title": "On Prayer and The Contemplative Life",
@@ -2430,6 +4767,8 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "field": "",
+   "tags": [],
    "sources": [
     {
      "id": "ridi",
@@ -2438,7 +4777,8 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "Refactoring",
@@ -2447,6 +4787,12 @@
    "cover": "https://image.aladin.co.kr/product/23618/61/cover500/k932638523_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=236186172",
+   "field": "컴퓨터/모바일",
+   "tags": [
+    "프로그래밍 개발/방법론",
+    "프로그래밍 기초/개발 방법론",
+    "객체지향 프로그래밍/UML"
+   ],
    "sources": [
     {
      "id": "kindle",
@@ -2455,7 +4801,15 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": [
+    88,
+    12,
+    17,
+    91,
+    96,
+    97
+   ]
   },
   {
    "title": "Robert C. Martin Series",
@@ -2464,6 +4818,8 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "field": "",
+   "tags": [],
    "sources": [
     {
      "id": "kindle",
@@ -2472,7 +4828,8 @@
    ],
    "read": false,
    "readAt": "",
-   "addedAt": ""
+   "addedAt": "",
+   "similar": []
   }
  ]
 }
