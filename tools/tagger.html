@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>태그 붙이기</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='5' y='8' width='6' height='16' rx='2.5' fill='%231e1c19'/%3E%3Crect x='13' y='8' width='6' height='16' rx='2.5' fill='%23c9c9c4'/%3E%3Crect x='21' y='8' width='6' height='16' rx='2.5' fill='%238c3b4a'/%3E%3C/svg%3E" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
@@ -46,34 +46,32 @@ tr.hit td{background:var(--acc-bg)}
 .c-cv{width:30px}
 .c-cv img{width:26px;border-radius:2px;display:block}
 .c-cv .ph{width:26px;height:39px;border-radius:2px;background:#eceae7}
-.c-b{width:33%}
+.c-b{width:26%}
 .c-b b{font-size:12.5px;font-weight:650;letter-spacing:-.02em;display:block;line-height:1.3}
 .c-b span{font-size:11px;color:var(--faint)}
-.c-t{width:auto}
-.tag{display:inline-flex;align-items:center;gap:4px;border:1px solid var(--rule2);border-radius:6px;
-     padding:2px 5px 2px 7px;font-size:11.5px;margin:0 3px 3px 0;background:#fff}
-.tag.new{border-color:var(--acc);color:var(--acc);background:var(--acc-bg)}
-.tag b{font-weight:600}
-.tag i{font-style:normal;color:var(--faint);cursor:pointer;font-size:12px;line-height:1}
-.tag i:hover{color:var(--acc)}
-.addt{border:1px dashed var(--rule2);border-radius:6px;padding:2px 8px;font-size:11.5px;
+.c-t{width:auto;padding-right:12px}
+/* 태그 — 자리는 그대로 두고 켜짐/꺼짐만 바뀐다 */
+.tag,.sug{display:inline-flex;align-items:center;border-radius:6px;padding:2px 8px 3px;
+          font-size:11.5px;margin:0 3px 3px 0;cursor:pointer;font-family:inherit;
+          border:1px solid transparent}
+.tag{background:var(--acc);color:#fff;font-weight:600;border-color:var(--acc)}
+.tag:hover{background:#a04a5a;border-color:#a04a5a}
+.sug{background:none;color:var(--faint);border-color:var(--rule2);border-style:dashed}
+.sug:hover{border-color:var(--acc);border-style:solid;color:var(--acc);background:var(--acc-bg)}
+.addt{border:1px dashed var(--rule2);border-radius:6px;padding:2px 8px 3px;font-size:11.5px;
       color:var(--muted);background:none;cursor:pointer}
 .addt:hover{border-color:var(--acc);color:var(--acc)}
 .tin{border:1px solid var(--acc);border-radius:6px;padding:2px 6px;font-size:11.5px;width:118px;
      outline:none}
 .rare{color:var(--acc)}
-/* 메모 — 사이트에는 안 나간다. 나에게 주는 지시를 적는 자리 */
-.c-m{width:34px;text-align:right}
-.memo{border:0;background:none;cursor:pointer;font-size:11px;color:var(--faint);padding:2px 4px;
-      border-radius:5px}
-.memo:hover{color:var(--acc);background:var(--acc-bg)}
-.memo.has{color:var(--acc);font-weight:700}
-tr.memoopen td{border-bottom:0}
-tr.memorow td{padding:0 8px 8px 0}
-tr.memorow textarea{width:100%;border:1px solid var(--acc);border-radius:7px;padding:7px 9px;
-                    font-family:inherit;font-size:12px;line-height:1.5;resize:vertical;min-height:52px;
-                    outline:none}
-tr.memorow .mh{font-size:11px;color:var(--faint);margin:3px 0 0}
+/* 메모 — 오른쪽 열. 사이트에는 안 나가고 나에게 주는 지시를 적는 자리 */
+.c-m{width:24%;padding-right:0}
+.c-m textarea{width:100%;border:1px solid var(--rule2);border-radius:6px;padding:4px 7px;
+              font-family:inherit;font-size:11.5px;line-height:1.45;resize:vertical;
+              min-height:30px;outline:none;color:var(--sec);background:#fff}
+.c-m textarea:focus{border-color:var(--acc);min-height:60px}
+.c-m textarea:not(:placeholder-shown){border-color:var(--acc);background:var(--acc-bg);color:var(--ink)}
+.c-m textarea::placeholder{color:#c9c7c2}
 
 /* 태그 정리 */
 .tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:6px}
@@ -104,6 +102,40 @@ tr.memorow .mh{font-size:11px;color:var(--faint);margin:3px 0 0}
 .go{border:1px solid var(--ink);background:var(--ink);color:#fff;font-size:12px;padding:6px 13px;
     border-radius:7px;cursor:pointer;margin-top:12px}
 .msg{font-size:11.5px;color:var(--acc);margin-top:8px;min-height:16px}
+
+/* ── 폰 ── 표를 접어 카드로 쌓는다 */
+@media (max-width: 720px) {
+  .wrap{padding:14px 12px 30px}
+  .top{flex-wrap:wrap;gap:7px}
+  h1{font-size:14px}
+  .tabs{margin-left:0;order:3;width:100%}
+  .tab{flex:1;text-align:center;padding:6px 4px}
+  .st{order:2;margin-left:auto;font-size:10.5px}
+  .bar{flex-wrap:wrap}
+  .bar input[type=search]{flex:1 1 100%}
+  .bar select{flex:1}
+
+  table,tbody,tr,td{display:block;width:auto}
+  .c-b,.c-t,.c-m,.c-cv{width:auto}
+  tr{border-bottom:1px solid var(--rule2);padding:9px 0 10px;position:relative}
+  td{border:0;padding:0}
+  .c-cv{position:absolute;left:0;top:9px}
+  .c-cv img,.c-cv .ph{width:34px}
+  .c-b{padding-left:44px;min-height:40px;width:auto}
+  .c-b span{display:block}
+  .c-b b{font-size:13.5px}
+  .c-t{padding:7px 0 0;width:auto}
+  .tag,.sug{font-size:12.5px;padding:4px 10px 5px;margin:0 4px 5px 0}
+  .addt{font-size:12.5px;padding:4px 10px 5px}
+  .c-m{width:auto;padding-top:5px}
+  .c-m textarea{font-size:12.5px;min-height:26px}
+  .c-m textarea:focus{min-height:56px}
+
+  /* 태그 정리·책 추가도 한 칸으로 */
+  .tg{grid-template-columns:1fr}
+  .add{max-width:none}
+  .save{padding:6px 14px}
+}
 .pane{display:none}
 .pane.on{display:block}
 </style>
@@ -139,6 +171,9 @@ tr.memorow .mh{font-size:11px;color:var(--faint);margin:3px 0 0}
       <option value="tagcount">태그 적은 순</option>
     </select>
   </div>
+  <div class="hint" style="margin:0 0 6px">점선은 <b>추천</b>, 진한 것은 <b>붙은 태그</b>. 눌러서 켜고 끈다 — 자리는 그대로다.
+    오른쪽 <b>메모</b> 칸은 사이트에 안 나간다.
+    이 책을 어떻게 할지 적어 두면 내가 읽고 처리한다 — 예: 회사에서 빌린 책 · 표지가 다른 판이다 · 이건 빼 줘</div>
   <table><tbody id="rows"></tbody></table>
 </section>
 
@@ -190,8 +225,14 @@ function counts() {
   for (const list of Object.values(TAGS)) for (const t of list) c[t] = (c[t] || 0) + 1
   return c
 }
+const LOCAL = 'tagger-draft'
+function keep() {
+  try { localStorage.setItem(LOCAL, JSON.stringify({ tags: TAGS, notes: NOTES, touched: [...touched] })) }
+  catch (e) {}
+}
 function markDirty() {
   dirty = true
+  keep()
   const b = $('#save')
   b.disabled = false
   b.classList.add('dirty')
@@ -219,6 +260,8 @@ function visible() {
 }
 
 function drawList() {
+  // 다시 그리기 전에 지금 화면의 메모를 걷어 둔다
+  document.querySelectorAll('textarea[data-m]').forEach((ta) => { NOTES[ta.dataset.m] = ta.value })
   const R = rare()
   const list = visible()
   $('#rows').innerHTML = list.map((b) => {
@@ -228,44 +271,41 @@ function drawList() {
       <td class="c-cv">${b.cover ? `<img src="${esc(b.cover)}" alt="" loading="lazy">` : '<div class="ph"></div>'}</td>
       <td class="c-b"><b>${esc(b.title)}</b><span>${esc(b.author || '')}</span></td>
       <td class="c-t">
-        ${tags.map((t) => `<span class="tag${sug.includes(t) ? '' : ' new'}"><b class="${R.has(t) ? 'rare' : ''}">${esc(t)}</b><i data-del="${esc(t)}">×</i></span>`).join('')}
-        <button class="addt" data-add>+ 태그</button>
+        ${[...sug, ...tags.filter((t) => !sug.includes(t))].map((t) => {
+          const on = tags.includes(t)
+          return `<button class="${on ? 'tag' : 'sug'}" data-${on ? 'del' : 'pick'}="${esc(t)}">${esc(t)}</button>`
+        }).join('')}
+        <button class="addt" data-add>직접</button>
       </td>
-      <td class="c-m"><button class="memo${(NOTES[b.title] || '').trim() ? ' has' : ''}" data-memo title="메모">✎</button></td>
-    </tr>
-    ${openMemo.has(b.title) ? `<tr class="memorow" data-m="${esc(b.title)}">
-      <td></td><td colspan="3"><textarea placeholder="이 책을 어떻게 할지 적어 줘. 예: 회사에서 빌린 책 · 표지가 다른 판이다 · 이거랑 저거는 같은 책">${esc(NOTES[b.title] || '')}</textarea>
-      <div class="mh">사이트에는 안 나간다. 저장하면 data/notes.json 에 남고 내가 읽는다.</div></td>
-    </tr>` : ''}`
+      <td class="c-m"><textarea data-m="${esc(b.title)}" rows="1" placeholder="메모">${esc(NOTES[b.title] || '')}</textarea></td>
+    </tr>`
   }).join('')
   const memoN = Object.values(NOTES).filter((v) => (v || '').trim()).length
   $('#st').textContent = `${list.length}권 보임 · 손댄 것 ${touched.size} · 태그 ${Object.keys(counts()).length}종`
     + (memoN ? ` · 메모 ${memoN}` : '')
 }
 
-const openMemo = new Set()
-
 $('#rows').addEventListener('input', (e) => {
-  const tr = e.target.closest('tr.memorow')
-  if (!tr) return
-  NOTES[tr.dataset.m] = e.target.value
+  const ta = e.target.closest('textarea[data-m]')
+  if (!ta) return
+  NOTES[ta.dataset.m] = ta.value
   markDirty()
+  $('#st').textContent = $('#st').textContent.replace(/ · 메모 \d+$/, '')
 })
 
 $('#rows').addEventListener('click', (e) => {
   const tr = e.target.closest('tr')
   if (!tr) return
   const title = tr.dataset.t
-  if (e.target.closest('[data-memo]')) {
-    openMemo.has(title) ? openMemo.delete(title) : openMemo.add(title)
-    drawList()
-    const ta = document.querySelector(`tr.memorow[data-m="${CSS.escape(title)}"] textarea`)
-    if (ta) { ta.focus(); ta.selectionStart = ta.value.length }
-    return
-  }
+
   const del = e.target.closest('[data-del]')
   if (del) {
     TAGS[title] = (TAGS[title] || []).filter((t) => t !== del.dataset.del)
+    touched.add(title); markDirty(); drawList(); return
+  }
+  const pick = e.target.closest('[data-pick]')
+  if (pick) {
+    TAGS[title] = [...new Set([...(TAGS[title] || []), pick.dataset.pick])]
     touched.add(title); markDirty(); drawList(); return
   }
   if (e.target.closest('[data-add]')) {
@@ -332,7 +372,7 @@ $('#asearch').addEventListener('click', async () => {
   const q = $('#atitle').value.trim()
   if (!q) return
   $('#amsg').textContent = '찾는 중…'
-  const r = await fetch('/api/search?q=' + encodeURIComponent(q)).then((x) => x.json())
+  const r = await fetch('../api/search?q=' + encodeURIComponent(q)).then((x) => x.json())
   foundBook = r.found
   if (!foundBook) { $('#amsg').textContent = '못 찾았다. 제목만으로 담아도 된다.'; $('#afound').innerHTML = ''; return }
   $('#amsg').textContent = ''
@@ -348,7 +388,7 @@ $('#aadd').addEventListener('click', async () => {
   if (!srcs.length) { $('#amsg').textContent = '어디에 있는지 하나는 골라야 한다'; return }
   const body = { title, author: foundBook?.author || '', cover: foundBook?.cover || '',
                  publisher: foundBook?.publisher || '', link: foundBook?.aladin || '', sources: srcs }
-  const r = await fetch('/api/add', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+  const r = await fetch('../api/add', { method: 'POST', headers: { 'Content-Type': 'application/json' },
                                       body: JSON.stringify({ ...body, service: srcs[0] }) }).then((x) => x.json())
   if (r.error) { $('#amsg').textContent = r.error; return }
   const tags = $('#atags').value.split(',').map((s) => s.trim()).filter(Boolean)
@@ -361,14 +401,15 @@ $('#aadd').addEventListener('click', async () => {
 $('#save').addEventListener('click', async () => {
   const b = $('#save')
   b.textContent = '저장 중…'
-  const r = await fetch('/api/tags', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+  const r = await fetch('../api/tags', { method: 'POST', headers: { 'Content-Type': 'application/json' },
                                        body: JSON.stringify({ tags: TAGS, notes: NOTES }) }).then((x) => x.json())
   if (r.ok) {
     dirty = false
+    localStorage.removeItem(LOCAL)
     b.classList.remove('dirty'); b.disabled = true; b.textContent = '저장됨'
   } else b.textContent = '실패'
 })
-window.addEventListener('beforeunload', (e) => { if (dirty) e.preventDefault() })
+
 
 // ── 탭 ──
 document.querySelector('.tabs').addEventListener('click', (e) => {
@@ -381,18 +422,31 @@ document.querySelector('.tabs').addEventListener('click', (e) => {
 
 // ── 시작 ──
 Promise.all([
-  fetch('/data/library.json?v=' + Date.now()).then((r) => r.json()),
-  fetch('/data/tags-suggested.json?v=' + Date.now()).then((r) => r.json()),
-  fetch('/data/tags.json?v=' + Date.now()).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
-  fetch('/data/notes.json?v=' + Date.now()).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+  fetch('../data/library.json?v=' + Date.now()).then((r) => r.json()),
+  fetch('../data/tags-suggested.json?v=' + Date.now()).then((r) => r.json()),
+  fetch('../data/tags.json?v=' + Date.now()).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+  fetch('../data/notes.json?v=' + Date.now()).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
 ]).then(([lib, sug, saved, notes]) => {
   NOTES = notes || {}
   BOOKS = lib.books
   SUGGEST = sug
   for (const b of BOOKS) {
-    TAGS[b.title] = saved[b.title] ? [...saved[b.title]] : [...(sug[b.title] || [])]
-    if (saved[b.title]) touched.add(b.title)
+    // 추천은 추천일 뿐이다. 고른 것만 태그가 된다.
+    TAGS[b.title] = saved[b.title] ? [...saved[b.title]] : []
+    if (saved[b.title]?.length) touched.add(b.title)
   }
+  // 저장 전에 닫았더라도 쓰던 것이 남아 있으면 되살린다
+  try {
+    const draft = JSON.parse(localStorage.getItem(LOCAL) || 'null')
+    if (draft) {
+      Object.assign(TAGS, draft.tags || {})
+      Object.assign(NOTES, draft.notes || {})
+      ;(draft.touched || []).forEach((t) => touched.add(t))
+      markDirty()
+      $('#save').textContent = '저장 (쓰던 것 있음)'
+    }
+  } catch (e) {}
+
   const dl = document.createElement('datalist')
   dl.id = 'alltags'
   document.body.appendChild(dl)

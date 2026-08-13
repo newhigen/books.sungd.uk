@@ -4,8 +4,8 @@
 정적 파일을 서빙하면서, 태그 편집 화면(tools/tagger.html)이 파일에 바로 저장할 수 있게
 몇 가지 창구를 연다. 로컬에서만 쓴다 — 바깥에 열지 말 것.
 
-    python3 scripts/serve.py            # http://localhost:8912
-    python3 scripts/serve.py 9000
+    python3 scripts/serve.py            # 이 맥에서만
+    python3 scripts/serve.py --phone    # 폰에서도 (Tailscale 주소에만 연다)
 
 창구
     POST /api/tags     {tags:{…}, notes:{…}}  → data/tags.json · data/notes.json
@@ -22,8 +22,10 @@ REPO = Path(__file__).resolve().parent.parent
 # 알라딘 검색은 enrich.py 것을 그대로 쓴다
 spec = importlib.util.spec_from_file_location("enrich", REPO / "scripts" / "enrich.py")
 enrich = importlib.util.module_from_spec(spec)
+_argv = sys.argv[:]          # enrich 가 argv 를 읽으므로 잠시 비웠다가 돌려놓는다
 sys.argv = ["enrich.py"]
 spec.loader.exec_module(enrich)
+sys.argv = _argv
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -42,6 +44,12 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         self.end_headers()
         self.wfile.write(body)
+
+    def end_headers(self):
+        # 편집 화면은 고칠 때마다 바로 보여야 한다
+        if self.path.startswith("/tools/") or self.path.startswith("/data/"):
+            self.send_header("Cache-Control", "no-store")
+        super().end_headers()
 
     def do_GET(self):
         u = urlparse(self.path)
@@ -94,9 +102,39 @@ class Handler(SimpleHTTPRequestHandler):
         return self._json({"error": "모르는 창구"}, 404)
 
 
+def tailscale_ip():
+    """이 맥의 tailnet 주소. 꺼져 있으면 빈 문자열."""
+    import subprocess
+    for cmd in (["tailscale", "ip", "-4"], ["/Applications/Tailscale.app/Contents/MacOS/Tailscale", "ip", "-4"]):
+        try:
+            out = subprocess.run(cmd, capture_output=True, text=True, timeout=4).stdout.strip()
+            if out and out.split("\n")[0].startswith("100."):
+                return out.split("\n")[0]
+        except Exception:
+            pass
+    return ""
+
+
 if __name__ == "__main__":
-    port = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else 8912
-    print(f"책장 편집 서버 · http://localhost:{port}")
+    args = sys.argv[1:]
+    port = int(next((a for a in args if a.isdigit()), 8912))
+    # 폰에서 쓰려면 --phone. tailnet 주소에만 연다 — 같은 와이파이의 남에게는 안 열린다.
+    want_phone = "--phone" in args
+
+    print(f"책장 편집 서버")
     print(f"  책장   http://localhost:{port}/")
     print(f"  태그   http://localhost:{port}/tools/tagger.html")
-    ThreadingHTTPServer(("127.0.0.1", port), Handler).serve_forever()
+
+    servers = [ThreadingHTTPServer(("127.0.0.1", port), Handler)]
+    if want_phone:
+        ip = tailscale_ip()
+        if not ip:
+            print("  ! tailscale 이 꺼져 있다. 켜고 다시 실행할 것.")
+        else:
+            servers.append(ThreadingHTTPServer((ip, port), Handler))
+            print(f"  폰    http://{ip}:{port}/tools/tagger.html   (Tailscale 켠 기기만)")
+
+    import threading
+    for srv in servers[1:]:
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+    servers[0].serve_forever()

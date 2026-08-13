@@ -1,6 +1,6 @@
 {
  "updatedAt": "2026-08-13",
- "total": 136,
+ "total": 196,
  "services": [
   {
    "id": "ridi",
@@ -25,6 +25,24 @@
    "name": "구글 북스",
    "kind": "ebook",
    "count": 2
+  },
+  {
+   "id": "paper",
+   "name": "종이책",
+   "kind": "paper",
+   "count": 82
+  },
+  {
+   "id": "company",
+   "name": "회사 대여",
+   "kind": "borrowed",
+   "count": 28
+  },
+  {
+   "id": "friend",
+   "name": "지인 대여",
+   "kind": "borrowed",
+   "count": 1
   }
  ],
  "fields": [
@@ -90,7 +108,12 @@
     "성공",
     "성공학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-06",
    "addedAt": "",
@@ -126,7 +149,7 @@
    "similar": [
     48,
     92,
-    110,
+    136,
     0,
     4,
     5
@@ -148,7 +171,12 @@
     "디자인이야기/디자이너/디자인 실기",
     "웹디자인/홈페이지"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-06",
    "addedAt": "",
@@ -172,7 +200,12 @@
     "설득",
     "협상"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-06",
    "addedAt": "",
@@ -226,6 +259,10 @@
    ],
    "sources": [
     {
+     "id": "paper",
+     "link": ""
+    },
+    {
      "id": "google",
      "link": ""
     }
@@ -254,7 +291,12 @@
     "사진/그림 에세이",
     "외국에세이"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-05",
    "addedAt": "",
@@ -279,7 +321,12 @@
     "한국소설",
     "2000년대 이후 한국소설"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-05",
    "addedAt": "",
@@ -315,7 +362,7 @@
     88,
     46,
     55,
-    100
+    115
    ]
   },
   {
@@ -334,7 +381,12 @@
     "리더십",
     "e-비즈니스/온라인 창업"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-05",
    "addedAt": "",
@@ -344,7 +396,7 @@
     32,
     3,
     75,
-    110
+    136
    ]
   },
   {
@@ -358,7 +410,12 @@
    "tags": [
     "교양 인문학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-04",
    "addedAt": "",
@@ -367,7 +424,7 @@
     14,
     40,
     78,
-    114,
+    144,
     50
    ]
   },
@@ -410,7 +467,12 @@
     "책읽기/글쓰기",
     "글쓰기"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-04",
    "addedAt": "",
@@ -434,7 +496,12 @@
    "tags": [
     "교양 인문학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-04",
    "addedAt": "",
@@ -443,7 +510,7 @@
     14,
     40,
     78,
-    114,
+    144,
     50
    ]
   },
@@ -461,7 +528,12 @@
     "철학 일반",
     "교양 철학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-04",
    "addedAt": "",
@@ -471,7 +543,7 @@
     40,
     78,
     80,
-    114
+    144
    ]
   },
   {
@@ -488,7 +560,12 @@
     "세계의 문학",
     "일본문학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-03",
    "addedAt": "",
@@ -498,7 +575,7 @@
     61,
     79,
     83,
-    103
+    118
    ]
   },
   {
@@ -538,17 +615,22 @@
     "세무/재무/회계",
     "기업/경영자 스토리"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
-    110,
+    136,
     87,
     90,
     95,
-    96,
-    111
+    102,
+    138
    ]
   },
   {
@@ -567,13 +649,18 @@
     "취업/진로/유망직업",
     "국내 진학/취업"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
     95,
-    96,
+    102,
     32,
     49,
     51,
@@ -601,10 +688,10 @@
    "addedAt": "",
    "similar": [
     61,
-    105,
-    126,
+    121,
+    178,
     79,
-    103,
+    118,
     15
    ]
   },
@@ -624,7 +711,7 @@
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
-    120,
+    170,
     0,
     4,
     5,
@@ -729,9 +816,9 @@
    "similar": [
     70,
     77,
-    98,
-    99,
-    106
+    113,
+    114,
+    128
    ]
   },
   {
@@ -812,7 +899,12 @@
     "성공",
     "성공학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-01",
    "addedAt": "",
@@ -847,7 +939,7 @@
     75,
     35,
     3,
-    110,
+    136,
     12
    ]
   },
@@ -865,7 +957,12 @@
     "음식에세이",
     "한국에세이"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-01",
    "addedAt": "",
@@ -875,7 +972,7 @@
     88,
     46,
     55,
-    97
+    109
    ]
   },
   {
@@ -901,7 +998,7 @@
     3,
     34,
     59,
-    97
+    109
    ]
   },
   {
@@ -920,7 +1017,12 @@
     "CEO/비즈니스맨을 위한 능력계발",
     "간부학/리더십"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-01",
    "addedAt": "",
@@ -930,7 +1032,7 @@
     51,
     60,
     95,
-    96
+    102
    ]
   },
   {
@@ -945,7 +1047,12 @@
     "성공",
     "성공학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-01",
    "addedAt": "",
@@ -972,15 +1079,20 @@
     "인간관계",
     "교양심리학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-12",
    "addedAt": "",
    "similar": [
     59,
-    104,
-    97,
-    120,
+    119,
+    109,
+    170,
     0,
     1
    ]
@@ -1001,7 +1113,12 @@
     "성공",
     "성공학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-12",
    "addedAt": "",
@@ -1057,7 +1174,12 @@
     "성공",
     "성공학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-12",
    "addedAt": "",
@@ -1111,7 +1233,12 @@
     "CEO/비즈니스맨을 위한 능력계발",
     "기획/정보/문서관리"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-11",
    "addedAt": "",
@@ -1119,7 +1246,7 @@
     1,
     48,
     75,
-    110,
+    136,
     3,
     9
    ]
@@ -1135,7 +1262,12 @@
    "tags": [
     "교양 인문학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-11",
    "addedAt": "",
@@ -1144,7 +1276,7 @@
     13,
     14,
     78,
-    114,
+    144,
     50
    ]
   },
@@ -1160,7 +1292,12 @@
     "성공",
     "성공학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-11",
    "addedAt": "",
@@ -1185,7 +1322,12 @@
     "성공",
     "성공학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-11",
    "addedAt": "",
@@ -1344,7 +1486,7 @@
    "similar": [
     1,
     92,
-    110,
+    136,
     17,
     39,
     36
@@ -1366,6 +1508,10 @@
     {
      "id": "kyobo",
      "link": ""
+    },
+    {
+     "id": "paper",
+     "link": ""
     }
    ],
    "read": true,
@@ -1377,7 +1523,7 @@
     51,
     60,
     95,
-    96
+    102
    ]
   },
   {
@@ -1393,7 +1539,12 @@
     "책읽기/글쓰기",
     "글쓰기"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-08",
    "addedAt": "",
@@ -1418,7 +1569,12 @@
     "컴퓨터 공학",
     "소프트웨어 공학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-08",
    "addedAt": "",
@@ -1428,7 +1584,7 @@
     49,
     60,
     95,
-    96
+    102
    ]
   },
   {
@@ -1442,7 +1598,12 @@
    "tags": [
     "창의적사고/두뇌계발"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-08",
    "addedAt": "",
@@ -1468,7 +1629,12 @@
     "각국정치사정/정치사",
     "미국"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-08",
    "addedAt": "",
@@ -1489,7 +1655,12 @@
     "성공",
     "성공학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-08",
    "addedAt": "",
@@ -1513,7 +1684,12 @@
    "tags": [
     "한국에세이"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-08",
    "addedAt": "",
@@ -1523,7 +1699,7 @@
     46,
     57,
     88,
-    97
+    109
    ]
   },
   {
@@ -1541,14 +1717,19 @@
     "테마문학",
     "영화소설"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-07",
    "addedAt": "",
    "similar": [
-    103,
+    118,
     79,
-    126,
+    178,
     15,
     19,
     61
@@ -1567,7 +1748,12 @@
     "명사에세이",
     "문인에세이"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-07",
    "addedAt": "",
@@ -1577,7 +1763,7 @@
     88,
     46,
     55,
-    97
+    109
    ]
   },
   {
@@ -1623,15 +1809,20 @@
     "성공",
     "성공학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-07",
    "addedAt": "",
    "similar": [
     34,
-    104,
-    97,
-    120,
+    119,
+    109,
+    170,
     0,
     1
    ]
@@ -1648,7 +1839,12 @@
     "컴퓨터 공학",
     "소프트웨어 공학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-06",
    "addedAt": "",
@@ -1658,7 +1854,7 @@
     49,
     51,
     95,
-    96
+    102
    ]
   },
   {
@@ -1682,12 +1878,12 @@
    "readAt": "2025-05",
    "addedAt": "",
    "similar": [
-    126,
+    178,
     19,
-    105,
+    121,
     63,
     79,
-    103
+    118
    ]
   },
   {
@@ -1705,7 +1901,12 @@
     "그래픽 일반",
     "웹디자인 기타"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-04",
    "addedAt": "",
@@ -1732,7 +1933,7 @@
    "addedAt": "",
    "similar": [
     61,
-    126,
+    178,
     7,
     15,
     19,
@@ -1839,7 +2040,12 @@
     "성공",
     "성공학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-03",
    "addedAt": "",
@@ -1868,7 +2074,7 @@
    "readAt": "2025-03",
    "addedAt": "",
    "similar": [
-    99
+    114
    ]
   },
   {
@@ -1885,7 +2091,12 @@
     "시간관리/정보관리",
     "정보관리"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-03",
    "addedAt": "",
@@ -1914,12 +2125,12 @@
    "readAt": "2025-03",
    "addedAt": "",
    "similar": [
-    98,
-    101,
+    113,
+    116,
     24,
     77,
-    99,
-    106
+    114,
+    128
    ]
   },
   {
@@ -1942,9 +2153,9 @@
    "addedAt": "",
    "similar": [
     74,
-    101,
     116,
-    99,
+    153,
+    114,
     6,
     8
    ]
@@ -1961,7 +2172,12 @@
     "경제학/경제일반",
     "화폐/금융/재정"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-02",
    "addedAt": "",
@@ -1986,15 +2202,20 @@
     "심리학/정신분석학",
     "교양 심리학"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-02",
    "addedAt": "",
    "similar": [
-    114,
-    120,
+    144,
+    170,
     80,
-    112,
+    140,
     10,
     13
    ]
@@ -2012,14 +2233,19 @@
     "건강정보",
     "건강에세이/건강정보"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-02",
    "addedAt": "",
    "similar": [
-    101,
-    71,
     116,
+    71,
+    153,
     6,
     8,
     11
@@ -2048,7 +2274,7 @@
     91,
     93,
     29,
-    110,
+    136,
     39,
     69
    ]
@@ -2062,7 +2288,12 @@
    "aladin": "",
    "field": "",
    "tags": [],
-   "sources": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-01",
    "addedAt": "",
@@ -2080,16 +2311,21 @@
     "구기",
     "기타"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2025-01",
    "addedAt": "",
    "similar": [
     24,
     70,
-    98,
-    99,
-    106
+    113,
+    114,
+    128
    ]
   },
   {
@@ -2112,7 +2348,7 @@
     13,
     14,
     40,
-    114,
+    144,
     50
    ]
   },
@@ -2143,8 +2379,8 @@
    "addedAt": "",
    "similar": [
     83,
-    103,
-    126,
+    118,
+    178,
     19,
     56,
     61
@@ -2170,9 +2406,9 @@
    "similar": [
     14,
     73,
-    112,
-    114,
-    120,
+    140,
+    144,
+    170,
     22
    ]
   },
@@ -2190,7 +2426,12 @@
     "시간관리/정보관리",
     "시간관리"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2024-10",
    "addedAt": "",
@@ -2257,7 +2498,7 @@
    "addedAt": "",
    "similar": [
     79,
-    103,
+    118,
     15,
     19,
     56,
@@ -2303,7 +2544,12 @@
     "기업 경영",
     "조직/인력/성과관리"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2024-08",
    "addedAt": "",
@@ -2313,7 +2559,7 @@
     1,
     48,
     92,
-    110
+    136
    ]
   },
   {
@@ -2335,7 +2581,7 @@
    "addedAt": "",
    "similar": [
     91,
-    129,
+    182,
     5,
     69,
     81,
@@ -2355,17 +2601,22 @@
     "프로그래밍 기초/개발 방법론",
     "객체지향 프로그래밍/UML"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2024-05",
    "addedAt": "",
    "similar": [
-    121,
-    134,
+    171,
+    190,
     17,
     90,
     95,
-    96
+    102
    ]
   },
   {
@@ -2391,7 +2642,7 @@
     57,
     46,
     55,
-    97
+    109
    ]
   },
   {
@@ -2412,7 +2663,7 @@
    "readAt": "2024-03",
    "addedAt": "",
    "similar": [
-    131,
+    187,
     18,
     28,
     32,
@@ -2432,7 +2683,12 @@
     "프로그래밍 개발/방법론",
     "프로그래밍 기초/개발 방법론"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2024-02",
    "addedAt": "",
@@ -2440,9 +2696,9 @@
     17,
     87,
     95,
-    96,
-    111,
-    115
+    102,
+    138,
+    145
    ]
   },
   {
@@ -2470,7 +2726,7 @@
     69,
     81,
     86,
-    129,
+    182,
     75
    ]
   },
@@ -2498,7 +2754,7 @@
    "similar": [
     1,
     48,
-    110,
+    136,
     17,
     36,
     85
@@ -2519,7 +2775,12 @@
     "정보관리",
     "창의적사고/두뇌계발"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2023-04",
    "addedAt": "",
@@ -2529,7 +2790,7 @@
     82,
     69,
     86,
-    129
+    182
    ]
   },
   {
@@ -2558,7 +2819,7 @@
     81,
     86,
     91,
-    129,
+    182,
     18
    ]
   },
@@ -2578,18 +2839,147 @@
     "프로그래밍 개발/방법론",
     "프로그래밍 기초/개발 방법론"
    ],
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2022-07",
    "addedAt": "",
    "similar": [
-    96,
+    102,
     18,
-    115,
-    121,
-    131,
-    132
+    145,
+    171,
+    187,
+    188
    ]
+  },
+  {
+   "title": "2000년생이 온다",
+   "author": "임홍택",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/32955/72/cover500/k222936240_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329557210",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    97
+   ]
+  },
+  {
+   "title": "90년생이 온다",
+   "author": "임홍택",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/33730/69/cover500/k082939640_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337306986",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    96
+   ]
+  },
+  {
+   "title": "가상 면접 사례로 배우는 대규모 시스템 설계 기초 2",
+   "author": "알렉스 쉬, 산 람",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/33040/41/cover500/8966264255_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330404121",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "개발 7년차, 매니저 1일차",
+   "author": "카미유 푸르니에, 권원상",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/23096/5/cover500/k692637692_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=230960553",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "개발자 원칙",
+   "author": "박성철, 강대명",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/34527/3/cover500/k112932855_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345270362",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "개발자로 살아남기",
+   "author": "박종천",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/28501/32/cover500/k572835625_2.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=285013226",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "개발자를 넘어 기술 리더로 가는 길",
@@ -2618,12 +3008,132 @@
    "addedAt": "",
    "similar": [
     95,
-    121,
+    171,
     18,
-    115,
-    131,
-    132
+    145,
+    187,
+    188
    ]
+  },
+  {
+   "title": "개발자를 위한 글쓰기 가이드",
+   "author": "유영경",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/26421/20/cover500/899792480x_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=264212092",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "개발자를 위한 필수 수학",
+   "author": "토마스 닐드, 박해선",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/34034/66/cover500/k662931262_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340346630",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "결국 해내는 사람들의 원칙",
+   "author": "앨런 피즈, 바바라 피즈",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/38560/24/cover500/k802135953_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385602478",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "구글 엔지니어는 이렇게 일한다",
+   "author": "타이터스 윈터스, 톰 맨쉬렉",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/29414/60/cover500/k562837320_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=294146082",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "규칙 없음",
+   "author": "리드 헤이스팅스, 에린 메이어",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/24790/60/cover500/8925599635_3.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=247906056",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "그림으로 이해하는 도커와 쿠버네티스",
+   "author": "토쿠나가 코헤이, 서수환",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/37789/76/cover500/k922033662_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=377897689",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "기분이 태도가 되지 않게",
@@ -2650,11 +3160,71 @@
    "similar": [
     34,
     59,
-    104,
+    119,
     8,
     30,
     31
    ]
+  },
+  {
+   "title": "기브앤테이크",
+   "author": "애덤 그랜트, 윤태준",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/35340/83/cover500/k992035681_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353408353",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "기초부터 다지는 통계학 교과서 with 파이썬",
+   "author": "개러스 제임스, 다니엘라 위튼",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/35363/43/cover500/896626462x_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353634346",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "나미야 잡화점의 기적",
+   "author": "히가시노 게이고, 양윤옥",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/30768/99/cover500/k252830652_2.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=307689982",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "남자 몸 만들기 4주 혁명",
@@ -2680,8 +3250,8 @@
     70,
     24,
     77,
-    99,
-    106
+    114,
+    128
    ]
   },
   {
@@ -2712,7 +3282,7 @@
     24,
     70,
     77,
-    98
+    113
    ]
   },
   {
@@ -2770,7 +3340,7 @@
    "similar": [
     74,
     71,
-    116,
+    153,
     70,
     6,
     8
@@ -2818,6 +3388,10 @@
      "link": ""
     },
     {
+     "id": "paper",
+     "link": ""
+    },
+    {
      "id": "ridi",
      "link": "https://ridibooks.com/library/books/1377475/"
     }
@@ -2830,8 +3404,8 @@
     79,
     19,
     61,
-    105,
-    126
+    121,
+    178
    ]
   },
   {
@@ -2861,11 +3435,31 @@
    "similar": [
     34,
     59,
-    97,
-    120,
+    109,
+    170,
     0,
     1
    ]
+  },
+  {
+   "title": "도널드 노먼의 UX 디자인 특강",
+   "author": "도널드 A. 노먼, 범어디자인연구소",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/14106/3/cover500/k202532130_2.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=141060330",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "돈키호테",
@@ -2894,11 +3488,131 @@
    "similar": [
     19,
     61,
-    113,
-    126,
+    143,
+    178,
     79,
-    103
+    118
    ]
+  },
+  {
+   "title": "두려움 없는 조직",
+   "author": "에이미 에드먼슨, 최윤영",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/21011/79/cover500/k502636376_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=210117981",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "레거시 코드 활용 전략",
+   "author": "마이클 C. 페더스, 심윤보",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/16877/94/cover500/k022534070_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=168779479",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "린 분석",
+   "author": "앨리스테어 크롤, 벤저민 요스코비츠",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/3446/54/cover500/8968480699_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=34465476",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "린 스타트업",
+   "author": "에릭 리스, 이창수",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/2064/86/cover500/8966260578_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=20648680",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "맛있는 일본어",
+   "author": "문선희, 오노야마 하루카",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/34937/24/cover500/k732934364_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=349372427",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "몽고DB 완벽 가이드",
+   "author": "",
+   "englishTitle": "",
+   "cover": "",
+   "publisher": "",
+   "aladin": "",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "백종원이 추천하는 집밥 메뉴 54",
@@ -2925,8 +3639,8 @@
     24,
     70,
     77,
-    98,
-    99
+    113,
+    114
    ]
   },
   {
@@ -2974,7 +3688,7 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    110,
+    136,
     17,
     1,
     3,
@@ -3013,6 +3727,86 @@
    ]
   },
   {
+   "title": "생각에 관한 생각",
+   "author": "대니얼 카너먼, 이창신",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/14013/55/cover500/8934981210_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=140135544",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "순서 파괴",
+   "author": "콜린 브라이어, 빌 카",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/26556/49/cover500/k972738931_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=265564975",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "쉽게 보는 난중일기 완역본",
+   "author": "이순신, 노승석",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/30086/21/cover500/k562839575_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=300862118",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "스타트업 서비스 설계는 처음인데요",
+   "author": "강대명",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/37426/63/cover500/8966264956_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374266337",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
    "title": "스프린트",
    "author": "제이크 냅, 존 제라츠키",
    "englishTitle": "",
@@ -3043,8 +3837,28 @@
     48,
     75,
     92,
-    108
+    130
    ]
+  },
+  {
+   "title": "신경끄기의 기술",
+   "author": "마크 맨슨, 한재호",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/31737/86/cover500/8901272032_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317378665",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "실용주의 프로그래머(20주년 기념판)",
@@ -3072,9 +3886,29 @@
     87,
     90,
     95,
-    96,
-    115
+    102,
+    145
    ]
+  },
+  {
+   "title": "애자일 회고",
+   "author": "에스더 더비, 다이애나 라센",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/170/70/cover500/8991268382_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=1707009",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "어떻게 공부할 것인가",
@@ -3102,11 +3936,51 @@
    "similar": [
     73,
     80,
-    114,
-    120,
+    144,
+    170,
     10,
     13
    ]
+  },
+  {
+   "title": "업",
+   "author": "장성락(REDICE STUDIO), 추공",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/39905/20/cover500/k892130927_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399052013",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "여백 사고",
+   "author": "야마자키 세이타로, 김영주",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/34574/77/cover500/k732933362_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345747701",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "연금술사",
@@ -3131,7 +4005,7 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    105,
+    121,
     15,
     19,
     56,
@@ -3163,7 +4037,7 @@
    "addedAt": "",
    "similar": [
     73,
-    120,
+    170,
     10,
     13,
     14,
@@ -3196,13 +4070,159 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    131,
-    132,
+    187,
+    188,
     95,
-    96,
-    118,
-    121
+    102,
+    162,
+    171
    ]
+  },
+  {
+   "title": "요즘 우아한 AI 개발",
+   "author": "우아한형제들",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/36071/60/cover500/k502037248_2.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360716036",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    145
+   ]
+  },
+  {
+   "title": "우리, 프로그래머들",
+   "author": "로버트 C. 마틴, 최희철",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/38466/66/cover500/k392135919_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=384666614",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    159
+   ]
+  },
+  {
+   "title": "월든",
+   "author": "헨리 데이비드 소로, 강승영",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/1284/8/cover500/8956605416_3.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=12840843",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "friend",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "이상한 나라의 엘리트",
+   "author": "야스토미 아유미, 박솔바로",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/17007/26/cover500/8988613759_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=170072646",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "인생에 대하여",
+   "author": "레프 니콜라예비치 톨스토이, 이강은",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/25325/65/cover500/k182633502_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=253256526",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    19
+   ]
+  },
+  {
+   "title": "일 잘하는 사람은 단순하게 말합니다",
+   "author": "박소연",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/31216/10/cover500/k092831152_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=312161010",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "일본어 무작정 따라하기",
+   "author": "후지이 아사리",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/30963/87/cover500/k212831201_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=309638760",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "자세를 펴면 인생이 펴집니다",
@@ -3230,11 +4250,51 @@
    "similar": [
     71,
     74,
-    101,
+    116,
     6,
     8,
     11
    ]
+  },
+  {
+   "title": "자존감 수업",
+   "author": "윤홍균",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/8679/31/cover500/k372535696_2.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86793193",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "조훈현, 고수의 생각법",
+   "author": "조훈현",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/6136/36/cover500/k962433729_2.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=61363642",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "지적 대화를 위한 30분 고전",
@@ -3255,6 +4315,110 @@
    "readAt": "",
    "addedAt": "",
    "similar": []
+  },
+  {
+   "title": "커리어 스킬",
+   "author": "존 손메즈, 이미령",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/18782/34/cover500/k662635470_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=187823405",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "클리어 씽킹",
+   "author": "셰인 패리시, 최호영",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/33690/64/cover500/8925575302_2.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336906409",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "클린 애자일",
+   "author": "로버트 C. 마틴, 정지용",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/25684/50/cover500/8966262864_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=256845084",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    147
+   ]
+  },
+  {
+   "title": "턴어라운드",
+   "author": "L. 데이비드 마르케, 김동규",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/24310/7/cover500/8984077933_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=243100705",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "테스트 주도 개발",
+   "author": "켄트 벡, 김창준",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/3746/97/cover500/8966261027_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=37469717",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    87
+   ]
   },
   {
    "title": "파이썬 알고리즘 인터뷰",
@@ -3282,12 +4446,74 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    115,
-    121,
-    131,
+    145,
+    171,
+    187,
     95,
-    96,
-    132
+    102,
+    188
+   ]
+  },
+  {
+   "title": "파이썬으로 살펴보는 아키텍처 패턴",
+   "author": "해리 퍼시벌, 밥 그레고리",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/27194/43/cover500/k012732190_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=271944317",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "패턴 랭귀지",
+   "author": "크리스토퍼 알렉산더, 사라 이시가와",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/2762/3/cover500/8966260810_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=27620362",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "페스트",
+   "author": "알베르 카뮈, 김화영",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/1126/73/cover500/s937462672_2.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=11267326",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    83
    ]
   },
   {
@@ -3303,6 +4529,70 @@
     {
      "id": "ridi",
      "link": "https://ridibooks.com/library/books/1529056/"
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "프로그래밍 심리학",
+   "author": "제럴드 M. 와인버그, 조상민",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/3422/82/cover500/8966260985_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=34228223",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    9,
+    12,
+    29
+   ]
+  },
+  {
+   "title": "프로덕트 오너",
+   "author": "김성한",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/23569/83/cover500/8984077844_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=235698335",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "한석준의 대화의 기술",
+   "author": "한석준",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/35090/55/cover500/k052934494_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=350905572",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
     }
    ],
    "read": false,
@@ -3338,8 +4628,8 @@
     34,
     59,
     73,
-    104,
-    114,
+    119,
+    144,
     0
    ]
   },
@@ -3369,12 +4659,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    96,
+    102,
     95,
-    115,
-    118,
-    131,
-    132
+    145,
+    162,
+    187,
+    188
    ]
   },
   {
@@ -3410,6 +4700,26 @@
     {
      "id": "kindle",
      "link": "https://www.amazon.com/dp/B0D18J83VB"
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "AI 엔지니어링",
+   "author": "칩 후옌, 변성윤",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/37309/79/cover500/k622031756_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=373097975",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
     }
    ],
    "read": false,
@@ -3467,9 +4777,29 @@
     87,
     90,
     95,
-    96,
-    111
+    102,
+    138
    ]
+  },
+  {
+   "title": "Big Feelings",
+   "author": "EBS",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/29381/32/cover500/895476570x_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=293813247",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
   },
   {
    "title": "David Copperfield",
@@ -3500,9 +4830,9 @@
     61,
     19,
     79,
-    105,
+    121,
     56,
-    103
+    118
    ]
   },
   {
@@ -3546,6 +4876,26 @@
    "similar": []
   },
   {
+   "title": "EQ 감성지능",
+   "author": "대니얼 골먼, 한창호",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/270/69/cover500/8901088835_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2706952",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
    "title": "Getting Things Done",
    "author": "David Allen",
    "englishTitle": "",
@@ -3578,6 +4928,46 @@
    ]
   },
   {
+   "title": "Hello Coding 알고리즘",
+   "author": "아디트야 바르가바, 김도형",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/10598/25/cover500/896848354x_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=105982502",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "High Output Management",
+   "author": "",
+   "englishTitle": "",
+   "cover": "",
+   "publisher": "",
+   "aladin": "",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
    "title": "Meta-Leadership",
    "author": "Constance Dierickx",
    "englishTitle": "",
@@ -3590,6 +4980,26 @@
     {
      "id": "kindle",
      "link": "https://www.amazon.com/dp/B0B7KRJ461"
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "MLOps 구축 가이드북",
+   "author": "김남기",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/34386/72/cover500/k332932509_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=343867281",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
     }
    ],
    "read": false,
@@ -3623,12 +5033,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    115,
+    145,
     95,
-    96,
-    118,
-    121,
-    132
+    102,
+    162,
+    171,
+    188
    ]
   },
   {
@@ -3656,12 +5066,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    115,
+    145,
     95,
-    96,
-    121,
-    131,
-    118
+    102,
+    171,
+    187,
+    162
    ]
   },
   {
@@ -3708,11 +5118,11 @@
    "addedAt": "",
    "similar": [
     87,
-    121,
+    171,
     17,
     90,
     95,
-    96
+    102
    ]
   },
   {
@@ -3728,6 +5138,86 @@
     {
      "id": "kindle",
      "link": "https://www.amazon.com/dp/B001GSTOAM"
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "SQL Antipatterns",
+   "author": "빌 카윈, 윤성준",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/1208/69/cover500/8966260047_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=12086993",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "THE MISSING README",
+   "author": "",
+   "englishTitle": "",
+   "cover": "",
+   "publisher": "",
+   "aladin": "",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "The Next Conversation",
+   "author": "",
+   "englishTitle": "",
+   "cover": "",
+   "publisher": "",
+   "aladin": "",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": []
+  },
+  {
+   "title": "UX/UI의 10가지 심리학 법칙",
+   "author": "존 야블론스키, 이미령",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/33764/78/cover500/k592930168_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337647826",
+   "field": "",
+   "tags": [],
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
     }
    ],
    "read": false,

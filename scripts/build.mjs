@@ -22,6 +22,9 @@ const SERVICES = [
   { id: 'google', name: '구글 북스', kind: 'ebook' },
   { id: 'pdf', name: 'PDF', kind: 'file' },
   { id: 'paper', name: '종이책', kind: 'paper' },
+  { id: 'company', name: '회사 대여', kind: 'borrowed' },
+  { id: 'friend', name: '지인 대여', kind: 'borrowed' },
+  { id: 'library', name: '도서관', kind: 'borrowed' },
 ]
 
 // ---- 제목 정규화 (같은 책 찾기) ----

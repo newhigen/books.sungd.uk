@@ -1,0 +1,91 @@
+{
+ "service": "company",
+ "collectedAt": "2026-08-14",
+ "books": [
+  {
+   "title": "UX/UI의 10가지 심리학 법칙"
+  },
+  {
+   "title": "횡설수설하지 않고 정확하게 설명하는 법"
+  },
+  {
+   "title": "디자인 구구단"
+  },
+  {
+   "title": "그만 배우기의 기술"
+  },
+  {
+   "title": "일 잘하는 엔지니어의 생각 기법"
+  },
+  {
+   "title": "테크니컬 리더"
+  },
+  {
+   "title": "데이터 문해력"
+  },
+  {
+   "title": "미니멀리즘 프로그래머"
+  },
+  {
+   "title": "데이터 과학자 원칙"
+  },
+  {
+   "title": "#100일챌린지"
+  },
+  {
+   "title": "무엇이 1등 팀을 만드는가?"
+  },
+  {
+   "title": "그림으로 배우는 HTTP & Network Basics"
+  },
+  {
+   "title": "턴어라운드"
+  },
+  {
+   "title": "High Output Management"
+  },
+  {
+   "title": "개발자 원칙"
+  },
+  {
+   "title": "린 분석"
+  },
+  {
+   "title": "두려움 없는 조직"
+  },
+  {
+   "title": "요즘 우아한 AI 개발"
+  },
+  {
+   "title": "그림으로 이해하는 도커와 쿠버네티스"
+  },
+  {
+   "title": "스타트업 서비스 설계는 처음인데요"
+  },
+  {
+   "title": "AI 엔지니어링"
+  },
+  {
+   "title": "MLOps 구축 가이드북"
+  },
+  {
+   "title": "Hello Coding 알고리즘"
+  },
+  {
+   "title": "기초부터 다지는 통계학 교과서 with 파이썬"
+  },
+  {
+   "title": "개발자를 위한 필수 수학"
+  },
+  {
+   "title": "몽고DB 완벽 가이드"
+  },
+  {
+   "title": "SQL Antipatterns"
+  },
+  {
+   "title": "패턴 랭귀지"
+  }
+ ],
+ "note": "회사 책장에서 빌림"
+}
