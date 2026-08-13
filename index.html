@@ -119,6 +119,20 @@ button,select,input{font-family:inherit;letter-spacing:inherit}
 .row .rr{flex:none;text-align:right;font-family:var(--mono);font-size:10.5px;color:var(--ink-3);
          line-height:1.5}
 .row .rr b{display:block;font-weight:400;color:var(--muted)}
+/* ── 표 보기 — 표지 없이 촘촘하게 ── */
+.tblwrap{overflow-x:auto;padding:4px 0 36px;min-width:0}
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px;min-width:520px}
+.tbl th{text-align:left;font-weight:500;color:var(--ink-3);font-size:11.5px;padding:6px 10px 6px 0;
+        border-bottom:1px solid var(--line-strong);white-space:nowrap}
+.tbl td{padding:7px 10px 7px 0;border-bottom:1px solid var(--border);vertical-align:top}
+.tbl tr{cursor:pointer}
+.tbl tbody tr:hover td{background:var(--surface2)}
+.tbl .c-title{font-weight:600;letter-spacing:-.02em;line-height:1.35;width:42%}
+.tbl .c-author{color:var(--muted);width:22%}
+.tbl .c-field{color:var(--muted);width:15%;white-space:nowrap}
+.tbl .c-where{color:var(--muted);width:13%;white-space:nowrap}
+.tbl .c-read{font-family:var(--mono);font-size:11px;color:var(--ink-3);text-align:right;
+             white-space:nowrap;padding-right:0}
 .empty-msg{padding:56px 0;text-align:center;color:var(--ink-3);font-size:13px}
 
 /* ── 상세 ── */
@@ -191,6 +205,7 @@ button,select,input{font-family:inherit;letter-spacing:inherit}
       <div class="viewsw" id="viewsw">
         <button data-v="grid">표지</button>
         <button data-v="list">목록</button>
+        <button data-v="table">표</button>
       </div>
       <select id="sort" aria-label="정렬">
         <option value="read">최근 읽은 순</option>
@@ -281,6 +296,17 @@ function render() {
             <div class="bt">${esc(b.title)}</div>
             <div class="ba">${esc(b.author || '저자 미상')}</div>
           </button>`).join('')}</div>`
+      : state.view === 'table'
+      ? `<div class="tblwrap"><table class="tbl">
+          <thead><tr><th>제목</th><th>저자</th><th>분야</th><th>어디에</th><th style="text-align:right">읽음</th></tr></thead>
+          <tbody>${list.map((b) => `
+            <tr data-i="${idx(b)}">
+              <td class="c-title">${esc(b.title)}</td>
+              <td class="c-author">${esc(b.author || '')}</td>
+              <td class="c-field">${esc(b.field || '')}</td>
+              <td class="c-where">${b.sources.map((s) => esc(serviceName(s.id))).join(' · ')}</td>
+              <td class="c-read">${b.readAt ? esc(monthLabel(b.readAt)) : ''}</td>
+            </tr>`).join('')}</tbody></table></div>`
       : `<div class="list">${list.map((b) => `
           <button class="row" data-i="${idx(b)}">
             <div class="cv">${coverHTML(b)}</div>
