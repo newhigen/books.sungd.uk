@@ -127,15 +127,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399902905",
   "match": 1.0
  },
- "대한민국 헌법": {
-  "title": "헌법 필사 (스프링)",
-  "author": "대한민국",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/35102/82/cover500/k982934603_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351028235",
-  "match": 0.4,
-  "uncertain": true
- },
  "데이터 과학자 원칙": {
   "title": "데이터 과학자 원칙",
   "author": "이정원, 권시현(데싸노트)",
@@ -199,9 +190,6 @@
   "cover": "https://image.aladin.co.kr/product/33995/2/cover500/k392930645_1.jpg",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=339950299",
   "match": 1.0
- },
- "논리적으로 말하는 테크닉": {
-  "notfound": true
  },
  "모든 관계는 말투에서 시작된다": {
   "title": "모든 관계는 말투에서 시작된다 (10만 부 기념 스폐셜 에디션)",
@@ -267,24 +255,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332803864",
   "match": 1.0
  },
- "노 하드 필링스": {
-  "title": "No Hard Feelings 노 하드 필링스",
-  "author": "리즈 포슬린, 몰리 웨스트 더피",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/18828/9/cover500/8968061513_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=188280906",
-  "match": 0.46,
-  "uncertain": true
- },
- "데이터 문해력": {
-  "title": "빅데이터 시대, 성과를 이끌어 내는 데이터 문해력",
-  "author": "카시와기 요시키, 강모희",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/26565/83/cover500/8965402913_2.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=265658321",
-  "match": 0.46,
-  "uncertain": true
- },
  "리크루터의 채용 실무 가이드": {
   "title": "리크루터의 채용 실무 가이드",
   "author": "박하늘, 전민아",
@@ -341,9 +311,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=309085697",
   "match": 1.0
  },
- "The Tech Resume Inside Out": {
-  "notfound": true
- },
  "그림들": {
   "title": "그림들",
   "author": "SUN 도슨트",
@@ -391,15 +358,6 @@
   "cover": "https://image.aladin.co.kr/product/17597/74/cover500/8966262333_1.jpg",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=175977462",
   "match": 1.0
- },
- "노트의 품격": {
-  "title": "어른의 품격을 채우는 100일 필사 노트",
-  "author": "김종원",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/35809/29/cover500/k572036659_2.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358092951",
-  "match": 0.27,
-  "uncertain": true
  },
  "린 소프트웨어 개발": {
   "title": "린 소프트웨어 개발",
@@ -505,15 +463,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=350931",
   "match": 1.0
  },
- "나 홀로 유럽": {
-  "title": "걸어서 세계 속으로 나홀로 유럽여행 : 남유럽 동유럽 편",
-  "author": "KBS 걸어서 세계속으로 제작팀",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/9815/39/cover500/k832535058_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=98153915",
-  "match": 0.37,
-  "uncertain": true
- },
  "모든 것은 예측 가능하다": {
   "title": "모든 것은 예측 가능하다",
   "author": "톰 치버스, 홍한결",
@@ -562,24 +511,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=306554256",
   "match": 1.0
  },
- "현직 약사가 알려주는 영양제 특강": {
-  "title": "영양제 특강",
-  "author": "염혜진",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/32920/41/cover500/k902936837_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329204106",
-  "match": 0.53,
-  "uncertain": true
- },
- "더 머니북": {
-  "title": "더 머니이슈 + 브랜드북 + 2026 행운의 달력 세트 - 전3권",
-  "author": "토스",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/37903/20/cover500/k952033839_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379032035",
-  "match": 0.3,
-  "uncertain": true
- },
  "불안한 완벽주의자를 위한 책": {
   "title": "불안한 완벽주의자를 위한 책",
   "author": "마이클 투히그, 클라리사 옹",
@@ -604,9 +535,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=903605",
   "match": 0.83
  },
- "그림으로 배우는 HTTP & Network Basics": {
-  "notfound": true
- },
  "아티스트의 탁구 노트": {
   "title": "아티스트의 탁구 노트",
   "author": "황세진",
@@ -614,15 +542,6 @@
   "cover": "https://image.aladin.co.kr/product/7113/79/cover500/k842434790_1.jpg",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=71137981",
   "match": 1.0
- },
- "어디서 살 것인가: 우리가 살고 싶은 곳의 기준을 바꾸다": {
-  "title": "어디서 살 것인가",
-  "author": "유현준",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/14799/66/cover500/8932473803_2.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=147996667",
-  "match": 0.48,
-  "uncertain": true
  },
  "어린왕자": {
   "title": "어린왕자 (소프트커버 에디션)",
@@ -655,15 +574,6 @@
   "cover": "https://image.aladin.co.kr/product/8632/15/cover500/k312535674_1.jpg",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86321510",
   "match": 1.0
- },
- "이동진 독서법": {
-  "title": "닥치는 대로 끌리는 대로 오직 재미있게 이동진 독서법",
-  "author": "이동진",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/29563/46/cover500/k762837255_2.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=295634618",
-  "match": 0.43,
-  "uncertain": true
  },
  "이방인": {
   "title": "이방인",
@@ -761,9 +671,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=189796678",
   "match": 1.0
  },
- "이팩티브 엔지니어": {
-  "notfound": true
- },
  "어린 왕자(한글판)": {
   "title": "어린 왕자 (한글판 + 영어 + 프랑스어 텍스트)",
   "author": "앙투안 드 생텍쥐페리, 김동근",
@@ -820,9 +727,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=495064",
   "match": 1.0
  },
- "내 코드가 그렇게 이상한가요? [무료특별판]": {
-  "notfound": true
- },
  "내가 알던 사람": {
   "title": "내가 알던 사람",
   "author": "샌디프 자우하르, 서정아",
@@ -846,15 +750,6 @@
   "cover": "https://image.aladin.co.kr/product/15831/44/cover500/895699336x_1.jpg",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=158314436",
   "match": 1.0
- },
- "더 나은 선택": {
-  "title": "환경, 지구를 위한 리셋 그리고 우리의 선택",
-  "author": "유재열, 권재철",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/36984/83/cover500/k012030025_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=369848389",
-  "match": 0.18,
-  "uncertain": true
  },
  "데미안": {
   "title": "데미안",
@@ -1064,18 +959,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2045878",
   "match": 1.0
  },
- "지적 대화를 위한 30분 고전": {
-  "notfound": true
- },
- "크리스천의 성 토크": {
-  "title": "크리스천의 性 TALK (성 토크)",
-  "author": "박수웅",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/31832/8/cover500/8953144965_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=318320896",
-  "match": 0.56,
-  "uncertain": true
- },
  "크리스천의 연애": {
   "title": "크리스천의 연애",
   "author": "박수웅",
@@ -1180,9 +1063,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=245495826",
   "match": 1.0
  },
- "포프TV 1권": {
-  "notfound": true
- },
  "풍성한 삶으로의 초대": {
   "title": "풍성한 삶으로의 초대 워크북 - 일반용",
   "author": "김형국",
@@ -1231,15 +1111,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=290892473",
   "match": 1.0
  },
- "Animal Farm": {
-  "title": "동물농장",
-  "author": "조지 오웰, 금정연",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/37480/63/cover500/k922032019_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374806337",
-  "match": 0.0,
-  "uncertain": true
- },
  "Demian (영어로 읽는 세계문학 319)": {
   "title": "데미안",
   "author": "헤르만 헤세, 전영애",
@@ -1247,7 +1118,8 @@
   "cover": "https://image.aladin.co.kr/product/26/0/cover500/s452139198_1.jpg",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=260084",
   "match": 0.0,
-  "uncertain": true
+  "alias": "데미안",
+  "confirmedBy": "사람 확인 2026-08-13 — 같은 작품, 리디는 영문판"
  },
  "MLOps 실전 가이드": {
   "title": "MLOps 실전 가이드",
@@ -1257,15 +1129,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=319756283",
   "match": 1.0
  },
- "On Prayer and The Contemplative Life": {
-  "notfound": true
- },
- "A Philosophy of Software Design, 2nd Edition": {
-  "notfound": true
- },
- "A System for Writing": {
-  "notfound": true
- },
  "Apprenticeship Patterns": {
   "title": "프로그래머의 길, 멘토에게 묻다",
   "author": "데이브 후버, 애디웨일 오시나이",
@@ -1273,7 +1136,8 @@
   "cover": "https://image.aladin.co.kr/product/741/54/cover500/8991268803_1.jpg",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=7415431",
   "match": 0.0,
-  "uncertain": true
+  "alias": "프로그래머의 길, 멘토에게 묻다",
+  "confirmedBy": "사람 확인 2026-08-13"
  },
  "David Copperfield": {
   "title": "데이비드 코퍼필드",
@@ -1282,7 +1146,184 @@
   "cover": "https://image.aladin.co.kr/product/880/10/cover500/8949707314_2.jpg",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=8801063",
   "match": 0.0,
+  "alias": "데이비드 코퍼필드",
+  "confirmedBy": "사람 확인 2026-08-13"
+ },
+ "Every Good Endeavor": {
+  "title": "팀 켈러의 일과 영성",
+  "author": "팀 켈러, 최종훈",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/3332/59/cover500/8953119901_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=33325998",
+  "match": 0.0,
+  "alias": "팀 켈러의 일과 영성",
+  "confirmedBy": "사람 확인 2026-08-13"
+ },
+ "Getting Things Done": {
+  "title": "쏟아지는 일 완벽하게 해내는 법",
+  "author": "데이비드 앨런, 김경섭",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/8683/83/cover500/8934975288_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86838333",
+  "match": 0.0,
+  "alias": "쏟아지는 일 완벽하게 해내는 법",
+  "confirmedBy": "사람 확인 2026-08-13"
+ },
+ "Modern Software Engineering": {
+  "title": "모던 소프트웨어 엔지니어링",
+  "author": "데이비드 팔리, 박재호",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/36167/97/cover500/k622038191_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361679771",
+  "match": 0.0,
+  "alias": "모던 소프트웨어 엔지니어링",
+  "confirmedBy": "사람 확인 2026-08-13"
+ },
+ "Refactoring": {
+  "title": "리팩터링 2판 (리팩토링 개정판)",
+  "author": "마틴 파울러, 개앞맵시",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/23618/61/cover500/k932638523_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=236186172",
+  "match": 0.0,
+  "alias": "리팩터링 2판 (리팩토링 개정판)",
+  "confirmedBy": "사람 확인 2026-08-13"
+ },
+ "이팩티브 엔지니어": {
+  "title": "이펙티브 엔지니어",
+  "author": "에드먼드 라우, 이미령",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/29689/33/cover500/k962838585_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=296893356",
+  "match": 1.0
+ },
+ "대한민국 헌법": {
+  "title": "대한민국헌법 (미니미니북)",
+  "author": "대한민국",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/35585/77/cover500/k712036793_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355857744",
+  "match": 1.0
+ },
+ "논리적으로 말하는 테크닉": {
+  "notfound": true
+ },
+ "노 하드 필링스": {
+  "title": "No Hard Feelings 노 하드 필링스",
+  "author": "리즈 포슬린, 몰리 웨스트 더피",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/18828/9/cover500/8968061513_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=188280906",
+  "match": 0.85
+ },
+ "데이터 문해력": {
+  "title": "빅데이터 시대, 성과를 이끌어 내는 데이터 문해력",
+  "author": "카시와기 요시키, 강모희",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/26565/83/cover500/8965402913_2.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=265658321",
+  "match": 0.85
+ },
+ "The Tech Resume Inside Out": {
+  "notfound": true
+ },
+ "노트의 품격": {
+  "title": "노트의 품격",
+  "author": "이재영",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/15683/56/cover500/k112533130_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=156835614",
+  "match": 1.0
+ },
+ "나 홀로 유럽": {
+  "title": "나홀로 유럽",
+  "author": "백원달",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/13686/32/cover500/k062532611_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=136863291",
+  "match": 1.0
+ },
+ "현직 약사가 알려주는 영양제 특강": {
+  "title": "영양제 특강",
+  "author": "염혜진",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/32920/41/cover500/k902936837_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329204106",
+  "match": 0.53,
+  "confirmedBy": "사람 확인 2026-08-13 — 표기만 다름"
+ },
+ "더 머니북": {
+  "title": "THE MONEY BOOK 더 머니북",
+  "author": "토스",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/34009/78/cover500/k772931867_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340097859",
+  "match": 0.85
+ },
+ "그림으로 배우는 HTTP & Network Basics": {
+  "notfound": true
+ },
+ "어디서 살 것인가: 우리가 살고 싶은 곳의 기준을 바꾸다": {
+  "title": "어디서 살 것인가",
+  "author": "유현준",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/14799/66/cover500/8932473803_2.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=147996667",
+  "match": 1.0
+ },
+ "이동진 독서법": {
+  "title": "닥치는 대로 끌리는 대로 오직 재미있게 이동진 독서법",
+  "author": "이동진",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/29563/46/cover500/k762837255_2.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=295634618",
+  "match": 0.85
+ },
+ "내 코드가 그렇게 이상한가요? [무료특별판]": {
+  "title": "내 코드가 그렇게 이상한가요?",
+  "author": "센바 다이야, 윤인성",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/31790/64/cover500/8966263992_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317906454",
+  "match": 1.0
+ },
+ "더 나은 선택": {
+  "title": "더 나은 나를 만드는 선택력 시리즈 1~3 세트 - 전3권",
+  "author": "가니트 레비, 아디어 레비",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/40021/37/cover500/k742130331_2.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400213742",
+  "match": 0.38,
   "uncertain": true
+ },
+ "지적 대화를 위한 30분 고전": {
+  "notfound": true
+ },
+ "크리스천의 성 토크": {
+  "title": "크리스천의 性 TALK (성 토크)",
+  "author": "박수웅",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/31832/8/cover500/8953144965_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=318320896",
+  "match": 0.56,
+  "confirmedBy": "사람 확인 2026-08-13 — 표기만 다름"
+ },
+ "포프TV 1권": {
+  "notfound": true
+ },
+ "A Philosophy of Software Design, 2nd Edition": {
+  "notfound": true
+ },
+ "A System for Writing": {
+  "notfound": true
+ },
+ "Animal Farm": {
+  "title": "Animal Farm",
+  "author": "조지 오웰",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/87/27/cover500/8971724471_2.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=872721",
+  "match": 1.0
  },
  "Designing Data-Intensive Applications": {
   "notfound": true
@@ -1296,44 +1337,11 @@
   "match": 0.0,
   "uncertain": true
  },
- "Every Good Endeavor": {
-  "title": "팀 켈러의 일과 영성",
-  "author": "팀 켈러, 최종훈",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/3332/59/cover500/8953119901_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=33325998",
-  "match": 0.0,
-  "uncertain": true
- },
- "Getting Things Done": {
-  "title": "쏟아지는 일 완벽하게 해내는 법",
-  "author": "데이비드 앨런, 김경섭",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/8683/83/cover500/8934975288_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86838333",
-  "match": 0.0,
-  "uncertain": true
- },
  "Meta-Leadership": {
   "notfound": true
  },
- "Modern Software Engineering": {
-  "title": "모던 소프트웨어 엔지니어링",
-  "author": "데이비드 팔리, 박재호",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/36167/97/cover500/k622038191_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361679771",
-  "match": 0.0,
-  "uncertain": true
- },
- "Refactoring": {
-  "title": "리팩터링 2판 (리팩토링 개정판)",
-  "author": "마틴 파울러, 개앞맵시",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/23618/61/cover500/k932638523_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=236186172",
-  "match": 0.0,
-  "uncertain": true
+ "On Prayer and The Contemplative Life": {
+  "notfound": true
  },
  "Robert C. Martin Series": {
   "title": "차별화로 핵심역량을 높이는 경영전략",

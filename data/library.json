@@ -1,6 +1,6 @@
 {
  "updatedAt": "2026-08-13",
- "total": 171,
+ "total": 169,
  "services": [
   {
    "id": "ridi",
@@ -227,11 +227,11 @@
   },
   {
    "title": "대한민국 헌법",
-   "author": "",
+   "author": "대한민국",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/35585/77/cover500/k712036793_1.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355857744",
    "sources": [],
    "read": true,
    "readAt": "2026-03",
@@ -443,11 +443,11 @@
   },
   {
    "title": "노 하드 필링스",
-   "author": "",
+   "author": "리즈 포슬린, 몰리 웨스트 더피",
    "englishTitle": "No Hard Feelings",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/18828/9/cover500/8968061513_1.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=188280906",
    "sources": [],
    "read": true,
    "readAt": "2025-12",
@@ -455,11 +455,11 @@
   },
   {
    "title": "데이터 문해력",
-   "author": "",
+   "author": "카시와기 요시키, 강모희",
    "englishTitle": "Data Literacy",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/26565/83/cover500/8965402913_2.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=265658321",
    "sources": [],
    "read": true,
    "readAt": "2025-12",
@@ -640,11 +640,11 @@
   },
   {
    "title": "노트의 품격",
-   "author": "",
+   "author": "이재영",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/15683/56/cover500/k112533130_1.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=156835614",
    "sources": [],
    "read": true,
    "readAt": "2025-08",
@@ -813,11 +813,11 @@
   },
   {
    "title": "나 홀로 유럽",
-   "author": "",
+   "author": "백원달",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/13686/32/cover500/k062532611_1.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=136863291",
    "sources": [],
    "read": true,
    "readAt": "2025-04",
@@ -907,11 +907,11 @@
   },
   {
    "title": "현직 약사가 알려주는 영양제 특강",
-   "author": "",
+   "author": "염혜진",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/32920/41/cover500/k902936837_1.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329204106",
    "sources": [],
    "read": true,
    "readAt": "2025-03",
@@ -919,11 +919,11 @@
   },
   {
    "title": "더 머니북",
-   "author": "",
+   "author": "토스",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/34009/78/cover500/k772931867_1.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340097859",
    "sources": [],
    "read": true,
    "readAt": "2025-02",
@@ -991,11 +991,11 @@
   },
   {
    "title": "어디서 살 것인가: 우리가 살고 싶은 곳의 기준을 바꾸다",
-   "author": "",
+   "author": "유현준",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/14799/66/cover500/8932473803_2.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=147996667",
    "sources": [],
    "read": true,
    "readAt": "2025-01",
@@ -1058,9 +1058,9 @@
    "title": "이동진 독서법",
    "author": "이동진",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/29563/46/cover500/k762837255_2.jpg",
    "publisher": "위즈덤하우스",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=295634618",
    "sources": [
     {
      "id": "kyobo",
@@ -1232,11 +1232,11 @@
   },
   {
    "title": "이팩티브 엔지니어",
-   "author": "",
+   "author": "에드먼드 라우, 이미령",
    "englishTitle": "The Effective Engineer",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/29689/33/cover500/k962838585_1.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=296893356",
    "sources": [],
    "read": true,
    "readAt": "2022-07",
@@ -1331,9 +1331,9 @@
    "title": "내 코드가 그렇게 이상한가요? [무료특별판]",
    "author": "센바 다이야",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/31790/64/cover500/8966263992_1.jpg",
    "publisher": "인사이트",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317906454",
    "sources": [
     {
      "id": "kyobo",
@@ -1423,6 +1423,10 @@
     {
      "id": "kyobo",
      "link": ""
+    },
+    {
+     "id": "ridi",
+     "link": "https://ridibooks.com/library/books/1377475/"
     }
    ],
    "read": false,
@@ -1875,9 +1879,9 @@
    "title": "크리스천의 성 토크",
    "author": "박수웅",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/31832/8/cover500/8953144965_1.jpg",
    "publisher": "두란노서원",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=318320896",
    "sources": [
     {
      "id": "kyobo",
@@ -2060,7 +2064,7 @@
   },
   {
    "title": "팀 켈러의 일과 영성",
-   "author": "팀 켈러, 최종훈",
+   "author": "Timothy Keller",
    "englishTitle": "",
    "cover": "https://image.aladin.co.kr/product/3332/59/cover500/8953119901_1.jpg",
    "publisher": "",
@@ -2069,6 +2073,10 @@
     {
      "id": "ridi",
      "link": "https://ridibooks.com/library/books/2228894/"
+    },
+    {
+     "id": "kindle",
+     "link": "https://www.amazon.com/dp/B007T8R18K"
     }
    ],
    "read": false,
@@ -2266,9 +2274,9 @@
    "title": "Animal Farm",
    "author": "George Orwell",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/87/27/cover500/8971724471_2.jpg",
    "publisher": "더클래식",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=872721",
    "sources": [
     {
      "id": "kyobo",
@@ -2283,9 +2291,9 @@
    "title": "Apprenticeship Patterns",
    "author": "Dave Hoover",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/741/54/cover500/8991268803_1.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=7415431",
    "sources": [
     {
      "id": "kindle",
@@ -2300,30 +2308,13 @@
    "title": "David Copperfield",
    "author": "Charles Dickens",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/880/10/cover500/8949707314_2.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=8801063",
    "sources": [
     {
      "id": "kindle",
      "link": "https://www.amazon.com/dp/B004GHNIQQ"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": ""
-  },
-  {
-   "title": "Demian (영어로 읽는 세계문학 319)",
-   "author": "",
-   "englishTitle": "",
-   "cover": "",
-   "publisher": "",
-   "aladin": "",
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/1377475/"
     }
    ],
    "read": false,
@@ -2365,29 +2356,12 @@
    "addedAt": ""
   },
   {
-   "title": "Every Good Endeavor",
-   "author": "Timothy Keller",
-   "englishTitle": "",
-   "cover": "",
-   "publisher": "",
-   "aladin": "",
-   "sources": [
-    {
-     "id": "kindle",
-     "link": "https://www.amazon.com/dp/B007T8R18K"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": ""
-  },
-  {
    "title": "Getting Things Done",
    "author": "David Allen",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/8683/83/cover500/8934975288_1.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86838333",
    "sources": [
     {
      "id": "google",
@@ -2436,9 +2410,9 @@
    "title": "Modern Software Engineering",
    "author": "David Farley",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/36167/97/cover500/k622038191_1.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361679771",
    "sources": [
     {
      "id": "kindle",
@@ -2470,9 +2444,9 @@
    "title": "Refactoring",
    "author": "Martin Fowler",
    "englishTitle": "",
-   "cover": "",
+   "cover": "https://image.aladin.co.kr/product/23618/61/cover500/k932638523_1.jpg",
    "publisher": "",
-   "aladin": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=236186172",
    "sources": [
     {
      "id": "kindle",

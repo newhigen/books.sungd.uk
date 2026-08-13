@@ -79,6 +79,10 @@ function loadSources() {
     })
 }
 
+// ---- 표지·저자 보강분 (scripts/enrich.py 가 만든 캐시) ----
+const COVERS = join(repo, 'data', 'covers.json')
+const covers = existsSync(COVERS) ? JSON.parse(readFileSync(COVERS, 'utf8')) : {}
+
 // ---- 병합 ----
 const books = new Map() // key → 책
 
@@ -111,10 +115,6 @@ for (const src of loadSources()) {
   }
 }
 
-// ---- 표지·저자 보강분 (scripts/enrich.py 가 만든 캐시) ----
-const COVERS = join(repo, 'data', 'covers.json')
-const covers = existsSync(COVERS) ? JSON.parse(readFileSync(COVERS, 'utf8')) : {}
-
 for (const r of readLog()) {
   if (!r.title) continue
   const book = upsert(keyOf(r.title), { title: r.title, englishTitle: r.englishTitle })
@@ -123,20 +123,31 @@ for (const r of readLog()) {
   if (!book.readAt || r.readAt > book.readAt) book.readAt = r.readAt
 }
 
-// 영문 제목으로 들어온 책을 한글 기록과 합친다.
-// 읽은 기록에 english-title 이 있으므로, 그 열을 별칭 삼아 같은 책임을 알아본다.
+// 같은 책이 두 이름으로 들어온 경우 한 줄로 합친다 (남길 쪽, 지울 쪽).
+function mergeInto(keepKey, dropKey) {
+  const keep = books.get(keepKey)
+  const drop = books.get(dropKey)
+  if (!keep || !drop || keep === drop) return false
+  for (const src of drop.sources) {
+    if (!keep.sources.some((x) => x.id === src.id)) keep.sources.push(src)
+  }
+  for (const k of ['author', 'cover', 'publisher', 'addedAt', 'englishTitle', 'aladin']) {
+    if (!keep[k] && drop[k]) keep[k] = drop[k]
+  }
+  if (drop.read) keep.read = true
+  if (drop.readAt && (!keep.readAt || drop.readAt > keep.readAt)) keep.readAt = drop.readAt
+  books.delete(dropKey)
+  return true
+}
+
+// 읽은 기록의 english-title 열을 별칭 삼아, 원서 제목으로 들어온 책을 한글 기록과 합친다.
 for (const r of readLog()) {
-  if (!r.englishTitle) continue
-  const ko = books.get(keyOf(r.title))
-  const en = books.get(keyOf(r.englishTitle))
-  if (!ko || !en || ko === en) continue
-  for (const src of en.sources) {
-    if (!ko.sources.some((x) => x.id === src.id)) ko.sources.push(src)
-  }
-  for (const k of ['author', 'cover', 'publisher', 'addedAt']) {
-    if (!ko[k] && en[k]) ko[k] = en[k]
-  }
-  books.delete(keyOf(r.englishTitle))
+  if (r.englishTitle) mergeInto(keyOf(r.title), keyOf(r.englishTitle))
+}
+
+// 사람이 확인한 원서↔번역서 짝 (data/covers.json 의 alias). 한글 쪽으로 모은다.
+for (const [title, c] of Object.entries(covers)) {
+  if (c && c.alias) mergeInto(keyOf(c.alias), keyOf(title))
 }
 
 // 수집 원본에 없던 표지·저자를 채운다 (원본 값이 있으면 그대로 둔다)
