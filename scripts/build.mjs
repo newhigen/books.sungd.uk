@@ -26,7 +26,9 @@ const SERVICES = [
 
 // ---- 제목 정규화 (같은 책 찾기) ----
 // 부제·판형·괄호를 떼고 공백·기호를 지운 것을 키로 쓴다.
-function keyOf(title, author) {
+// 저자는 키에 넣지 않는다 — 읽은 기록(read-log.csv)에는 저자가 없어서, 저자를 섞으면
+// 수집 목록과 읽은 기록이 같은 책인데도 영영 안 만난다.
+function keyOf(title) {
   const t = String(title || '')
     .replace(/\([^)]*\)/g, ' ')
     .replace(/\[[^\]]*\]/g, ' ')
@@ -34,11 +36,7 @@ function keyOf(title, author) {
     .replace(/(개정|증보|전면개정|리커버|특별|합본)?\s*(판|호|권)\b/g, ' ')
     .replace(/[^\p{L}\p{N}]/gu, '')
     .toLowerCase()
-  const a = String(author || '')
-    .split(/[,;·]/)[0]
-    .replace(/[^\p{L}\p{N}]/gu, '')
-    .toLowerCase()
-  return t + (a ? '@' + a.slice(0, 6) : '')
+  return t
 }
 
 // ---- 읽은 책 로그 (title, english-title, year, month) ----
@@ -100,7 +98,7 @@ function upsert(key, patch) {
 for (const src of loadSources()) {
   for (const b of src.books) {
     if (!b.title) continue
-    const book = upsert(keyOf(b.title, b.author), {
+    const book = upsert(keyOf(b.title), {
       title: b.title,
       author: b.author || '',
       cover: b.cover || '',
@@ -119,10 +117,26 @@ const covers = existsSync(COVERS) ? JSON.parse(readFileSync(COVERS, 'utf8')) : {
 
 for (const r of readLog()) {
   if (!r.title) continue
-  const book = upsert(keyOf(r.title, ''), { title: r.title, englishTitle: r.englishTitle })
+  const book = upsert(keyOf(r.title), { title: r.title, englishTitle: r.englishTitle })
   book.read = true
   // 같은 책을 두 번 읽었으면 최근 것을 남긴다
   if (!book.readAt || r.readAt > book.readAt) book.readAt = r.readAt
+}
+
+// 영문 제목으로 들어온 책을 한글 기록과 합친다.
+// 읽은 기록에 english-title 이 있으므로, 그 열을 별칭 삼아 같은 책임을 알아본다.
+for (const r of readLog()) {
+  if (!r.englishTitle) continue
+  const ko = books.get(keyOf(r.title))
+  const en = books.get(keyOf(r.englishTitle))
+  if (!ko || !en || ko === en) continue
+  for (const src of en.sources) {
+    if (!ko.sources.some((x) => x.id === src.id)) ko.sources.push(src)
+  }
+  for (const k of ['author', 'cover', 'publisher', 'addedAt']) {
+    if (!ko[k] && en[k]) ko[k] = en[k]
+  }
+  books.delete(keyOf(r.englishTitle))
 }
 
 // 수집 원본에 없던 표지·저자를 채운다 (원본 값이 있으면 그대로 둔다)

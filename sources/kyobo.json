@@ -1,0 +1,201 @@
+{
+ "service": "kyobo",
+ "collectedAt": "2026-08-13",
+ "books": [
+  {
+   "title": "완벽이라는 중독",
+   "author": "토머스 커런",
+   "publisher": "북라이프"
+  },
+  {
+   "title": "행복 전환 연습",
+   "author": "러스 해리스",
+   "publisher": "마인드빌딩"
+  },
+  {
+   "title": "너무 잘하려고 애쓰지 마라",
+   "author": "나태주",
+   "publisher": "열림원"
+  },
+  {
+   "title": "오래된 인터뷰, 개발자의 미래를 긷다 1 (무료특별판)",
+   "author": "수전 래머스",
+   "publisher": "인사이트"
+  },
+  {
+   "title": "머신 러닝 마스터 클래스 (무료특별판)",
+   "author": "민재식",
+   "publisher": "인사이트"
+  },
+  {
+   "title": "내 코드가 그렇게 이상한가요? [무료특별판]",
+   "author": "센바 다이야",
+   "publisher": "인사이트"
+  },
+  {
+   "title": "시스템 성능 엔지니어링(무료특별판)",
+   "author": "브렌던 그레그",
+   "publisher": "인사이트"
+  },
+  {
+   "title": "내가 알던 사람",
+   "author": "샌디프 자우하르",
+   "publisher": "글항아리"
+  },
+  {
+   "title": "달리기를 말할 때 내가 하고 싶은 이야기",
+   "author": "무라카미 하루키",
+   "publisher": "문학사상"
+  },
+  {
+   "title": "돈키호테",
+   "author": "미겔 데 세르반테스",
+   "publisher": "시공사"
+  },
+  {
+   "title": "주문하신 대만 간식 나왔습니다",
+   "author": "송채원(송차이)",
+   "publisher": "책밥"
+  },
+  {
+   "title": "모든 것은 예측 가능하다",
+   "author": "톰 치버스",
+   "publisher": "김영사"
+  },
+  {
+   "title": "개발자를 넘어 기술 리더로 가는 길",
+   "author": "타냐 라일리",
+   "publisher": "한빛미디어"
+  },
+  {
+   "title": "자세를 펴면 인생이 펴집니다",
+   "author": "송영민",
+   "publisher": "퍼스트펭귄"
+  },
+  {
+   "title": "복음 안에서 발견한 참된 자유",
+   "author": "팀 켈러",
+   "publisher": "복있는사람"
+  },
+  {
+   "title": "어떻게 공부할 것인가",
+   "author": "헨리 뢰디거",
+   "publisher": "와이즈베리"
+  },
+  {
+   "title": "어린 왕자(한글판)",
+   "author": "생텍쥐페리",
+   "publisher": "더클래식"
+  },
+  {
+   "title": "빌드(BUILD) 창조의 과정",
+   "author": "토니 퍼델",
+   "publisher": "비즈니스북스"
+  },
+  {
+   "title": "실용주의 프로그래머(20주년 기념판)",
+   "author": "데이비드 토머스",
+   "publisher": "인사이트"
+  },
+  {
+   "title": "이방인",
+   "author": "알베르 카뮈",
+   "publisher": "민음사"
+  },
+  {
+   "title": "이동진 독서법",
+   "author": "이동진",
+   "publisher": "위즈덤하우스"
+  },
+  {
+   "title": "요즘 우아한 개발",
+   "author": "우아한형제들",
+   "publisher": "골든래빗(주)"
+  },
+  {
+   "title": "데미안",
+   "author": "헤르만 헤세",
+   "publisher": "민음사"
+  },
+  {
+   "title": "헤드 퍼스트 디자인 패턴",
+   "author": "에릭 프리먼",
+   "publisher": "한빛미디어"
+  },
+  {
+   "title": "유난한 도전",
+   "author": "정경화",
+   "publisher": "북스톤"
+  },
+  {
+   "title": "함께 자라기",
+   "author": "김창준",
+   "publisher": "인사이트"
+  },
+  {
+   "title": "메이크 타임",
+   "author": "제이크 냅",
+   "publisher": "김영사"
+  },
+  {
+   "title": "더 나은 선택",
+   "author": "크레이그 그로쉘",
+   "publisher": "규장"
+  },
+  {
+   "title": "관계의 걸림돌 극복하기",
+   "author": "이관직",
+   "publisher": "두란노서원"
+  },
+  {
+   "title": "무신론 기자, 크리스천 과학자에게 따지다",
+   "author": "우종학",
+   "publisher": "IVP"
+  },
+  {
+   "title": "성경으로 불안 극복하기",
+   "author": "이관직",
+   "publisher": "두란노서원"
+  },
+  {
+   "title": "팀 켈러의 기도",
+   "author": "팀 켈러",
+   "publisher": "두란노서원"
+  },
+  {
+   "title": "크리스천의 연애",
+   "author": "박수웅",
+   "publisher": "두란노서원"
+  },
+  {
+   "title": "크리스천의 성 토크",
+   "author": "박수웅",
+   "publisher": "두란노서원"
+  },
+  {
+   "title": "하나님을 하나님 되게",
+   "author": "J. D. 그리어",
+   "publisher": "두란노서원"
+  },
+  {
+   "title": "다이어트의 정석",
+   "author": "수피",
+   "publisher": "한문화"
+  },
+  {
+   "title": "백종원이 추천하는 집밥 메뉴 54",
+   "author": "백종원",
+   "publisher": "서울문화사"
+  },
+  {
+   "title": "Animal Farm",
+   "author": "George Orwell",
+   "publisher": "더클래식"
+  },
+  {
+   "title": "남자 몸 만들기 4주 혁명",
+   "author": "한동길",
+   "publisher": "랜덤하우스코리아"
+  }
+ ]
+}

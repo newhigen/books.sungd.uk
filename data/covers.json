@@ -763,5 +763,585 @@
  },
  "이팩티브 엔지니어": {
   "notfound": true
+ },
+ "어린 왕자(한글판)": {
+  "title": "어린 왕자 (한글판 + 영어 + 프랑스어 텍스트)",
+  "author": "앙투안 드 생텍쥐페리, 김동근",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/6865/38/cover500/8998046660_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=68653840",
+  "match": 1.0
+ },
+ "메이크 타임": {
+  "title": "메이크 타임",
+  "author": "제이크 냅, 존 제라츠키",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/18979/66/cover500/8934995254_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=189796678",
+  "match": 1.0
+ },
+ "개발자를 넘어 기술 리더로 가는 길": {
+  "title": "개발자를 넘어 기술 리더로 가는 길",
+  "author": "타냐 라일리, 김그레이스",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/31673/39/cover500/k032833674_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=316733978",
+  "match": 1.0
+ },
+ "관계의 걸림돌 극복하기": {
+  "title": "관계의 걸림돌 극복하기",
+  "author": "이관직",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/10783/78/cover500/895312834x_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=107837820",
+  "match": 1.0
+ },
+ "그리스도인의 정체성": {
+  "title": "오스왈드 챔버스 그리스도인의 정체성",
+  "author": "오스왈드 챔버스, 스데반 황",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/13941/21/cover500/8977823870_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=139412178",
+  "match": 0.72
+ },
+ "기분이 태도가 되지 않게": {
+  "title": "기분이 태도가 되지 않게 (헬로키티 에디션)",
+  "author": "레몬심리, 박영란",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/37535/62/cover500/8901297841_3.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375356292",
+  "match": 1.0
+ },
+ "남자 몸 만들기 4주 혁명": {
+  "title": "남자 몸 만들기 4주 혁명",
+  "author": "한동길",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/49/50/cover500/895757462x_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=495064",
+  "match": 1.0
+ },
+ "내 코드가 그렇게 이상한가요? [무료특별판]": {
+  "notfound": true
+ },
+ "내가 알던 사람": {
+  "title": "내가 알던 사람",
+  "author": "샌디프 자우하르, 서정아",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/34558/45/cover500/k572933165_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345584561",
+  "match": 1.0
+ },
+ "너무 잘하려고 애쓰지 마라": {
+  "title": "너무 잘하려고 애쓰지 마라",
+  "author": "나태주",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/29566/59/cover500/k702837352_2.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=295665964",
+  "match": 1.0
+ },
+ "다이어트의 정석": {
+  "title": "다이어트의 정석",
+  "author": "수피",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/15831/44/cover500/895699336x_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=158314436",
+  "match": 1.0
+ },
+ "더 나은 선택": {
+  "title": "환경, 지구를 위한 리셋 그리고 우리의 선택",
+  "author": "유재열, 권재철",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/36984/83/cover500/k012030025_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=369848389",
+  "match": 0.18,
+  "uncertain": true
+ },
+ "데미안": {
+  "title": "데미안",
+  "author": "헤르만 헤세, 전영애",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/26/0/cover500/s452139198_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=260084",
+  "match": 1.0
+ },
+ "데일 카네기 인간관계론 (50만부 돌파 초판 무삭제 완역본)": {
+  "title": "데일 카네기 인간관계론 (50만부 돌파 초판 무삭제 완역본)",
+  "author": "데일 카네기, 임상훈",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/20945/79/cover500/s652933016_2.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=209457983",
+  "match": 1.0
+ },
+ "돈키호테": {
+  "title": "돈키호테 1",
+  "author": "미겔 데 세르반떼스, 안영옥",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/4922/52/cover500/8932916802_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49225289",
+  "match": 0.89
+ },
+ "머신 러닝 마스터 클래스 (무료특별판)": {
+  "title": "머신 러닝 마스터 클래스",
+  "author": "민재식",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/35522/24/cover500/8966264638_2.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355222458",
+  "match": 1.0
+ },
+ "무신론 기자, 크리스천 과학자에게 따지다": {
+  "title": "무신론 기자, 크리스천 과학자에게 따지다",
+  "author": "우종학",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/4880/60/cover500/8932813752_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=48806011",
+  "match": 1.0
+ },
+ "백종원이 추천하는 집밥 메뉴 54": {
+  "title": "백종원이 추천하는 집밥 메뉴 52 + 54 + 56 세트 - 전3권",
+  "author": "백종원",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/39356/43/cover500/k972138633_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=393564333",
+  "match": 0.76
+ },
+ "복음 안에서 발견한 참된 자유": {
+  "title": "복음 안에서 발견한 참된 자유",
+  "author": "팀 켈러, 장호준",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/34047/15/cover500/k792931279_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340471562",
+  "match": 1.0
+ },
+ "부모님을 위한 컴퓨터 무작정 따라하기": {
+  "title": "부모님을 위한 컴퓨터 무작정 따라하기",
+  "author": "곽은지",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/30788/81/cover500/k382831366_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=307888132",
+  "match": 1.0
+ },
+ "빌드(BUILD) 창조의 과정": {
+  "title": "빌드(BUILD) 창조의 과정",
+  "author": "토니 퍼델, 엄성수",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/35109/65/cover500/k982934606_2.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351096536",
+  "match": 1.0
+ },
+ "빠르게 실패하기": {
+  "title": "더 빠르게 실패하기 (15만 부 기념 에디션)",
+  "author": "존 크럼볼츠, 라이언 바비노",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/35301/77/cover500/k022035973_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353017744",
+  "match": 0.93
+ },
+ "새가족반": {
+  "title": "새가족반",
+  "author": "이정규",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/36028/57/cover500/k502037123_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360285729",
+  "match": 1.0
+ },
+ "성경으로 불안 극복하기": {
+  "title": "성경으로 불안 극복하기",
+  "author": "이관직",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/11797/31/cover500/895312963x_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=117973148",
+  "match": 1.0
+ },
+ "순전한 기독교": {
+  "title": "순전한 기독교 (개정무선판)",
+  "author": "C. S. 루이스, 장경철",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/17718/45/cover500/8936513265_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=177184523",
+  "match": 1.0
+ },
+ "스크루테이프의 편지": {
+  "title": "스크루테이프의 편지",
+  "author": "C. S. 루이스, 김선형",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/17560/38/cover500/8936513192_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=175603868",
+  "match": 1.0
+ },
+ "스프린트": {
+  "title": "스프린트",
+  "author": "제이크 냅, 존 제라츠키",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/7492/5/cover500/8934975954_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=74920583",
+  "match": 1.0
+ },
+ "시스템 성능 엔지니어링(무료특별판)": {
+  "title": "시스템 성능 엔지니어링",
+  "author": "브렌던 그레그, 이호연",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/37515/89/cover500/8966264964_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375158996",
+  "match": 1.0
+ },
+ "실용주의 프로그래머(20주년 기념판)": {
+  "title": "실용주의 프로그래머 20주년 기념판",
+  "author": "데이비드 토머스, 앤드류 헌트",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/28878/64/cover500/8966263364_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=288786463",
+  "match": 0.72
+ },
+ "어떻게 공부할 것인가": {
+  "title": "어떻게 공부할 것인가",
+  "author": "헨리 뢰디거, 마크 맥대니얼",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/4958/83/cover500/8937834863_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49588358",
+  "match": 1.0
+ },
+ "연금술사": {
+  "title": "연금술사",
+  "author": "파울로 코엘료, 최정수",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/39702/10/cover500/k022130492_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=397021013",
+  "match": 1.0
+ },
+ "연애 신학": {
+  "title": "연애 신학",
+  "author": "권율",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/24682/84/cover500/k412631598_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=246828433",
+  "match": 1.0
+ },
+ "오래된 인터뷰, 개발자의 미래를 긷다 1 (무료특별판)": {
+  "title": "오래된 인터뷰, 개발자의 미래를 긷다 1~2 세트 - 전2권",
+  "author": "수전 래머스, 피터 사이블",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/37459/68/cover500/s312032723_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374596836",
+  "match": 0.84
+ },
+ "완벽이라는 중독": {
+  "title": "완벽이라는 중독",
+  "author": "토머스 커런, 김문주",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/34762/68/cover500/k342933922_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=347626896",
+  "match": 1.0
+ },
+ "요즘 우아한 개발": {
+  "title": "요즘 우아한 백엔드 개발",
+  "author": "우아한형제들",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/39952/0/cover500/k422130420_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399520031",
+  "match": 0.82
+ },
+ "위험한 기도": {
+  "title": "가장 위험한 기도, 주기도",
+  "author": "김영봉",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/2683/45/cover500/8932812942_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=26834557",
+  "match": 0.67
+ },
+ "자세를 펴면 인생이 펴집니다": {
+  "title": "자세를 펴면 인생이 펴집니다",
+  "author": "송영민",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/35197/33/cover500/k622934529_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351973338",
+  "match": 1.0
+ },
+ "제임스 패커의 하나님의 인도": {
+  "title": "제임스 패커의 하나님의 인도",
+  "author": "제임스 패커, 캐롤린 나이스트롬",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/204/58/cover500/8904157528_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2045878",
+  "match": 1.0
+ },
+ "지적 대화를 위한 30분 고전": {
+  "notfound": true
+ },
+ "크리스천의 성 토크": {
+  "title": "크리스천의 性 TALK (성 토크)",
+  "author": "박수웅",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/31832/8/cover500/8953144965_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=318320896",
+  "match": 0.56,
+  "uncertain": true
+ },
+ "크리스천의 연애": {
+  "title": "크리스천의 연애",
+  "author": "박수웅",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/32008/16/cover500/8953145139_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320081658",
+  "match": 1.0
+ },
+ "팀 켈러, 결혼을 말하다": {
+  "title": "팀 켈러, 결혼을 말하다",
+  "author": "팀 켈러, 캐시 켈러",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/4140/69/cover500/8953120500_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=41406915",
+  "match": 1.0
+ },
+ "팀 켈러, 고통에 답하다": {
+  "title": "팀 켈러, 고통에 답하다",
+  "author": "팀 켈러, 최종훈",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/13402/14/cover500/8953130581_3.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=134021436",
+  "match": 1.0
+ },
+ "팀 켈러, 당신을 위한 갈라디아서": {
+  "title": "팀 켈러, 당신을 위한 갈라디아서",
+  "author": "팀 켈러, 윤종석",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/14983/19/cover500/8953131685_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=149831991",
+  "match": 1.0
+ },
+ "팀 켈러, 당신을 위한 로마서": {
+  "title": "팀 켈러, 당신을 위한 로마서 1",
+  "author": "팀 켈러, 김건우",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/5021/89/cover500/8953121213_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=50218970",
+  "match": 0.96
+ },
+ "팀 켈러의 기도": {
+  "title": "팀 켈러의 기도",
+  "author": "팀 켈러, 최종훈",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/5987/9/cover500/8953122147_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=59870938",
+  "match": 1.0
+ },
+ "팀 켈러의 내가 만든 신": {
+  "title": "팀 켈러의 내가 만든 신",
+  "author": "팀 켈러, 윤종석",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/10904/21/cover500/8953128285_3.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=109042167",
+  "match": 1.0
+ },
+ "팀 켈러의 답이 되는 기독교": {
+  "title": "팀 켈러의 답이 되는 기독교",
+  "author": "팀 켈러, 윤종석",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/13119/67/cover500/8953130298_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=131196721",
+  "match": 1.0
+ },
+ "팀 켈러의 예수, 예수": {
+  "title": "팀 켈러의 예수, 예수",
+  "author": "팀 켈러, 윤종석",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/12370/32/cover500/895312994x_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=123703299",
+  "match": 1.0
+ },
+ "팀 켈러의 인생 베이직": {
+  "title": "팀 켈러의 인생 베이직 (합본 에디션)",
+  "author": "팀 켈러, 윤종석",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/35987/7/cover500/8953150418_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=359870768",
+  "match": 1.0
+ },
+ "팀 켈러의 일과 영성": {
+  "title": "팀 켈러의 일과 영성",
+  "author": "팀 켈러, 최종훈",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/3332/59/cover500/8953119901_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=33325998",
+  "match": 1.0
+ },
+ "팀 켈러의 탕부 하나님": {
+  "title": "팀 켈러의 탕부 하나님",
+  "author": "팀 켈러, 윤종석",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/8716/84/cover500/8953125782_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=87168498",
+  "match": 1.0
+ },
+ "파이썬 알고리즘 인터뷰": {
+  "title": "파이썬 알고리즘 인터뷰",
+  "author": "박상길, 정진호",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/24549/58/cover500/k822631873_3.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=245495826",
+  "match": 1.0
+ },
+ "포프TV 1권": {
+  "notfound": true
+ },
+ "풍성한 삶으로의 초대": {
+  "title": "풍성한 삶으로의 초대 워크북 - 일반용",
+  "author": "김형국",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/18685/93/cover500/k782635664_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=186859354",
+  "match": 0.75
+ },
+ "풍성한 삶의 첫걸음": {
+  "title": "풍성한 삶의 첫걸음",
+  "author": "김형국",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/10565/45/cover500/k312530435_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=105654566",
+  "match": 1.0
+ },
+ "하나님을 탐닉하라": {
+  "title": "하나님을 탐닉하라",
+  "author": "마이클 존 큐직, 정성욱",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/2199/82/cover500/8936509527_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=21998282",
+  "match": 1.0
+ },
+ "하나님을 하나님 되게": {
+  "title": "하나님을 하나님 되게",
+  "author": "J. D. 그리어, 정성묵",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/15151/34/cover500/8953131499_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=151513445",
+  "match": 1.0
+ },
+ "행복 전환 연습": {
+  "title": "행복 전환 연습",
+  "author": "러스 해리스, 김미옥",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/32054/88/cover500/k652834687_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320548892",
+  "match": 1.0
+ },
+ "헤드 퍼스트 디자인 패턴": {
+  "title": "헤드 퍼스트 디자인 패턴",
+  "author": "에릭 프리먼, 엘리자베스 롭슨",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/29089/24/cover500/k212837767_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=290892473",
+  "match": 1.0
+ },
+ "Animal Farm": {
+  "title": "동물농장",
+  "author": "조지 오웰, 금정연",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/37480/63/cover500/k922032019_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374806337",
+  "match": 0.0,
+  "uncertain": true
+ },
+ "Demian (영어로 읽는 세계문학 319)": {
+  "title": "데미안",
+  "author": "헤르만 헤세, 전영애",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/26/0/cover500/s452139198_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=260084",
+  "match": 0.0,
+  "uncertain": true
+ },
+ "MLOps 실전 가이드": {
+  "title": "MLOps 실전 가이드",
+  "author": "노아 기프트, 알프레도 데자",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/31975/62/cover500/k242834363_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=319756283",
+  "match": 1.0
+ },
+ "On Prayer and The Contemplative Life": {
+  "notfound": true
+ },
+ "A Philosophy of Software Design, 2nd Edition": {
+  "notfound": true
+ },
+ "A System for Writing": {
+  "notfound": true
+ },
+ "Apprenticeship Patterns": {
+  "title": "프로그래머의 길, 멘토에게 묻다",
+  "author": "데이브 후버, 애디웨일 오시나이",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/741/54/cover500/8991268803_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=7415431",
+  "match": 0.0,
+  "uncertain": true
+ },
+ "David Copperfield": {
+  "title": "데이비드 코퍼필드",
+  "author": "찰스 디킨스, 신상웅",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/880/10/cover500/8949707314_2.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=8801063",
+  "match": 0.0,
+  "uncertain": true
+ },
+ "Designing Data-Intensive Applications": {
+  "notfound": true
+ },
+ "Designing Machine Learning Systems": {
+  "title": "가상 면접 사례로 배우는 머신러닝 시스템 설계 기초",
+  "author": "알리 아미니안, 알렉스 쉬",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/33375/15/cover500/8966264352_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=333751539",
+  "match": 0.0,
+  "uncertain": true
+ },
+ "Every Good Endeavor": {
+  "title": "팀 켈러의 일과 영성",
+  "author": "팀 켈러, 최종훈",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/3332/59/cover500/8953119901_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=33325998",
+  "match": 0.0,
+  "uncertain": true
+ },
+ "Getting Things Done": {
+  "title": "쏟아지는 일 완벽하게 해내는 법",
+  "author": "데이비드 앨런, 김경섭",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/8683/83/cover500/8934975288_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86838333",
+  "match": 0.0,
+  "uncertain": true
+ },
+ "Meta-Leadership": {
+  "notfound": true
+ },
+ "Modern Software Engineering": {
+  "title": "모던 소프트웨어 엔지니어링",
+  "author": "데이비드 팔리, 박재호",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/36167/97/cover500/k622038191_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361679771",
+  "match": 0.0,
+  "uncertain": true
+ },
+ "Refactoring": {
+  "title": "리팩터링 2판 (리팩토링 개정판)",
+  "author": "마틴 파울러, 개앞맵시",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/23618/61/cover500/k932638523_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=236186172",
+  "match": 0.0,
+  "uncertain": true
+ },
+ "Robert C. Martin Series": {
+  "title": "차별화로 핵심역량을 높이는 경영전략",
+  "author": "클레이튼 M. 크리스텐슨, 로버트 S. 캐플런",
+  "publisher": "",
+  "cover": "https://image.aladin.co.kr/product/7134/15/cover500/k282434990_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=71341536",
+  "match": 0.0,
+  "uncertain": true
  }
 }

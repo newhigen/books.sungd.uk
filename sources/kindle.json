@@ -1,0 +1,62 @@
+{
+ "service": "kindle",
+ "collectedAt": "2026-08-13",
+ "note": "샘플 2권(Hell Yeah or No · Modern Software Engineering 샘플본) 제외. 마지막 한 줄은 시리즈 묶음이라 안에 든 권수는 아직 안 펼침.",
+ "books": [
+  {
+   "title": "Meta-Leadership",
+   "author": "Constance Dierickx",
+   "link": "https://www.amazon.com/dp/B0B7KRJ461"
+  },
+  {
+   "title": "Modern Software Engineering",
+   "author": "David Farley",
+   "link": "https://www.amazon.com/dp/B09GG6XKS4"
+  },
+  {
+   "title": "A System for Writing",
+   "author": "Bob Doto",
+   "link": "https://www.amazon.com/dp/B0D18J83VB"
+  },
+  {
+   "title": "Designing Data-Intensive Applications",
+   "author": "Martin Kleppmann",
+   "link": "https://www.amazon.com/dp/B06XPJML5D"
+  },
+  {
+   "title": "A Philosophy of Software Design, 2nd Edition",
+   "author": "John K. Ousterhout",
+   "link": "https://www.amazon.com/dp/B09B8LFKQL"
+  },
+  {
+   "title": "Apprenticeship Patterns",
+   "author": "Dave Hoover",
+   "link": "https://www.amazon.com/dp/B002RMSZ7E"
+  },
+  {
+   "title": "Designing Machine Learning Systems",
+   "author": "Chip Huyen",
+   "link": "https://www.amazon.com/dp/B0B1LGL2SR"
+  },
+  {
+   "title": "Refactoring",
+   "author": "Martin Fowler",
+   "link": "https://www.amazon.com/dp/B07LCM8RG2"
+  },
+  {
+   "title": "Every Good Endeavor",
+   "author": "Timothy Keller",
+   "link": "https://www.amazon.com/dp/B007T8R18K"
+  },
+  {
+   "title": "David Copperfield",
+   "author": "Charles Dickens",
+   "link": "https://www.amazon.com/dp/B004GHNIQQ"
+  },
+  {
+   "title": "Robert C. Martin Series",
+   "author": "Robert C. Martin",
+   "link": "https://www.amazon.com/dp/B001GSTOAM"
+  }
+ ]
+}
