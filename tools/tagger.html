@@ -59,10 +59,15 @@ h1{font-size:13px;font-weight:800;letter-spacing:-.03em;white-space:nowrap}
 table{width:100%;border-collapse:collapse;table-layout:fixed}
 .w-c{width:26px}.w-b{width:31%}.w-t{width:auto}.w-m{width:19%}
 td{padding:3px 8px 4px 0;border-bottom:1px solid var(--rule);vertical-align:top}
-tr.done .c-b{opacity:.45}
-tr.sep td{padding:11px 0 2px;border:0;font-size:11px;font-weight:750;color:var(--acc);
+/* 다 본 책은 한 톤 물러나되 읽을 수는 있게 — 거의 다 찍고 나면 화면 전체가 흐려진다 */
+tr.done .c-b{opacity:.62}
+tr.sep td{padding:9px 0 2px;border:0;font-size:11px;font-weight:750;color:var(--acc);
           letter-spacing:-.02em}
-tr.sep:first-child td{padding-top:2px}
+/* 묶음이 태그보다 한 단 위 — 굵은 선으로 구간을 끊는다 */
+tr.grp td{padding:20px 0 3px;border:0;border-top:1.5px solid var(--ink);font-size:12px;
+          font-weight:800;color:var(--ink);letter-spacing:-.03em}
+tr.grp:first-child td{padding-top:2px;border-top:0}
+tr.grp + tr.sep td{padding-top:3px}
 
 /* 다 봤다 — 왼쪽 끝에서 훑어 내려가며 찍는다 */
 .c-c{padding-left:0;padding-top:5px}
@@ -98,9 +103,14 @@ tr.sep:first-child td{padding-top:2px}
 .c-m textarea:not(:placeholder-shown){border-color:var(--acc);background:var(--acc-bg);color:var(--ink)}
 .c-m textarea::placeholder{color:#cecbc6}
 
-/* ── 태그 정리 ── */
-.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:4px}
-.tgi{display:flex;align-items:center;gap:5px;border-bottom:1px solid var(--rule);padding:4px 2px}
+/* ── 태그 정리 ── 묶음별로 세로 단에 흘린다 */
+.tg{columns:4;column-gap:22px}
+.tgg{break-inside:avoid;display:inline-block;width:100%;margin-bottom:13px}
+.tgg h3{font-size:11px;font-weight:750;color:var(--acc);letter-spacing:-.02em;
+        padding-bottom:2px;border-bottom:1px solid var(--rule2);margin-bottom:1px}
+.tgg h3 span{font-family:var(--mono);font-size:10px;font-weight:400;color:var(--faint);
+             float:right;letter-spacing:0}
+.tgi{display:flex;align-items:center;gap:5px;border-bottom:1px solid var(--rule);padding:3px 1px}
 .tgi.few .nm{color:var(--acc)}
 .tgi .nm{font-weight:650;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .tgi .n{font-family:var(--mono);font-size:10.5px;color:var(--faint)}
@@ -152,7 +162,7 @@ tr.sep:first-child td{padding-top:2px}
   .tag,.sug,.addt{font-size:12px;padding:3px 9px 4px;margin:0 3px 3px 0}
   .c-m{padding:3px 0 0 30px}
   .c-m textarea{font-size:12px}
-  .tg{grid-template-columns:1fr}
+  .tg{columns:1}
   .add{max-width:none}
 }
 </style>
@@ -234,21 +244,24 @@ const SERVICES = [
   ['google', '구글 북스'], ['pdf', 'PDF'], ['library', '도서관'], ['company', '회사'],
 ]
 
-// 주제 태그의 차례 — 뜻이 가까운 것끼리 붙여 둔다. 형식(가이드·에세이·소설…)은
-// 태그가 아니라 별도 축이라 여기 없다. 여기 없는 태그는 뒤로 밀린다.
-const TAG_ORDER = [
-  '개발자 태도', '개발자 커리어', '개발 조직', '코드 품질', '설계·아키텍처',
-  '시스템 설계', '알고리즘', '개발 방법론', '애자일', '테크니컬 라이팅', 'DB', '인프라', 'IT',
-  'ML', 'MLOps', 'AI', '데이터 분석', '통계·수학',
-  'UI/UX', '디자인', '프로덕트', '창업',
-  '리더십', '매니저', '팀', 'HR', '일하는 법', '커리어',
-  '학습', '노트·기록', '독서', '글쓰기', '말하기', '시간 관리',
-  '의사결정', '문제 해결', '사고법',
-  '심리', '멘탈', '완벽주의', '습관', '대화', '관계', 'INFJ',
-  '인생', '일상', '철학', '인문', '역사', '사회', '법', '돈',
-  '고전', '한국소설', '일본소설', '추리',
-  '건강', '운동', '음식', '여행', '예술', '건축', '사진', '일본어',
+// 주제 태그를 뜻이 가까운 것끼리 묶어 둔다. 이 차례가 목록 정렬에도, 태그 정리 화면의
+// 묶음에도 그대로 쓰인다. 여기 없는 태그는 '그 밖' 으로 모인다.
+const TAG_GROUPS = [
+  ['개발·기술', ['개발자 태도', '개발자 커리어', '개발 조직', '코드 품질', '설계·아키텍처',
+                '시스템 설계', '알고리즘', '개발 방법론', '애자일', '테크니컬 라이팅',
+                'DB', '인프라', 'IT']],
+  ['데이터·AI', ['ML', 'MLOps', 'AI', '데이터 분석', '통계·수학']],
+  ['만들기', ['UI/UX', '디자인', '프로덕트', '창업']],
+  ['일·조직', ['리더십', '매니저', '팀', 'HR', '일하는 법', '커리어', '성공']],
+  ['배우기·생각', ['학습', '성장', '노트·기록', '독서', '글쓰기', '말하기', '시간 관리',
+                 '의사결정', '문제 해결', '사고법']],
+  ['마음·관계', ['심리', '멘탈', '완벽주의', '습관', '대화', '관계', 'INFJ']],
+  ['삶·교양', ['인생', '일상', '정리', '철학', '인문', '역사', '사회', '법', '돈']],
+  ['문학', ['고전', '한국소설', '일본소설', '추리', '에세이']],
+  ['몸·취미', ['건강', '운동', '음식', '여행', '예술', '건축', '사진', '일본어']],
 ]
+const TAG_ORDER = TAG_GROUPS.flatMap(([, list]) => list)
+const TAG_OF = new Map(TAG_GROUPS.flatMap(([g, list]) => list.map((t) => [t, g])))
 const tagRank = (t) => {
   const i = TAG_ORDER.indexOf(t)
   return i < 0 ? TAG_ORDER.length : i
@@ -331,7 +344,7 @@ function drawList() {
   document.querySelectorAll('textarea[data-m]').forEach((ta) => { NOTES[ta.dataset.m] = ta.value })
   const list = visible()
   const byTag = $('#sort').value === 'tag'
-  let lastHead = null
+  let lastHead = null, lastGrp = null
   $('#rows').innerHTML = list.map((b) => {
     const tags = TAGS[b.title] || []
     const sug = SUGGEST[b.title] || []
@@ -339,9 +352,15 @@ function drawList() {
     let head = ''
     if (byTag) {
       const first = [...tags].sort((x, y) => tagRank(x) - tagRank(y))[0] || '(아직 없음)'
+      // 묶음(개발·기술 …) 이 먼저, 그 아래 태그
+      const grp = TAG_OF.get(first) || '그 밖'
+      if (grp !== lastGrp) {
+        lastGrp = grp
+        head += `<tr class="grp"><td colspan="4">${esc(grp)}</td></tr>`
+      }
       if (first !== lastHead) {
         lastHead = first
-        head = `<tr class="sep"><td colspan="4">${esc(first)}</td></tr>`
+        head += `<tr class="sep"><td colspan="4">${esc(first)}</td></tr>`
       }
     }
     const meta = [b.author, b.form].filter(Boolean).join(' · ')
@@ -431,17 +450,30 @@ $('#hidedone').addEventListener('click', () => {
   drawList()
 })
 
-// ── 태그 정리 ──
+// ── 태그 정리 ── 뜻이 가까운 것끼리 묶어 보여 준다
 function drawTags() {
   const c = counts()
-  const sorted = Object.entries(c).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ko'))
-  $('#tglist').innerHTML = sorted.map(([t, n]) =>
-    `<div class="tgi${n <= 2 ? ' few' : ''}">
-      <span class="nm">${esc(t)}</span><span class="n">${n}</span>
-      <button data-ren="${esc(t)}">이름</button>
-      <button data-mrg="${esc(t)}">합치기</button>
-      <button data-del="${esc(t)}">지우기</button>
-    </div>`).join('')
+  const seen = new Set()
+  const blocks = TAG_GROUPS.map(([name, list]) => {
+    const rows = list.filter((t) => c[t])
+    rows.forEach((t) => seen.add(t))
+    return [name, rows]
+  })
+  const rest = Object.keys(c).filter((t) => !seen.has(t)).sort((a, b) => c[b] - c[a])
+  if (rest.length) blocks.push(['그 밖', rest])
+
+  $('#tglist').innerHTML = blocks.filter(([, rows]) => rows.length).map(([name, rows]) => {
+    const sum = rows.reduce((a, t) => a + c[t], 0)
+    return `<section class="tgg">
+      <h3>${esc(name)} <span>${rows.length}종 · ${sum}권</span></h3>
+      ${rows.map((t) => `<div class="tgi${c[t] <= 2 ? ' few' : ''}">
+        <span class="nm">${esc(t)}</span><span class="n">${c[t]}</span>
+        <button data-ren="${esc(t)}">이름</button>
+        <button data-mrg="${esc(t)}">합치기</button>
+        <button data-del="${esc(t)}">지우기</button>
+      </div>`).join('')}
+    </section>`
+  }).join('')
 }
 $('#tglist').addEventListener('click', (e) => {
   const b = e.target.closest('button')
