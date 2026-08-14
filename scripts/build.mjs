@@ -165,6 +165,8 @@ for (const book of books.values()) {
   if (!book.cover) book.cover = c.cover || ''
   if (!book.publisher) book.publisher = c.publisher || ''
   if (!book.aladin) book.aladin = c.aladin || ''
+  // 알라딘에 없는 책은 교보에서 찾아 둔다
+  if (!book.kyobo) book.kyobo = c.kyobo || ''
 }
 
 // ---- 분야 정하기 ----
@@ -258,6 +260,7 @@ const all = [...books.values()].map((b) => ({
   cover: b.cover || '',
   publisher: b.publisher || '',
   aladin: b.aladin || '',
+  kyobo: b.kyobo || '',
   field: b.field || '',
   tags: b.tags || [],
   gist: b.gist || '',

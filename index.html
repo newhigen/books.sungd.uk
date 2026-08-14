@@ -351,7 +351,9 @@ function openBook(b) {
       ${b.field ? `<div class="drow"><dt>분야</dt><dd>${esc(b.field)}</dd></div>` : ''}
       ${b.form ? `<div class="drow"><dt>어떤 꼴</dt><dd>${esc(b.form)}</dd></div>` : ''}
       ${b.tags?.length ? `<div class="drow"><dt>태그</dt><dd class="tags">${b.tags.map((t) => `<button data-tag="${esc(t)}">${esc(t)}</button>`).join('')}</dd></div>` : ''}
-      ${b.aladin ? `<div class="drow"><dt>책 정보</dt><dd class="where"><a href="${esc(b.aladin)}" target="_blank" rel="noopener">알라딘</a></dd></div>` : ''}
+      ${b.aladin || b.kyobo ? `<div class="drow"><dt>책 정보</dt><dd class="where">${
+        b.aladin ? `<a href="${esc(b.aladin)}" target="_blank" rel="noopener">알라딘</a>` : ''
+      }${b.kyobo ? `<a href="${esc(b.kyobo)}" target="_blank" rel="noopener">교보</a>` : ''}</dd></div>` : ''}
     </dl>
     ${simil.length ? `<div class="simil"><h4>비슷한 책</h4><div class="simil-row">${simil.map((s) => `
       <button data-go="${DATA.books.indexOf(s)}">

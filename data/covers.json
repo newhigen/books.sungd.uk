@@ -1792,7 +1792,12 @@
   "pinned": true
  },
  "Big Feelings": {
-  "notfound": true,
-  "note": "알라딘에 없다 — 영어 원서. 검색하면 EBS 영어 교재가 잡혀서 막아 둔다."
+  "title": "Big Feelings",
+  "author": "Liz Fosslien, Mollie West Duffy",
+  "publisher": "Portfolio",
+  "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9780593418239.jpg",
+  "kyobo": "https://product.kyobobook.co.kr/detail/S000010437752",
+  "match": 1.0,
+  "note": "알라딘에 없다 — 교보에서 확인했다"
  }
 }
