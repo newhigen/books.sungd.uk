@@ -1158,7 +1158,13 @@
   "match": 1.0
  },
  "논리적으로 말하는 테크닉": {
-  "notfound": true
+  "title": "논리적으로 말하는 테크닉",
+  "author": "데구치 히로시, 현유경",
+  "publisher": "인포더북스",
+  "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788994567426.jpg",
+  "kyobo": "https://product.kyobobook.co.kr/detail/S000001551449",
+  "match": 1.0,
+  "note": "알라딘에 없다 — 교보에서 확인했다"
  },
  "노 하드 필링스": {
   "title": "No Hard Feelings 노 하드 필링스",
@@ -1739,13 +1745,13 @@
   "uncertain": true
  },
  "The Next Conversation": {
-  "title": "잠시 멈춤",
-  "author": "제퍼슨 피셔, 정지현",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/37823/89/cover500/8965967740_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=378238931",
-  "match": 0.0,
-  "uncertain": true
+  "title": "The Next Conversation",
+  "author": "Jefferson Fisher",
+  "publisher": "Tarcher",
+  "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9798217045792.jpg",
+  "kyobo": "https://product.kyobobook.co.kr/detail/S000216226878",
+  "match": 1.0,
+  "note": "알라딘에 없다 — 교보에서 확인했다"
  },
  "UX/UI의 10가지 심리학 법칙": {
   "title": "UX/UI의 10가지 심리학 법칙",

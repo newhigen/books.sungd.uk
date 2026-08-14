@@ -951,19 +951,22 @@
   },
   {
    "title": "논리적으로 말하는 테크닉",
-   "author": "",
+   "author": "데구치 히로시, 현유경",
    "englishTitle": "Logical Speaking Techniques",
-   "cover": "",
-   "publisher": "",
+   "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788994567426.jpg",
+   "publisher": "인포더북스",
    "aladin": "",
-   "kyobo": "",
+   "kyobo": "https://product.kyobobook.co.kr/detail/S000001551449",
    "field": "",
    "tags": [
     "말하기"
    ],
-   "gist": "",
-   "topics": [],
-   "form": "",
+   "gist": "말이 전달되지 않는 이유를 대화 형식으로 풀어낸 논리적 말하기",
+   "topics": [
+    "말하기",
+    "논리"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2026-02",
@@ -6783,19 +6786,22 @@
   },
   {
    "title": "The Next Conversation",
-   "author": "",
+   "author": "Jefferson Fisher",
    "englishTitle": "",
-   "cover": "",
-   "publisher": "",
+   "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9798217045792.jpg",
+   "publisher": "Tarcher",
    "aladin": "",
-   "kyobo": "",
+   "kyobo": "https://product.kyobobook.co.kr/detail/S000216226878",
    "field": "",
    "tags": [
     "대화"
    ],
-   "gist": "",
-   "topics": [],
-   "form": "",
+   "gist": "말싸움에서 이기려 들지 않고 대화를 이어가는 법",
+   "topics": [
+    "대화",
+    "갈등"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
