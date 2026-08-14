@@ -91,8 +91,9 @@ class Handler(SimpleHTTPRequestHandler):
                     new = {k: v for k, v in new.items() if str(v).strip()}
                 elif key == "done":
                     new = sorted(set(new))
-                # 있던 것을 통째로 비우는 저장은 실수일 가능성이 높다
-                if cur and not new:
+                # 있던 것을 통째로 비우는 저장은 실수일 가능성이 높다.
+                # 다 본 표시는 예외 — 전부 풀고 처음부터 훑는 건 정상이다.
+                if key != "done" and cur and not new:
                     return self._json({"error": f"{name} 을 비우려 한다. 실수 같아서 막았다."}, 400)
                 p.write_text(json.dumps(new, ensure_ascii=False, indent=1) + "\n")
                 out[key] = len(new)
