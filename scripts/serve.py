@@ -8,7 +8,8 @@
     python3 scripts/serve.py --phone    # 폰에서도 (Tailscale 주소에만 연다)
 
 창구
-    POST /api/tags     {tags:{…}, notes:{…}}  → data/tags.json · data/notes.json
+    POST /api/tags     {tags:{…}, notes:{…}, done:[…]}
+                       → data/tags.json · data/notes.json · data/done.json
     GET  /api/search?q= 알라딘 검색           → 후보 목록
     POST /api/add      {title, sources:[…]}  → sources/manual.json 에 추가
 """
@@ -83,7 +84,11 @@ class Handler(SimpleHTTPRequestHandler):
             notes = {k: v for k, v in notes.items() if str(v).strip()}
             (REPO / "data" / "notes.json").write_text(
                 json.dumps(notes, ensure_ascii=False, indent=1) + "\n")
-            return self._json({"ok": True, "tags": len(tags), "notes": len(notes)})
+            # 다 봤다고 표시한 책 — 어디까지 훑었는지만 담는다
+            done = sorted(set(data.get("done", [])))
+            (REPO / "data" / "done.json").write_text(
+                json.dumps(done, ensure_ascii=False, indent=1) + "\n")
+            return self._json({"ok": True, "tags": len(tags), "notes": len(notes), "done": len(done)})
 
         if u.path == "/api/add":
             p = REPO / "sources" / "manual.json"
