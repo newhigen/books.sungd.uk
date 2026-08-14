@@ -1,24 +1,24 @@
 {
  "updatedAt": "2026-08-14",
- "total": 196,
+ "total": 193,
  "services": [
   {
    "id": "ridi",
    "name": "리디북스",
    "kind": "ebook",
-   "count": 12
+   "count": 11
   },
   {
    "id": "kyobo",
    "name": "교보 sam",
    "kind": "ebook",
-   "count": 27
+   "count": 26
   },
   {
    "id": "kindle",
    "name": "킨들",
    "kind": "ebook",
-   "count": 10
+   "count": 9
   },
   {
    "id": "google",
@@ -42,37 +42,41 @@
    "id": "friend",
    "name": "지인 대여",
    "kind": "borrowed",
-   "count": 1
+   "count": 2
   }
  ],
  "fields": [
   {
-   "name": "자기계발",
-   "count": 22
-  },
-  {
    "name": "개발",
-   "count": 21
+   "count": 42
   },
   {
-   "name": "인문·심리",
-   "count": 16
-  },
-  {
-   "name": "에세이",
-   "count": 15
-  },
-  {
-   "name": "문학",
-   "count": 13
+   "name": "자기계발",
+   "count": 32
   },
   {
    "name": "일·경영",
-   "count": 12
+   "count": 20
+  },
+  {
+   "name": "인문·심리",
+   "count": 20
+  },
+  {
+   "name": "문학",
+   "count": 17
+  },
+  {
+   "name": "에세이",
+   "count": 16
   },
   {
    "name": "글쓰기·읽기",
    "count": 9
+  },
+  {
+   "name": "디자인",
+   "count": 7
   },
   {
    "name": "건강·생활",
@@ -83,12 +87,8 @@
    "count": 3
   },
   {
-   "name": "디자인",
-   "count": 2
-  },
-  {
    "name": "여행",
-   "count": 1
+   "count": 2
   },
   {
    "name": "과학",
@@ -124,11 +124,11 @@
    "addedAt": "",
    "similar": [
     52,
+    53,
     67,
     81,
     28,
-    49,
-    140
+    49
    ]
   },
   {
@@ -148,14 +148,19 @@
     "성공"
    ],
    "form": "소설",
-   "sources": [],
+   "sources": [
+    {
+     "id": "friend",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-06",
    "addedAt": "",
    "similar": [
     34,
     110,
-    119,
+    118,
     3,
     9,
     29
@@ -187,7 +192,12 @@
    "readAt": "2026-06",
    "addedAt": "",
    "similar": [
-    62
+    62,
+    100,
+    119,
+    134,
+    163,
+    192
    ]
   },
   {
@@ -219,7 +229,7 @@
    "similar": [
     25,
     27,
-    151,
+    150,
     1,
     9,
     29
@@ -247,10 +257,10 @@
    "readAt": "2026-05",
    "addedAt": "",
    "similar": [
-    131,
+    130,
+    136,
+    154,
     39,
-    137,
-    155,
     0,
     5
    ]
@@ -286,9 +296,9 @@
    "readAt": "2026-05",
    "addedAt": "",
    "similar": [
+    105,
     21,
     59,
-    105,
     0,
     4,
     20
@@ -324,9 +334,9 @@
     58,
     8,
     88,
+    75,
     115,
-    11,
-    30
+    11
    ]
   },
   {
@@ -360,9 +370,9 @@
     38,
     41,
     107,
-    133,
-    136,
-    142
+    132,
+    135,
+    140
    ]
   },
   {
@@ -390,9 +400,9 @@
     115,
     6,
     88,
+    75,
     11,
-    30,
-    44
+    30
    ]
   },
   {
@@ -426,9 +436,9 @@
     29,
     85,
     92,
+    159,
     12,
-    167,
-    60
+    166
    ]
   },
   {
@@ -459,7 +469,7 @@
    "addedAt": "",
    "similar": [
     78,
-    164,
+    163,
     13,
     14,
     34,
@@ -558,7 +568,7 @@
    "readAt": "2026-04",
    "addedAt": "",
    "similar": [
-    156,
+    155,
     10,
     14,
     34,
@@ -595,9 +605,9 @@
    "similar": [
     80,
     83,
-    148,
-    150,
-    165,
+    147,
+    149,
+    164,
     10
    ]
   },
@@ -659,7 +669,7 @@
    "addedAt": "",
    "similar": [
     47,
-    53
+    148
    ]
   },
   {
@@ -692,10 +702,10 @@
    "similar": [
     35,
     95,
+    99,
+    101,
     102,
-    176,
-    43,
-    99
+    156
    ]
   },
   {
@@ -725,12 +735,12 @@
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
-    138,
+    137,
     32,
-    100,
-    147,
+    146,
     166,
-    167
+    100,
+    165
    ]
   },
   {
@@ -756,12 +766,12 @@
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
-    150,
+    149,
     56,
     79,
     83,
-    118,
-    121
+    117,
+    120
    ]
   },
   {
@@ -788,10 +798,10 @@
    "similar": [
     33,
     42,
+    140,
     0,
     4,
-    5,
-    26
+    5
    ]
   },
   {
@@ -852,7 +862,7 @@
     23,
     84,
     58,
-    173
+    172
    ]
   },
   {
@@ -882,7 +892,7 @@
     22,
     84,
     58,
-    173
+    172
    ]
   },
   {
@@ -911,7 +921,7 @@
     77,
     113,
     114,
-    128
+    127
    ]
   },
   {
@@ -935,7 +945,7 @@
    "similar": [
     3,
     27,
-    151
+    150
    ]
   },
   {
@@ -961,8 +971,8 @@
    "addedAt": "",
    "similar": [
     31,
-    169,
-    194,
+    168,
+    191,
     0,
     4,
     5
@@ -990,9 +1000,9 @@
    "readAt": "2026-02",
    "addedAt": "",
    "similar": [
+    150,
     3,
     25,
-    151,
     0,
     4,
     5
@@ -1027,11 +1037,11 @@
    "addedAt": "",
    "similar": [
     49,
+    145,
+    173,
     0,
     52,
-    67,
-    81,
-    140
+    53
    ]
   },
   {
@@ -1058,7 +1068,7 @@
    "similar": [
     9,
     12,
-    167,
+    166,
     32,
     1,
     3
@@ -1092,7 +1102,7 @@
    "addedAt": "",
    "similar": [
     66,
-    128,
+    127,
     6,
     8,
     11,
@@ -1122,8 +1132,8 @@
    "addedAt": "",
    "similar": [
     26,
-    169,
-    194,
+    168,
+    191,
     0,
     4,
     5
@@ -1158,11 +1168,11 @@
    "addedAt": "",
    "similar": [
     18,
-    138,
+    137,
+    146,
+    166,
     29,
-    100,
-    147,
-    166
+    100
    ]
   },
   {
@@ -1195,10 +1205,10 @@
    "similar": [
     20,
     42,
+    140,
     92,
-    125,
-    130,
-    0
+    124,
+    129
    ]
   },
   {
@@ -1228,9 +1238,9 @@
    "readAt": "2025-12",
    "addedAt": "",
    "similar": [
-    119,
-    1,
     110,
+    118,
+    1,
     10,
     13,
     14
@@ -1264,7 +1274,7 @@
    "addedAt": "",
    "similar": [
     17,
-    124,
+    123,
     18,
     28,
     32,
@@ -1328,12 +1338,12 @@
    "readAt": "2025-12",
    "addedAt": "",
    "similar": [
-    154,
-    170,
+    109,
+    153,
+    169,
     0,
     4,
-    5,
-    20
+    5
    ]
   },
   {
@@ -1359,11 +1369,11 @@
    "addedAt": "",
    "similar": [
     41,
+    140,
+    141,
     7,
     107,
-    133,
-    136,
-    142
+    132
    ]
   },
   {
@@ -1394,9 +1404,9 @@
    "addedAt": "",
    "similar": [
     4,
-    131,
-    137,
-    155,
+    130,
+    136,
+    154,
     12,
     21
    ]
@@ -1429,7 +1439,7 @@
    "addedAt": "",
    "similar": [
     73,
-    144,
+    143,
     10,
     13,
     14,
@@ -1464,11 +1474,11 @@
    "addedAt": "",
    "similar": [
     38,
+    140,
+    141,
     7,
     107,
-    133,
-    136,
-    142
+    132
    ]
   },
   {
@@ -1500,10 +1510,10 @@
    "similar": [
     20,
     33,
+    140,
     0,
     4,
-    5,
-    26
+    5
    ]
   },
   {
@@ -1533,7 +1543,7 @@
     99,
     101,
     102,
-    157
+    156
    ]
   },
   {
@@ -1652,9 +1662,9 @@
     46,
     64,
     66,
-    134,
+    133,
     16,
-    53
+    148
    ]
   },
   {
@@ -1680,8 +1690,8 @@
    "addedAt": "",
    "similar": [
     62,
-    120,
-    195,
+    119,
+    192,
     1,
     3,
     9
@@ -1721,10 +1731,10 @@
    "similar": [
     28,
     51,
+    138,
+    158,
     0,
-    52,
-    67,
-    81
+    52
    ]
   },
   {
@@ -1756,7 +1766,7 @@
    "similar": [
     84,
     91,
-    173,
+    172,
     12,
     21,
     22
@@ -1791,9 +1801,9 @@
    "addedAt": "",
    "similar": [
     49,
-    188,
-    139,
-    159,
+    138,
+    158,
+    187,
     17,
     18
    ]
@@ -1826,29 +1836,31 @@
    "addedAt": "",
    "similar": [
     0,
+    53,
     67,
     81,
     28,
-    49,
-    140
+    49
    ]
   },
   {
    "title": "안다는 착각",
-   "author": "김봉중",
+   "author": "니시바야시 가츠히코",
    "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/34795/55/cover500/k762933228_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=347955545",
-   "field": "역사·사회",
+   "cover": "https://image.aladin.co.kr/product/36374/3/cover500/k322039476_1.jpg",
+   "publisher": "21세기북스",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=363740383",
+   "field": "자기계발",
    "tags": [
-    "정치학/외교학/행정학",
-    "각국정치사정/정치사",
-    "미국"
+    "학습",
+    "독서"
    ],
-   "gist": "",
-   "topics": [],
-   "form": "",
+   "gist": "읽고 안다고 여겼는데 물으면 답 못 하는 이유",
+   "topics": [
+    "독해",
+    "학습"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -1859,8 +1871,12 @@
    "readAt": "2025-08",
    "addedAt": "",
    "similar": [
-    16,
-    47
+    0,
+    52,
+    67,
+    69,
+    81,
+    28
    ]
   },
   {
@@ -1889,8 +1905,8 @@
    "readAt": "2025-08",
    "addedAt": "",
    "similar": [
-    132,
-    158,
+    157,
+    131,
     0,
     4,
     5,
@@ -1960,11 +1976,11 @@
    "addedAt": "",
    "similar": [
     19,
-    143,
+    142,
+    149,
     57,
     80,
-    114,
-    148
+    114
    ]
   },
   {
@@ -1994,12 +2010,12 @@
    "readAt": "2025-07",
    "addedAt": "",
    "similar": [
+    147,
     19,
     56,
     80,
     114,
-    143,
-    148
+    142
    ]
   },
   {
@@ -2068,10 +2084,10 @@
    "similar": [
     73,
     109,
-    144,
-    170,
-    5,
-    21
+    131,
+    143,
+    153,
+    169
    ]
   },
   {
@@ -2103,10 +2119,10 @@
    "addedAt": "",
    "similar": [
     85,
-    145,
+    106,
+    144,
     9,
     92,
-    106,
     107
    ]
   },
@@ -2167,10 +2183,12 @@
    "readAt": "2025-04",
    "addedAt": "",
    "similar": [
+    119,
+    192,
     48,
-    120,
-    195,
-    2
+    2,
+    100,
+    134
    ]
   },
   {
@@ -2300,7 +2318,8 @@
     46,
     47,
     64,
-    128
+    127,
+    125
    ]
   },
   {
@@ -2332,10 +2351,10 @@
    "similar": [
     0,
     52,
+    53,
     81,
     28,
-    49,
-    140
+    49
    ]
   },
   {
@@ -2363,7 +2382,7 @@
     71,
     74,
     116,
-    153
+    152
    ]
   },
   {
@@ -2393,12 +2412,12 @@
    "readAt": "2025-03",
    "addedAt": "",
    "similar": [
+    53,
     82,
     93,
     0,
     4,
-    5,
-    20
+    5
    ]
   },
   {
@@ -2455,7 +2474,7 @@
    "similar": [
     74,
     116,
-    153,
+    152,
     68,
     6,
     8
@@ -2524,12 +2543,12 @@
    "readAt": "2025-02",
    "addedAt": "",
    "similar": [
-    144,
+    143,
     40,
     59,
     109,
-    170,
-    132
+    131,
+    153
    ]
   },
   {
@@ -2561,7 +2580,7 @@
    "similar": [
     71,
     116,
-    153,
+    152,
     68,
     6,
     8
@@ -2569,33 +2588,32 @@
   },
   {
    "title": "정리의 기술",
-   "author": "드니 르보, 장 뤽 들라드리에르",
+   "author": "곤도 마리에",
    "englishTitle": "The Life-Changing Magic of Tidying Up",
-   "cover": "https://image.aladin.co.kr/product/90/36/cover500/8995737069_2.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=903605",
-   "field": "일·경영",
+   "cover": "https://image.aladin.co.kr/product/22949/43/cover500/8901234483_1.jpg",
+   "publisher": "웅진지식하우스",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=229494332",
+   "field": "자기계발",
    "tags": [
-    "창의적사고/두뇌계발",
-    "CEO/비즈니스맨을 위한 능력계발",
-    "기획/정보/문서관리",
-    "시간관리/정보관리",
-    "정보관리"
+    "일상"
    ],
-   "gist": "",
-   "topics": [],
-   "form": "",
+   "gist": "곤도 마리에의 정리법 실천편",
+   "topics": [
+    "정리",
+    "미니멀리즘"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2025-02",
    "addedAt": "",
    "similar": [
-    1,
-    3,
-    9,
-    29,
-    36,
-    48
+    6,
+    8,
+    88,
+    115,
+    0,
+    4
    ]
   },
   {
@@ -2660,7 +2678,7 @@
     58,
     24,
     114,
-    128
+    127
    ]
   },
   {
@@ -2686,7 +2704,7 @@
    "addedAt": "",
    "similar": [
     10,
-    164,
+    163,
     13,
     14,
     34,
@@ -2722,10 +2740,10 @@
    "similar": [
     19,
     83,
-    118,
-    121,
-    178,
-    175
+    117,
+    120,
+    164,
+    177
    ]
   },
   {
@@ -2751,8 +2769,8 @@
    "readAt": "2024-11",
    "addedAt": "",
    "similar": [
-    148,
-    150,
+    147,
+    149,
     14,
     19,
     56,
@@ -2788,10 +2806,10 @@
    "similar": [
     0,
     52,
+    53,
     67,
     28,
-    49,
-    140
+    49
    ]
   },
   {
@@ -2821,11 +2839,11 @@
    "addedAt": "",
    "similar": [
     93,
+    53,
     69,
     12,
     21,
-    22,
-    23
+    22
    ]
   },
   {
@@ -2856,12 +2874,12 @@
    "readAt": "2024-09",
    "addedAt": "",
    "similar": [
-    165,
-    118,
+    164,
+    117,
     19,
     79,
-    121,
-    178
+    120,
+    149
    ]
   },
   {
@@ -2887,7 +2905,7 @@
    "readAt": "2024-09",
    "addedAt": "",
    "similar": [
-    173,
+    172,
     12,
     21,
     22,
@@ -2926,9 +2944,9 @@
     60,
     9,
     92,
-    106,
     107,
-    122
+    121,
+    106
    ]
   },
   {
@@ -2954,7 +2972,7 @@
    "addedAt": "",
    "similar": [
     94,
-    182,
+    181,
     0,
     4,
     5,
@@ -2988,9 +3006,9 @@
    "readAt": "2024-05",
    "addedAt": "",
    "similar": [
-    161,
-    190,
-    123,
+    160,
+    122,
+    188,
     17,
     18,
     28
@@ -3020,10 +3038,10 @@
    "similar": [
     6,
     8,
+    75,
     115,
     11,
-    30,
-    44
+    30
    ]
   },
   {
@@ -3049,12 +3067,12 @@
    "readAt": "2024-03",
    "addedAt": "",
    "similar": [
-    180,
+    179,
     98,
     104,
     111,
-    135,
-    179
+    134,
+    178
    ]
   },
   {
@@ -3116,7 +3134,7 @@
    "similar": [
     50,
     84,
-    173,
+    172,
     0,
     4,
     5
@@ -3152,10 +3170,10 @@
    "similar": [
     9,
     85,
-    130,
+    124,
+    129,
     33,
-    60,
-    106
+    60
    ]
   },
   {
@@ -3185,11 +3203,11 @@
    "addedAt": "",
    "similar": [
     82,
+    53,
     69,
     12,
     21,
-    22,
-    23
+    22
    ]
   },
   {
@@ -3220,8 +3238,8 @@
    "addedAt": "",
    "similar": [
     86,
-    182,
-    136,
+    181,
+    135,
     0,
     4,
     5
@@ -3255,11 +3273,11 @@
    "addedAt": "",
    "similar": [
     17,
-    102,
-    176,
-    43,
     99,
-    101
+    101,
+    102,
+    156,
+    175
    ]
   },
   {
@@ -3269,7 +3287,7 @@
    "cover": "https://image.aladin.co.kr/product/32955/72/cover500/k222936240_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329557210",
-   "field": "",
+   "field": "일·경영",
    "tags": [
     "사회"
    ],
@@ -3290,8 +3308,11 @@
    "addedAt": "",
    "similar": [
     97,
-    149,
-    175
+    148,
+    174,
+    1,
+    3,
+    9
    ]
   },
   {
@@ -3301,7 +3322,7 @@
    "cover": "https://image.aladin.co.kr/product/33730/69/cover500/k082939640_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337306986",
-   "field": "",
+   "field": "일·경영",
    "tags": [
     "사회"
    ],
@@ -3322,8 +3343,11 @@
    "addedAt": "",
    "similar": [
     96,
-    149,
-    175
+    148,
+    174,
+    1,
+    3,
+    9
    ]
   },
   {
@@ -3333,7 +3357,7 @@
    "cover": "https://image.aladin.co.kr/product/33040/41/cover500/8966264255_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330404121",
-   "field": "",
+   "field": "개발",
    "tags": [
     "시스템 설계"
    ],
@@ -3353,9 +3377,11 @@
    "addedAt": "",
    "similar": [
     89,
-    135,
+    134,
+    178,
     179,
-    180
+    17,
+    18
    ]
   },
   {
@@ -3365,7 +3391,7 @@
    "cover": "https://image.aladin.co.kr/product/23096/5/cover500/k692637692_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=230960553",
-   "field": "",
+   "field": "개발",
    "tags": [
     "매니저",
     "개발자 커리어"
@@ -3387,11 +3413,11 @@
    "addedAt": "",
    "similar": [
     17,
-    43,
     95,
     101,
     102,
-    157
+    156,
+    175
    ]
   },
   {
@@ -3401,7 +3427,7 @@
    "cover": "https://image.aladin.co.kr/product/34527/3/cover500/k112932855_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345270362",
-   "field": "",
+   "field": "디자인",
    "tags": [
     "개발자 태도"
    ],
@@ -3423,10 +3449,10 @@
    "similar": [
     18,
     32,
-    138,
-    147,
-    166,
-    167
+    137,
+    146,
+    165,
+    166
    ]
   },
   {
@@ -3436,7 +3462,7 @@
    "cover": "https://image.aladin.co.kr/product/28501/32/cover500/k572835625_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=285013226",
-   "field": "",
+   "field": "개발",
    "tags": [
     "개발자 커리어"
    ],
@@ -3457,11 +3483,11 @@
    "addedAt": "",
    "similar": [
     17,
-    43,
     95,
     99,
     102,
-    157
+    156,
+    175
    ]
   },
   {
@@ -3494,10 +3520,10 @@
    "similar": [
     17,
     95,
-    176,
-    9,
-    43,
-    99
+    99,
+    101,
+    156,
+    175
    ]
   },
   {
@@ -3507,7 +3533,7 @@
    "cover": "https://image.aladin.co.kr/product/26421/20/cover500/899792480x_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=264212092",
-   "field": "",
+   "field": "개발",
    "tags": [
     "테크니컬 라이팅"
    ],
@@ -3527,7 +3553,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    90
+    90,
+    17,
+    18,
+    28,
+    32,
+    35
    ]
   },
   {
@@ -3537,7 +3568,7 @@
    "cover": "https://image.aladin.co.kr/product/34034/66/cover500/k662931262_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340346630",
-   "field": "",
+   "field": "개발",
    "tags": [
     "통계·수학",
     "ML"
@@ -3559,9 +3590,11 @@
    "addedAt": "",
    "similar": [
     111,
-    65,
     89,
-    180
+    65,
+    179,
+    17,
+    18
    ]
   },
   {
@@ -3571,7 +3604,7 @@
    "cover": "https://image.aladin.co.kr/product/38560/24/cover500/k802135953_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385602478",
-   "field": "",
+   "field": "자기계발",
    "tags": [
     "습관"
    ],
@@ -3593,7 +3626,10 @@
    "similar": [
     5,
     21,
-    59
+    59,
+    0,
+    4,
+    20
    ]
   },
   {
@@ -3603,7 +3639,7 @@
    "cover": "https://image.aladin.co.kr/product/29414/60/cover500/k562837320_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=294146082",
-   "field": "",
+   "field": "개발",
    "tags": [
     "개발 조직"
    ],
@@ -3623,11 +3659,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    9,
     60,
+    144,
+    9,
     85,
     92,
-    145
+    17
    ]
   },
   {
@@ -3637,7 +3674,7 @@
    "cover": "https://image.aladin.co.kr/product/24790/60/cover500/8925599635_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=247906056",
-   "field": "",
+   "field": "일·경영",
    "tags": [
     "일하는 법",
     "팀"
@@ -3658,12 +3695,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    7,
-    38,
-    41,
-    60,
     85,
-    122
+    121,
+    132,
+    135,
+    7,
+    38
    ]
   },
   {
@@ -3673,7 +3710,7 @@
    "cover": "https://image.aladin.co.kr/product/37789/76/cover500/k922033662_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=377897689",
-   "field": "",
+   "field": "개발",
    "tags": [
     "인프라"
    ],
@@ -3693,19 +3730,25 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    76
+    76,
+    17,
+    18,
+    28,
+    32,
+    35
    ]
   },
   {
    "title": "기분이 태도가 되지 않게",
-   "author": "레몬심리, 박영란",
+   "author": "레몬심리",
    "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/37535/62/cover500/8901297841_3.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375356292",
+   "cover": "https://image.aladin.co.kr/product/24368/89/cover500/8901243652_1.jpg",
+   "publisher": "갤리온",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=243688983",
    "field": "인문·심리",
    "tags": [
-    "심리"
+    "심리",
+    "멘탈"
    ],
    "gist": "기분에 휘둘려 태도가 되지 않게 감정을 다루는 법",
    "topics": [
@@ -3723,12 +3766,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
+    153,
+    169,
     59,
     73,
-    144,
-    170,
-    132,
-    154
+    131,
+    143
    ]
   },
   {
@@ -3738,7 +3781,7 @@
    "cover": "https://image.aladin.co.kr/product/35340/83/cover500/k992035681_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353408353",
-   "field": "",
+   "field": "인문·심리",
    "tags": [
     "관계"
    ],
@@ -3758,9 +3801,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    1,
     34,
-    119
+    118,
+    1,
+    10,
+    13,
+    14
    ]
   },
   {
@@ -3770,7 +3816,7 @@
    "cover": "https://image.aladin.co.kr/product/35363/43/cover500/896626462x_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353634346",
-   "field": "",
+   "field": "개발",
    "tags": [
     "통계·수학",
     "ML"
@@ -3792,9 +3838,11 @@
    "addedAt": "",
    "similar": [
     104,
-    65,
     89,
-    180
+    65,
+    179,
+    17,
+    18
    ]
   },
   {
@@ -3804,7 +3852,7 @@
    "cover": "https://image.aladin.co.kr/product/30768/99/cover500/k252830652_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=307689982",
-   "field": "",
+   "field": "문학",
    "tags": [
     "일본소설"
    ],
@@ -3824,7 +3872,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    15
+    15,
+    7,
+    19,
+    56,
+    61,
+    63
    ]
   },
   {
@@ -3859,7 +3912,7 @@
     58,
     24,
     114,
-    128
+    127
    ]
   },
   {
@@ -3893,8 +3946,8 @@
     56,
     57,
     80,
-    143,
-    148
+    142,
+    147
    ]
   },
   {
@@ -3926,10 +3979,10 @@
    "similar": [
     8,
     6,
+    75,
     88,
     7,
-    15,
-    19
+    15
    ]
   },
   {
@@ -3961,34 +4014,11 @@
    "similar": [
     71,
     74,
-    153,
+    152,
     70,
     68,
     6
    ]
-  },
-  {
-   "title": "더 나은 선택",
-   "author": "크레이그 그로쉘",
-   "englishTitle": "",
-   "cover": "",
-   "publisher": "규장",
-   "aladin": "",
-   "field": "",
-   "tags": [],
-   "gist": "",
-   "topics": [],
-   "form": "",
-   "sources": [
-    {
-     "id": "kyobo",
-     "link": ""
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": []
   },
   {
    "title": "데미안",
@@ -4028,9 +4058,9 @@
     83,
     19,
     79,
-    121,
-    178,
-    165
+    120,
+    164,
+    177
    ]
   },
   {
@@ -4060,8 +4090,8 @@
    "addedAt": "",
    "similar": [
     34,
-    1,
     110,
+    1,
     10,
     13,
     14
@@ -4074,7 +4104,7 @@
    "cover": "https://image.aladin.co.kr/product/14106/3/cover500/k202532130_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=141060330",
-   "field": "",
+   "field": "디자인",
    "tags": [
     "UI/UX"
    ],
@@ -4094,9 +4124,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    48,
     62,
-    195
+    192,
+    48,
+    2,
+    100,
+    134
    ]
   },
   {
@@ -4129,9 +4162,9 @@
     19,
     79,
     83,
-    118,
-    178,
-    165
+    117,
+    164,
+    177
    ]
   },
   {
@@ -4141,7 +4174,7 @@
    "cover": "https://image.aladin.co.kr/product/21011/79/cover500/k502636376_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=210117981",
-   "field": "",
+   "field": "일·경영",
    "tags": [
     "팀"
    ],
@@ -4161,9 +4194,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    60,
     85,
-    107
+    107,
+    60,
+    1,
+    3,
+    9
    ]
   },
   {
@@ -4173,7 +4209,7 @@
    "cover": "https://image.aladin.co.kr/product/16877/94/cover500/k022534070_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=168779479",
-   "field": "",
+   "field": "개발",
    "tags": [
     "코드 품질"
    ],
@@ -4194,8 +4230,11 @@
    "addedAt": "",
    "similar": [
     87,
-    161,
-    190
+    160,
+    188,
+    17,
+    18,
+    28
    ]
   },
   {
@@ -4205,7 +4244,7 @@
    "cover": "https://image.aladin.co.kr/product/3446/54/cover500/8968480699_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=34465476",
-   "field": "",
+   "field": "일·경영",
    "tags": [
     "데이터 분석",
     "프로덕트"
@@ -4226,11 +4265,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
+    129,
+    135,
+    167,
     17,
     35,
-    130,
-    136,
-    168
+    1
    ]
   },
   {
@@ -4240,7 +4280,7 @@
    "cover": "https://image.aladin.co.kr/product/2064/86/cover500/8966260578_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=20648680",
-   "field": "",
+   "field": "일·경영",
    "tags": [
     "창업"
    ],
@@ -4260,9 +4300,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    33,
     92,
-    130
+    129,
+    33,
+    1,
+    3,
+    9
    ]
   },
   {
@@ -4272,7 +4315,7 @@
    "cover": "https://image.aladin.co.kr/product/34937/24/cover500/k732934364_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=349372427",
-   "field": "",
+   "field": "여행",
    "tags": [
     "일본어"
    ],
@@ -4292,7 +4335,8 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    152
+    151,
+    66
    ]
   },
   {
@@ -4322,7 +4366,7 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    192
+    189
    ]
   },
   {
@@ -4417,11 +4461,11 @@
    "addedAt": "",
    "similar": [
     92,
-    136,
-    33,
+    123,
     124,
-    125,
-    168
+    135,
+    167,
+    33
    ]
   },
   {
@@ -4452,9 +4496,9 @@
    "addedAt": "",
    "similar": [
     4,
+    136,
+    154,
     39,
-    137,
-    155,
     0,
     5
    ]
@@ -4466,7 +4510,7 @@
    "cover": "https://image.aladin.co.kr/product/14013/55/cover500/8934981210_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=140135544",
-   "field": "",
+   "field": "인문·심리",
    "tags": [
     "의사결정",
     "심리"
@@ -4487,12 +4531,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    54,
     59,
     73,
     109,
-    144,
-    154
+    143,
+    153,
+    169
    ]
   },
   {
@@ -4502,7 +4546,7 @@
    "cover": "https://image.aladin.co.kr/product/26556/49/cover500/k972738931_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=265564975",
-   "field": "",
+   "field": "일·경영",
    "tags": [
     "일하는 법"
    ],
@@ -4522,12 +4566,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
+    107,
+    135,
     7,
     38,
     41,
-    107,
-    136,
-    142
+    140
    ]
   },
   {
@@ -4537,7 +4581,7 @@
    "cover": "https://image.aladin.co.kr/product/30086/21/cover500/k562839575_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=300862118",
-   "field": "",
+   "field": "문학",
    "tags": [
     "역사"
    ],
@@ -4557,7 +4601,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    47
+    47,
+    7,
+    15,
+    19,
+    56,
+    61
    ]
   },
   {
@@ -4567,7 +4616,7 @@
    "cover": "https://image.aladin.co.kr/product/37426/63/cover500/8966264956_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374266337",
-   "field": "",
+   "field": "디자인",
    "tags": [
     "시스템 설계",
     "설계·아키텍처"
@@ -4588,12 +4637,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
+    163,
     89,
     98,
-    145,
-    163,
-    164,
-    171
+    144,
+    162,
+    170
    ]
   },
   {
@@ -4624,12 +4673,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    130,
-    94,
-    7,
-    38,
-    41,
-    107
+    107,
+    123,
+    129,
+    132,
+    167,
+    94
    ]
   },
   {
@@ -4639,7 +4688,7 @@
    "cover": "https://image.aladin.co.kr/product/31737/86/cover500/8901272032_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317378665",
-   "field": "",
+   "field": "자기계발",
    "tags": [
     "사고법"
    ],
@@ -4660,9 +4709,11 @@
    "addedAt": "",
    "similar": [
     4,
+    130,
+    154,
     39,
-    131,
-    155
+    0,
+    5
    ]
   },
   {
@@ -4694,10 +4745,10 @@
    "similar": [
     18,
     32,
+    146,
+    166,
     49,
-    100,
-    147,
-    166
+    100
    ]
   },
   {
@@ -4707,7 +4758,7 @@
    "cover": "https://image.aladin.co.kr/product/170/70/cover500/8991268382_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=1707009",
-   "field": "",
+   "field": "개발",
    "tags": [
     "애자일"
    ],
@@ -4729,7 +4780,10 @@
    "similar": [
     49,
     51,
-    159
+    158,
+    17,
+    18,
+    28
    ]
   },
   {
@@ -4763,22 +4817,28 @@
     28,
     49,
     52,
-    67,
-    81
+    53,
+    67
    ]
   },
   {
    "title": "업",
-   "author": "장성락(REDICE STUDIO), 추공",
+   "author": "리멤버",
    "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/39905/20/cover500/k892130927_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399052013",
-   "field": "",
-   "tags": [],
-   "gist": "",
-   "topics": [],
-   "form": "",
+   "cover": "https://image.aladin.co.kr/product/38655/95/cover500/k832136514_1.jpg",
+   "publisher": "필름(Feelm)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=386559530",
+   "field": "자기계발",
+   "tags": [
+    "커리어",
+    "일하는 법"
+   ],
+   "gist": "자기 기준을 세워 온 열다섯 사람의 이야기",
+   "topics": [
+    "일",
+    "커리어"
+   ],
+   "form": "인터뷰·대담",
    "sources": [
     {
      "id": "paper",
@@ -4788,7 +4848,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    20,
+    33,
+    38,
+    41,
+    42,
+    141
+   ]
   },
   {
    "title": "여백 사고",
@@ -4797,7 +4864,7 @@
    "cover": "https://image.aladin.co.kr/product/34574/77/cover500/k732933362_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345747701",
-   "field": "",
+   "field": "자기계발",
    "tags": [
     "일하는 법"
    ],
@@ -4817,12 +4884,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    7,
     38,
     41,
+    140,
+    7,
     107,
-    133,
-    136
+    132
    ]
   },
   {
@@ -4854,10 +4921,10 @@
    "similar": [
     19,
     56,
+    149,
     57,
     80,
-    114,
-    148
+    114
    ]
   },
   {
@@ -4892,8 +4959,8 @@
     40,
     59,
     109,
-    170,
-    132
+    131,
+    153
    ]
   },
   {
@@ -4924,12 +4991,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
+    145,
     60,
-    171,
-    146,
-    9,
-    85,
-    92
+    106,
+    162,
+    170,
+    9
    ]
   },
   {
@@ -4939,7 +5006,7 @@
    "cover": "https://image.aladin.co.kr/product/36071/60/cover500/k502037248_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360716036",
-   "field": "",
+   "field": "개발",
    "tags": [
     "AI",
     "MLOps"
@@ -4960,11 +5027,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    145,
+    144,
     28,
-    174,
+    173,
+    185,
     186,
-    187
+    17
    ]
   },
   {
@@ -4974,7 +5042,7 @@
    "cover": "https://image.aladin.co.kr/product/38466/66/cover500/k392135919_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=384666614",
-   "field": "",
+   "field": "개발",
    "tags": [
     "개발자 태도"
    ],
@@ -4994,12 +5062,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    159,
+    158,
     18,
     32,
-    100,
-    138,
-    166
+    137,
+    166,
+    100
    ]
   },
   {
@@ -5009,7 +5077,7 @@
    "cover": "https://image.aladin.co.kr/product/1284/8/cover500/8956605416_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=12840843",
-   "field": "",
+   "field": "에세이",
    "tags": [
     "인생",
     "철학"
@@ -5031,11 +5099,11 @@
    "addedAt": "",
    "similar": [
     80,
-    150,
+    149,
+    57,
     14,
     19,
-    56,
-    57
+    56
    ]
   },
   {
@@ -5045,7 +5113,7 @@
    "cover": "https://image.aladin.co.kr/product/17007/26/cover500/8988613759_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=170072646",
-   "field": "",
+   "field": "역사·사회",
    "tags": [
     "사회"
    ],
@@ -5067,7 +5135,9 @@
    "similar": [
     96,
     97,
-    175
+    174,
+    16,
+    47
    ]
   },
   {
@@ -5077,7 +5147,7 @@
    "cover": "https://image.aladin.co.kr/product/25325/65/cover500/k182633502_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=253256526",
-   "field": "",
+   "field": "문학",
    "tags": [
     "인생",
     "철학"
@@ -5100,10 +5170,10 @@
    "similar": [
     19,
     80,
-    148,
-    14,
+    147,
     56,
-    57
+    83,
+    142
    ]
   },
   {
@@ -5113,7 +5183,7 @@
    "cover": "https://image.aladin.co.kr/product/31216/10/cover500/k092831152_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=312161010",
-   "field": "",
+   "field": "자기계발",
    "tags": [
     "말하기"
    ],
@@ -5133,9 +5203,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
+    27,
     3,
     25,
-    27
+    0,
+    4,
+    5
    ]
   },
   {
@@ -5165,7 +5238,7 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    126
+    125
    ]
   },
   {
@@ -5210,7 +5283,7 @@
    "cover": "https://image.aladin.co.kr/product/8679/31/cover500/k372535696_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86793193",
-   "field": "",
+   "field": "인문·심리",
    "tags": [
     "멘탈",
     "심리"
@@ -5231,12 +5304,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    170,
-    37,
+    109,
+    169,
     59,
     73,
-    109,
-    132
+    131,
+    143
    ]
   },
   {
@@ -5246,7 +5319,7 @@
    "cover": "https://image.aladin.co.kr/product/6136/36/cover500/k962433729_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=61363642",
-   "field": "",
+   "field": "자기계발",
    "tags": [
     "사고법"
    ],
@@ -5267,9 +5340,11 @@
    "addedAt": "",
    "similar": [
     4,
+    130,
+    136,
     39,
-    131,
-    137
+    0,
+    5
    ]
   },
   {
@@ -5306,7 +5381,7 @@
    "cover": "https://image.aladin.co.kr/product/18782/34/cover500/k662635470_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=187823405",
-   "field": "",
+   "field": "개발",
    "tags": [
     "개발자 커리어"
    ],
@@ -5327,11 +5402,11 @@
    "addedAt": "",
    "similar": [
     17,
-    43,
     95,
     99,
     101,
-    102
+    102,
+    175
    ]
   },
   {
@@ -5341,7 +5416,7 @@
    "cover": "https://image.aladin.co.kr/product/33690/64/cover500/8925575302_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336906409",
-   "field": "",
+   "field": "자기계발",
    "tags": [
     "의사결정"
    ],
@@ -5362,7 +5437,11 @@
    "addedAt": "",
    "similar": [
     54,
-    132
+    131,
+    0,
+    4,
+    5,
+    20
    ]
   },
   {
@@ -5372,7 +5451,7 @@
    "cover": "https://image.aladin.co.kr/product/25684/50/cover500/8966262864_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=256845084",
-   "field": "",
+   "field": "개발",
    "tags": [
     "애자일"
    ],
@@ -5391,10 +5470,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    147,
+    146,
     49,
     51,
-    139
+    138,
+    17,
+    18
    ]
   },
   {
@@ -5404,7 +5485,7 @@
    "cover": "https://image.aladin.co.kr/product/24310/7/cover500/8984077933_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=243100705",
-   "field": "",
+   "field": "일·경영",
    "tags": [
     "리더십",
     "매니저"
@@ -5428,8 +5509,9 @@
     9,
     99,
     102,
+    183,
     184,
-    185
+    1
    ]
   },
   {
@@ -5439,7 +5521,7 @@
    "cover": "https://image.aladin.co.kr/product/3746/97/cover500/8966261027_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=37469717",
-   "field": "",
+   "field": "개발",
    "tags": [
     "코드 품질"
    ],
@@ -5460,8 +5542,11 @@
    "addedAt": "",
    "similar": [
     87,
-    123,
-    190
+    122,
+    188,
+    17,
+    18,
+    28
    ]
   },
   {
@@ -5491,7 +5576,7 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    183,
+    182,
     17,
     18,
     28,
@@ -5506,7 +5591,7 @@
    "cover": "https://image.aladin.co.kr/product/27194/43/cover500/k012732190_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=271944317",
-   "field": "",
+   "field": "개발",
    "tags": [
     "설계·아키텍처"
    ],
@@ -5526,11 +5611,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    135,
-    145,
-    164,
+    144,
+    170,
+    134,
+    163,
     171,
-    172
+    17
    ]
   },
   {
@@ -5540,7 +5626,7 @@
    "cover": "https://image.aladin.co.kr/product/2762/3/cover500/8966260810_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=27620362",
-   "field": "",
+   "field": "디자인",
    "tags": [
     "설계·아키텍처",
     "건축"
@@ -5561,12 +5647,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
+    134,
     10,
     78,
-    135,
-    145,
-    163,
-    171
+    144,
+    162,
+    170
    ]
   },
   {
@@ -5576,7 +5662,7 @@
    "cover": "https://image.aladin.co.kr/product/1126/73/cover500/s937462672_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=11267326",
-   "field": "",
+   "field": "문학",
    "tags": [
     "고전",
     "철학"
@@ -5598,11 +5684,11 @@
    "addedAt": "",
    "similar": [
     83,
-    14,
     19,
     79,
-    80,
-    118
+    117,
+    120,
+    149
    ]
   },
   {
@@ -5632,9 +5718,9 @@
     18,
     32,
     100,
-    138,
-    147,
-    167
+    137,
+    146,
+    166
    ]
   },
   {
@@ -5644,7 +5730,7 @@
    "cover": "https://image.aladin.co.kr/product/3422/82/cover500/8966260985_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=34228223",
-   "field": "",
+   "field": "개발",
    "tags": [
     "심리",
     "개발자 태도"
@@ -5665,12 +5751,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    9,
-    12,
-    29,
     18,
     32,
-    59
+    137,
+    146,
+    9,
+    12
    ]
   },
   {
@@ -5680,7 +5766,7 @@
    "cover": "https://image.aladin.co.kr/product/23569/83/cover500/8984077844_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=235698335",
-   "field": "",
+   "field": "일·경영",
    "tags": [
     "프로덕트"
    ],
@@ -5700,9 +5786,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    124,
-    130,
-    136
+    123,
+    129,
+    135,
+    1,
+    3,
+    9
    ]
   },
   {
@@ -5712,7 +5801,7 @@
    "cover": "https://image.aladin.co.kr/product/35090/55/cover500/k052934494_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=350905572",
-   "field": "",
+   "field": "자기계발",
    "tags": [
     "대화"
    ],
@@ -5734,7 +5823,10 @@
    "similar": [
     26,
     31,
-    194
+    191,
+    0,
+    4,
+    5
    ]
   },
   {
@@ -5765,12 +5857,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    154,
+    109,
+    153,
     59,
     73,
-    109,
-    144,
-    37
+    131,
+    143
    ]
   },
   {
@@ -5800,12 +5892,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    145,
+    144,
+    162,
     102,
-    135,
+    134,
     163,
-    164,
-    172
+    171
    ]
   },
   {
@@ -5835,11 +5927,11 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    135,
-    145,
+    134,
+    144,
+    162,
     163,
-    164,
-    171
+    170
    ]
   },
   {
@@ -5885,7 +5977,7 @@
    "cover": "https://image.aladin.co.kr/product/37309/79/cover500/k622031756_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=373097975",
-   "field": "",
+   "field": "개발",
    "tags": [
     "AI"
    ],
@@ -5906,7 +5998,11 @@
    "addedAt": "",
    "similar": [
     28,
-    146
+    145,
+    17,
+    18,
+    32,
+    35
    ]
   },
   {
@@ -5942,7 +6038,7 @@
     83,
     96,
     97,
-    118
+    117
    ]
   },
   {
@@ -5974,19 +6070,19 @@
    "similar": [
     17,
     95,
-    102,
-    43,
     99,
-    101
+    101,
+    102,
+    156
    ]
   },
   {
    "title": "Big Feelings",
-   "author": "EBS",
+   "author": "",
    "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/29381/32/cover500/895476570x_1.jpg",
+   "cover": "",
    "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=293813247",
+   "aladin": "",
    "field": "",
    "tags": [],
    "gist": "",
@@ -6033,9 +6129,9 @@
     19,
     79,
     83,
-    118,
-    121,
-    165
+    117,
+    120,
+    164
    ]
   },
   {
@@ -6067,8 +6163,8 @@
    "similar": [
     89,
     98,
-    135,
-    180
+    134,
+    179
    ]
   },
   {
@@ -6103,8 +6199,8 @@
     98,
     104,
     111,
-    135,
-    179
+    134,
+    178
    ]
   },
   {
@@ -6114,7 +6210,7 @@
    "cover": "https://image.aladin.co.kr/product/270/69/cover500/8901088835_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2706952",
-   "field": "",
+   "field": "인문·심리",
    "tags": [
     "심리"
    ],
@@ -6137,9 +6233,9 @@
     59,
     73,
     109,
-    132,
-    144,
-    154
+    131,
+    143,
+    153
    ]
   },
   {
@@ -6184,7 +6280,7 @@
    "cover": "https://image.aladin.co.kr/product/10598/25/cover500/896848354x_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=105982502",
-   "field": "",
+   "field": "개발",
    "tags": [
     "알고리즘"
    ],
@@ -6204,7 +6300,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    162
+    161,
+    17,
+    18,
+    28,
+    32,
+    35
    ]
   },
   {
@@ -6235,7 +6336,7 @@
    "addedAt": "",
    "similar": [
     99,
-    160
+    159
    ]
   },
   {
@@ -6264,7 +6365,7 @@
    "similar": [
     9,
     102,
-    160
+    159
    ]
   },
   {
@@ -6274,7 +6375,7 @@
    "cover": "https://image.aladin.co.kr/product/34386/72/cover500/k332932509_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=343867281",
-   "field": "",
+   "field": "개발",
    "tags": [
     "MLOps"
    ],
@@ -6294,8 +6395,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    146,
-    187
+    145,
+    186,
+    17,
+    18,
+    28,
+    32
    ]
   },
   {
@@ -6325,8 +6430,8 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    146,
-    186,
+    145,
+    185,
     17,
     18,
     28,
@@ -6368,29 +6473,6 @@
    ]
   },
   {
-   "title": "On Prayer and The Contemplative Life",
-   "author": "",
-   "englishTitle": "",
-   "cover": "",
-   "publisher": "",
-   "aladin": "",
-   "field": "",
-   "tags": [],
-   "gist": "",
-   "topics": [],
-   "form": "",
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/587336/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": []
-  },
-  {
    "title": "Refactoring",
    "author": "Martin Fowler",
    "englishTitle": "",
@@ -6418,35 +6500,12 @@
    "addedAt": "",
    "similar": [
     87,
-    123,
-    161,
+    122,
+    160,
     17,
     18,
     28
    ]
-  },
-  {
-   "title": "Robert C. Martin Series",
-   "author": "Robert C. Martin",
-   "englishTitle": "",
-   "cover": "",
-   "publisher": "",
-   "aladin": "",
-   "field": "",
-   "tags": [],
-   "gist": "",
-   "topics": [],
-   "form": "",
-   "sources": [
-    {
-     "id": "kindle",
-     "link": "https://www.amazon.com/dp/B001GSTOAM"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": []
   },
   {
    "title": "SQL Antipatterns",
@@ -6455,7 +6514,7 @@
    "cover": "https://image.aladin.co.kr/product/1208/69/cover500/8966260047_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=12086993",
-   "field": "",
+   "field": "개발",
    "tags": [
     "DB"
    ],
@@ -6475,7 +6534,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    127
+    126,
+    17,
+    18,
+    28,
+    32,
+    35
    ]
   },
   {
@@ -6539,7 +6603,7 @@
    "similar": [
     26,
     31,
-    169
+    168
    ]
   },
   {
@@ -6549,7 +6613,7 @@
    "cover": "https://image.aladin.co.kr/product/33764/78/cover500/k592930168_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337647826",
-   "field": "",
+   "field": "디자인",
    "tags": [
     "UI/UX"
    ],
@@ -6569,9 +6633,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    48,
     62,
-    120
+    119,
+    48,
+    2,
+    100,
+    134
    ]
   }
  ]

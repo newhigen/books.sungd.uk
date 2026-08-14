@@ -27,6 +27,35 @@ def norm(s):
 
 HINTS = json.loads((REPO / "data" / "search-hints.json").read_text()) if (REPO / "data" / "search-hints.json").exists() else {}
 
+# 제목이 같은 다른 책이 잡힐 때가 있다(‘정리의 기술’ 이 마인드맵 책으로, ‘업’ 이 웹툰으로).
+# 그런 책은 알라딘 상품 번호를 손으로 박아 두고 검색을 건너뛴다.
+PINS = json.loads((REPO / "data" / "aladin-pins.json").read_text()) if (REPO / "data" / "aladin-pins.json").exists() else {}
+
+
+def by_item(item_id):
+    """상품 번호로 곧장 간다."""
+    url = "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=%s" % item_id
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        html = r.read().decode("utf-8", "replace")
+
+    def meta(key):
+        m = re.search(r'<meta[^>]*property="%s"[^>]*content="([^"]*)"' % key, html)
+        return m.group(1).strip() if m else ""
+
+    auth = re.search(r'AuthorSearch=[^"]*"[^>]*>([^<]+)</a>', html)
+    pub = re.search(r'PublisherSearch=[^"]*"[^>]*>([^<]+)</a>', html)
+    cover = re.search(r"https://image\.aladin\.co\.kr/product/\d+/\d+/cover\w*/[^\"']+?\.jpg", html)
+    return {
+        "title": meta("og:title") or "",
+        "author": auth.group(1).strip() if auth else "",
+        "publisher": pub.group(1).strip() if pub else "",
+        "cover": cover.group(0) if cover else "",
+        "aladin": url,
+        "match": 1.0,
+        "pinned": True,
+    }
+
 
 def short(title):
     """부제와 기호를 떼어 검색어를 줄인다. 원제와 같으면 빈 문자열."""
@@ -102,7 +131,12 @@ def main():
     for i, b in enumerate(todo, 1):
         title = b["title"]
         got = None
-        for attempt in (HINTS.get(title, ""), title, short(title)):
+        if title in PINS:
+            try:
+                got = by_item(PINS[title])
+            except Exception as e:
+                print(f"  ! {title} — {e}")
+        for attempt in () if got else (HINTS.get(title, ""), title, short(title)):
             if not attempt:
                 continue          # 손으로 정한 검색어가 없을 뿐이니 다음 후보로
             if got and not got.get("uncertain"):
