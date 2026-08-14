@@ -75,20 +75,28 @@ class Handler(SimpleHTTPRequestHandler):
 
         if u.path == "/api/tags":
             # 예전 형태({제목: [태그]})도 받아 준다
-            tags = data.get("tags", data if not isinstance(data.get("tags"), dict) else {})
-            notes = data.get("notes", {})
-            if "tags" not in data and "notes" not in data:
-                tags, notes = data, {}
-            (REPO / "data" / "tags.json").write_text(
-                json.dumps(tags, ensure_ascii=False, indent=1) + "\n")
-            notes = {k: v for k, v in notes.items() if str(v).strip()}
-            (REPO / "data" / "notes.json").write_text(
-                json.dumps(notes, ensure_ascii=False, indent=1) + "\n")
-            # 다 봤다고 표시한 책 — 어디까지 훑었는지만 담는다
-            done = sorted(set(data.get("done", [])))
-            (REPO / "data" / "done.json").write_text(
-                json.dumps(done, ensure_ascii=False, indent=1) + "\n")
-            return self._json({"ok": True, "tags": len(tags), "notes": len(notes), "done": len(done)})
+            if "tags" not in data and "notes" not in data and "done" not in data:
+                data = {"tags": data}
+
+            out = {}
+            for key, name in (("tags", "tags.json"), ("notes", "notes.json"), ("done", "done.json")):
+                # 안 보낸 것은 건드리지 않는다. 셋 다 덮어쓰면, 태그만 보낸 요청 하나에
+                # 메모가 통째로 날아간다(실제로 그랬다).
+                if key not in data:
+                    continue
+                p = REPO / "data" / name
+                cur = json.loads(p.read_text()) if p.exists() else ({} if key != "done" else [])
+                new = data[key]
+                if key == "notes":
+                    new = {k: v for k, v in new.items() if str(v).strip()}
+                elif key == "done":
+                    new = sorted(set(new))
+                # 있던 것을 통째로 비우는 저장은 실수일 가능성이 높다
+                if cur and not new:
+                    return self._json({"error": f"{name} 을 비우려 한다. 실수 같아서 막았다."}, 400)
+                p.write_text(json.dumps(new, ensure_ascii=False, indent=1) + "\n")
+                out[key] = len(new)
+            return self._json({"ok": True, **out})
 
         if u.path == "/api/add":
             p = REPO / "sources" / "manual.json"
