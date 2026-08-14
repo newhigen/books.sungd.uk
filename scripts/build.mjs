@@ -216,6 +216,14 @@ for (const book of books.values()) {
   book.tags = tags.slice(0, 6)
 }
 
+// ---- 태그는 손으로 붙인 것이 먼저 (data/tags.json) ----
+// 서점 분류에서 뽑은 태그는 '성공학' 처럼 진열대 말이라, 있으면 내 태그로 갈아 끼운다.
+const MINE = join(repo, 'data', 'tags.json')
+const mine = existsSync(MINE) ? JSON.parse(readFileSync(MINE, 'utf8')) : {}
+for (const book of books.values()) {
+  if (mine[book.title]?.length) book.tags = mine[book.title]
+}
+
 // ---- 무슨 책인지 한 줄 (data/summaries.json — 손으로 쓴다) ----
 const GISTS = join(repo, 'data', 'summaries.json')
 const gists = existsSync(GISTS) ? JSON.parse(readFileSync(GISTS, 'utf8')) : {}

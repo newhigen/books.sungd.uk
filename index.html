@@ -349,6 +349,7 @@ function openBook(b) {
       <div class="drow"><dt>어디에</dt><dd class="where">${where}</dd></div>
       <div class="drow"><dt>읽음</dt><dd class="tnum">${b.read ? (monthLabel(b.readAt) || '읽음') : '아직'}</dd></div>
       ${b.field ? `<div class="drow"><dt>분야</dt><dd>${esc(b.field)}</dd></div>` : ''}
+      ${b.form ? `<div class="drow"><dt>어떤 꼴</dt><dd>${esc(b.form)}</dd></div>` : ''}
       ${b.tags?.length ? `<div class="drow"><dt>태그</dt><dd class="tags">${b.tags.map((t) => `<button data-tag="${esc(t)}">${esc(t)}</button>`).join('')}</dd></div>` : ''}
       ${b.aladin ? `<div class="drow"><dt>책 정보</dt><dd class="where"><a href="${esc(b.aladin)}" target="_blank" rel="noopener">알라딘</a></dd></div>` : ''}
     </dl>
