@@ -575,6 +575,10 @@
  "Apprenticeship Patterns": [
   "개발자 커리어"
  ],
+ "Big Feelings": [
+  "심리",
+  "멘탈"
+ ],
  "David Copperfield": [
   "고전"
  ],
@@ -623,9 +627,5 @@
  ],
  "UX/UI의 10가지 심리학 법칙": [
   "UI/UX"
- ],
- "Big Feelings": [
-  "심리",
-  "멘탈"
  ]
 }
