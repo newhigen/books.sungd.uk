@@ -1,77 +1,119 @@
 #!/usr/bin/env python3
-"""책마다 추천 태그를 만든다. 사람이 tools/tagger.html 에서 고친다.
+"""추천 태그를 만든다. 사람이 붙인 것을 보고 배운다.
 
-재료는 셋이다.
-  1) 분야 규칙이 정한 갈래 (build.mjs 의 field)
-  2) 알라딘 분류 경로의 아래 칸들 — 다만 표현이 거칠어 다듬는다
-  3) 제목에서 바로 읽히는 말 (글쓰기·습관 같은 것)
+규칙을 손으로 적는 대신, 이미 붙인 태그에서 배운다 — 어떤 분류·제목의 책에 어떤 태그를
+붙였는지 세어 두고, 같은 특징을 가진 다른 책에 그 태그를 권한다. 사람이 태그를 더 붙일수록
+추천이 그 사람 말에 가까워진다.
+
+추천은 어디까지나 추천이라 화면에서 켜져 있지 않다. 눌러야 붙는다.
+
+    python3 scripts/suggest-tags.py
 """
 import json, re
+from collections import Counter, defaultdict
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 lib = json.loads((REPO / "data" / "library.json").read_text())
 cats = json.loads((REPO / "data" / "categories.json").read_text())
+mine = json.loads((REPO / "data" / "tags.json").read_text())
+mine = {k: v for k, v in mine.items() if v}
 
-# 알라딘 소분류 → 쓸 만한 말로 바꾸기. 없으면 슬래시로 쪼개 첫 조각만 쓴다.
-RENAME = {
-    "프로그래밍 개발/방법론": "개발 방법론", "프로그래밍 기초/개발 방법론": "개발 방법론",
-    "컴퓨터 공학": "컴퓨터 공학", "소프트웨어 공학": "소프트웨어 공학",
-    "CEO/비즈니스맨을 위한 능력계발": "일하는 법", "간부학/리더십": "리더십",
-    "기업 경영": "경영", "경영전략/혁신": "전략", "마케팅/세일즈": "마케팅",
-    "성공": "성공", "성공학": "성공", "시간관리/정보관리": "시간 관리",
-    "창의적사고/두뇌계발": "생각법", "취업/진로/유망직업": "커리어",
-    "협상/설득/화술": "말하기", "화술": "말하기", "인간관계": "관계",
-    "심리학/정신분석학": "심리", "교양 인문학": "인문", "책읽기/글쓰기": "글쓰기",
-    "세계의 문학": "소설", "서양고전문학": "고전", "한국에세이": "에세이",
-    "외국에세이": "에세이", "명사에세이": "에세이", "건강정보": "건강",
-    "그래픽/멀티미디어": "그래픽", "웹디자인/홈페이지": "웹디자인",
-    "디자인/공예": "디자인", "디자인이론/비평/역사": "디자인",
-    "e비즈니스/창업": "창업", "프로그래밍 언어": "프로그래밍 언어",
-}
-DROP = re.compile(r"일반$|기타$|^\d{4}년$|추천도서|베스트|우수출|전문기관|대학교재|국내도서|외국도서")
+STOP = set("그 이 저 것 수 등 및 위한 대한 하는 되는 있는 없는 나는 내가 우리 당신 the a of to and for in on with your my is are how what why".split())
 
-# 제목에서 바로 읽히는 것
-TITLE_TAGS = [
-    ("글쓰기", r"글쓰기|문장|writing"), ("독서", r"독서|책 읽|읽었더라면|책을 읽"),
-    ("노트", r"노트|제텔카스텐|메모"), ("습관", r"습관"), ("학습", r"학습|공부|배우기"),
-    ("실패", r"실패"), ("리더십", r"리더|리더십"), ("면접", r"면접|인터뷰"),
-    ("머신러닝", r"머신러닝|머신 러닝|딥러닝|ML"), ("리팩터링", r"리팩터|리팩토링|refactor"),
-    ("애자일", r"애자일|스크럼|린 "), ("생산성", r"시간|딥 워크|메이크 타임|정리"),
-    ("의사결정", r"선택|결정|판단|예측"), ("커리어", r"커리어|이직|채용|진로"),
-    ("대화", r"대화|말투|말하는|설득|화술"), ("여행기", r"여행|유럽|뉴욕"),
-]
+# 책 내용이 아니라 서점 진열 코너 이름 — 이것들이 섞이면 엉뚱한 태그가 딸려 온다
+# (실제로 '2019 청소년 추천도서' 한 칸 때문에 습관 책에 '건축' 이 붙었다)
+SHELF = re.compile(
+    r"추천도서|베스트셀러|대학교재|전문서적|청소년|외부/전문기관|한국출판문화|우수출"
+    r"|세종도서|올해의 책|독자 선정|문학상|과학창의재단|^\d{4}년?$"
+)
 
-def clean(tag):
-    t = RENAME.get(tag)
-    if t:
-        return t
-    if DROP.search(tag):
-        return None
-    t = tag.split("/")[0].strip()
-    return t if 1 < len(t) <= 12 else None
 
-out = {}
-for b in lib["books"]:
-    tags = []
-    if b.get("field"):
-        tags.append(b["field"])
+def feats(b):
+    """책의 특징 — 분류 경로 칸, 손으로 쓴 주제어와 형식, 제목·소개 낱말."""
+    out = set()
     c = cats.get(b["title"], {})
     for p in c.get("paths", []):
-        for name in p[1:]:
-            t = clean(name)
-            if t and t not in tags:
-                tags.append(t)
-    hay = b["title"] + " " + b.get("englishTitle", "")
-    for name, pat in TITLE_TAGS:
-        if re.search(pat, hay, re.I) and name not in tags:
-            tags.append(name)
-    out[b["title"]] = tags[:5]
+        for name in p:
+            if not SHELF.search(name):
+                out.add("분류:" + name)
+    if b.get("field"):
+        out.add("갈래:" + b["field"])
+    # 서점 분류보다 이쪽이 책 내용에 가깝다
+    for t in b.get("topics", []):
+        out.add("주제:" + t)
+    if b.get("form"):
+        out.add("꼴:" + b["form"])
+    words = re.findall(
+        r"[가-힣A-Za-z]{2,}",
+        b["title"] + " " + b.get("englishTitle", "") + " " + b.get("gist", ""),
+    )
+    for w in words:
+        if w.lower() not in STOP:
+            out.add("말:" + w.lower())
+    if b.get("author"):
+        out.add("이:" + b["author"].split(",")[0].strip())
+    return out
+
+
+books = {b["title"]: b for b in lib["books"]}
+
+# 특징마다 믿음이 다르다. 손으로 쓴 주제어가 가장 정확하고, 낱말은 우연히 겹치기 쉽다.
+WEIGHT = {"주제": 1.3, "분류": 1.0, "이": 1.0, "꼴": 0.6, "갈래": 0.8, "말": 0.4}
+
+# 여러 책에 두루 나오는 낱말은 그 책을 가리키지 못한다 — "이론", "방법" 같은 것들
+word_books = Counter()
+for b in books.values():
+    for x in feats(b):
+        if x.startswith("말:"):
+            word_books[x] += 1
+COMMON = {w for w, n in word_books.items() if n >= 10}
+
+
+def weighted(b):
+    return [(x, WEIGHT.get(x.split(":", 1)[0], 1.0)) for x in feats(b) if x not in COMMON]
+
+
+# ── 배우기 ──
+tag_count = Counter()
+feat_tag = defaultdict(Counter)
+for title, tags in mine.items():
+    b = books.get(title)
+    if not b:
+        continue
+    f = weighted(b)
+    for t in tags:
+        tag_count[t] += 1
+        for x, _ in f:
+            feat_tag[x][t] += 1
+
+# ── 권하기 ──
+out = {}
+for title, b in books.items():
+    have = set(mine.get(title, []))
+    score = Counter()
+    for x, w in weighted(b):
+        seen = feat_tag.get(x)
+        if not seen:
+            continue
+        total = sum(seen.values())
+        for t, n in seen.items():
+            if t in have:
+                continue
+            # 그 특징에서 그 태그가 나온 비율 × 특징이 드물수록 가산 × 특징의 믿음
+            score[t] += (n / total) * (1.0 + 1.0 / total) * w
+    # 1등과 너무 벌어진 것은 우연히 걸린 쪽이다
+    top = score.most_common(1)[0][1] if score else 0
+    picked = [t for t, s in score.most_common(6) if s >= max(0.7, top * 0.5)][:3]
+    out[title] = picked
 
 (REPO / "data" / "tags-suggested.json").write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n")
 
-from collections import Counter
-cnt = Counter(t for v in out.values() for t in v)
-print(f"{len(out)}권에 추천 태그 붙임 · 태그 {len(cnt)}종")
-print("많은 것:", ", ".join(f"{k} {n}" for k, n in cnt.most_common(12)))
-print("한 번뿐:", sum(1 for k, n in cnt.items() if n == 1), "종")
+c = Counter(t for v in out.values() for t in v)
+none = sum(1 for v in out.values() if not v)
+notag = [t for t in books if t not in mine]
+print(f"배운 것 — 사람이 붙인 {len(mine)}권 · 태그 {len(tag_count)}종")
+print(f"추천 — {len(out)}권 · 평균 {round(sum(len(v) for v in out.values())/len(out),1)}개 · 못 짚은 책 {none}권")
+print(f"아직 태그 없는 책 {len(notag)}권 중 추천이 붙은 것 {sum(1 for t in notag if out.get(t))}권")
+print()
+print("많이 권한 것:", ", ".join(f"{k} {n}" for k, n in c.most_common(12)))
