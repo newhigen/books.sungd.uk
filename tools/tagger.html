@@ -257,8 +257,10 @@ function counts() {
   return c
 }
 const LOCAL = 'tagger-draft'
+// 태그 어휘를 갈아엎으면 올린다. 안 그러면 브라우저에 남은 옛 초안이 새 태그를 덮는다.
+const TAG_VER = 2
 function keep() {
-  try { localStorage.setItem(LOCAL, JSON.stringify({ tags: TAGS, notes: NOTES, touched: [...touched] })) }
+  try { localStorage.setItem(LOCAL, JSON.stringify({ ver: TAG_VER, tags: TAGS, notes: NOTES, touched: [...touched] })) }
   catch (e) {}
 }
 function markDirty() {
@@ -498,7 +500,11 @@ Promise.all([
   // 저장 전에 닫았더라도 쓰던 것이 남아 있으면 되살린다
   try {
     const draft = JSON.parse(localStorage.getItem(LOCAL) || 'null')
-    if (draft) {
+    if (draft && draft.ver !== TAG_VER) {
+      // 어휘가 바뀌었다 — 옛 초안의 태그는 버리고 메모만 살린다
+      Object.assign(NOTES, draft.notes || {})
+      localStorage.removeItem(LOCAL)
+    } else if (draft) {
       Object.assign(TAGS, draft.tags || {})
       Object.assign(NOTES, draft.notes || {})
       ;(draft.touched || []).forEach((t) => touched.add(t))
