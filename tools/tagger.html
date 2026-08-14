@@ -10,170 +10,148 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--ink:#141414;--sec:#3d3d3a;--muted:#6a6a66;--faint:#9b9b96;
-      --rule:#f2f2f0;--rule2:#e5e5e2;--acc:#8c3b4a;--acc-bg:#fbf2f4;--ok:#3f7d58;
+      --rule:#f0f0ee;--rule2:#e3e3e0;--acc:#8c3b4a;--acc-bg:#fbf2f4;--ok:#3f7d58;
       --sans:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;
       --mono:'Google Sans Code',ui-monospace,Menlo,monospace}
 html{color-scheme:light}
-body{background:#fff;color:var(--ink);font-family:var(--sans);font-size:12.5px;line-height:1.45;
+body{background:#fff;color:var(--ink);font-family:var(--sans);font-size:12px;line-height:1.4;
      -webkit-font-smoothing:antialiased}
-.wrap{max-width:1180px;margin:0 auto;padding:20px 16px 40px}
-button,input,select{font-family:inherit;letter-spacing:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 14px 32px}
+button,input,select{font-family:inherit;letter-spacing:inherit;font-size:inherit}
 
-/* ── 머리 ── */
-.top{display:flex;align-items:center;gap:10px;padding-bottom:9px;border-bottom:1px solid var(--rule2)}
-h1{font-size:15px;font-weight:800;letter-spacing:-.03em}
-.tabs{display:flex;gap:2px;margin-left:8px}
-.tab{border:0;background:none;font-size:12.5px;color:var(--muted);padding:5px 10px;cursor:pointer;
-     border-radius:6px}
-.tab:hover{color:var(--ink);background:#fafaf9}
-.tab.on{color:var(--ink);font-weight:750;background:var(--acc-bg)}
-.st{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--faint)}
-.save{border:1px solid var(--ink);background:var(--ink);color:#fff;font-size:12px;padding:5px 12px;
-      border-radius:6px;cursor:pointer}
+/* ── 머리 — 스크롤해도 붙어 있다 ── */
+.head{position:sticky;top:0;z-index:20;background:#fff;padding-top:10px}
+.head::after{content:'';display:block;height:2px;background:var(--rule);position:relative}
+.hrow{display:flex;align-items:center;gap:8px}
+h1{font-size:13px;font-weight:800;letter-spacing:-.03em;white-space:nowrap}
+.tabs{display:flex;gap:1px}
+.tab{border:0;background:none;color:var(--muted);padding:3px 8px 4px;cursor:pointer;
+     border-bottom:2px solid transparent;margin-bottom:-1px}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--ink);font-weight:700;border-bottom-color:var(--acc)}
+.count{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap}
+.count b{color:var(--ok);font-weight:500}
+.save{border:1px solid var(--ink);background:var(--ink);color:#fff;padding:3px 10px 4px;
+      border-radius:5px;cursor:pointer}
 .save.dirty{background:var(--acc);border-color:var(--acc)}
-.save:disabled{opacity:.45;cursor:default}
-.ghost{border:1px solid var(--rule2);background:#fff;color:var(--muted);font-size:12px;
-       padding:5px 10px;border-radius:6px;cursor:pointer}
+.save:disabled{opacity:.4;cursor:default}
+.ghost{border:1px solid var(--rule2);background:#fff;color:var(--muted);padding:3px 8px 4px;
+       border-radius:5px;cursor:pointer}
 .ghost:hover{border-color:var(--ink);color:var(--ink)}
 
-/* ── 얼마나 봤나 ── */
-.prog{display:flex;align-items:center;gap:10px;padding:11px 0 0}
-.prog .track{flex:1;height:6px;border-radius:3px;background:var(--rule);overflow:hidden}
-.prog .fill{height:100%;background:var(--ok);border-radius:3px;transition:width .25s}
-.prog .num{font-family:var(--mono);font-size:11.5px;color:var(--sec);white-space:nowrap}
-.prog .num b{color:var(--ok);font-weight:600}
+/* 얼마나 봤나 — 머리 맨 아래 선이 그대로 막대다 */
+.fill{position:absolute;left:0;bottom:0;height:2px;background:var(--ok);width:0;transition:width .25s}
 
-/* ── 거르개 ── */
-.bar{display:flex;align-items:center;gap:7px;padding:11px 0 9px}
-.bar input[type=search]{flex:1;border:1px solid var(--rule2);border-radius:7px;padding:6px 10px;
-                        font-size:12.5px;outline:none;min-width:0}
-.bar input[type=search]:focus{border-color:var(--acc)}
-.bar select{border:1px solid var(--rule2);border-radius:7px;padding:5px 7px;font-size:12px;
-            color:var(--sec);background:#fff}
-.toggle{border:1px solid var(--rule2);background:#fff;color:var(--muted);font-size:12px;
-        padding:5px 10px;border-radius:7px;cursor:pointer;white-space:nowrap}
-.toggle.on{border-color:var(--ok);color:var(--ok);background:#f3f8f5;font-weight:650}
+.frow{display:flex;align-items:center;gap:5px;padding:6px 0 7px}
+.frow input[type=search]{flex:1;border:1px solid var(--rule2);border-radius:5px;padding:3px 8px 4px;
+                         outline:none;min-width:0}
+.frow input[type=search]:focus{border-color:var(--acc)}
+.frow select{border:1px solid var(--rule2);border-radius:5px;padding:3px 5px;color:var(--sec);
+             background:#fff}
+.toggle{border:1px solid var(--rule2);background:#fff;color:var(--muted);padding:3px 8px 4px;
+        border-radius:5px;cursor:pointer;white-space:nowrap}
+.toggle.on{border-color:var(--ok);color:var(--ok);font-weight:650}
+
+.note{font-size:11px;color:var(--faint);padding:0 0 8px;line-height:1.45}
+.note b{color:var(--muted);font-weight:650}
 
 /* ── 목록 ── */
-/* 칸 너비를 colgroup 으로 못 박는다. 안 그러면 메모 칸이 제 폭을 우겨 표가 옆으로 삐져나가고,
-   첫 행이 태그 머리글(colspan)이라 브라우저가 폭을 가늠하지도 못한다. */
 table{width:100%;border-collapse:collapse;table-layout:fixed}
-.w-cv{width:34px}
-.w-b{width:28%}
-.w-t{width:auto}
-.w-m{width:22%}
-.w-d{width:40px}
-td{padding:7px 8px 7px 0;border-bottom:1px solid var(--rule);vertical-align:top}
-tr.hit td{background:var(--acc-bg)}
-tr.done td{background:none}
-tr.done .c-b b,tr.done .c-b span,tr.done .c-b i{opacity:.5}
-tr.done .c-cv img,tr.done .c-cv .ph{opacity:.45}
-tr.sep td{padding:14px 0 4px;border:0;font-size:11.5px;font-weight:750;color:var(--acc);
+.w-c{width:26px}.w-b{width:31%}.w-t{width:auto}.w-m{width:19%}
+td{padding:3px 8px 4px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+tr.done .c-b{opacity:.45}
+tr.sep td{padding:11px 0 2px;border:0;font-size:11px;font-weight:750;color:var(--acc);
           letter-spacing:-.02em}
-.c-cv{width:30px}
-.c-cv img{width:26px;border-radius:2px;display:block}
-.c-cv .ph{width:26px;height:39px;border-radius:2px;background:#eceae7}
-.c-b{width:28%}
-.c-b b{font-size:12.5px;font-weight:650;letter-spacing:-.02em;display:block;line-height:1.3;
-       word-break:keep-all;overflow-wrap:anywhere}
-.c-b span{font-size:11px;color:var(--faint)}
-/* 무슨 책인지 한 줄 — 태그를 고를 때 근거가 된다 */
+tr.sep:first-child td{padding-top:2px}
+
+/* 다 봤다 — 왼쪽 끝에서 훑어 내려가며 찍는다 */
+.c-c{padding-left:0;padding-top:5px}
+.chk{width:15px;height:15px;border:1.5px solid var(--rule2);border-radius:4px;background:#fff;
+     cursor:pointer;color:transparent;font-size:10px;line-height:1;padding:0;display:block}
+.chk:hover{border-color:var(--ok)}
+.chk.on{border-color:var(--ok);background:var(--ok);color:#fff}
+
+.c-b b{font-weight:650;letter-spacing:-.02em;line-height:1.35;word-break:keep-all;
+       overflow-wrap:anywhere}
+.c-b em{font-style:normal;color:var(--faint);font-size:11px}
 .c-b i{display:block;font-style:normal;font-size:11px;line-height:1.4;color:var(--muted);
-       margin-top:4px}
-.c-t{width:auto;padding-right:12px}
+       margin-top:1px}
+
 /* 태그 — 자리는 그대로 두고 켜짐/꺼짐만 바뀐다 */
-.tag,.sug{display:inline-flex;align-items:center;border-radius:6px;padding:2px 8px 3px;
-          font-size:11.5px;margin:0 3px 3px 0;cursor:pointer;font-family:inherit;
-          border:1px solid transparent}
+.tag,.sug,.addt{display:inline-flex;align-items:center;border-radius:4px;padding:1px 6px 2px;
+                font-size:11px;margin:0 2px 2px 0;cursor:pointer;border:1px solid transparent;
+                line-height:1.35}
 .tag{background:var(--acc);color:#fff;font-weight:600;border-color:var(--acc)}
 .tag:hover{background:#a04a5a;border-color:#a04a5a}
 .sug{background:none;color:var(--faint);border-color:var(--rule2);border-style:dashed}
 .sug:hover{border-color:var(--acc);border-style:solid;color:var(--acc);background:var(--acc-bg)}
-.addt{border:1px dashed var(--rule2);border-radius:6px;padding:2px 8px 3px;font-size:11.5px;
-      color:var(--muted);background:none;cursor:pointer}
+.addt{border-color:var(--rule2);border-style:dashed;color:#c4c2bd;background:none}
 .addt:hover{border-color:var(--acc);color:var(--acc)}
-.tin{border:1px solid var(--acc);border-radius:6px;padding:2px 6px;font-size:11.5px;width:118px;
+.tin{border:1px solid var(--acc);border-radius:4px;padding:1px 5px;font-size:11px;width:108px;
      outline:none}
-/* 메모 — 사이트에는 안 나가고 나에게 주는 지시를 적는 자리 */
-.c-m{width:22%}
-.c-m textarea{width:100%;min-width:0;border:1px solid var(--rule2);border-radius:6px;padding:4px 7px;
-              font-family:inherit;font-size:11.5px;line-height:1.45;resize:vertical;
-              min-height:30px;outline:none;color:var(--sec);background:#fff}
-.c-m textarea:focus{border-color:var(--acc);min-height:60px}
+
+/* 메모 — 사이트에 안 나가고 나에게 주는 지시를 적는 자리 */
+.c-m textarea{width:100%;min-width:0;border:1px solid var(--rule2);border-radius:4px;
+              padding:2px 6px;font-family:inherit;font-size:11px;line-height:1.4;resize:vertical;
+              min-height:22px;outline:none;color:var(--sec);background:#fff;display:block}
+.c-m textarea:focus{border-color:var(--acc);min-height:54px}
 .c-m textarea:not(:placeholder-shown){border-color:var(--acc);background:var(--acc-bg);color:var(--ink)}
-.c-m textarea::placeholder{color:#c9c7c2}
-/* 다 봤다 표시 */
-.c-d{width:34px;padding-right:0;text-align:right}
-.chk{width:24px;height:24px;border:1.5px solid var(--rule2);border-radius:50%;background:#fff;
-     cursor:pointer;color:transparent;font-size:12px;line-height:1;padding:0}
-.chk:hover{border-color:var(--ok);color:#cfe0d6}
-.chk.on{border-color:var(--ok);background:var(--ok);color:#fff}
+.c-m textarea::placeholder{color:#cecbc6}
 
 /* ── 태그 정리 ── */
-.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:6px}
-.tgi{display:flex;align-items:center;gap:6px;border:1px solid var(--rule2);border-radius:7px;
-     padding:6px 8px}
-.tgi.few{border-color:#e8d5da;background:#fdf9fa}
-.tgi .nm{font-weight:650;font-size:12px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.tgi .n{font-family:var(--mono);font-size:11px;color:var(--acc)}
-.tgi button{border:0;background:none;color:var(--faint);cursor:pointer;font-size:11px;padding:1px 3px}
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:4px}
+.tgi{display:flex;align-items:center;gap:5px;border-bottom:1px solid var(--rule);padding:4px 2px}
+.tgi.few .nm{color:var(--acc)}
+.tgi .nm{font-weight:650;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tgi .n{font-family:var(--mono);font-size:10.5px;color:var(--faint)}
+.tgi button{border:0;background:none;color:#c4c2bd;cursor:pointer;font-size:10.5px;padding:0 2px}
 .tgi button:hover{color:var(--acc)}
-.hint{font-size:11.5px;color:var(--muted);margin:8px 0 12px}
-.hint b{color:var(--ink)}
 
 /* ── 책 추가 ── */
-.add{max-width:560px}
-.add label{display:block;font-size:11.5px;color:var(--muted);margin:11px 0 3px}
-.add input[type=text]{width:100%;border:1px solid var(--rule2);border-radius:7px;padding:7px 10px;
-                      font-size:12.5px;outline:none}
+.add{max-width:520px}
+.add label{display:block;font-size:11px;color:var(--muted);margin:9px 0 2px}
+.add input[type=text]{width:100%;border:1px solid var(--rule2);border-radius:5px;padding:4px 8px;
+                      outline:none}
 .add input:focus{border-color:var(--acc)}
-.srcs{display:flex;flex-wrap:wrap;gap:4px}
-.srcs button{border:1px solid var(--rule2);background:#fff;border-radius:6px;padding:4px 9px;
-             font-size:11.5px;cursor:pointer;color:var(--sec)}
+.srcs{display:flex;flex-wrap:wrap;gap:3px}
+.srcs button{border:1px solid var(--rule2);background:#fff;border-radius:4px;padding:2px 7px 3px;
+             font-size:11px;cursor:pointer;color:var(--sec)}
 .srcs button.on{border-color:var(--acc);background:var(--acc-bg);color:var(--acc);font-weight:650}
-.found{display:flex;gap:10px;border:1px solid var(--rule2);border-radius:8px;padding:9px;margin-top:10px}
-.found img{width:44px;border-radius:2px}
-.found .ft{font-weight:650;font-size:12.5px}
-.found .fa{font-size:11.5px;color:var(--muted)}
-.go{border:1px solid var(--ink);background:var(--ink);color:#fff;font-size:12px;padding:6px 13px;
-    border-radius:7px;cursor:pointer;margin-top:12px}
-.msg{font-size:11.5px;color:var(--acc);margin-top:8px;min-height:16px}
+.found{display:flex;gap:8px;border-top:1px solid var(--rule2);padding:8px 0 0;margin-top:9px}
+.found img{width:38px}
+.found .ft{font-weight:650}
+.found .fa{font-size:11px;color:var(--muted)}
+.go{border:1px solid var(--ink);background:var(--ink);color:#fff;padding:4px 11px 5px;
+    border-radius:5px;cursor:pointer;margin-top:10px}
+.msg{font-size:11px;color:var(--acc);margin-top:6px;min-height:14px}
 
 .pane{display:none}
 .pane.on{display:block}
 
-/* ── 폰 ── 표를 접어 카드로 쌓는다 */
+/* ── 폰 ── 표를 접어 카드로 쌓는다 ── */
 @media (max-width: 720px) {
-  .wrap{padding:14px 12px 30px}
-  .top{flex-wrap:wrap;gap:7px}
-  h1{font-size:14px}
-  .tabs{margin-left:0;order:3;width:100%}
-  .tab{flex:1;text-align:center;padding:6px 4px}
-  .st{order:2;margin-left:auto;font-size:10.5px}
-  .save{padding:6px 14px}
-  .bar{flex-wrap:wrap}
-  .bar input[type=search]{flex:1 1 100%}
-  .bar select{flex:1}
-  .toggle{flex:1 1 100%}
+  .wrap{padding:0 10px 24px}
+  .head{padding-top:8px}
+  .hrow{flex-wrap:wrap;gap:6px}
+  h1{font-size:12.5px}
+  .tabs{order:3;width:100%;margin-top:2px}
+  .tab{flex:1;text-align:center;padding:5px 2px 6px}
+  .count{margin-left:auto}
+  .frow{flex-wrap:wrap}
+  .frow input[type=search]{flex:1 1 100%}
+  .frow select,.toggle{flex:1}
 
   table,tbody,tr,td{display:block;width:auto}
-  .c-b,.c-t,.c-m,.c-cv,.c-d{width:auto}
-  tr{border-bottom:1px solid var(--rule2);padding:9px 0 10px;position:relative}
+  tr{border-bottom:1px solid var(--rule2);padding:6px 0 7px;position:relative}
   td{border:0;padding:0}
-  .c-cv{position:absolute;left:0;top:9px}
-  .c-cv img,.c-cv .ph{width:34px}
-  .c-b{padding-left:44px;padding-right:36px;min-height:40px}
-  .c-b span{display:block}
-  .c-b b{font-size:13.5px}
-  .c-t{padding:7px 0 0}
-  .tag,.sug{font-size:12.5px;padding:4px 10px 5px;margin:0 4px 5px 0}
-  .addt{font-size:12.5px;padding:4px 10px 5px}
-  .c-m{padding-top:5px}
-  .c-m textarea{font-size:12.5px;min-height:26px}
-  .c-m textarea:focus{min-height:56px}
-  .c-d{position:absolute;right:0;top:9px}
-  .chk{width:28px;height:28px}
-
+  .c-c{position:absolute;left:0;top:6px}
+  .chk{width:22px;height:22px;font-size:12px}
+  .c-b{padding-left:30px}
+  .c-b b{font-size:12.5px}
+  .c-t{padding:4px 0 0 30px}
+  .tag,.sug,.addt{font-size:12px;padding:3px 9px 4px;margin:0 3px 3px 0}
+  .c-m{padding:3px 0 0 30px}
+  .c-m textarea{font-size:12px}
   .tg{grid-template-columns:1fr}
   .add{max-width:none}
 }
@@ -182,62 +160,59 @@ tr.sep td{padding:14px 0 4px;border:0;font-size:11.5px;font-weight:750;color:var
 <body>
 <div class="wrap">
 
-<div class="top">
-  <h1>태그 붙이기</h1>
-  <div class="tabs">
-    <button class="tab on" data-p="list">책 목록</button>
-    <button class="tab" data-p="tags">태그 정리</button>
-    <button class="tab" data-p="add">책 추가</button>
+<header class="head">
+  <div class="hrow">
+    <h1>태그 붙이기</h1>
+    <div class="tabs">
+      <button class="tab on" data-p="list">책 목록</button>
+      <button class="tab" data-p="tags">태그 정리</button>
+      <button class="tab" data-p="add">책 추가</button>
+    </div>
+    <span class="count" id="count"></span>
+    <button class="ghost" id="revert" title="브라우저에 담아 둔 것을 버리고 저장된 상태로">되돌리기</button>
+    <button class="save" id="save" disabled>저장</button>
   </div>
-  <span class="st" id="st"></span>
-  <button class="ghost" id="revert" title="브라우저에 담아 둔 것을 버리고 저장된 상태로">되돌리기</button>
-  <button class="save" id="save" disabled>저장</button>
-</div>
-
-<!-- 책 목록 -->
-<section class="pane on" data-p="list">
-  <div class="prog">
-    <div class="track"><div class="fill" id="fill" style="width:0"></div></div>
-    <span class="num" id="pnum"></span>
-  </div>
-  <div class="bar">
-    <input type="search" id="q" placeholder="제목·저자·태그 검색" autocomplete="off" />
+  <div class="frow" data-for="list">
+    <input type="search" id="q" placeholder="제목·저자·태그" autocomplete="off" />
     <select id="filter">
       <option value="all">전체</option>
       <option value="untouched">아직 안 고친 것</option>
       <option value="notag">태그 없는 것</option>
-      <option value="rare">드문 태그가 붙은 것</option>
+      <option value="rare">드문 태그</option>
       <option value="memo">메모 있는 것</option>
     </select>
     <select id="sort">
-      <option value="tag" selected>태그 순 (비슷한 것끼리)</option>
+      <option value="tag" selected>태그 순</option>
       <option value="recent">최근 읽은 순</option>
       <option value="title">제목 순</option>
       <option value="tagcount">태그 적은 순</option>
     </select>
     <button class="toggle" id="hidedone">다 본 것 숨기기</button>
   </div>
-  <div class="hint" style="margin:0 0 6px">점선은 <b>추천</b>, 진한 것은 <b>붙은 태그</b>. 눌러서 켜고 끈다 — 자리는 그대로다.
-    오른쪽 동그라미를 누르면 <b>다 본 책</b>으로 넘어가고 위 막대가 찬다.
-    <b>메모</b> 칸은 사이트에 안 나간다. 이 책을 어떻게 할지 적어 두면 내가 읽고 처리한다
-    — 예: 회사에서 빌린 책 · 표지가 다른 판이다 · 이건 빼 줘</div>
+  <div class="fill" id="fill"></div>
+</header>
+
+<!-- 책 목록 -->
+<section class="pane on" data-p="list">
+  <p class="note">점선은 <b>추천</b>, 진한 것은 <b>붙은 태그</b> — 눌러서 켜고 끈다.
+    왼쪽 네모를 찍으면 <b>다 본 책</b>이 되고 위 막대가 찬다.
+    <b>메모</b>는 사이트에 안 나간다. 이 책을 어떻게 할지 적어 두면 내가 읽고 처리한다.</p>
   <table>
-    <colgroup><col class="w-cv" /><col class="w-b" /><col class="w-t" /><col class="w-m" /><col class="w-d" /></colgroup>
+    <colgroup><col class="w-c" /><col class="w-b" /><col class="w-t" /><col class="w-m" /></colgroup>
     <tbody id="rows"></tbody>
   </table>
 </section>
 
 <!-- 태그 정리 -->
 <section class="pane" data-p="tags">
-  <div class="hint">책 수가 적은 태그는 <b>붉은 칸</b>으로 보인다. 이름을 바꾸거나 다른 태그에 합치거나
-    지운다. 합칠 때는 옮겨 갈 태그 이름을 적으면 된다.</div>
+  <p class="note">책 수가 적은 태그는 <b>붉은 글씨</b>다. 이름을 바꾸거나 다른 태그에 합치거나 지운다.</p>
   <div class="tg" id="tglist"></div>
 </section>
 
 <!-- 책 추가 -->
 <section class="pane add" data-p="add">
-  <div class="hint">제목을 넣고 <b>찾기</b>를 누르면 알라딘에서 표지·저자를 가져온다.
-    어디에 있는지 고르고 담으면 <code>sources/manual.json</code> 에 들어간다.</div>
+  <p class="note">제목을 넣고 <b>찾기</b>를 누르면 알라딘에서 표지·저자를 가져온다.
+    어디에 있는지 고르고 담으면 <code>sources/manual.json</code> 에 들어간다.</p>
   <label>제목</label>
   <input type="text" id="atitle" placeholder="예: 함께 자라기" />
   <label>어디에 있나</label>
@@ -317,15 +292,6 @@ function markDirty() {
   b.textContent = '저장'
 }
 
-// ── 얼마나 봤나 ──
-function drawProgress() {
-  const all = BOOKS.length
-  const n = BOOKS.filter((b) => DONE.has(b.title)).length
-  const pct = all ? Math.round((n / all) * 100) : 0
-  $('#fill').style.width = pct + '%'
-  $('#pnum').innerHTML = `<b>${n}</b>/${all} (${pct}%)`
-}
-
 // ── 목록 ──
 function visible() {
   const q = $('#q').value.trim().toLowerCase()
@@ -375,29 +341,35 @@ function drawList() {
       const first = [...tags].sort((x, y) => tagRank(x) - tagRank(y))[0] || '(아직 없음)'
       if (first !== lastHead) {
         lastHead = first
-        head = `<tr class="sep"><td colspan="5">${esc(first)}</td></tr>`
+        head = `<tr class="sep"><td colspan="4">${esc(first)}</td></tr>`
       }
     }
-    const cls = [done ? 'done' : '', !done && touched.has(b.title) ? 'hit' : ''].filter(Boolean).join(' ')
-    return head + `<tr data-t="${esc(b.title)}" class="${cls}">
-      <td class="c-cv">${b.cover ? `<img src="${esc(b.cover)}" alt="" loading="lazy">` : '<div class="ph"></div>'}</td>
-      <td class="c-b"><b>${esc(b.title)}</b><span>${esc(b.author || '')}${b.form ? ` · ${esc(b.form)}` : ''}</span>
+    const meta = [b.author, b.form].filter(Boolean).join(' · ')
+    return head + `<tr data-t="${esc(b.title)}"${done ? ' class="done"' : ''}>
+      <td class="c-c"><button class="chk${done ? ' on' : ''}" data-done title="다 봤다">✓</button></td>
+      <td class="c-b"><b>${esc(b.title)}</b>${meta ? ` <em>${esc(meta)}</em>` : ''}
         ${b.gist ? `<i>${esc(b.gist)}</i>` : ''}</td>
       <td class="c-t">
         ${[...sug, ...tags.filter((t) => !sug.includes(t))].map((t) => {
           const on = tags.includes(t)
           return `<button class="${on ? 'tag' : 'sug'}" data-${on ? 'del' : 'pick'}="${esc(t)}">${esc(t)}</button>`
         }).join('')}
-        <button class="addt" data-add>직접</button>
+        <button class="addt" data-add>+</button>
       </td>
       <td class="c-m"><textarea data-m="${esc(b.title)}" rows="1" placeholder="메모">${esc(NOTES[b.title] || '')}</textarea></td>
-      <td class="c-d"><button class="chk${done ? ' on' : ''}" data-done title="다 봤다">✓</button></td>
     </tr>`
   }).join('')
-  const memoN = Object.values(NOTES).filter((v) => (v || '').trim()).length
-  $('#st').textContent = `${list.length}권 보임 · 손댄 것 ${touched.size} · 태그 ${Object.keys(counts()).length}종`
-    + (memoN ? ` · 메모 ${memoN}` : '')
-  drawProgress()
+  drawCount(list.length)
+}
+
+function drawCount(shown) {
+  const all = BOOKS.length
+  const n = BOOKS.filter((b) => DONE.has(b.title)).length
+  const pct = all ? Math.round((n / all) * 100) : 0
+  $('#fill').style.width = pct + '%'
+  const memo = Object.values(NOTES).filter((v) => (v || '').trim()).length
+  $('#count').innerHTML = `<b>${n}</b>/${all} (${pct}%) · ${shown}권 보임`
+    + ` · 태그 ${Object.keys(counts()).length}종` + (memo ? ` · 메모 ${memo}` : '')
 }
 
 $('#rows').addEventListener('input', (e) => {
@@ -534,7 +506,7 @@ $('#save').addEventListener('click', async () => {
     dirty = false
     localStorage.removeItem(LOCAL)
     b.classList.remove('dirty'); b.disabled = true; b.textContent = '저장됨'
-  } else b.textContent = '실패'
+  } else b.textContent = r.error || '실패'
 })
 
 $('#revert').addEventListener('click', () => {
@@ -543,12 +515,13 @@ $('#revert').addEventListener('click', () => {
   location.reload()
 })
 
-// ── 탭 ──
+// ── 탭 ── 거르개 줄은 책 목록에서만 쓴다
 document.querySelector('.tabs').addEventListener('click', (e) => {
   const t = e.target.closest('.tab')
   if (!t) return
   document.querySelectorAll('.tab').forEach((x) => x.classList.toggle('on', x === t))
   document.querySelectorAll('.pane').forEach((p) => p.classList.toggle('on', p.dataset.p === t.dataset.p))
+  $('.frow').style.display = t.dataset.p === 'list' ? '' : 'none'
   if (t.dataset.p === 'tags') drawTags()
 })
 
