@@ -216,6 +216,17 @@ for (const book of books.values()) {
   book.tags = tags.slice(0, 6)
 }
 
+// ---- 무슨 책인지 한 줄 (data/summaries.json — 손으로 쓴다) ----
+const GISTS = join(repo, 'data', 'summaries.json')
+const gists = existsSync(GISTS) ? JSON.parse(readFileSync(GISTS, 'utf8')) : {}
+for (const book of books.values()) {
+  const g = gists[book.title]
+  if (!g) continue
+  book.gist = g.gist || ''
+  book.topics = g.topics || []
+  book.form = g.form || ''
+}
+
 // ---- 감출 것 빼기 ----
 // data/hidden.json 에 적힌 분야·제목은 공개 데이터에 싣지 않는다. 화면에서 가리는 게
 // 아니라 파일에서 빠지므로, 받아보더라도 흔적이 없다.
@@ -241,6 +252,9 @@ const all = [...books.values()].map((b) => ({
   aladin: b.aladin || '',
   field: b.field || '',
   tags: b.tags || [],
+  gist: b.gist || '',
+  topics: b.topics || [],
+  form: b.form || '',
   sources: b.sources,
   read: !!b.read,
   readAt: b.readAt || '',
