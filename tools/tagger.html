@@ -30,6 +30,9 @@ h1{font-size:15px;font-weight:800;letter-spacing:-.03em}
 .save{border:1px solid var(--ink);background:var(--ink);color:#fff;font-size:12px;padding:5px 12px;
       border-radius:6px;cursor:pointer}
 .save.dirty{background:var(--acc);border-color:var(--acc)}
+.ghost{border:1px solid var(--rule2);background:#fff;color:var(--muted);font-size:12px;
+       padding:5px 10px;border-radius:6px;cursor:pointer}
+.ghost:hover{border-color:var(--ink);color:var(--ink)}
 .save:disabled{opacity:.45;cursor:default}
 
 .bar{display:flex;align-items:center;gap:7px;padding:11px 0 9px}
@@ -43,12 +46,17 @@ h1{font-size:15px;font-weight:800;letter-spacing:-.03em}
 table{width:100%;border-collapse:collapse}
 td{padding:7px 8px 7px 0;border-bottom:1px solid var(--rule);vertical-align:top}
 tr.hit td{background:var(--acc-bg)}
+tr.sep td{padding:14px 0 4px;border:0;font-size:11.5px;font-weight:750;color:var(--acc);
+          letter-spacing:-.02em}
 .c-cv{width:30px}
 .c-cv img{width:26px;border-radius:2px;display:block}
 .c-cv .ph{width:26px;height:39px;border-radius:2px;background:#eceae7}
-.c-b{width:26%}
+.c-b{width:30%}
 .c-b b{font-size:12.5px;font-weight:650;letter-spacing:-.02em;display:block;line-height:1.3}
 .c-b span{font-size:11px;color:var(--faint)}
+/* 무슨 책인지 한 줄 — 태그를 고를 때 근거가 된다 */
+.c-b i{display:block;font-style:normal;font-size:11px;line-height:1.4;color:var(--muted);
+       margin-top:4px}
 .c-t{width:auto;padding-right:12px}
 /* 태그 — 자리는 그대로 두고 켜짐/꺼짐만 바뀐다 */
 .tag,.sug{display:inline-flex;align-items:center;border-radius:6px;padding:2px 8px 3px;
@@ -151,6 +159,7 @@ tr.hit td{background:var(--acc-bg)}
     <button class="tab" data-p="add">책 추가</button>
   </div>
   <span class="st" id="st"></span>
+  <button class="ghost" id="revert" title="브라우저에 담아 둔 것을 버리고 저장된 상태로">되돌리기</button>
   <button class="save" id="save" disabled>저장</button>
 </div>
 
@@ -166,6 +175,7 @@ tr.hit td{background:var(--acc-bg)}
       <option value="memo">메모 있는 것</option>
     </select>
     <select id="sort">
+      <option value="tag" selected>태그 순 (비슷한 것끼리)</option>
       <option value="recent">최근 읽은 순</option>
       <option value="title">제목 순</option>
       <option value="tagcount">태그 적은 순</option>
@@ -208,6 +218,24 @@ const SERVICES = [
   ['paper', '종이책'], ['ridi', '리디북스'], ['kyobo', '교보 sam'], ['kindle', '킨들'],
   ['google', '구글 북스'], ['pdf', 'PDF'], ['library', '도서관'], ['company', '회사'],
 ]
+
+// 뜻이 가까운 태그끼리 붙여 둔 순서. 여기 없는 태그는 뒤로 밀린다.
+const TAG_ORDER = [
+  '개발자', '컴퓨터공학', '소프트웨어 공학', '시스템 설계', 'DB', 'IT', '애자일',
+  'ML', 'MLOps', 'AI', 'Data Science', '데이터',
+  'UI/UX', '디자인', '예술', '건축', '사진',
+  '프로덕트', '창업', '기획', '문제 해결', '일하는 법', '일 잘하는 법',
+  '리더십', '매니저', '팀', '개발 조직', 'HR', '커리어', '성장', '성공',
+  '학습', '생각', '노트', '독서', '글쓰기', '시간 관리', '루틴', '완벽주의',
+  '심리', '대화', '말하기', '관계', '인간관계', 'INFJ',
+  '인생', '철학', '인문', '역사', '사회', '법', '돈',
+  '소설', '에세이',
+  '건강', '운동', '음식', '요리', '여행', '일본어',
+]
+const tagRank = (t) => {
+  const i = TAG_ORDER.indexOf(t)
+  return i < 0 ? TAG_ORDER.length : i
+}
 
 let BOOKS = []          // 화면에 보이는 책
 let TAGS = {}           // 제목 → [태그]
@@ -256,6 +284,19 @@ function visible() {
   const s = $('#sort').value
   if (s === 'title') list.sort((a, b) => a.title.localeCompare(b.title, 'ko'))
   else if (s === 'tagcount') list.sort((a, b) => (TAGS[a.title] || []).length - (TAGS[b.title] || []).length)
+  else if (s === 'tag') {
+    // 첫 태그의 자리로 줄 세우고, 같으면 두 번째 태그 → 제목 순
+    const key = (b) => {
+      const t = TAGS[b.title] || []
+      if (!t.length) return [9999, 9999, b.title]
+      const sorted = [...t].sort((x, y) => tagRank(x) - tagRank(y))
+      return [tagRank(sorted[0]), sorted[1] ? tagRank(sorted[1]) : -1, b.title]
+    }
+    list.sort((a, b) => {
+      const ka = key(a), kb = key(b)
+      return ka[0] - kb[0] || ka[1] - kb[1] || ka[2].localeCompare(kb[2], 'ko')
+    })
+  }
   return list
 }
 
@@ -264,12 +305,22 @@ function drawList() {
   document.querySelectorAll('textarea[data-m]').forEach((ta) => { NOTES[ta.dataset.m] = ta.value })
   const R = rare()
   const list = visible()
+  let lastHead = null
   $('#rows').innerHTML = list.map((b) => {
     const tags = TAGS[b.title] || []
     const sug = SUGGEST[b.title] || []
-    return `<tr data-t="${esc(b.title)}" class="${touched.has(b.title) ? 'hit' : ''}">
+    let head = ''
+    if ($('#sort').value === 'tag') {
+      const first = [...tags].sort((x, y) => tagRank(x) - tagRank(y))[0] || '(아직 없음)'
+      if (first !== lastHead) {
+        lastHead = first
+        head = `<tr class="sep"><td colspan="4">${esc(first)}</td></tr>`
+      }
+    }
+    return head + `<tr data-t="${esc(b.title)}" class="${touched.has(b.title) ? 'hit' : ''}">
       <td class="c-cv">${b.cover ? `<img src="${esc(b.cover)}" alt="" loading="lazy">` : '<div class="ph"></div>'}</td>
-      <td class="c-b"><b>${esc(b.title)}</b><span>${esc(b.author || '')}</span></td>
+      <td class="c-b"><b>${esc(b.title)}</b><span>${esc(b.author || '')}</span>
+        ${b.gist ? `<i>${esc(b.gist)}</i>` : ''}</td>
       <td class="c-t">
         ${[...sug, ...tags.filter((t) => !sug.includes(t))].map((t) => {
           const on = tags.includes(t)
@@ -412,6 +463,12 @@ $('#save').addEventListener('click', async () => {
 
 
 // ── 탭 ──
+$('#revert').addEventListener('click', () => {
+  if (dirty && !window.confirm('브라우저에 담아 둔 것을 버리고 저장된 상태로 돌아간다. 계속할까?')) return
+  localStorage.removeItem(LOCAL)
+  location.reload()
+})
+
 document.querySelector('.tabs').addEventListener('click', (e) => {
   const t = e.target.closest('.tab')
   if (!t) return
