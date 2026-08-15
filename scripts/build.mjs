@@ -263,6 +263,7 @@ const all = [...books.values()].map((b) => ({
   kyobo: b.kyobo || '',
   field: b.field || '',
   tags: b.tags || [],
+  groups: [],
   gist: b.gist || '',
   topics: b.topics || [],
   form: b.form || '',
@@ -315,11 +316,34 @@ const fields = Object.entries(fieldCount)
   .sort((a, b) => b[1] - a[1])
   .map(([name, count]) => ({ name, count }))
 
+// ---- 주제(묶음) → 서브주제(태그) ----
+// 정의는 data/tag-groups.json 한 곳에만 둔다. 사이트와 태그 화면이 같이 본다.
+const GROUPS = join(repo, 'data', 'tag-groups.json')
+const groupDef = existsSync(GROUPS) ? JSON.parse(readFileSync(GROUPS, 'utf8')).groups || [] : []
+const groupOf = new Map(groupDef.flatMap((g) => g.tags.map((t) => [t, g.name])))
+for (const b of all) {
+  b.groups = [...new Set((b.tags || []).map((t) => groupOf.get(t) || '그 밖'))]
+}
+const tagCount = {}
+for (const b of all) for (const t of b.tags || []) tagCount[t] = (tagCount[t] || 0) + 1
+const listed = new Set(groupDef.flatMap((g) => g.tags))
+const groups = [
+  ...groupDef.map((g) => ({ name: g.name, tags: g.tags.filter((t) => tagCount[t]) })),
+  { name: '그 밖', tags: Object.keys(tagCount).filter((t) => !listed.has(t)) },
+]
+  .filter((g) => g.tags.length)
+  .map((g) => ({
+    ...g,
+    count: all.filter((b) => b.tags.some((t) => g.tags.includes(t))).length,
+    tags: g.tags.map((t) => ({ name: t, count: tagCount[t] })),
+  }))
+
 const out = {
   updatedAt: new Date().toISOString().slice(0, 10),
   total: all.length,
   services,
   fields,
+  groups,
   books: all,
 }
 writeFileSync(OUT, JSON.stringify(out, null, 1) + '\n')
