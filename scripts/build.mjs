@@ -310,6 +310,23 @@ const services = [
     .map((id) => ({ id, name: id, kind: 'ebook' })),
 ].map((s) => ({ ...s, count: all.filter((b) => b.sources.some((x) => x.id === s.id)).length }))
 
+// 소장처도 한 겹 감싼다 — 온라인인지 종이인지 빌린 것인지
+const WHERE_GROUPS = [
+  { id: 'online', name: '온라인', kinds: ['ebook', 'file'] },
+  { id: 'paper', name: '종이책', kinds: ['paper'] },
+  { id: 'borrowed', name: '빌린 것', kinds: ['borrowed'] },
+]
+const wheres = WHERE_GROUPS.map((g) => {
+  const ids = services.filter((s) => g.kinds.includes(s.kind)).map((s) => s.id)
+  return {
+    id: g.id,
+    name: g.name,
+    ids,
+    count: all.filter((b) => b.sources.some((s) => ids.includes(s.id))).length,
+    services: services.filter((s) => ids.includes(s.id)).map((s) => ({ id: s.id, name: s.name, count: s.count })),
+  }
+}).filter((g) => g.count)
+
 const fieldCount = {}
 for (const b of all) if (b.field) fieldCount[b.field] = (fieldCount[b.field] || 0) + 1
 const fields = Object.entries(fieldCount)
@@ -342,6 +359,7 @@ const out = {
   updatedAt: new Date().toISOString().slice(0, 10),
   total: all.length,
   services,
+  wheres,
   fields,
   groups,
   books: all,

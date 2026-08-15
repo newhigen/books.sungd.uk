@@ -202,6 +202,7 @@ button,select,input{font-family:inherit;letter-spacing:inherit}
   <div class="controls">
     <input class="search" id="q" type="search" placeholder="제목·저자 검색" autocomplete="off" />
     <nav class="tabs" id="tabs"></nav>
+    <div class="fields subs" id="subwhere" hidden></div>
     <div class="fields" id="groups"></div>
     <div class="fields subs" id="subtags" hidden></div>
     <div class="bar">
@@ -251,9 +252,9 @@ const coverHTML = (b) =>
     ? `<img src="${esc(b.cover)}" alt="" loading="lazy" onerror="this.parentNode.innerHTML=this.dataset.ph" data-ph="${esc(placeholder(b))}" />`
     : placeholder(b)
 
-const state = { where: 'all', group: '', tag: '', sort: 'read', q: '',
+const state = { where: 'all', src: '', group: '', tag: '', sort: 'read', q: '',
                 view: localStorage.getItem('shelf-view') || 'grid' }
-let DATA = { books: [], services: [], groups: [], updatedAt: '' }
+let DATA = { books: [], services: [], wheres: [], groups: [], updatedAt: '' }
 // 주제 차례 — 태그 순 정렬과 서브주제 줄이 같은 차례를 쓴다
 const tagRank = (t) => {
   let i = 0
@@ -268,7 +269,11 @@ function visible() {
   const q = state.q.trim().toLowerCase()
   return DATA.books.filter((b) => {
     if (state.where === 'none' && b.sources.length) return false
-    if (state.where !== 'all' && state.where !== 'none' && !b.sources.some((s) => s.id === state.where)) return false
+    if (state.where !== 'all' && state.where !== 'none') {
+      const g = DATA.wheres.find((w) => w.id === state.where)
+      if (g && !b.sources.some((s) => g.ids.includes(s.id))) return false
+    }
+    if (state.src && !b.sources.some((s) => s.id === state.src)) return false
     if (state.group && !(b.groups || []).includes(state.group)) return false
     if (state.tag && !(b.tags || []).includes(state.tag)) return false
     if (!q) return true
@@ -338,6 +343,13 @@ function render() {
 
   $('#shown').textContent = `${list.length}권`
   $('#tabs').querySelectorAll('.tab').forEach((t) => t.classList.toggle('on', t.dataset.f === state.where))
+  // 소장처 묶음을 고르면 그 안의 서비스 줄이 열린다 (하나뿐이면 열 것이 없다)
+  const w = (DATA.wheres || []).find((x) => x.id === state.where)
+  $('#subwhere').hidden = !w || w.services.length < 2
+  if (w && w.services.length > 1) {
+    $('#subwhere').innerHTML = w.services.map((s) =>
+      `<button class="fld${s.id === state.src ? ' on' : ''}" data-src="${esc(s.id)}">${esc(s.name)}<i>${s.count}</i></button>`).join('')
+  }
   $('#groups').querySelectorAll('.fld').forEach((f) => f.classList.toggle('on', f.dataset.group === state.group))
   // 주제를 고르면 그 안의 서브주제 줄이 열린다
   const g = (DATA.groups || []).find((x) => x.name === state.group)
@@ -440,14 +452,24 @@ fetch('data/library.json?v=' + Date.now())
   .then((d) => {
     DATA = d
     const none = d.books.filter((b) => !b.sources.length).length
+    // 어디에 있는가 — 온라인·종이책·빌린 것으로 감싸고, 누르면 그 안이 열린다
     const tabs = [{ id: 'all', name: '전체', count: d.books.length }]
-      .concat(d.services.map((s) => ({ id: s.id, name: s.name, count: s.count })))
+      .concat((d.wheres || []).map((w) => ({ id: w.id, name: w.name, count: w.count })))
     if (none) tabs.push({ id: 'none', name: '소장처 미확인', count: none })
     $('#tabs').innerHTML = tabs.map((t) =>
       `<button class="tab" data-f="${t.id}">${esc(t.name)}<i>${t.count}</i></button>`).join('')
     $('#tabs').addEventListener('click', (e) => {
       const t = e.target.closest('.tab')
-      if (t) { state.where = t.dataset.f; render() }
+      if (!t) return
+      state.where = t.dataset.f
+      state.src = ''
+      render()
+    })
+    $('#subwhere').addEventListener('click', (e) => {
+      const f = e.target.closest('.fld')
+      if (!f) return
+      state.src = state.src === f.dataset.src ? '' : f.dataset.src
+      render()
     })
 
     $('#groups').innerHTML = [{ name: '', label: '주제 전체', count: '' }]

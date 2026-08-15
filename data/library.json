@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-08-14",
+ "updatedAt": "2026-08-15",
  "total": 193,
  "services": [
   {
@@ -43,6 +43,77 @@
    "name": "지인 대여",
    "kind": "borrowed",
    "count": 2
+  }
+ ],
+ "wheres": [
+  {
+   "id": "online",
+   "name": "온라인",
+   "ids": [
+    "ridi",
+    "kyobo",
+    "kindle",
+    "google"
+   ],
+   "count": 47,
+   "services": [
+    {
+     "id": "ridi",
+     "name": "리디북스",
+     "count": 11
+    },
+    {
+     "id": "kyobo",
+     "name": "교보 sam",
+     "count": 26
+    },
+    {
+     "id": "kindle",
+     "name": "킨들",
+     "count": 9
+    },
+    {
+     "id": "google",
+     "name": "구글 북스",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "paper",
+   "name": "종이책",
+   "ids": [
+    "paper"
+   ],
+   "count": 82,
+   "services": [
+    {
+     "id": "paper",
+     "name": "종이책",
+     "count": 82
+    }
+   ]
+  },
+  {
+   "id": "borrowed",
+   "name": "빌린 것",
+   "ids": [
+    "company",
+    "friend"
+   ],
+   "count": 30,
+   "services": [
+    {
+     "id": "company",
+     "name": "회사 대여",
+     "count": 28
+    },
+    {
+     "id": "friend",
+     "name": "지인 대여",
+     "count": 2
+    }
+   ]
   }
  ],
  "fields": [
