@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>책장 새 얼굴</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='9' y='4' width='14' height='24' rx='2' fill='%23141414'/%3E%3Crect x='9' y='12' width='14' height='4.5' fill='%238c3b4a'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Google+Sans+Code:wght@400;500&display=swap" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#141414;--sec:#3d3d3a;--muted:#6a6a66;--faint:#9b9b96;
+  --rule:#f0f0ee;--rule2:#e3e3e0;--acc:#8c3b4a;
+  --sans:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;
+  --serif:'Noto Serif KR',Georgia,serif;
+  --mono:'Google Sans Code',ui-monospace,Menlo,monospace;
+}
+html{color-scheme:light;scroll-behavior:smooth}
+body{background:#fff;color:var(--ink);font-family:var(--sans);font-size:13.5px;line-height:1.5;
+     -webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+
+/* ── 껍데기 ── 후보를 담는 틀. 이 틀 자체는 눈에 안 띄게 둔다 */
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px 60px}
+.head{position:sticky;top:0;z-index:30;background:#fff;padding:14px 0 0;
+      border-bottom:1px solid var(--rule2)}
+.head h1{font-size:16px;font-weight:800;letter-spacing:-.03em}
+.head p{font-size:12.5px;color:var(--muted);margin-top:3px}
+.jump{display:flex;gap:2px;margin-top:10px;overflow-x:auto;scrollbar-width:none}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:none;font-size:12.5px;color:var(--muted);text-decoration:none;padding:6px 9px 7px;
+        border-bottom:2px solid transparent;white-space:nowrap}
+.jump a:hover{color:var(--ink)}
+.jump a.on{color:var(--ink);font-weight:700;border-bottom-color:var(--acc)}
+
+.cand{padding:30px 0 6px;border-bottom:1px solid var(--rule)}
+.cand > header{margin-bottom:14px}
+.cand h2{font-size:15px;font-weight:800;letter-spacing:-.03em}
+.cand h2 b{color:var(--acc);font-family:var(--mono);font-size:12px;font-weight:500;margin-right:6px}
+.cand .ref{font-size:11.5px;color:var(--faint);margin-top:2px}
+.cand .why{font-size:12.5px;color:var(--sec);margin-top:6px;max-width:62ch}
+.cand .why b{font-weight:700;color:var(--ink)}
+
+/* 후보를 넣는 액자 — 안쪽은 저마다의 스타일이라 바깥과 섞이지 않게 가둔다 */
+.frame{border:1px solid var(--rule2);border-radius:10px;overflow:hidden}
+
+/* ══ A · 서가 ══ 책등을 세워 실제 책장처럼 */
+.shelfA{background:#efeae1;padding:16px 14px 4px;font-family:var(--sans)}
+.shelfA .row{margin-bottom:16px}
+.shelfA .lbl{font-size:11px;font-weight:750;color:#7a6a55;letter-spacing:-.02em;margin-bottom:5px}
+.shelfA .books{display:flex;align-items:flex-end;gap:3px;overflow-x:auto;scrollbar-width:none;
+               padding-bottom:9px;border-bottom:5px solid #c3ac8c;
+               box-shadow:0 5px 5px -4px rgba(90,70,40,.35)}
+.shelfA .books::-webkit-scrollbar{display:none}
+.shelfA .spine{flex:none;width:27px;border-radius:2px 2px 0 0;color:#fff;cursor:pointer;
+               writing-mode:vertical-rl;text-orientation:mixed;font-size:10.5px;font-weight:600;
+               padding:8px 4px;letter-spacing:-.02em;overflow:hidden;
+               box-shadow:inset -2px 0 4px rgba(0,0,0,.18)}
+.shelfA .spine:hover{transform:translateY(-4px)}
+
+/* ══ B · 에디토리얼 ══ 큰 세리프 제목 + 표지 크게 */
+.edB{background:#fff;padding:26px 20px 22px}
+.edB h3{font-family:var(--serif);font-size:27px;font-weight:600;letter-spacing:-.02em;
+        line-height:1.25;text-align:center}
+.edB .sub{text-align:center;font-size:12px;color:var(--muted);margin-top:6px;
+          font-family:var(--mono)}
+.edB .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 16px;margin-top:26px}
+.edB figure img{width:100%;border-radius:1px;box-shadow:0 1px 2px rgba(0,0,0,.14),0 8px 18px -8px rgba(0,0,0,.3)}
+.edB figcaption{margin-top:9px}
+.edB .t{font-family:var(--serif);font-size:13px;font-weight:600;line-height:1.35;
+        word-break:keep-all}
+.edB .a{font-size:11px;color:var(--faint);margin-top:2px}
+
+/* ══ C · 겹쳐 쌓기 ══ 주제 한 칸이 표지 더미로 */
+.stackC{background:#faf9f7;padding:20px 16px}
+.stackC .pile{display:flex;align-items:center;gap:16px;padding:14px 0;
+              border-bottom:1px solid #ebe8e3;cursor:pointer}
+.stackC .pile:last-child{border-bottom:0}
+.stackC .fan{position:relative;width:104px;height:82px;flex:none}
+.stackC .fan img{position:absolute;top:50%;left:0;width:50px;border-radius:2px;
+                 box-shadow:0 2px 7px rgba(0,0,0,.25);transform-origin:bottom left}
+.stackC .meta .nm{font-weight:750;letter-spacing:-.02em;font-size:14px}
+.stackC .meta .n{font-size:11.5px;color:var(--muted);margin-top:2px}
+.stackC .meta .tg{font-size:11px;color:var(--faint);margin-top:4px}
+
+/* ══ D · 카탈로그 ══ 숫자를 앞세우고 목록은 조밀하게 */
+.catD{background:#fff;padding:16px 14px}
+.catD .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.catD .st{border-top:2px solid var(--ink);padding-top:6px}
+.catD .st b{display:block;font-family:var(--mono);font-size:19px;font-weight:500;line-height:1}
+.catD .st span{font-size:10.5px;color:var(--muted)}
+.catD .bars{margin-bottom:14px}
+.catD .bar{display:flex;align-items:center;gap:7px;margin-bottom:3px;font-size:11px}
+.catD .bar i{font-style:normal;width:62px;color:var(--sec);flex:none;text-align:right}
+.catD .bar{--track:190px}
+.catD .bar u{text-decoration:none;height:9px;background:var(--acc);
+            border-radius:1px;display:block;flex:none;max-width:var(--track)}
+.catD .bar em{font-style:normal;font-family:var(--mono);font-size:10px;color:var(--faint)}
+.catD table{width:100%;border-collapse:collapse;font-size:12px}
+.catD th{text-align:left;font-size:10.5px;color:var(--faint);font-weight:500;
+         padding-bottom:5px;border-bottom:1px solid var(--rule2)}
+.catD td{padding:5px 8px 5px 0;border-bottom:1px solid var(--rule)}
+.catD .ti{font-weight:650;letter-spacing:-.02em}
+.catD .tg{color:var(--acc);font-size:11px;white-space:nowrap}
+.catD .fm{color:var(--faint);font-size:11px}
+
+/* ══ E · 밤 서재 ══ 어두운 바탕에 표지가 도드라진다 */
+.nightE{background:#16151a;padding:22px 16px 18px;color:#e8e6e1}
+.nightE h3{font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:-.02em}
+.nightE .sub{font-size:11.5px;color:#8b8880;margin-top:3px;font-family:var(--mono)}
+.nightE .row{display:flex;gap:11px;overflow-x:auto;scrollbar-width:none;margin-top:15px;
+             padding-bottom:4px}
+.nightE .row::-webkit-scrollbar{display:none}
+.nightE .bk{flex:none;width:86px}
+.nightE .bk img{width:86px;border-radius:2px;box-shadow:0 6px 18px -4px rgba(0,0,0,.75)}
+.nightE .bk .t{font-size:11px;margin-top:7px;line-height:1.3;word-break:keep-all;color:#d8d5ce}
+.nightE .bk .g{font-size:10px;color:#7d7a72;margin-top:2px}
+.nightE .glow{color:#d8a657}
+
+/* ── 폰 ── */
+@media (max-width: 620px) {
+  .wrap{padding:0 11px 44px}
+  .edB{padding:20px 14px 18px}
+  .edB h3{font-size:21px}
+  .edB .grid{grid-template-columns:repeat(2,1fr);gap:18px 12px}
+  .catD .stats{grid-template-columns:repeat(2,1fr)}
+  .catD .fm{display:none}
+  .stackC .fan{width:86px;height:70px}
+  .stackC .fan img{width:42px}
+}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="wrap" style="padding-bottom:0">
+    <h1>책장 새 얼굴</h1>
+    <p>독서 사이트들을 보고 뽑은 다섯 갈래. 지금 책 30권을 실제로 넣어 그렸다.</p>
+    <nav class="jump" id="jump">
+      <a href="#a" class="on">A 서가</a>
+      <a href="#b">B 에디토리얼</a>
+      <a href="#c">C 쌓기</a>
+      <a href="#d">D 카탈로그</a>
+      <a href="#e">E 밤 서재</a>
+      <a href="#now">지금 것</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="cand" id="a">
+    <header>
+      <h2><b>A</b>서가</h2>
+      <p class="ref">참고 — 실제 책장, Bookshelf 앱들</p>
+      <p class="why">책등을 세워 <b>진짜 책장처럼</b> 보여준다. 주제가 한 칸이고 책등 색은 주제를 따른다.
+        표지를 안 쓰니 표지 없는 책도 자리를 차지하고, 193권이 한 화면에 훨씬 많이 들어간다.
+        대신 제목이 세로라 훑기는 느리다.</p>
+    </header>
+    <div class="frame"><div class="shelfA" id="A"></div></div>
+  </section>
+
+  <section class="cand" id="b">
+    <header>
+      <h2><b>B</b>에디토리얼</h2>
+      <p class="ref">참고 — Literal.club, Oku</p>
+      <p class="why">큰 <b>명조 제목</b>에 넓은 여백, 표지를 크게. 지금과 뼈대는 같은데 글꼴과 여백만
+        바꿔도 "도구"에서 "읽는 것"으로 인상이 바뀐다. 한 화면에 담기는 책은 줄어든다.</p>
+    </header>
+    <div class="frame"><div class="edB" id="B"></div></div>
+  </section>
+
+  <section class="cand" id="c">
+    <header>
+      <h2><b>C</b>쌓기</h2>
+      <p class="ref">참고 — Oku 컬렉션</p>
+      <p class="why">주제 하나가 <b>표지 더미</b>로 보인다. 목록이 아니라 "무더기"라 어느 주제가 두꺼운지
+        눈으로 바로 온다. 누르면 그 더미가 펼쳐지는 구조. 개별 책을 찾기엔 한 단계 더 들어가야 한다.</p>
+    </header>
+    <div class="frame"><div class="stackC" id="C"></div></div>
+  </section>
+
+  <section class="cand" id="d">
+    <header>
+      <h2><b>D</b>카탈로그</h2>
+      <p class="ref">참고 — The StoryGraph</p>
+      <p class="why">숫자를 앞에 세운다. <b>주제 분포와 형식 비율</b>을 막대로 먼저 보여주고 목록은 조밀한 표로.
+        "내 책장이 어떻게 생겼나"를 묻는 화면이다. 표지가 거의 안 보인다.</p>
+    </header>
+    <div class="frame"><div class="catD" id="D"></div></div>
+  </section>
+
+  <section class="cand" id="e">
+    <header>
+      <h2><b>E</b>밤 서재</h2>
+      <p class="ref">참고 — Letterboxd, 리디 다크</p>
+      <p class="why">어두운 바탕에서 <b>표지가 스스로 빛난다</b>. 표지 색이 살아나서 목록이 화려해진다.
+        밤에 폰으로 보기 좋고, 낮에는 눈에 띄게 어둡다.</p>
+    </header>
+    <div class="frame"><div class="nightE" id="E"></div></div>
+  </section>
+
+  <section class="cand" id="now">
+    <header>
+      <h2><b>지금</b>에디토리얼 미니멀</h2>
+      <p class="ref">현재 books.sungd.uk</p>
+      <p class="why">흰 바탕, 테두리 없는 가는 선, 버건디 한 색, 표지 격자. 정보는 잘 보이는데
+        <b>책장이라기보다 관리 도구</b>로 읽힌다. 위 다섯은 여기서 무엇을 바꾸면 인상이 달라지는지를 갈래로 나눈 것.</p>
+    </header>
+  </section>
+
+</main>
+
+<script>
+const BOOKS = [
+{
+"title": "그만 배우기의 기술",
+"author": "팻 플린, 김지혜",
+"cover": "https://image.aladin.co.kr/product/38541/58/cover500/k812135439_1.jpg",
+"tags": [
+"학습"
+],
+"groups": [
+"배우기·생각"
+],
+"form": "가이드",
+"gist": "배우기만 하는 단계에서 배운 것을 써먹는 단계로 넘어가는 법",
+"readAt": "2026-06",
+"where": [
+"company"
+]
+},
+{
+"title": "횡설수설하지 않고 정확하게 설명하는 법",
+"author": "고구레 다이치, 황미숙",
+"cover": "https://image.aladin.co.kr/product/33117/27/cover500/k122937122_1.jpg",
+"tags": [
+"말하기"
+],
+"groups": [
+"배우기·생각"
+],
+"form": "가이드",
+"gist": "설명을 감각이 아니라 구조로 만드는 법",
+"readAt": "2026-06",
+"where": [
+"company"
+]
+},
+{
+"title": "누가 내 치즈를 옮겼을까?",
+"author": "스펜서 존슨, 이영진",
+"cover": "https://image.aladin.co.kr/product/5917/28/cover500/8980104804_2.jpg",
+"tags": [
+"사고법"
+],
+"groups": [
+"배우기·생각"
+],
+"form": "소설",
+"gist": "변화 앞에서 사람이 어떻게 반응하는지를 생쥐 우화로",
+"readAt": "2026-05",
+"where": []
+},
+{
+"title": "와인버그에게 배우는 차곡차곡 글쓰기",
+"author": "제럴드 M. 와인버그, 송재하",
+"cover": "https://image.aladin.co.kr/product/35498/53/cover500/8966264662_1.jpg",
+"tags": [
+"글쓰기"
+],
+"groups": [
+"배우기·생각"
+],
+"form": "가이드",
+"gist": "글감을 모아 쌓아 올리는 자연스러운 글쓰기 방법",
+"readAt": "2026-04",
+"where": [
+"paper"
+]
+},
+{
+"title": "더 기버 1",
+"author": "밥 버그, 존 데이비드 만",
+"cover": "https://image.aladin.co.kr/product/38959/46/cover500/k762137312_1.jpg",
+"tags": [
+"관계"
+],
+"groups": [
+"마음·관계"
+],
+"form": "소설",
+"gist": "주는 사람이 결국 더 얻는다는 다섯 법칙을 우화로 풀어낸 이야기",
+"readAt": "2026-06",
+"where": [
+"friend"
+]
+},
+{
+"title": "아주 작은 습관의 힘",
+"author": "James Clear",
+"cover": "https://image.aladin.co.kr/product/37944/74/cover500/k672033454_3.jpg",
+"tags": [
+"습관"
+],
+"groups": [
+"마음·관계"
+],
+"form": "가이드",
+"gist": "작은 행동을 시스템으로 만들어 습관을 바꾸는 방법",
+"readAt": "2026-05",
+"where": [
+"paper",
+"google"
+]
+},
+{
+"title": "소란스러운 세상 속 혼자를 위한 책",
+"author": "데비 텅, 최세희",
+"cover": "https://image.aladin.co.kr/product/26249/45/cover500/k572738481_1.jpg",
+"tags": [
+"INFJ"
+],
+"groups": [
+"마음·관계"
+],
+"form": "에세이",
+"gist": "내향인의 일상을 그린 카툰 에세이",
+"readAt": "2026-04",
+"where": []
+},
+{
+"title": "모든 관계는 말투에서 시작된다",
+"author": "김범준",
+"cover": "https://image.aladin.co.kr/product/17251/48/cover500/8960863858_3.jpg",
+"tags": [
+"대화"
+],
+"groups": [
+"마음·관계"
+],
+"form": "가이드",
+"gist": "말투를 바꿔 관계를 바꾸는 법",
+"readAt": "2026-02",
+"where": []
+},
+{
+"title": "디자인 구구단",
+"author": "에이핫",
+"cover": "https://image.aladin.co.kr/product/34360/88/cover500/k182932901_1.jpg",
+"tags": [
+"디자인",
+"UI/UX"
+],
+"groups": [
+"만들기"
+],
+"form": "가이드",
+"gist": "비율·균형·색·서체 등 디자인 기본 이론 아홉 가지",
+"readAt": "2026-06",
+"where": [
+"company"
+]
+},
+{
+"title": "디테일의 발견",
+"author": "생각노트",
+"cover": "https://image.aladin.co.kr/product/31088/38/cover500/k742831839_1.jpg",
+"tags": [
+"UI/UX"
+],
+"groups": [
+"만들기"
+],
+"form": "에세이",
+"gist": "서비스와 공간의 작은 디테일을 모아 왜 좋은지 뜯어본 기록",
+"readAt": "2025-09",
+"where": []
+},
+{
+"title": "(사용자를) 생각하게 하지 마!",
+"author": "스티브 크룩, 이미령",
+"cover": "https://image.aladin.co.kr/product/4927/43/cover500/8966261213_1.jpg",
+"tags": [
+"UI/UX"
+],
+"groups": [
+"만들기"
+],
+"form": "가이드",
+"gist": "웹 사용성의 기본 — 생각하게 만들면 진 것이다",
+"readAt": "2025-04",
+"where": [
+"paper"
+]
+},
+{
+"title": "유난한 도전",
+"author": "정경화",
+"cover": "https://image.aladin.co.kr/product/30369/69/cover500/k822839859_1.jpg",
+"tags": [
+"창업",
+"개발 조직"
+],
+"groups": [
+"만들기",
+"개발·기술"
+],
+"form": "회고·전기",
+"gist": "토스팀이 만들어진 십 년의 기록",
+"readAt": "2023-12",
+"where": [
+"kyobo"
+]
+},
+{
+"title": "이렇게 작지만 확실한 행복",
+"author": "무라카미 하루키, 안자이 미즈마루",
+"cover": "https://image.aladin.co.kr/product/34082/41/cover500/8970125930_1.jpg",
+"tags": [
+"일상"
+],
+"groups": [
+"삶·교양"
+],
+"form": "에세이",
+"gist": "하루키가 케임브리지에서 보낸 2년의 일상 산문",
+"readAt": "2026-05",
+"where": [
+"paper"
+]
+},
+{
+"title": "좋다고 하니까 나도 좋다",
+"author": "나태주",
+"cover": "https://image.aladin.co.kr/product/17860/2/cover500/8926366308_1.jpg",
+"tags": [
+"일상"
+],
+"groups": [
+"삶·교양"
+],
+"form": "에세이",
+"gist": "나태주 시인이 일상에서 건네는 짧은 위로",
+"readAt": "2026-05",
+"where": []
+},
+{
+"title": "지적 대화를 위한 넓고 얕은 지식 2",
+"author": "채사장",
+"cover": "https://image.aladin.co.kr/product/22872/85/cover500/k912636841_2.jpg",
+"tags": [
+"인문"
+],
+"groups": [
+"삶·교양"
+],
+"form": "이론서",
+"gist": "철학·과학·예술·종교를 넓게 훑는 교양 입문",
+"readAt": "2026-04",
+"where": [
+"paper"
+]
+},
+{
+"title": "철학은 날씨를 바꾼다",
+"author": "서동욱",
+"cover": "https://image.aladin.co.kr/product/33148/4/cover500/8934971355_1.jpg",
+"tags": [
+"철학",
+"에세이"
+],
+"groups": [
+"삶·교양",
+"문학"
+],
+"form": "에세이",
+"gist": "철학자가 일상 소재로 쓴 인문 에세이",
+"readAt": "2026-04",
+"where": [
+"paper"
+]
+},
+{
+"title": "일의 기쁨과 슬픔",
+"author": "장류진",
+"cover": "https://image.aladin.co.kr/product/21292/13/cover500/8936438034_1.jpg",
+"tags": [
+"한국소설",
+"일하는 법"
+],
+"groups": [
+"문학",
+"일·조직"
+],
+"form": "소설",
+"gist": "이삼십대 직장인의 일상을 그린 단편 여덟 편",
+"readAt": "2026-05",
+"where": [
+"paper"
+]
+},
+{
+"title": "괴테는 모든 것을 말했다",
+"author": "스즈키 유이, 이지수",
+"cover": "https://image.aladin.co.kr/product/39990/29/cover500/k822130836_1.jpg",
+"tags": [
+"일본소설"
+],
+"groups": [
+"문학"
+],
+"form": "소설",
+"gist": "괴테 연구자가 출처 모를 인용문을 쫓는 일본 소설",
+"readAt": "2026-03",
+"where": [
+"paper"
+]
+},
+{
+"title": "사람은 무엇으로 사는가",
+"author": "레프 니콜라예비치 톨스토이, 연진희",
+"cover": "https://image.aladin.co.kr/product/37686/72/cover500/8937464721_1.jpg",
+"tags": [
+"고전",
+"인생"
+],
+"groups": [
+"문학",
+"삶·교양"
+],
+"form": "소설",
+"gist": "삶과 죽음을 다룬 톨스토이 후기 단편선",
+"readAt": "2026-03",
+"where": []
+},
+{
+"title": "진홍색 연구",
+"author": "아서 코난 도일, 박상은",
+"cover": "https://image.aladin.co.kr/product/4164/0/cover500/8976041488_1.jpg",
+"tags": [
+"추리"
+],
+"groups": [
+"문학"
+],
+"form": "소설",
+"gist": "홈즈와 왓슨이 처음 만나는 셜록 홈즈 첫 장편",
+"readAt": "2025-05",
+"where": []
+},
+{
+"title": "테크니컬 리더",
+"author": "제럴드 M. 와인버그, 조승빈",
+"cover": "https://image.aladin.co.kr/product/2274/9/cover500/8966260659_1.jpg",
+"tags": [
+"리더십",
+"개발 조직"
+],
+"groups": [
+"일·조직",
+"개발·기술"
+],
+"form": "가이드",
+"gist": "기술자가 문제 해결형 리더로 자라는 과정",
+"readAt": "2026-05",
+"where": [
+"company"
+]
+},
+{
+"title": "실패는 나침반이다",
+"author": "한기용",
+"cover": "https://image.aladin.co.kr/product/33486/40/cover500/k992938254_1.jpg",
+"tags": [
+"커리어"
+],
+"groups": [
+"일·조직"
+],
+"form": "회고·전기",
+"gist": "실리콘밸리 엔지니어가 돌아본 커리어와 실패",
+"readAt": "2026-03",
+"where": []
+},
+{
+"title": "진짜 좋아하는 일만 하고 사는 법",
+"author": "데릭 시버스, 정지현",
+"cover": "https://image.aladin.co.kr/product/33280/38/cover500/k432938978_1.jpg",
+"tags": [
+"커리어"
+],
+"groups": [
+"일·조직"
+],
+"form": "에세이",
+"gist": "CD Baby 창업자 데릭 시버스의 짧은 생각들",
+"readAt": "2026-01",
+"where": [
+"paper"
+]
+},
+{
+"title": "리크루터의 채용 실무 가이드",
+"author": "박하늘, 전민아",
+"cover": "https://image.aladin.co.kr/product/31733/79/cover500/k012833095_1.jpg",
+"tags": [
+"HR"
+],
+"groups": [
+"일·조직"
+],
+"form": "가이드",
+"gist": "채용 담당자의 실무 절차와 판단 기준",
+"readAt": "2025-12",
+"where": []
+},
+{
+"title": "건축가의 공간 일기",
+"author": "조성익",
+"cover": "https://image.aladin.co.kr/product/33990/7/cover500/k722930546_1.jpg",
+"tags": [
+"건축"
+],
+"groups": [
+"몸·취미"
+],
+"form": "에세이",
+"gist": "건축가가 공간을 감상하고 기록하는 방식",
+"readAt": "2026-04",
+"where": [
+"paper"
+]
+},
+{
+"title": "내 인생을 빛내줄 스마트폰 사진",
+"author": "담이",
+"cover": "https://image.aladin.co.kr/product/33995/2/cover500/k392930645_1.jpg",
+"tags": [
+"사진"
+],
+"groups": [
+"몸·취미"
+],
+"form": "가이드",
+"gist": "스마트폰으로 사진과 영상을 찍고 보정하기",
+"readAt": "2026-02",
+"where": []
+},
+{
+"title": "요리를 한다는 것",
+"author": "최강록",
+"cover": "https://image.aladin.co.kr/product/36568/61/cover500/k872039245_1.jpg",
+"tags": [
+"음식"
+],
+"groups": [
+"몸·취미"
+],
+"form": "에세이",
+"gist": "셰프 최강록이 요리와 식당을 돌아본 자전 에세이",
+"readAt": "2026-01",
+"where": [
+"paper"
+]
+},
+{
+"title": "그림들",
+"author": "SUN 도슨트",
+"cover": "https://image.aladin.co.kr/product/29110/98/cover500/k052837263_1.jpg",
+"tags": [
+"예술"
+],
+"groups": [
+"몸·취미"
+],
+"form": "가이드",
+"gist": "뉴욕 현대미술관 대표 작품을 도슨트가 풀어준 해설",
+"readAt": "2025-09",
+"where": []
+},
+{
+"title": "데이터 과학자 원칙",
+"author": "이정원, 권시현(데싸노트)",
+"cover": "https://image.aladin.co.kr/product/31704/71/cover500/k982833687_1.jpg",
+"tags": [
+"데이터 분석"
+],
+"groups": [
+"데이터·AI"
+],
+"form": "인터뷰·대담",
+"gist": "현직 데이터 과학자 아홉 명이 말하는 일하는 원칙",
+"readAt": "2026-03",
+"where": [
+"company"
+]
+},
+{
+"title": "#100일챌린지",
+"author": "오츠카 아미, 류두진",
+"cover": "https://image.aladin.co.kr/product/36769/7/cover500/8966264816_1.jpg",
+"tags": [
+"AI",
+"학습"
+],
+"groups": [
+"데이터·AI",
+"배우기·생각"
+],
+"form": "회고·전기",
+"gist": "챗GPT로 백 일 만에 소프트웨어 엔지니어가 된 기록",
+"readAt": "2026-01",
+"where": [
+"company"
+]
+}
+]
+
+const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))
+const $ = (s) => document.querySelector(s)
+
+// 주제마다 색 하나 — 책등과 라벨이 같은 색을 쓴다
+const HUE = {
+  '개발·기술': '#3c4b63', '데이터·AI': '#2f5d50', '만들기': '#7a4b6b',
+  '일·조직': '#8c5a2b', '배우기·생각': '#4a5d2f', '마음·관계': '#8c3b4a',
+  '삶·교양': '#5b4a6b', '문학': '#7b3f3f', '몸·취미': '#2f6b6b', '그 밖': '#5a5a55',
+}
+const groupOf = (b) => (b.groups && b.groups[0]) || '그 밖'
+const byGroup = () => {
+  const m = new Map()
+  for (const b of BOOKS) {
+    const g = groupOf(b)
+    if (!m.has(g)) m.set(g, [])
+    m.get(g).push(b)
+  }
+  return [...m.entries()]
+}
+
+// ── A · 서가 ──
+$('#A').innerHTML = byGroup().map(([g, rows]) => `
+  <div class="row">
+    <div class="lbl">${esc(g)} <span style="color:#a89a8d">${rows.length}</span></div>
+    <div class="books">
+      ${rows.concat(rows).slice(0, 14).map((b, i) => `
+        <div class="spine" style="background:${HUE[g] || '#5a5a55'};height:${104 + (i * 7) % 34}px"
+             title="${esc(b.title)}">${esc(b.title.slice(0, 11))}</div>`).join('')}
+    </div>
+  </div>`).join('')
+
+// ── B · 에디토리얼 ──
+$('#B').innerHTML = `
+  <h3>읽은 것과 읽을 것</h3>
+  <p class="sub">193권 · 아홉 주제</p>
+  <div class="grid">
+    ${BOOKS.slice(0, 6).map((b) => `
+      <figure>
+        <img src="${esc(b.cover)}" alt="" loading="lazy">
+        <figcaption>
+          <div class="t">${esc(b.title)}</div>
+          <div class="a">${esc((b.author || '').split(',')[0])}</div>
+        </figcaption>
+      </figure>`).join('')}
+  </div>`
+
+// ── C · 쌓기 ──
+$('#C').innerHTML = byGroup().map(([g, rows]) => `
+  <div class="pile">
+    <div class="fan">
+      ${rows.slice(0, 4).map((b, i) => `
+        <img src="${esc(b.cover)}" alt="" loading="lazy"
+             style="left:${i * 16}px;transform:translateY(-50%) rotate(${-9 + i * 6}deg);z-index:${4 - i}">`).join('')}
+    </div>
+    <div class="meta">
+      <div class="nm">${esc(g)}</div>
+      <div class="n">${rows.length}권</div>
+      <div class="tg">${esc([...new Set(rows.flatMap((b) => b.tags))].slice(0, 3).join(' · '))}</div>
+    </div>
+  </div>`).join('')
+
+// ── D · 카탈로그 ──
+const forms = {}
+for (const b of BOOKS) if (b.form) forms[b.form] = (forms[b.form] || 0) + 1
+// 표본이 아니라 책장 전체 수치 — 표본은 주제마다 네 권씩이라 막대가 다 같아진다
+const GROUP_N = [['개발·기술',53],['배우기·생각',38],['삶·교양',27],['마음·관계',24],
+                 ['몸·취미',23],['일·조직',23],['문학',18],['데이터·AI',13],['만들기',11]]
+const maxN = GROUP_N[0][1]
+$('#D').innerHTML = `
+  <div class="stats">
+    <div class="st"><b>193</b><span>모은 책</span></div>
+    <div class="st"><b>68</b><span>태그</span></div>
+    <div class="st"><b>9</b><span>주제</span></div>
+    <div class="st"><b>82</b><span>종이책</span></div>
+  </div>
+  <div class="bars">
+    ${GROUP_N.map(([g, n]) => `
+      <div class="bar">
+        <i>${esc(g)}</i>
+        <u style="width:${Math.round((n / maxN) * 100)}%"></u>
+        <em>${n}</em>
+      </div>`).join('')}
+  </div>
+  <table>
+    <thead><tr><th>제목</th><th>주제</th><th>꼴</th></tr></thead>
+    <tbody>
+      ${BOOKS.slice(0, 9).map((b) => `
+        <tr>
+          <td class="ti">${esc(b.title)}</td>
+          <td class="tg">${esc((b.tags || []).slice(0, 2).join(' · '))}</td>
+          <td class="fm">${esc(b.form)}</td>
+        </tr>`).join('')}
+    </tbody>
+  </table>`
+
+// ── E · 밤 서재 ──
+$('#E').innerHTML = `
+  <h3>밤에 보는 책장</h3>
+  <p class="sub">최근 읽은 것부터</p>
+  ${byGroup().slice(0, 3).map(([g, rows]) => `
+    <div class="sec">
+      <div class="sub glow" style="margin-top:14px">${esc(g)}</div>
+      <div class="row">
+        ${rows.map((b) => `
+          <div class="bk">
+            <img src="${esc(b.cover)}" alt="" loading="lazy">
+            <div class="t">${esc(b.title)}</div>
+            <div class="g">${esc((b.tags || [])[0] || '')}</div>
+          </div>`).join('')}
+      </div>
+    </div>`).join('')}`
+
+// 지금 보는 자리를 위 탭에 표시
+const links = [...document.querySelectorAll('.jump a')]
+const spy = new IntersectionObserver((es) => {
+  for (const e of es) {
+    if (!e.isIntersecting) continue
+    links.forEach((a) => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id))
+  }
+}, { rootMargin: '-30% 0px -60% 0px' })
+document.querySelectorAll('.cand').forEach((s) => spy.observe(s))
+</script>
+</body>
+</html>
