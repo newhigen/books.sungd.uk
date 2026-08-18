@@ -47,8 +47,9 @@ class Handler(SimpleHTTPRequestHandler):
         self.wfile.write(body)
 
     def end_headers(self):
-        # 편집 화면은 고칠 때마다 바로 보여야 한다
-        if self.path.startswith("/tools/") or self.path.startswith("/data/"):
+        # 여기서 보는 것은 늘 방금 고친 것이어야 한다. 폰 브라우저가 index.html 을
+        # 캐시해 두는 바람에 새 화면이 안 보이는 일이 있었다.
+        if not self.path.startswith("/api/"):
             self.send_header("Cache-Control", "no-store")
         super().end_headers()
 
