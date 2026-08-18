@@ -66,7 +66,7 @@ button,select,input{font-family:inherit;letter-spacing:inherit}
 .tab i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--ink-3);margin-left:4px}
 .tab.on i{color:var(--acc)}
 
-/* 분야 — 눌러서 켜고 끄는 글자 버튼 */
+/* 주제 — 눌러서 켜고 끄는 글자 버튼. 아래 줄은 그 주제 안의 서브주제 */
 .fields{display:flex;gap:6px;margin-top:9px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
 .fields::-webkit-scrollbar{display:none}
 .fld{flex:none;border:1px solid transparent;background:none;color:var(--muted);font-size:12px;
@@ -74,6 +74,8 @@ button,select,input{font-family:inherit;letter-spacing:inherit}
 .fld:hover{color:var(--text);background:var(--surface2)}
 .fld.on{background:var(--acc-bg);color:var(--acc);border-color:var(--acc);font-weight:700}
 .fld i{font-style:normal;font-family:var(--mono);font-size:10.5px;opacity:.65;margin-left:4px}
+.subs{margin-top:3px;padding-left:11px;border-left:2px solid var(--acc-bg)}
+.subs .fld{font-size:11.5px;padding:2px 7px;color:var(--ink-3)}
 
 /* 도구 줄 */
 .bar{display:flex;align-items:center;gap:8px;padding:12px 0 2px;font-size:12px;color:var(--ink-3)}
@@ -151,6 +153,7 @@ button,select,input{font-family:inherit;letter-spacing:inherit}
 .ctitle{font-size:15.5px;font-weight:800;letter-spacing:-.03em;line-height:1.3;word-break:keep-all}
 .cmeta{font-size:12px;color:var(--muted);margin-top:4px}
 .cen{font-size:11.5px;color:var(--ink-3);font-style:italic;margin-top:2px}
+.cgist{margin-top:14px;font-size:13px;line-height:1.55;color:var(--muted);word-break:keep-all}
 .rows{margin-top:16px;border-top:1px solid var(--border)}
 .drow{display:flex;gap:11px;padding:8px 0;border-bottom:1px solid var(--border);font-size:12.5px}
 .drow dt{color:var(--ink-3);width:60px;flex:none;font-size:12px}
@@ -199,7 +202,9 @@ button,select,input{font-family:inherit;letter-spacing:inherit}
   <div class="controls">
     <input class="search" id="q" type="search" placeholder="제목·저자 검색" autocomplete="off" />
     <nav class="tabs" id="tabs"></nav>
-    <div class="fields" id="fields"></div>
+    <div class="fields subs" id="subwhere" hidden></div>
+    <div class="fields" id="groups"></div>
+    <div class="fields subs" id="subtags" hidden></div>
     <div class="bar">
       <span class="n" id="shown"></span>
       <div class="viewsw" id="viewsw">
@@ -211,7 +216,7 @@ button,select,input{font-family:inherit;letter-spacing:inherit}
         <option value="read">최근 읽은 순</option>
         <option value="title">제목 순</option>
         <option value="author">저자 순</option>
-        <option value="field">분야 순</option>
+        <option value="topic">주제 순</option>
       </select>
     </div>
     <div class="note" id="note" hidden></div>
@@ -247,8 +252,15 @@ const coverHTML = (b) =>
     ? `<img src="${esc(b.cover)}" alt="" loading="lazy" onerror="this.parentNode.innerHTML=this.dataset.ph" data-ph="${esc(placeholder(b))}" />`
     : placeholder(b)
 
-const state = { where: 'all', field: '', sort: 'read', q: '', view: localStorage.getItem('shelf-view') || 'grid' }
-let DATA = { books: [], services: [], fields: [], updatedAt: '' }
+const state = { where: 'all', src: '', group: '', tag: '', sort: 'read', q: '',
+                view: localStorage.getItem('shelf-view') || 'grid' }
+let DATA = { books: [], services: [], wheres: [], groups: [], updatedAt: '' }
+// 주제 차례 — 태그 순 정렬과 서브주제 줄이 같은 차례를 쓴다
+const tagRank = (t) => {
+  let i = 0
+  for (const g of DATA.groups) for (const x of g.tags) { if (x.name === t) return i; i++ }
+  return 9999
+}
 
 const monthLabel = (m) => (m ? m.replace(/^(\d{4})-(\d{2})$/, (_, y, mo) => `${y}.${+mo}`) : '')
 const serviceName = (id) => (DATA.services.find((s) => s.id === id) || {}).name || id
@@ -257,8 +269,13 @@ function visible() {
   const q = state.q.trim().toLowerCase()
   return DATA.books.filter((b) => {
     if (state.where === 'none' && b.sources.length) return false
-    if (state.where !== 'all' && state.where !== 'none' && !b.sources.some((s) => s.id === state.where)) return false
-    if (state.field && b.field !== state.field) return false
+    if (state.where !== 'all' && state.where !== 'none') {
+      const g = DATA.wheres.find((w) => w.id === state.where)
+      if (g && !b.sources.some((s) => g.ids.includes(s.id))) return false
+    }
+    if (state.src && !b.sources.some((s) => s.id === state.src)) return false
+    if (state.group && !(b.groups || []).includes(state.group)) return false
+    if (state.tag && !(b.tags || []).includes(state.tag)) return false
     if (!q) return true
     return (b.title + ' ' + b.author + ' ' + b.englishTitle + ' ' + b.publisher + ' ' + (b.tags || []).join(' '))
       .toLowerCase().includes(q)
@@ -270,7 +287,11 @@ function sorted(list) {
   const ko = (a, b) => a.localeCompare(b, 'ko')
   if (state.sort === 'title') c.sort((a, b) => ko(a.title, b.title))
   else if (state.sort === 'author') c.sort((a, b) => ko(a.author || '힣', b.author || '힣'))
-  else if (state.sort === 'field') c.sort((a, b) => ko(a.field || '힣', b.field || '힣') || ko(a.title, b.title))
+  else if (state.sort === 'topic') {
+    // 첫 태그의 차례로 줄 세운다 — 비슷한 주제가 붙어 나온다
+    const key = (b) => Math.min(...((b.tags || []).map(tagRank).concat(9999)))
+    c.sort((a, b) => key(a) - key(b) || ko(a.title, b.title))
+  }
   else {
     // 최근 읽은 순 — 읽은 달이 있는 책이 먼저, 아직 안 읽은 책은 제목 순으로 뒤에
     c.sort((a, b) => {
@@ -298,12 +319,12 @@ function render() {
           </button>`).join('')}</div>`
       : state.view === 'table'
       ? `<div class="tblwrap"><table class="tbl">
-          <thead><tr><th>제목</th><th>저자</th><th>분야</th><th>어디에</th><th style="text-align:right">읽음</th></tr></thead>
+          <thead><tr><th>제목</th><th>저자</th><th>주제</th><th>어디에</th><th style="text-align:right">읽음</th></tr></thead>
           <tbody>${list.map((b) => `
             <tr data-i="${idx(b)}">
               <td class="c-title">${esc(b.title)}</td>
               <td class="c-author">${esc(b.author || '')}</td>
-              <td class="c-field">${esc(b.field || '')}</td>
+              <td class="c-field">${esc((b.tags || []).join(' · '))}</td>
               <td class="c-where">${b.sources.map((s) => esc(serviceName(s.id))).join(' · ')}</td>
               <td class="c-read">${b.readAt ? esc(monthLabel(b.readAt)) : ''}</td>
             </tr>`).join('')}</tbody></table></div>`
@@ -312,7 +333,7 @@ function render() {
             <div class="cv">${coverHTML(b)}</div>
             <div class="mid">
               <div class="rt">${esc(b.title)}</div>
-              <div class="rs">${esc(b.author || '저자 미상')}${b.field ? ' · ' + esc(b.field) : ''}</div>
+              <div class="rs">${esc(b.author || '저자 미상')}${b.tags?.length ? ' · ' + esc(b.tags.join(', ')) : ''}</div>
             </div>
             <div class="rr">
               <b>${b.sources.length ? b.sources.map((s) => esc(serviceName(s.id))).join(' · ') : ''}</b>
@@ -322,7 +343,21 @@ function render() {
 
   $('#shown').textContent = `${list.length}권`
   $('#tabs').querySelectorAll('.tab').forEach((t) => t.classList.toggle('on', t.dataset.f === state.where))
-  $('#fields').querySelectorAll('.fld').forEach((f) => f.classList.toggle('on', f.dataset.field === state.field))
+  // 소장처 묶음을 고르면 그 안의 서비스 줄이 열린다 (하나뿐이면 열 것이 없다)
+  const w = (DATA.wheres || []).find((x) => x.id === state.where)
+  $('#subwhere').hidden = !w || w.services.length < 2
+  if (w && w.services.length > 1) {
+    $('#subwhere').innerHTML = w.services.map((s) =>
+      `<button class="fld${s.id === state.src ? ' on' : ''}" data-src="${esc(s.id)}">${esc(s.name)}<i>${s.count}</i></button>`).join('')
+  }
+  $('#groups').querySelectorAll('.fld').forEach((f) => f.classList.toggle('on', f.dataset.group === state.group))
+  // 주제를 고르면 그 안의 서브주제 줄이 열린다
+  const g = (DATA.groups || []).find((x) => x.name === state.group)
+  $('#subtags').hidden = !g
+  if (g) {
+    $('#subtags').innerHTML = g.tags.map((t) =>
+      `<button class="fld${t.name === state.tag ? ' on' : ''}" data-tag="${esc(t.name)}">${esc(t.name)}<i>${t.count}</i></button>`).join('')
+  }
   $('#viewsw').querySelectorAll('button').forEach((v) => v.classList.toggle('on', v.dataset.v === state.view))
 }
 
@@ -343,12 +378,16 @@ function openBook(b) {
         <div class="cmeta">${esc(b.author || '저자 미상')}${b.publisher ? ' · ' + esc(b.publisher) : ''}</div>
       </div>
     </div>
+    ${b.gist ? `<p class="cgist">${esc(b.gist)}</p>` : ''}
     <dl class="rows">
       <div class="drow"><dt>어디에</dt><dd class="where">${where}</dd></div>
       <div class="drow"><dt>읽음</dt><dd class="tnum">${b.read ? (monthLabel(b.readAt) || '읽음') : '아직'}</dd></div>
-      ${b.field ? `<div class="drow"><dt>분야</dt><dd>${esc(b.field)}</dd></div>` : ''}
+      ${b.groups?.length ? `<div class="drow"><dt>주제</dt><dd>${esc(b.groups.join(' · '))}</dd></div>` : ''}
       ${b.tags?.length ? `<div class="drow"><dt>태그</dt><dd class="tags">${b.tags.map((t) => `<button data-tag="${esc(t)}">${esc(t)}</button>`).join('')}</dd></div>` : ''}
-      ${b.aladin ? `<div class="drow"><dt>책 정보</dt><dd class="where"><a href="${esc(b.aladin)}" target="_blank" rel="noopener">알라딘</a></dd></div>` : ''}
+      ${b.form ? `<div class="drow"><dt>어떤 꼴</dt><dd>${esc(b.form)}</dd></div>` : ''}
+      ${b.aladin || b.kyobo ? `<div class="drow"><dt>책 정보</dt><dd class="where">${
+        b.aladin ? `<a href="${esc(b.aladin)}" target="_blank" rel="noopener">알라딘</a>` : ''
+      }${b.kyobo ? `<a href="${esc(b.kyobo)}" target="_blank" rel="noopener">교보</a>` : ''}</dd></div>` : ''}
     </dl>
     ${simil.length ? `<div class="simil"><h4>비슷한 책</h4><div class="simil-row">${simil.map((s) => `
       <button data-go="${DATA.books.indexOf(s)}">
@@ -369,8 +408,11 @@ $('#out').addEventListener('click', (e) => {
 $('#sheet').addEventListener('click', (e) => {
   const tag = e.target.closest('[data-tag]')
   if (tag) {
-    state.q = tag.dataset.tag
-    $('#q').value = state.q
+    // 태그를 누르면 그 태그가 속한 주제까지 같이 열어 준다
+    const t = tag.dataset.tag
+    const g = (DATA.groups || []).find((x) => x.tags.some((y) => y.name === t))
+    state.group = g ? g.name : ''
+    state.tag = t
     closeBook()
     render()
     return
@@ -410,25 +452,42 @@ fetch('data/library.json?v=' + Date.now())
   .then((d) => {
     DATA = d
     const none = d.books.filter((b) => !b.sources.length).length
+    // 어디에 있는가 — 온라인·종이책·빌린 것으로 감싸고, 누르면 그 안이 열린다
     const tabs = [{ id: 'all', name: '전체', count: d.books.length }]
-      .concat(d.services.map((s) => ({ id: s.id, name: s.name, count: s.count })))
+      .concat((d.wheres || []).map((w) => ({ id: w.id, name: w.name, count: w.count })))
     if (none) tabs.push({ id: 'none', name: '소장처 미확인', count: none })
     $('#tabs').innerHTML = tabs.map((t) =>
       `<button class="tab" data-f="${t.id}">${esc(t.name)}<i>${t.count}</i></button>`).join('')
     $('#tabs').addEventListener('click', (e) => {
       const t = e.target.closest('.tab')
-      if (t) { state.where = t.dataset.f; render() }
+      if (!t) return
+      state.where = t.dataset.f
+      state.src = ''
+      render()
     })
-
-    $('#fields').innerHTML = [{ name: '', label: '분야 전체', count: '' }]
-      .concat((d.fields || []).map((f) => ({ name: f.name, label: f.name, count: f.count })))
-      .map((f) => `<button class="fld" data-field="${esc(f.name)}">${esc(f.label)}${f.count ? `<i>${f.count}</i>` : ''}</button>`)
-      .join('')
-    $('#fields').addEventListener('click', (e) => {
+    $('#subwhere').addEventListener('click', (e) => {
       const f = e.target.closest('.fld')
       if (!f) return
-      // 이미 켜진 분야를 다시 누르면 끈다
-      state.field = state.field === f.dataset.field ? '' : f.dataset.field
+      state.src = state.src === f.dataset.src ? '' : f.dataset.src
+      render()
+    })
+
+    $('#groups').innerHTML = [{ name: '', label: '주제 전체', count: '' }]
+      .concat((d.groups || []).map((g) => ({ name: g.name, label: g.name, count: g.count })))
+      .map((g) => `<button class="fld" data-group="${esc(g.name)}">${esc(g.label)}${g.count ? `<i>${g.count}</i>` : ''}</button>`)
+      .join('')
+    $('#groups').addEventListener('click', (e) => {
+      const f = e.target.closest('.fld')
+      if (!f) return
+      // 이미 켜진 주제를 다시 누르면 끈다. 주제를 바꾸면 서브주제는 풀린다.
+      state.group = state.group === f.dataset.group ? '' : f.dataset.group
+      state.tag = ''
+      render()
+    })
+    $('#subtags').addEventListener('click', (e) => {
+      const f = e.target.closest('.fld')
+      if (!f) return
+      state.tag = state.tag === f.dataset.tag ? '' : f.dataset.tag
       render()
     })
 

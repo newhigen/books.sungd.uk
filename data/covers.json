@@ -375,14 +375,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=68729431",
   "match": 1.0
  },
- "안다는 착각": {
-  "title": "미국을 안다는 착각",
-  "author": "김봉중",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/34795/55/cover500/k762933228_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=347955545",
-  "match": 0.77
- },
  "완벽한 선택은 없다": {
   "title": "완벽한 선택은 없다",
   "author": "안도 고다이, 김은혜",
@@ -526,14 +518,6 @@
   "cover": "https://image.aladin.co.kr/product/39597/61/cover500/k862130770_1.jpg",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=395976130",
   "match": 1.0
- },
- "정리의 기술": {
-  "title": "생각정리의 기술",
-  "author": "드니 르보, 장 뤽 들라드리에르",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/90/36/cover500/8995737069_2.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=903605",
-  "match": 0.83
  },
  "아티스트의 탁구 노트": {
   "title": "아티스트의 탁구 노트",
@@ -710,14 +694,6 @@
   "cover": "https://image.aladin.co.kr/product/13941/21/cover500/8977823870_1.jpg",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=139412178",
   "match": 0.72
- },
- "기분이 태도가 되지 않게": {
-  "title": "기분이 태도가 되지 않게 (헬로키티 에디션)",
-  "author": "레몬심리, 박영란",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/37535/62/cover500/8901297841_3.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375356292",
-  "match": 1.0
  },
  "남자 몸 만들기 4주 혁명": {
   "title": "남자 몸 만들기 4주 혁명",
@@ -1182,7 +1158,13 @@
   "match": 1.0
  },
  "논리적으로 말하는 테크닉": {
-  "notfound": true
+  "title": "논리적으로 말하는 테크닉",
+  "author": "데구치 히로시, 현유경",
+  "publisher": "인포더북스",
+  "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788994567426.jpg",
+  "kyobo": "https://product.kyobobook.co.kr/detail/S000001551449",
+  "match": 1.0,
+  "note": "알라딘에 없다 — 교보에서 확인했다"
  },
  "노 하드 필링스": {
   "title": "No Hard Feelings 노 하드 필링스",
@@ -1310,15 +1292,6 @@
  },
  "On Prayer and The Contemplative Life": {
   "notfound": true
- },
- "Robert C. Martin Series": {
-  "title": "차별화로 핵심역량을 높이는 경영전략",
-  "author": "클레이튼 M. 크리스텐슨, 로버트 S. 캐플런",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/7134/15/cover500/k282434990_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=71341536",
-  "match": 0.0,
-  "uncertain": true
  },
  "2000년생이 온다": {
   "title": "2000년생이 온다",
@@ -1545,14 +1518,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=1707009",
   "match": 1.0
  },
- "업": {
-  "title": "THE ART OF SOLO LEVELING : 웹툰 「나 혼자만 레벨업」 공식 아트북",
-  "author": "장성락(REDICE STUDIO), 추공",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/39905/20/cover500/k892130927_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399052013",
-  "match": 0.85
- },
  "여백 사고": {
   "title": "여백 사고",
   "author": "야마자키 세이타로, 김영주",
@@ -1729,14 +1694,6 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=373097975",
   "match": 1.0
  },
- "Big Feelings": {
-  "title": "EBS ELT Big Cat (Band 2) FEELINGS",
-  "author": "EBS",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/29381/32/cover500/895476570x_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=293813247",
-  "match": 0.71
- },
  "EQ 감성지능": {
   "title": "EQ 감성지능",
   "author": "대니얼 골먼, 한창호",
@@ -1788,13 +1745,13 @@
   "uncertain": true
  },
  "The Next Conversation": {
-  "title": "잠시 멈춤",
-  "author": "제퍼슨 피셔, 정지현",
-  "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/37823/89/cover500/8965967740_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=378238931",
-  "match": 0.0,
-  "uncertain": true
+  "title": "The Next Conversation",
+  "author": "Jefferson Fisher",
+  "publisher": "Tarcher",
+  "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9798217045792.jpg",
+  "kyobo": "https://product.kyobobook.co.kr/detail/S000216226878",
+  "match": 1.0,
+  "note": "알라딘에 없다 — 교보에서 확인했다"
  },
  "UX/UI의 10가지 심리학 법칙": {
   "title": "UX/UI의 10가지 심리학 법칙",
@@ -1803,5 +1760,50 @@
   "cover": "https://image.aladin.co.kr/product/33764/78/cover500/k592930168_1.jpg",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337647826",
   "match": 1.0
+ },
+ "안다는 착각": {
+  "title": "안다는 착각 | 니시바야시 가츠히코",
+  "author": "니시바야시 가츠히코",
+  "publisher": "21세기북스",
+  "cover": "https://image.aladin.co.kr/product/36374/3/cover500/k322039476_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=363740383",
+  "match": 1.0,
+  "pinned": true
+ },
+ "정리의 기술": {
+  "title": "정리의 기술 | 곤도 마리에 정리 시리즈 2 | 곤도 마리에",
+  "author": "곤도 마리에",
+  "publisher": "웅진지식하우스",
+  "cover": "https://image.aladin.co.kr/product/22949/43/cover500/8901234483_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=229494332",
+  "match": 1.0,
+  "pinned": true
+ },
+ "기분이 태도가 되지 않게": {
+  "title": "기분이 태도가 되지 않게 | 레몬심리",
+  "author": "레몬심리",
+  "publisher": "갤리온",
+  "cover": "https://image.aladin.co.kr/product/24368/89/cover500/8901243652_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=243688983",
+  "match": 1.0,
+  "pinned": true
+ },
+ "업": {
+  "title": "업 | 리멤버",
+  "author": "리멤버",
+  "publisher": "필름(Feelm)",
+  "cover": "https://image.aladin.co.kr/product/38655/95/cover500/k832136514_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=386559530",
+  "match": 1.0,
+  "pinned": true
+ },
+ "Big Feelings": {
+  "title": "Big Feelings",
+  "author": "Liz Fosslien, Mollie West Duffy",
+  "publisher": "Portfolio",
+  "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9780593418239.jpg",
+  "kyobo": "https://product.kyobobook.co.kr/detail/S000010437752",
+  "match": 1.0,
+  "note": "알라딘에 없다 — 교보에서 확인했다"
  }
 }

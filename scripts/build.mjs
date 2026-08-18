@@ -165,6 +165,8 @@ for (const book of books.values()) {
   if (!book.cover) book.cover = c.cover || ''
   if (!book.publisher) book.publisher = c.publisher || ''
   if (!book.aladin) book.aladin = c.aladin || ''
+  // 알라딘에 없는 책은 교보에서 찾아 둔다
+  if (!book.kyobo) book.kyobo = c.kyobo || ''
 }
 
 // ---- 분야 정하기 ----
@@ -216,6 +218,25 @@ for (const book of books.values()) {
   book.tags = tags.slice(0, 6)
 }
 
+// ---- 태그는 손으로 붙인 것이 먼저 (data/tags.json) ----
+// 서점 분류에서 뽑은 태그는 '성공학' 처럼 진열대 말이라, 있으면 내 태그로 갈아 끼운다.
+const MINE = join(repo, 'data', 'tags.json')
+const mine = existsSync(MINE) ? JSON.parse(readFileSync(MINE, 'utf8')) : {}
+for (const book of books.values()) {
+  if (mine[book.title]?.length) book.tags = mine[book.title]
+}
+
+// ---- 무슨 책인지 한 줄 (data/summaries.json — 손으로 쓴다) ----
+const GISTS = join(repo, 'data', 'summaries.json')
+const gists = existsSync(GISTS) ? JSON.parse(readFileSync(GISTS, 'utf8')) : {}
+for (const book of books.values()) {
+  const g = gists[book.title]
+  if (!g) continue
+  book.gist = g.gist || ''
+  book.topics = g.topics || []
+  book.form = g.form || ''
+}
+
 // ---- 감출 것 빼기 ----
 // data/hidden.json 에 적힌 분야·제목은 공개 데이터에 싣지 않는다. 화면에서 가리는 게
 // 아니라 파일에서 빠지므로, 받아보더라도 흔적이 없다.
@@ -239,8 +260,13 @@ const all = [...books.values()].map((b) => ({
   cover: b.cover || '',
   publisher: b.publisher || '',
   aladin: b.aladin || '',
+  kyobo: b.kyobo || '',
   field: b.field || '',
   tags: b.tags || [],
+  groups: [],
+  gist: b.gist || '',
+  topics: b.topics || [],
+  form: b.form || '',
   sources: b.sources,
   read: !!b.read,
   readAt: b.readAt || '',
@@ -284,17 +310,58 @@ const services = [
     .map((id) => ({ id, name: id, kind: 'ebook' })),
 ].map((s) => ({ ...s, count: all.filter((b) => b.sources.some((x) => x.id === s.id)).length }))
 
+// 소장처도 한 겹 감싼다 — 온라인인지 종이인지 빌린 것인지
+const WHERE_GROUPS = [
+  { id: 'online', name: '온라인', kinds: ['ebook', 'file'] },
+  { id: 'paper', name: '종이책', kinds: ['paper'] },
+  { id: 'borrowed', name: '빌린 것', kinds: ['borrowed'] },
+]
+const wheres = WHERE_GROUPS.map((g) => {
+  const ids = services.filter((s) => g.kinds.includes(s.kind)).map((s) => s.id)
+  return {
+    id: g.id,
+    name: g.name,
+    ids,
+    count: all.filter((b) => b.sources.some((s) => ids.includes(s.id))).length,
+    services: services.filter((s) => ids.includes(s.id)).map((s) => ({ id: s.id, name: s.name, count: s.count })),
+  }
+}).filter((g) => g.count)
+
 const fieldCount = {}
 for (const b of all) if (b.field) fieldCount[b.field] = (fieldCount[b.field] || 0) + 1
 const fields = Object.entries(fieldCount)
   .sort((a, b) => b[1] - a[1])
   .map(([name, count]) => ({ name, count }))
 
+// ---- 주제(묶음) → 서브주제(태그) ----
+// 정의는 data/tag-groups.json 한 곳에만 둔다. 사이트와 태그 화면이 같이 본다.
+const GROUPS = join(repo, 'data', 'tag-groups.json')
+const groupDef = existsSync(GROUPS) ? JSON.parse(readFileSync(GROUPS, 'utf8')).groups || [] : []
+const groupOf = new Map(groupDef.flatMap((g) => g.tags.map((t) => [t, g.name])))
+for (const b of all) {
+  b.groups = [...new Set((b.tags || []).map((t) => groupOf.get(t) || '그 밖'))]
+}
+const tagCount = {}
+for (const b of all) for (const t of b.tags || []) tagCount[t] = (tagCount[t] || 0) + 1
+const listed = new Set(groupDef.flatMap((g) => g.tags))
+const groups = [
+  ...groupDef.map((g) => ({ name: g.name, tags: g.tags.filter((t) => tagCount[t]) })),
+  { name: '그 밖', tags: Object.keys(tagCount).filter((t) => !listed.has(t)) },
+]
+  .filter((g) => g.tags.length)
+  .map((g) => ({
+    ...g,
+    count: all.filter((b) => b.tags.some((t) => g.tags.includes(t))).length,
+    tags: g.tags.map((t) => ({ name: t, count: tagCount[t] })),
+  }))
+
 const out = {
   updatedAt: new Date().toISOString().slice(0, 10),
   total: all.length,
   services,
+  wheres,
   fields,
+  groups,
   books: all,
 }
 writeFileSync(OUT, JSON.stringify(out, null, 1) + '\n')

@@ -1,24 +1,24 @@
 {
- "updatedAt": "2026-08-13",
- "total": 196,
+ "updatedAt": "2026-08-15",
+ "total": 193,
  "services": [
   {
    "id": "ridi",
    "name": "리디북스",
    "kind": "ebook",
-   "count": 12
+   "count": 11
   },
   {
    "id": "kyobo",
    "name": "교보 sam",
    "kind": "ebook",
-   "count": 27
+   "count": 26
   },
   {
    "id": "kindle",
    "name": "킨들",
    "kind": "ebook",
-   "count": 10
+   "count": 9
   },
   {
    "id": "google",
@@ -42,37 +42,112 @@
    "id": "friend",
    "name": "지인 대여",
    "kind": "borrowed",
-   "count": 1
+   "count": 2
+  }
+ ],
+ "wheres": [
+  {
+   "id": "online",
+   "name": "온라인",
+   "ids": [
+    "ridi",
+    "kyobo",
+    "kindle",
+    "google"
+   ],
+   "count": 47,
+   "services": [
+    {
+     "id": "ridi",
+     "name": "리디북스",
+     "count": 11
+    },
+    {
+     "id": "kyobo",
+     "name": "교보 sam",
+     "count": 26
+    },
+    {
+     "id": "kindle",
+     "name": "킨들",
+     "count": 9
+    },
+    {
+     "id": "google",
+     "name": "구글 북스",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "paper",
+   "name": "종이책",
+   "ids": [
+    "paper"
+   ],
+   "count": 82,
+   "services": [
+    {
+     "id": "paper",
+     "name": "종이책",
+     "count": 82
+    }
+   ]
+  },
+  {
+   "id": "borrowed",
+   "name": "빌린 것",
+   "ids": [
+    "company",
+    "friend"
+   ],
+   "count": 30,
+   "services": [
+    {
+     "id": "company",
+     "name": "회사 대여",
+     "count": 28
+    },
+    {
+     "id": "friend",
+     "name": "지인 대여",
+     "count": 2
+    }
+   ]
   }
  ],
  "fields": [
   {
-   "name": "자기계발",
-   "count": 22
-  },
-  {
    "name": "개발",
-   "count": 21
+   "count": 42
   },
   {
-   "name": "인문·심리",
-   "count": 16
-  },
-  {
-   "name": "에세이",
-   "count": 15
-  },
-  {
-   "name": "문학",
-   "count": 13
+   "name": "자기계발",
+   "count": 32
   },
   {
    "name": "일·경영",
-   "count": 12
+   "count": 20
+  },
+  {
+   "name": "인문·심리",
+   "count": 20
+  },
+  {
+   "name": "문학",
+   "count": 17
+  },
+  {
+   "name": "에세이",
+   "count": 16
   },
   {
    "name": "글쓰기·읽기",
    "count": 9
+  },
+  {
+   "name": "디자인",
+   "count": 7
   },
   {
    "name": "건강·생활",
@@ -83,16 +158,340 @@
    "count": 3
   },
   {
-   "name": "디자인",
-   "count": 2
-  },
-  {
    "name": "여행",
-   "count": 1
+   "count": 2
   },
   {
    "name": "과학",
    "count": 1
+  }
+ ],
+ "groups": [
+  {
+   "name": "개발·기술",
+   "tags": [
+    {
+     "name": "개발자 태도",
+     "count": 11
+    },
+    {
+     "name": "개발자 커리어",
+     "count": 7
+    },
+    {
+     "name": "개발 조직",
+     "count": 10
+    },
+    {
+     "name": "코드 품질",
+     "count": 5
+    },
+    {
+     "name": "설계·아키텍처",
+     "count": 6
+    },
+    {
+     "name": "시스템 설계",
+     "count": 5
+    },
+    {
+     "name": "알고리즘",
+     "count": 2
+    },
+    {
+     "name": "개발 방법론",
+     "count": 2
+    },
+    {
+     "name": "애자일",
+     "count": 4
+    },
+    {
+     "name": "테크니컬 라이팅",
+     "count": 2
+    },
+    {
+     "name": "DB",
+     "count": 2
+    },
+    {
+     "name": "인프라",
+     "count": 2
+    },
+    {
+     "name": "IT",
+     "count": 1
+    }
+   ],
+   "count": 53
+  },
+  {
+   "name": "데이터·AI",
+   "tags": [
+    {
+     "name": "ML",
+     "count": 4
+    },
+    {
+     "name": "MLOps",
+     "count": 3
+    },
+    {
+     "name": "AI",
+     "count": 3
+    },
+    {
+     "name": "데이터 분석",
+     "count": 3
+    },
+    {
+     "name": "통계·수학",
+     "count": 3
+    }
+   ],
+   "count": 13
+  },
+  {
+   "name": "만들기",
+   "tags": [
+    {
+     "name": "UI/UX",
+     "count": 5
+    },
+    {
+     "name": "디자인",
+     "count": 1
+    },
+    {
+     "name": "프로덕트",
+     "count": 4
+    },
+    {
+     "name": "창업",
+     "count": 3
+    }
+   ],
+   "count": 11
+  },
+  {
+   "name": "일·조직",
+   "tags": [
+    {
+     "name": "리더십",
+     "count": 4
+    },
+    {
+     "name": "매니저",
+     "count": 3
+    },
+    {
+     "name": "팀",
+     "count": 4
+    },
+    {
+     "name": "HR",
+     "count": 1
+    },
+    {
+     "name": "일하는 법",
+     "count": 9
+    },
+    {
+     "name": "커리어",
+     "count": 4
+    },
+    {
+     "name": "성공",
+     "count": 1
+    }
+   ],
+   "count": 23
+  },
+  {
+   "name": "배우기·생각",
+   "tags": [
+    {
+     "name": "학습",
+     "count": 8
+    },
+    {
+     "name": "성장",
+     "count": 1
+    },
+    {
+     "name": "노트·기록",
+     "count": 4
+    },
+    {
+     "name": "독서",
+     "count": 4
+    },
+    {
+     "name": "글쓰기",
+     "count": 7
+    },
+    {
+     "name": "말하기",
+     "count": 4
+    },
+    {
+     "name": "시간 관리",
+     "count": 3
+    },
+    {
+     "name": "의사결정",
+     "count": 3
+    },
+    {
+     "name": "문제 해결",
+     "count": 2
+    },
+    {
+     "name": "사고법",
+     "count": 5
+    }
+   ],
+   "count": 38
+  },
+  {
+   "name": "마음·관계",
+   "tags": [
+    {
+     "name": "심리",
+     "count": 11
+    },
+    {
+     "name": "멘탈",
+     "count": 5
+    },
+    {
+     "name": "완벽주의",
+     "count": 2
+    },
+    {
+     "name": "습관",
+     "count": 4
+    },
+    {
+     "name": "대화",
+     "count": 4
+    },
+    {
+     "name": "관계",
+     "count": 4
+    },
+    {
+     "name": "INFJ",
+     "count": 2
+    }
+   ],
+   "count": 24
+  },
+  {
+   "name": "삶·교양",
+   "tags": [
+    {
+     "name": "인생",
+     "count": 8
+    },
+    {
+     "name": "일상",
+     "count": 4
+    },
+    {
+     "name": "정리",
+     "count": 1
+    },
+    {
+     "name": "철학",
+     "count": 7
+    },
+    {
+     "name": "인문",
+     "count": 2
+    },
+    {
+     "name": "역사",
+     "count": 2
+    },
+    {
+     "name": "사회",
+     "count": 4
+    },
+    {
+     "name": "법",
+     "count": 1
+    },
+    {
+     "name": "돈",
+     "count": 1
+    }
+   ],
+   "count": 27
+  },
+  {
+   "name": "문학",
+   "tags": [
+    {
+     "name": "고전",
+     "count": 8
+    },
+    {
+     "name": "한국소설",
+     "count": 1
+    },
+    {
+     "name": "일본소설",
+     "count": 2
+    },
+    {
+     "name": "추리",
+     "count": 2
+    },
+    {
+     "name": "에세이",
+     "count": 5
+    }
+   ],
+   "count": 18
+  },
+  {
+   "name": "몸·취미",
+   "tags": [
+    {
+     "name": "건강",
+     "count": 5
+    },
+    {
+     "name": "운동",
+     "count": 4
+    },
+    {
+     "name": "음식",
+     "count": 3
+    },
+    {
+     "name": "여행",
+     "count": 4
+    },
+    {
+     "name": "예술",
+     "count": 2
+    },
+    {
+     "name": "건축",
+     "count": 3
+    },
+    {
+     "name": "사진",
+     "count": 1
+    },
+    {
+     "name": "일본어",
+     "count": 2
+    }
+   ],
+   "count": 23
   }
  ],
  "books": [
@@ -103,11 +502,20 @@
    "cover": "https://image.aladin.co.kr/product/38541/58/cover500/k812135439_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385415808",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "성공",
-    "성공학"
+    "학습"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "배우기만 하는 단계에서 배운 것을 써먹는 단계로 넘어가는 법",
+   "topics": [
+    "학습",
+    "실행"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -118,12 +526,12 @@
    "readAt": "2026-06",
    "addedAt": "",
    "similar": [
-    4,
-    5,
-    33,
-    37,
-    38,
-    41
+    52,
+    53,
+    67,
+    81,
+    28,
+    49
    ]
   },
   {
@@ -133,26 +541,36 @@
    "cover": "https://image.aladin.co.kr/product/38959/46/cover500/k762137312_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=389594657",
+   "kyobo": "",
    "field": "일·경영",
    "tags": [
-    "기업 경영",
-    "경영전략/혁신",
-    "마케팅/세일즈",
-    "마케팅/브랜드",
-    "성공",
-    "성공학"
+    "관계"
    ],
-   "sources": [],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "주는 사람이 결국 더 얻는다는 다섯 법칙을 우화로 풀어낸 이야기",
+   "topics": [
+    "인간관계",
+    "성공"
+   ],
+   "form": "소설",
+   "sources": [
+    {
+     "id": "friend",
+     "link": ""
+    }
+   ],
    "read": true,
    "readAt": "2026-06",
    "addedAt": "",
    "similar": [
-    48,
-    92,
-    136,
-    0,
-    4,
-    5
+    34,
+    110,
+    118,
+    3,
+    9,
+    29
    ]
   },
   {
@@ -162,15 +580,20 @@
    "cover": "https://image.aladin.co.kr/product/34360/88/cover500/k182932901_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=343608885",
+   "kyobo": "",
    "field": "디자인",
    "tags": [
-    "그래픽/멀티미디어",
-    "그래픽 일반",
-    "디자인/공예",
-    "디자인이론/비평/역사",
-    "디자인이야기/디자이너/디자인 실기",
-    "웹디자인/홈페이지"
+    "디자인",
+    "UI/UX"
    ],
+   "groups": [
+    "만들기"
+   ],
+   "gist": "비율·균형·색·서체 등 디자인 기본 이론 아홉 가지",
+   "topics": [
+    "디자인 기초"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -181,7 +604,12 @@
    "readAt": "2026-06",
    "addedAt": "",
    "similar": [
-    62
+    62,
+    119,
+    192,
+    48,
+    100,
+    134
    ]
   },
   {
@@ -191,15 +619,20 @@
    "cover": "https://image.aladin.co.kr/product/33117/27/cover500/k122937122_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=331172752",
+   "kyobo": "",
    "field": "일·경영",
    "tags": [
-    "협상/설득/화술",
-    "화술",
-    "CEO/비즈니스맨을 위한 능력계발",
-    "화술/협상/프레젠테이션",
-    "설득",
-    "협상"
+    "말하기"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "설명을 감각이 아니라 구조로 만드는 법",
+   "topics": [
+    "말하기",
+    "설명"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -210,12 +643,12 @@
    "readAt": "2026-06",
    "addedAt": "",
    "similar": [
-    26,
+    25,
     27,
-    31,
+    150,
+    1,
     9,
-    29,
-    75
+    29
    ]
   },
   {
@@ -225,22 +658,31 @@
    "cover": "https://image.aladin.co.kr/product/5917/28/cover500/8980104804_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=59172854",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "성공",
-    "성공학"
+    "사고법"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "변화 앞에서 사람이 어떻게 반응하는지를 생쥐 우화로",
+   "topics": [
+    "변화",
+    "태도"
+   ],
+   "form": "소설",
    "sources": [],
    "read": true,
    "readAt": "2026-05",
    "addedAt": "",
    "similar": [
+    130,
+    136,
+    154,
+    39,
     0,
-    5,
-    33,
-    37,
-    38,
-    41
+    5
    ]
   },
   {
@@ -250,13 +692,20 @@
    "cover": "https://image.aladin.co.kr/product/37944/74/cover500/k672033454_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379447436",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "성공",
-    "성공학",
-    "시간관리/정보관리",
-    "시간관리"
+    "습관"
    ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "작은 행동을 시스템으로 만들어 습관을 바꾸는 방법",
+   "topics": [
+    "습관",
+    "루틴"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -271,12 +720,12 @@
    "readAt": "2026-05",
    "addedAt": "",
    "similar": [
-    81,
-    91,
-    69,
+    105,
+    21,
+    59,
     0,
     4,
-    33
+    20
    ]
   },
   {
@@ -286,11 +735,20 @@
    "cover": "https://image.aladin.co.kr/product/34082/41/cover500/8970125930_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340824147",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "사진/그림 에세이",
-    "외국에세이"
+    "일상"
    ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "하루키가 케임브리지에서 보낸 2년의 일상 산문",
+   "topics": [
+    "일상",
+    "하루키"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "paper",
@@ -302,11 +760,11 @@
    "addedAt": "",
    "similar": [
     58,
-    11,
-    45,
     8,
-    30,
-    44
+    88,
+    115,
+    11,
+    30
    ]
   },
   {
@@ -316,11 +774,22 @@
    "cover": "https://image.aladin.co.kr/product/21292/13/cover500/8936438034_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=212921347",
+   "kyobo": "",
    "field": "문학",
    "tags": [
     "한국소설",
-    "2000년대 이후 한국소설"
+    "일하는 법"
    ],
+   "groups": [
+    "문학",
+    "일·조직"
+   ],
+   "gist": "이삼십대 직장인의 일상을 그린 단편 여덟 편",
+   "topics": [
+    "직장",
+    "한국소설"
+   ],
+   "form": "소설",
    "sources": [
     {
      "id": "paper",
@@ -331,12 +800,12 @@
    "readAt": "2026-05",
    "addedAt": "",
    "similar": [
-    15,
-    19,
-    56,
-    61,
-    63,
-    79
+    38,
+    40,
+    41,
+    107,
+    132,
+    135
    ]
   },
   {
@@ -346,23 +815,31 @@
    "cover": "https://image.aladin.co.kr/product/17860/2/cover500/8926366308_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=178600244",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "한국에세이",
-    "명사에세이",
-    "문인에세이"
+    "일상"
    ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "나태주 시인이 일상에서 건네는 짧은 위로",
+   "topics": [
+    "위로",
+    "일상"
+   ],
+   "form": "에세이",
    "sources": [],
    "read": true,
    "readAt": "2026-05",
    "addedAt": "",
    "similar": [
-    57,
-    30,
+    115,
+    6,
     88,
-    46,
-    55,
-    115
+    11,
+    30,
+    44
    ]
   },
   {
@@ -372,15 +849,22 @@
    "cover": "https://image.aladin.co.kr/product/2274/9/cover500/8966260659_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=22740964",
+   "kyobo": "",
    "field": "일·경영",
    "tags": [
-    "e비즈니스/창업",
-    "디지털 문화",
-    "CEO/비즈니스맨을 위한 능력계발",
-    "간부학/리더십",
     "리더십",
-    "e-비즈니스/온라인 창업"
+    "개발 조직"
    ],
+   "groups": [
+    "일·조직",
+    "개발·기술"
+   ],
+   "gist": "기술자가 문제 해결형 리더로 자라는 과정",
+   "topics": [
+    "리더십",
+    "기술 조직"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -391,12 +875,12 @@
    "readAt": "2026-05",
    "addedAt": "",
    "similar": [
-    36,
     29,
-    32,
-    3,
-    75,
-    136
+    85,
+    92,
+    107,
+    132,
+    159
    ]
   },
   {
@@ -406,10 +890,20 @@
    "cover": "https://image.aladin.co.kr/product/33990/7/cover500/k722930546_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=339900718",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "교양 인문학"
+    "건축"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "건축가가 공간을 감상하고 기록하는 방식",
+   "topics": [
+    "공간",
+    "건축"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "paper",
@@ -420,12 +914,12 @@
    "readAt": "2026-04",
    "addedAt": "",
    "similar": [
+    78,
+    163,
     13,
     14,
-    40,
-    78,
-    144,
-    50
+    34,
+    40
    ]
   },
   {
@@ -435,22 +929,31 @@
    "cover": "https://image.aladin.co.kr/product/26249/45/cover500/k572738481_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=262494588",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "사진/그림 에세이",
-    "외국에세이"
+    "INFJ"
    ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "내향인의 일상을 그린 카툰 에세이",
+   "topics": [
+    "내향",
+    "INFJ"
+   ],
+   "form": "에세이",
    "sources": [],
    "read": true,
    "readAt": "2026-04",
    "addedAt": "",
    "similar": [
+    55,
     6,
-    45,
-    58,
     8,
     30,
-    44
+    44,
+    45
    ]
   },
   {
@@ -460,13 +963,20 @@
    "cover": "https://image.aladin.co.kr/product/35498/53/cover500/8966264662_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=354985363",
+   "kyobo": "",
    "field": "글쓰기·읽기",
    "tags": [
-    "프로그래밍 개발/방법론",
-    "프로그래밍 기초/개발 방법론",
-    "책읽기/글쓰기",
     "글쓰기"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "글감을 모아 쌓아 올리는 자연스러운 글쓰기 방법",
+   "topics": [
+    "글쓰기",
+    "방법"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -480,9 +990,9 @@
     21,
     22,
     23,
-    50,
     84,
-    17
+    9,
+    29
    ]
   },
   {
@@ -492,10 +1002,20 @@
    "cover": "https://image.aladin.co.kr/product/22872/85/cover500/k912636841_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=228728501",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "교양 인문학"
+    "인문"
    ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "철학·과학·예술·종교를 넓게 훑는 교양 입문",
+   "topics": [
+    "교양",
+    "인문"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -506,12 +1026,12 @@
    "readAt": "2026-04",
    "addedAt": "",
    "similar": [
+    155,
     10,
     14,
+    34,
     40,
-    78,
-    144,
-    50
+    59
    ]
   },
   {
@@ -521,13 +1041,22 @@
    "cover": "https://image.aladin.co.kr/product/33148/4/cover500/8934971355_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=331480497",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "교양 인문학",
-    "인문 에세이",
-    "철학 일반",
-    "교양 철학"
+    "철학",
+    "에세이"
    ],
+   "groups": [
+    "삶·교양",
+    "문학"
+   ],
+   "gist": "철학자가 일상 소재로 쓴 인문 에세이",
+   "topics": [
+    "철학",
+    "위로"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "paper",
@@ -538,12 +1067,12 @@
    "readAt": "2026-04",
    "addedAt": "",
    "similar": [
-    10,
-    13,
     40,
-    78,
+    65,
     80,
-    144
+    45,
+    55,
+    58
    ]
   },
   {
@@ -553,13 +1082,20 @@
    "cover": "https://image.aladin.co.kr/product/39990/29/cover500/k822130836_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399902905",
+   "kyobo": "",
    "field": "문학",
    "tags": [
-    "일본소설",
-    "1950년대 이후 일본소설",
-    "세계의 문학",
-    "일본문학"
+    "일본소설"
    ],
+   "groups": [
+    "문학"
+   ],
+   "gist": "괴테 연구자가 출처 모를 인용문을 쫓는 일본 소설",
+   "topics": [
+    "일본소설",
+    "학문"
+   ],
+   "form": "소설",
    "sources": [
     {
      "id": "paper",
@@ -570,12 +1106,12 @@
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
+    112,
+    7,
     19,
     56,
     61,
-    79,
-    83,
-    118
+    63
    ]
   },
   {
@@ -585,18 +1121,27 @@
    "cover": "https://image.aladin.co.kr/product/35585/77/cover500/k712036793_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355857744",
+   "kyobo": "",
    "field": "역사·사회",
    "tags": [
-    "법과 생활",
-    "헌법"
+    "법"
    ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "헌법 조문 전문",
+   "topics": [
+    "헌법",
+    "법"
+   ],
+   "form": "자료",
    "sources": [],
    "read": true,
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
     47,
-    53
+    148
    ]
   },
   {
@@ -606,15 +1151,20 @@
    "cover": "https://image.aladin.co.kr/product/31704/71/cover500/k982833687_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317047184",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "프로그래밍 개발/방법론",
-    "프로그래밍 기초/개발 방법론",
-    "기업 경영",
-    "경영전략/혁신",
-    "세무/재무/회계",
-    "기업/경영자 스토리"
+    "데이터 분석"
    ],
+   "groups": [
+    "데이터·AI"
+   ],
+   "gist": "현직 데이터 과학자 아홉 명이 말하는 일하는 원칙",
+   "topics": [
+    "데이터",
+    "커리어"
+   ],
+   "form": "인터뷰·대담",
    "sources": [
     {
      "id": "company",
@@ -625,12 +1175,12 @@
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
-    136,
-    87,
-    90,
-    95,
-    102,
-    138
+    35,
+    123,
+    18,
+    28,
+    32,
+    49
    ]
   },
   {
@@ -640,15 +1190,20 @@
    "cover": "https://image.aladin.co.kr/product/38535/91/cover500/k092135330_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385359128",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "컴퓨터 공학",
-    "소프트웨어 공학",
-    "시간관리/정보관리",
-    "시간관리",
-    "취업/진로/유망직업",
-    "국내 진학/취업"
+    "개발자 태도"
    ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "복잡함을 덜어내는 코딩 원칙 스물아홉 가지",
+   "topics": [
+    "단순함",
+    "개발"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -659,12 +1214,12 @@
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
-    95,
-    102,
+    137,
     32,
-    49,
-    51,
-    60
+    95,
+    106,
+    146,
+    166
    ]
   },
   {
@@ -674,25 +1229,33 @@
    "cover": "https://image.aladin.co.kr/product/37686/72/cover500/8937464721_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=376867245",
+   "kyobo": "",
    "field": "문학",
    "tags": [
-    "러시아소설",
-    "서양고전문학",
-    "서양근대문학",
-    "세계의 문학",
-    "러시아문학"
+    "고전",
+    "인생"
    ],
+   "groups": [
+    "문학",
+    "삶·교양"
+   ],
+   "gist": "삶과 죽음을 다룬 톨스토이 후기 단편선",
+   "topics": [
+    "고전",
+    "톨스토이"
+   ],
+   "form": "소설",
    "sources": [],
    "read": true,
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
-    61,
-    121,
-    178,
+    149,
+    56,
     79,
-    118,
-    15
+    83,
+    117,
+    120
    ]
   },
   {
@@ -702,21 +1265,31 @@
    "cover": "https://image.aladin.co.kr/product/33486/40/cover500/k992938254_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=334864077",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "행복론"
+    "커리어"
    ],
+   "groups": [
+    "일·조직"
+   ],
+   "gist": "실리콘밸리 엔지니어가 돌아본 커리어와 실패",
+   "topics": [
+    "커리어",
+    "실패"
+   ],
+   "form": "회고·전기",
    "sources": [],
    "read": true,
    "readAt": "2026-03",
    "addedAt": "",
    "similar": [
-    170,
+    33,
+    42,
+    140,
     0,
     4,
-    5,
-    26,
-    27
+    5
    ]
   },
   {
@@ -726,11 +1299,22 @@
    "cover": "https://image.aladin.co.kr/product/11160/18/cover500/k072531089_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=111601879",
+   "kyobo": "",
    "field": "글쓰기·읽기",
    "tags": [
-    "책읽기/글쓰기",
-    "글쓰기"
+    "글쓰기",
+    "습관"
    ],
+   "groups": [
+    "배우기·생각",
+    "마음·관계"
+   ],
+   "gist": "백 일 동안 매일 쓰는 글쓰기 훈련법",
+   "topics": [
+    "글쓰기",
+    "습관"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2026-02",
@@ -739,9 +1323,9 @@
     12,
     22,
     23,
-    50,
     84,
-    82
+    5,
+    58
    ]
   },
   {
@@ -751,12 +1335,20 @@
    "cover": "https://image.aladin.co.kr/product/11807/4/cover500/k552531429_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=118070490",
+   "kyobo": "",
    "field": "글쓰기·읽기",
    "tags": [
-    "책읽기/글쓰기",
-    "글쓰기",
-    "인문 에세이"
+    "글쓰기"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "글쓰기로 삶이 바뀐 스물네 명의 기록",
+   "topics": [
+    "글쓰기",
+    "기록"
+   ],
+   "form": "에세이",
    "sources": [],
    "read": true,
    "readAt": "2026-02",
@@ -765,9 +1357,9 @@
     12,
     21,
     23,
-    50,
     84,
-    82
+    58,
+    172
    ]
   },
   {
@@ -777,11 +1369,20 @@
    "cover": "https://image.aladin.co.kr/product/28376/87/cover500/k642835600_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=283768718",
+   "kyobo": "",
    "field": "글쓰기·읽기",
    "tags": [
-    "책읽기/글쓰기",
     "글쓰기"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "은유를 글쓰기에 끌어들이는 관점",
+   "topics": [
+    "글쓰기",
+    "은유"
+   ],
+   "form": "이론서",
    "sources": [],
    "read": true,
    "readAt": "2026-02",
@@ -790,9 +1391,9 @@
     12,
     21,
     22,
-    50,
     84,
-    82
+    58,
+    172
    ]
   },
   {
@@ -802,13 +1403,20 @@
    "cover": "https://image.aladin.co.kr/product/33995/2/cover500/k392930645_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=339950299",
+   "kyobo": "",
    "field": "건강·생활",
    "tags": [
-    "사진",
-    "사진 실기",
-    "취미기타",
-    "사진/비디오 촬영"
+    "사진"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "스마트폰으로 사진과 영상을 찍고 보정하기",
+   "topics": [
+    "사진",
+    "스마트폰"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2026-02",
@@ -818,23 +1426,39 @@
     77,
     113,
     114,
-    128
+    127
    ]
   },
   {
    "title": "논리적으로 말하는 테크닉",
-   "author": "",
+   "author": "데구치 히로시, 현유경",
    "englishTitle": "Logical Speaking Techniques",
-   "cover": "",
-   "publisher": "",
+   "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788994567426.jpg",
+   "publisher": "인포더북스",
    "aladin": "",
+   "kyobo": "https://product.kyobobook.co.kr/detail/S000001551449",
    "field": "",
-   "tags": [],
+   "tags": [
+    "말하기"
+   ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "말이 전달되지 않는 이유를 대화 형식으로 풀어낸 논리적 말하기",
+   "topics": [
+    "말하기",
+    "논리"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2026-02",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    3,
+    27,
+    150
+   ]
   },
   {
    "title": "모든 관계는 말투에서 시작된다",
@@ -843,19 +1467,28 @@
    "cover": "https://image.aladin.co.kr/product/17251/48/cover500/8960863858_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=172514897",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "협상/설득/화술",
-    "화술"
+    "대화"
    ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "말투를 바꿔 관계를 바꾸는 법",
+   "topics": [
+    "말투",
+    "관계"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2026-02",
    "addedAt": "",
    "similar": [
-    27,
     31,
-    3,
+    168,
+    191,
     0,
     4,
     5
@@ -868,19 +1501,28 @@
    "cover": "https://image.aladin.co.kr/product/16257/61/cover500/k672533245_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=162576111",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "협상/설득/화술",
-    "화술"
+    "말하기"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "성질이 아니라 인격으로 다듬어 말하기",
+   "topics": [
+    "말하기",
+    "태도"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2026-02",
    "addedAt": "",
    "similar": [
-    26,
-    31,
+    150,
     3,
+    25,
     0,
     4,
     5
@@ -893,12 +1535,22 @@
    "cover": "https://image.aladin.co.kr/product/36769/7/cover500/8966264816_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=367690703",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "인공지능",
-    "성공",
-    "성공학"
+    "AI",
+    "학습"
    ],
+   "groups": [
+    "데이터·AI",
+    "배우기·생각"
+   ],
+   "gist": "챗GPT로 백 일 만에 소프트웨어 엔지니어가 된 기록",
+   "topics": [
+    "AI",
+    "학습"
+   ],
+   "form": "회고·전기",
    "sources": [
     {
      "id": "company",
@@ -909,12 +1561,12 @@
    "readAt": "2026-01",
    "addedAt": "",
    "similar": [
-    35,
+    49,
+    145,
+    173,
     0,
-    1,
-    4,
-    5,
-    33
+    52,
+    53
    ]
   },
   {
@@ -924,23 +1576,31 @@
    "cover": "https://image.aladin.co.kr/product/2274/7/cover500/8966260667_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=22740732",
+   "kyobo": "",
    "field": "일·경영",
    "tags": [
-    "창의적사고/두뇌계발",
-    "CEO/비즈니스맨을 위한 능력계발",
-    "성공학/경력관리"
+    "문제 해결"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "문제를 푸는 것보다 문제를 정의하는 것이 먼저",
+   "topics": [
+    "문제 정의",
+    "사고"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2026-01",
    "addedAt": "",
    "similar": [
     9,
-    75,
-    35,
-    3,
-    136,
-    12
+    12,
+    166,
+    32,
+    1,
+    3
    ]
   },
   {
@@ -950,13 +1610,20 @@
    "cover": "https://image.aladin.co.kr/product/36568/61/cover500/k872039245_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=365686101",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "명사에세이",
-    "기타 명사에세이",
-    "음식에세이",
-    "한국에세이"
+    "음식"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "셰프 최강록이 요리와 식당을 돌아본 자전 에세이",
+   "topics": [
+    "요리",
+    "셰프"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "paper",
@@ -967,12 +1634,12 @@
    "readAt": "2026-01",
    "addedAt": "",
    "similar": [
+    66,
+    127,
+    6,
     8,
-    57,
-    88,
-    46,
-    55,
-    109
+    11,
+    44
    ]
   },
   {
@@ -982,23 +1649,31 @@
    "cover": "https://image.aladin.co.kr/product/27757/1/cover500/8950996944_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=277570173",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "협상/설득/화술",
-    "화술",
-    "인간관계"
+    "대화"
    ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "하버드 협상팀이 정리한 어려운 대화 다루는 법",
+   "topics": [
+    "대화",
+    "갈등"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2026-01",
    "addedAt": "",
    "similar": [
     26,
-    27,
-    3,
-    34,
-    59,
-    109
+    168,
+    191,
+    0,
+    4,
+    5
    ]
   },
   {
@@ -1008,15 +1683,22 @@
    "cover": "https://image.aladin.co.kr/product/37840/18/cover500/k512033705_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=378401803",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "컴퓨터 공학",
-    "소프트웨어 공학",
-    "기업 경영",
-    "조직/인력/성과관리",
-    "CEO/비즈니스맨을 위한 능력계발",
-    "간부학/리더십"
+    "개발자 태도",
+    "문제 해결"
    ],
+   "groups": [
+    "개발·기술",
+    "배우기·생각"
+   ],
+   "gist": "성능 문제를 진단하는 엔지니어의 사고법",
+   "topics": [
+    "성능",
+    "진단"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -1028,11 +1710,11 @@
    "addedAt": "",
    "similar": [
     18,
-    49,
-    51,
-    60,
     95,
-    102
+    106,
+    137,
+    146,
+    166
    ]
   },
   {
@@ -1042,11 +1724,20 @@
    "cover": "https://image.aladin.co.kr/product/33280/38/cover500/k432938978_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332803864",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "성공",
-    "성공학"
+    "커리어"
    ],
+   "groups": [
+    "일·조직"
+   ],
+   "gist": "CD Baby 창업자 데릭 시버스의 짧은 생각들",
+   "topics": [
+    "창업",
+    "삶"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "paper",
@@ -1057,12 +1748,12 @@
    "readAt": "2026-01",
    "addedAt": "",
    "similar": [
+    20,
+    42,
+    140,
     0,
     4,
-    5,
-    37,
-    38,
-    41
+    5
    ]
   },
   {
@@ -1072,13 +1763,20 @@
    "cover": "https://image.aladin.co.kr/product/18828/9/cover500/8968061513_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=188280906",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "성공",
-    "성공학",
-    "인간관계",
-    "교양심리학"
+    "관계"
    ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "직장에서 감정을 다루는 법",
+   "topics": [
+    "감정",
+    "직장"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -1089,12 +1787,12 @@
    "readAt": "2025-12",
    "addedAt": "",
    "similar": [
-    59,
-    119,
-    109,
-    170,
-    0,
-    1
+    110,
+    118,
+    1,
+    10,
+    13,
+    14
    ]
   },
   {
@@ -1104,15 +1802,20 @@
    "cover": "https://image.aladin.co.kr/product/26565/83/cover500/8965402913_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=265658321",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "CEO/비즈니스맨을 위한 능력계발",
-    "성공학/경력관리",
-    "트렌드/미래전망",
-    "인공지능/빅데이터",
-    "성공",
-    "성공학"
+    "데이터 분석"
    ],
+   "groups": [
+    "데이터·AI"
+   ],
+   "gist": "데이터에서 결론을 끌어내는 사고 순서",
+   "topics": [
+    "데이터",
+    "사고"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -1123,12 +1826,12 @@
    "readAt": "2025-12",
    "addedAt": "",
    "similar": [
+    17,
+    123,
+    18,
     28,
-    0,
-    1,
-    4,
-    5,
-    29
+    32,
+    49
    ]
   },
   {
@@ -1138,26 +1841,31 @@
    "cover": "https://image.aladin.co.kr/product/31733/79/cover500/k012833095_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317337987",
+   "kyobo": "",
    "field": "일·경영",
    "tags": [
-    "기업 경영",
-    "조직/인력/성과관리",
-    "e-비즈니스",
-    "리더십",
-    "e비즈니스/창업",
-    "e-비즈니스/온라인 창업"
+    "HR"
    ],
+   "groups": [
+    "일·조직"
+   ],
+   "gist": "채용 담당자의 실무 절차와 판단 기준",
+   "topics": [
+    "채용",
+    "HR"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2025-12",
    "addedAt": "",
    "similar": [
-    9,
-    85,
-    32,
     1,
+    3,
+    9,
+    29,
     48,
-    92
+    72
    ]
   },
   {
@@ -1167,13 +1875,21 @@
    "cover": "https://image.aladin.co.kr/product/34426/19/cover500/k812932026_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=344261992",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "힐링",
-    "마음 다스리기",
-    "성공",
-    "성공학"
+    "멘탈",
+    "심리"
    ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "스포츠 심리 상담가가 정리한 멘탈 관리법",
+   "topics": [
+    "멘탈",
+    "심리"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -1184,12 +1900,12 @@
    "readAt": "2025-12",
    "addedAt": "",
    "similar": [
-    0,
-    4,
-    5,
-    33,
-    38,
-    41
+    109,
+    153,
+    169,
+    176,
+    59,
+    73
    ]
   },
   {
@@ -1199,22 +1915,33 @@
    "cover": "https://image.aladin.co.kr/product/34040/97/cover500/8925574977_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340409751",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "성공",
-    "성공학"
+    "일하는 법",
+    "개발 조직"
    ],
+   "groups": [
+    "일·조직",
+    "개발·기술"
+   ],
+   "gist": "애플의 일하는 방식 — 회의·협업·단순화",
+   "topics": [
+    "일하는 법",
+    "조직"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2025-11",
    "addedAt": "",
    "similar": [
-    0,
-    4,
-    5,
-    33,
-    37,
-    41
+    107,
+    132,
+    41,
+    140,
+    141,
+    7
    ]
   },
   {
@@ -1224,15 +1951,20 @@
    "cover": "https://image.aladin.co.kr/product/32776/97/cover500/k502936287_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=327769788",
+   "kyobo": "",
    "field": "글쓰기·읽기",
    "tags": [
-    "예술/대중문화의 이해",
-    "미학/예술이론",
-    "마케팅/세일즈",
-    "마케팅/브랜드",
-    "CEO/비즈니스맨을 위한 능력계발",
-    "기획/정보/문서관리"
+    "사고법"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "에디터가 의미를 만들어내는 열두 가지 사고법",
+   "topics": [
+    "편집",
+    "사고"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -1243,12 +1975,12 @@
    "readAt": "2025-11",
    "addedAt": "",
    "similar": [
-    1,
-    48,
-    75,
+    4,
+    130,
     136,
-    3,
-    9
+    154,
+    12,
+    21
    ]
   },
   {
@@ -1258,10 +1990,22 @@
    "cover": "https://image.aladin.co.kr/product/33809/20/cover500/k062930585_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=338092098",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "교양 인문학"
+    "일하는 법",
+    "에세이"
    ],
+   "groups": [
+    "일·조직",
+    "문학"
+   ],
+   "gist": "목수이자 건축가인 저자가 완벽을 좇으며 배운 것",
+   "topics": [
+    "완벽주의",
+    "일"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "paper",
@@ -1272,12 +2016,12 @@
    "readAt": "2025-11",
    "addedAt": "",
    "similar": [
-    10,
-    13,
     14,
-    78,
-    144,
-    50
+    7,
+    38,
+    41,
+    45,
+    55
    ]
   },
   {
@@ -1287,11 +2031,20 @@
    "cover": "https://image.aladin.co.kr/product/26023/31/cover500/8901248166_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=260233162",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "성공",
-    "성공학"
+    "일하는 법"
    ],
+   "groups": [
+    "일·조직"
+   ],
+   "gist": "기술이 아니라 감각으로 일하는 사람을 두 저자가 주고받으며 파고든 대담",
+   "topics": [
+    "일하는 법",
+    "감각"
+   ],
+   "form": "인터뷰·대담",
    "sources": [
     {
      "id": "paper",
@@ -1302,12 +2055,12 @@
    "readAt": "2025-11",
    "addedAt": "",
    "similar": [
-    0,
-    4,
-    5,
-    33,
-    37,
-    38
+    38,
+    140,
+    141,
+    7,
+    40,
+    107
    ]
   },
   {
@@ -1317,11 +2070,20 @@
    "cover": "https://image.aladin.co.kr/product/30908/56/cover500/k472831588_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=309085697",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "성공",
-    "성공학"
+    "커리어"
    ],
+   "groups": [
+    "일·조직"
+   ],
+   "gist": "커리어 코치가 말하는, 열심히 말고 전략적으로 일하기",
+   "topics": [
+    "커리어",
+    "전략"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -1332,12 +2094,12 @@
    "readAt": "2025-11",
    "addedAt": "",
    "similar": [
+    20,
+    33,
+    140,
     0,
     4,
-    5,
-    33,
-    37,
-    38
+    5
    ]
   },
   {
@@ -1347,13 +2109,32 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "kyobo": "",
    "field": "",
-   "tags": [],
+   "tags": [
+    "개발자 커리어"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "채용하는 쪽 눈으로 본 소프트웨어 엔지니어 이력서 쓰는 법",
+   "topics": [
+    "이력서",
+    "커리어"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2025-10",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    99,
+    101,
+    102,
+    156,
+    165,
+    175
+   ]
   },
   {
    "title": "그림들",
@@ -1362,14 +2143,20 @@
    "cover": "https://image.aladin.co.kr/product/29110/98/cover500/k052837263_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=291109856",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "미술",
-    "화집",
-    "예술에세이",
-    "미술에세이",
-    "미술 이야기"
+    "예술"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "뉴욕 현대미술관 대표 작품을 도슨트가 풀어준 해설",
+   "topics": [
+    "미술",
+    "모마"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2025-09",
@@ -1390,25 +2177,33 @@
    "cover": "https://image.aladin.co.kr/product/37231/18/cover500/8901297450_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372311844",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "외국에세이",
-    "예술에세이",
-    "미술에세이",
-    "미술",
-    "미술 이야기"
+    "예술",
+    "에세이"
    ],
+   "groups": [
+    "몸·취미",
+    "문학"
+   ],
+   "gist": "형을 잃고 미술관 경비원으로 일한 십 년의 기록",
+   "topics": [
+    "미술관",
+    "상실"
+   ],
+   "form": "에세이",
    "sources": [],
    "read": true,
    "readAt": "2025-09",
    "addedAt": "",
    "similar": [
     44,
-    6,
-    11,
+    55,
     58,
-    8,
-    30
+    14,
+    40,
+    6
    ]
   },
   {
@@ -1418,25 +2213,31 @@
    "cover": "https://image.aladin.co.kr/product/17675/63/cover500/k972534610_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=176756346",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "미국여행",
-    "미국여행 에세이",
-    "여행에세이",
-    "해외여행에세이",
-    "한국에세이"
+    "여행"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "칠 년간 뉴욕에 머물며 품은 의문을 하나씩 풀어간 여행기",
+   "topics": [
+    "뉴욕",
+    "여행"
+   ],
+   "form": "에세이",
    "sources": [],
    "read": true,
    "readAt": "2025-09",
    "addedAt": "",
    "similar": [
+    47,
     64,
+    66,
+    6,
     8,
-    30,
-    55,
-    57,
-    88
+    11
    ]
   },
   {
@@ -1446,21 +2247,33 @@
    "cover": "https://image.aladin.co.kr/product/32091/45/cover500/k162834197_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320914582",
+   "kyobo": "",
    "field": "역사·사회",
    "tags": [
-    "아메리카사",
-    "미국/캐나다사",
-    "미국여행",
-    "미국여행 가이드북"
+    "여행",
+    "역사"
    ],
+   "groups": [
+    "몸·취미",
+    "삶·교양"
+   ],
+   "gist": "뉴욕이라는 도시가 만들어진 내력",
+   "topics": [
+    "뉴욕",
+    "도시사"
+   ],
+   "form": "이론서",
    "sources": [],
    "read": true,
    "readAt": "2025-09",
    "addedAt": "",
    "similar": [
     46,
+    64,
+    66,
+    133,
     16,
-    53
+    148
    ]
   },
   {
@@ -1470,26 +2283,31 @@
    "cover": "https://image.aladin.co.kr/product/31088/38/cover500/k742831839_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310883870",
+   "kyobo": "",
    "field": "일·경영",
    "tags": [
-    "기업 경영",
-    "경영전략/혁신",
-    "마케팅/세일즈",
-    "마케팅/브랜드",
-    "기획/보고",
-    "기획"
+    "UI/UX"
    ],
+   "groups": [
+    "만들기"
+   ],
+   "gist": "서비스와 공간의 작은 디테일을 모아 왜 좋은지 뜯어본 기록",
+   "topics": [
+    "UI/UX",
+    "관찰"
+   ],
+   "form": "에세이",
    "sources": [],
    "read": true,
    "readAt": "2025-09",
    "addedAt": "",
    "similar": [
+    2,
+    62,
+    119,
+    192,
     1,
-    92,
-    136,
-    17,
-    39,
-    36
+    3
    ]
   },
   {
@@ -1499,11 +2317,22 @@
    "cover": "https://image.aladin.co.kr/product/17597/74/cover500/8966262333_1.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=175977462",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "컴퓨터 공학",
-    "소프트웨어 공학"
+    "애자일",
+    "학습"
    ],
+   "groups": [
+    "개발·기술",
+    "배우기·생각"
+   ],
+   "gist": "애자일을 개인과 팀의 학습 문제로 풀어낸 짧은 글 모음",
+   "topics": [
+    "성장",
+    "애자일"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kyobo",
@@ -1518,12 +2347,12 @@
    "readAt": "2025-09",
    "addedAt": "",
    "similar": [
-    18,
-    32,
+    28,
     51,
-    60,
-    95,
-    102
+    138,
+    158,
+    0,
+    52
    ]
   },
   {
@@ -1533,12 +2362,20 @@
    "cover": "https://image.aladin.co.kr/product/15683/56/cover500/k112533130_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=156835614",
+   "kyobo": "",
    "field": "글쓰기·읽기",
    "tags": [
-    "교양 인문학",
-    "책읽기/글쓰기",
-    "글쓰기"
+    "노트·기록"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "노트가 성취를 만든 인물들의 사례와 그들의 기록법",
+   "topics": [
+    "노트",
+    "기록"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -1549,12 +2386,12 @@
    "readAt": "2025-08",
    "addedAt": "",
    "similar": [
+    84,
+    91,
+    172,
     12,
     21,
-    22,
-    23,
-    84,
-    82
+    22
    ]
   },
   {
@@ -1564,11 +2401,21 @@
    "cover": "https://image.aladin.co.kr/product/97/91/cover500/8991268099_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=979171",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "컴퓨터 공학",
-    "소프트웨어 공학"
+    "개발 방법론",
+    "애자일"
    ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "도요타 린 원칙을 소프트웨어 개발로 옮긴 스물두 가지 도구",
+   "topics": [
+    "린",
+    "애자일"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -1579,12 +2426,12 @@
    "readAt": "2025-08",
    "addedAt": "",
    "similar": [
-    18,
-    32,
     49,
-    60,
-    95,
-    102
+    138,
+    158,
+    187,
+    17,
+    18
    ]
   },
   {
@@ -1594,10 +2441,22 @@
    "cover": "https://image.aladin.co.kr/product/6872/94/cover500/k832434173_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=68729431",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "창의적사고/두뇌계발"
+    "학습",
+    "개발자 태도"
    ],
+   "groups": [
+    "배우기·생각",
+    "개발·기술"
+   ],
+   "gist": "뇌가 배우는 방식에 맞춰 학습과 사고를 설계하기",
+   "topics": [
+    "학습",
+    "사고"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -1608,27 +2467,36 @@
    "readAt": "2025-08",
    "addedAt": "",
    "similar": [
-    91,
-    29,
-    75,
-    93,
     0,
-    4
+    53,
+    67,
+    81,
+    18,
+    28
    ]
   },
   {
    "title": "안다는 착각",
-   "author": "김봉중",
+   "author": "니시바야시 가츠히코",
    "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/34795/55/cover500/k762933228_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=347955545",
-   "field": "역사·사회",
+   "cover": "https://image.aladin.co.kr/product/36374/3/cover500/k322039476_1.jpg",
+   "publisher": "21세기북스",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=363740383",
+   "kyobo": "",
+   "field": "자기계발",
    "tags": [
-    "정치학/외교학/행정학",
-    "각국정치사정/정치사",
-    "미국"
+    "학습",
+    "독서"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "읽고 안다고 여겼는데 물으면 답 못 하는 이유",
+   "topics": [
+    "독해",
+    "학습"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -1639,8 +2507,12 @@
    "readAt": "2025-08",
    "addedAt": "",
    "similar": [
-    16,
-    47
+    0,
+    52,
+    67,
+    69,
+    81,
+    28
    ]
   },
   {
@@ -1650,11 +2522,19 @@
    "cover": "https://image.aladin.co.kr/product/36412/40/cover500/k392039891_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364124045",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "성공",
-    "성공학"
+    "의사결정"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "결정을 미루지 않고 빠르게 내리는 법",
+   "topics": [
+    "의사결정"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -1665,12 +2545,12 @@
    "readAt": "2025-08",
    "addedAt": "",
    "similar": [
+    157,
+    131,
     0,
     4,
     5,
-    33,
-    37,
-    38
+    20
    ]
   },
   {
@@ -1680,10 +2560,22 @@
    "cover": "https://image.aladin.co.kr/product/36817/55/cover500/k322030103_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=368175533",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "한국에세이"
+    "INFJ",
+    "에세이"
    ],
+   "groups": [
+    "마음·관계",
+    "문학"
+   ],
+   "gist": "내향형 의사가 쓴 병원의 하루",
+   "topics": [
+    "의사",
+    "내향"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "paper",
@@ -1694,12 +2586,12 @@
    "readAt": "2025-08",
    "addedAt": "",
    "similar": [
-    8,
-    30,
-    46,
-    57,
-    88,
-    109
+    11,
+    45,
+    58,
+    14,
+    40,
+    6
    ]
   },
   {
@@ -1709,14 +2601,20 @@
    "cover": "https://image.aladin.co.kr/product/36387/54/cover500/k702039674_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=363875410",
+   "kyobo": "",
    "field": "문학",
    "tags": [
-    "독일소설",
-    "세계의 문학",
-    "독일문학",
-    "테마문학",
-    "영화소설"
+    "인생"
    ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "괴짜 농부를 만난 이틀 동안 삶을 다시 보게 되는 독일 소설",
+   "topics": [
+    "삶",
+    "독일소설"
+   ],
+   "form": "소설",
    "sources": [
     {
      "id": "paper",
@@ -1727,12 +2625,12 @@
    "readAt": "2025-07",
    "addedAt": "",
    "similar": [
-    118,
-    79,
-    178,
-    15,
     19,
-    61
+    142,
+    149,
+    57,
+    80,
+    114
    ]
   },
   {
@@ -1742,12 +2640,20 @@
    "cover": "https://image.aladin.co.kr/product/36114/12/cover500/s602038067_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361141292",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "한국에세이",
-    "명사에세이",
-    "문인에세이"
+    "인생"
    ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "김영하가 한 번뿐인 삶을 두고 쓴 산문",
+   "topics": [
+    "삶",
+    "산문"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "paper",
@@ -1758,12 +2664,12 @@
    "readAt": "2025-07",
    "addedAt": "",
    "similar": [
-    8,
-    30,
-    88,
-    46,
-    55,
-    109
+    147,
+    19,
+    56,
+    80,
+    114,
+    142
    ]
   },
   {
@@ -1773,10 +2679,24 @@
    "cover": "https://image.aladin.co.kr/product/302/5/cover500/8970128336_3.jpg",
    "publisher": "문학사상",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=3020589",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "외국에세이"
+    "운동",
+    "글쓰기",
+    "에세이"
    ],
+   "groups": [
+    "몸·취미",
+    "배우기·생각",
+    "문학"
+   ],
+   "gist": "하루키가 달리기를 축으로 풀어낸 글쓰기와 삶",
+   "topics": [
+    "달리기",
+    "글쓰기"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "kyobo",
@@ -1788,11 +2708,11 @@
    "addedAt": "",
    "similar": [
     6,
-    11,
     45,
-    8,
-    30,
-    44
+    55,
+    12,
+    14,
+    21
    ]
   },
   {
@@ -1802,13 +2722,21 @@
    "cover": "https://image.aladin.co.kr/product/1781/7/cover500/8952766016_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=17810770",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "인간관계",
-    "교양심리학",
-    "성공",
-    "성공학"
+    "심리",
+    "습관"
    ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "스탠퍼드 의지력 강의 — 자제력이 어떻게 작동하고 어떻게 늘어나는가",
+   "topics": [
+    "의지력",
+    "심리"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -1819,12 +2747,12 @@
    "readAt": "2025-07",
    "addedAt": "",
    "similar": [
-    34,
-    119,
+    73,
     109,
-    170,
-    0,
-    1
+    131,
+    143,
+    153,
+    169
    ]
   },
   {
@@ -1834,11 +2762,22 @@
    "cover": "https://image.aladin.co.kr/product/35307/22/cover500/k312035179_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353072248",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "컴퓨터 공학",
-    "소프트웨어 공학"
+    "팀",
+    "개발 조직"
    ],
+   "groups": [
+    "일·조직",
+    "개발·기술"
+   ],
+   "gist": "구글 엔지니어링 리더가 정리한 팀 이끌기",
+   "topics": [
+    "팀",
+    "리더십"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -1849,12 +2788,12 @@
    "readAt": "2025-06",
    "addedAt": "",
    "similar": [
-    18,
-    32,
-    49,
-    51,
-    95,
-    102
+    85,
+    107,
+    106,
+    144,
+    145,
+    9
    ]
   },
   {
@@ -1864,26 +2803,31 @@
    "cover": "https://image.aladin.co.kr/product/4164/0/cover500/8976041488_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=41640064",
+   "kyobo": "",
    "field": "문학",
    "tags": [
-    "추리/미스터리소설",
-    "영미 추리/미스터리소설",
-    "서양고전문학",
-    "서양근대문학",
-    "세계의 문학",
-    "영국문학"
+    "추리"
    ],
+   "groups": [
+    "문학"
+   ],
+   "gist": "홈즈와 왓슨이 처음 만나는 셜록 홈즈 첫 장편",
+   "topics": [
+    "추리",
+    "셜록"
+   ],
+   "form": "소설",
    "sources": [],
    "read": true,
    "readAt": "2025-05",
    "addedAt": "",
    "similar": [
-    178,
-    19,
-    121,
     63,
-    79,
-    118
+    7,
+    15,
+    19,
+    56,
+    79
    ]
   },
   {
@@ -1893,14 +2837,20 @@
    "cover": "https://image.aladin.co.kr/product/4927/43/cover500/8966261213_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49274393",
+   "kyobo": "",
    "field": "디자인",
    "tags": [
-    "웹디자인/홈페이지",
-    "웹기획",
-    "그래픽/멀티미디어",
-    "그래픽 일반",
-    "웹디자인 기타"
+    "UI/UX"
    ],
+   "groups": [
+    "만들기"
+   ],
+   "gist": "웹 사용성의 기본 — 생각하게 만들면 진 것이다",
+   "topics": [
+    "UI/UX",
+    "사용성"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -1911,7 +2861,12 @@
    "readAt": "2025-04",
    "addedAt": "",
    "similar": [
-    2
+    2,
+    119,
+    192,
+    48,
+    100,
+    134
    ]
   },
   {
@@ -1921,23 +2876,31 @@
    "cover": "https://image.aladin.co.kr/product/35/9/cover500/8938201015_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=350931",
+   "kyobo": "",
    "field": "문학",
    "tags": [
-    "추리/미스터리소설",
-    "영미 추리/미스터리소설",
-    "영미소설"
+    "추리"
    ],
+   "groups": [
+    "문학"
+   ],
+   "gist": "섬에 모인 열 사람이 하나씩 죽어가는 추리 고전",
+   "topics": [
+    "추리",
+    "크리스티"
+   ],
+   "form": "소설",
    "sources": [],
    "read": true,
    "readAt": "2025-04",
    "addedAt": "",
    "similar": [
     61,
-    178,
     7,
     15,
     19,
-    56
+    56,
+    79
    ]
   },
   {
@@ -1947,26 +2910,31 @@
    "cover": "https://image.aladin.co.kr/product/13686/32/cover500/k062532611_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=136863291",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "유럽여행",
-    "유럽여행 에세이",
-    "교양만화",
-    "실용만화",
-    "여행에세이",
-    "해외여행에세이"
+    "여행"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "소심한 저자의 유럽 배낭여행 만화",
+   "topics": [
+    "여행",
+    "유럽"
+   ],
+   "form": "만화",
    "sources": [],
    "read": true,
    "readAt": "2025-04",
    "addedAt": "",
    "similar": [
     46,
+    47,
+    66,
     10,
     13,
-    14,
-    34,
-    40
+    14
    ]
   },
   {
@@ -1976,15 +2944,22 @@
    "cover": "https://image.aladin.co.kr/product/35493/29/cover500/k012035556_1.jpg",
    "publisher": "김영사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=354932983",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "기초과학/교양과학",
-    "뇌과학",
-    "뇌과학 일반",
-    "수학",
-    "쉽게 배우는 수학",
-    "확률/통계학"
+    "통계·수학",
+    "철학"
    ],
+   "groups": [
+    "데이터·AI",
+    "삶·교양"
+   ],
+   "gist": "베이즈 정리로 세상을 보는 법",
+   "topics": [
+    "베이즈",
+    "확률"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "kyobo",
@@ -1995,12 +2970,12 @@
    "readAt": "2025-04",
    "addedAt": "",
    "similar": [
-    10,
-    13,
     14,
-    34,
-    40,
-    59
+    80,
+    83,
+    104,
+    111,
+    147
    ]
   },
   {
@@ -2010,13 +2985,21 @@
    "cover": "https://image.aladin.co.kr/product/33663/70/cover500/k882939627_1.jpg",
    "publisher": "책밥",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336637033",
+   "kyobo": "",
    "field": "여행",
    "tags": [
-    "홍콩/대만/마카오여행",
-    "홍콩/대만/마카오여행 가이드북",
-    "테마여행",
-    "맛집여행"
+    "여행",
+    "음식"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "대만 로컬 먹거리를 그림으로 훑은 미식 여행기",
+   "topics": [
+    "대만",
+    "음식"
+   ],
+   "form": "만화",
    "sources": [
     {
      "id": "kyobo",
@@ -2026,7 +3009,14 @@
    "read": true,
    "readAt": "2025-04",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    30,
+    46,
+    47,
+    64,
+    127,
+    125
+   ]
   },
   {
    "title": "80:20 학습법",
@@ -2035,11 +3025,20 @@
    "cover": "https://image.aladin.co.kr/product/35577/46/cover500/k842036086_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355774608",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "성공",
-    "성공학"
+    "학습"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "결과의 팔 할을 만드는 이 할에 집중하는 학습법",
+   "topics": [
+    "학습",
+    "효율"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -2051,11 +3050,11 @@
    "addedAt": "",
    "similar": [
     0,
-    4,
-    5,
-    33,
-    37,
-    38
+    52,
+    53,
+    81,
+    28,
+    49
    ]
   },
   {
@@ -2065,16 +3064,29 @@
    "cover": "https://image.aladin.co.kr/product/18400/68/cover500/s652834191_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=184006846",
+   "kyobo": "",
    "field": "과학",
    "tags": [
-    "의학"
+    "건강"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "잠이 몸과 뇌에 하는 일을 신경과학으로",
+   "topics": [
+    "수면",
+    "뇌과학"
+   ],
+   "form": "이론서",
    "sources": [],
    "read": true,
    "readAt": "2025-03",
    "addedAt": "",
    "similar": [
-    114
+    71,
+    74,
+    116,
+    152
    ]
   },
   {
@@ -2084,13 +3096,20 @@
    "cover": "https://image.aladin.co.kr/product/13377/93/cover500/k082532104_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=133779316",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "성공",
-    "성공학",
-    "시간관리/정보관리",
-    "정보관리"
+    "독서"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "배민 김봉진의 독서법과 생각을 깨준 책 서른한 권",
+   "topics": [
+    "독서",
+    "기록"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -2101,12 +3120,12 @@
    "readAt": "2025-03",
    "addedAt": "",
    "similar": [
-    91,
-    5,
-    81,
+    53,
+    82,
+    93,
     0,
     4,
-    33
+    5
    ]
   },
   {
@@ -2116,21 +3135,31 @@
    "cover": "https://image.aladin.co.kr/product/30655/42/cover500/8956994412_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=306554256",
+   "kyobo": "",
    "field": "건강·생활",
    "tags": [
-    "헬스/피트니스"
+    "운동"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "헬스 초보를 위한 운동·식단 안내",
+   "topics": [
+    "운동",
+    "헬스"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2025-03",
    "addedAt": "",
    "similar": [
+    77,
     113,
     116,
+    58,
     24,
-    77,
-    114,
-    128
+    114
    ]
   },
   {
@@ -2140,13 +3169,20 @@
    "cover": "https://image.aladin.co.kr/product/32920/41/cover500/k902936837_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329204106",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "건강정보",
-    "건강에세이/건강정보",
-    "질병치료와 예방",
-    "기타질병"
+    "건강"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "약사가 목적별로 짚어주는 영양제 고르는 법",
+   "topics": [
+    "영양제",
+    "건강"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2025-03",
@@ -2154,8 +3190,8 @@
    "similar": [
     74,
     116,
-    153,
-    114,
+    152,
+    68,
     6,
     8
    ]
@@ -2167,11 +3203,20 @@
    "cover": "https://image.aladin.co.kr/product/34009/78/cover500/k772931867_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340097859",
+   "kyobo": "",
    "field": "일·경영",
    "tags": [
-    "경제학/경제일반",
-    "화폐/금융/재정"
+    "돈"
    ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "토스가 만든 돈 공부 입문",
+   "topics": [
+    "금융",
+    "돈"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -2197,11 +3242,21 @@
    "cover": "https://image.aladin.co.kr/product/31478/24/cover500/k002832522_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=314782464",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "심리학/정신분석학",
-    "교양 심리학"
+    "완벽주의",
+    "심리"
    ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "완벽주의를 다루는 임상심리 훈련",
+   "topics": [
+    "완벽주의",
+    "불안"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -2212,12 +3267,12 @@
    "readAt": "2025-02",
    "addedAt": "",
    "similar": [
-    144,
-    170,
-    80,
-    140,
-    10,
-    13
+    143,
+    59,
+    109,
+    131,
+    153,
+    169
    ]
   },
   {
@@ -2227,12 +3282,20 @@
    "cover": "https://image.aladin.co.kr/product/39597/61/cover500/k862130770_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=395976130",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "다이어트",
-    "건강정보",
-    "건강에세이/건강정보"
+    "건강"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "인슐린으로 설명하는 비만의 원인",
+   "topics": [
+    "비만",
+    "인슐린"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -2243,40 +3306,46 @@
    "readAt": "2025-02",
    "addedAt": "",
    "similar": [
-    116,
     71,
-    153,
+    116,
+    152,
+    68,
     6,
-    8,
-    11
+    8
    ]
   },
   {
    "title": "정리의 기술",
-   "author": "드니 르보, 장 뤽 들라드리에르",
+   "author": "곤도 마리에",
    "englishTitle": "The Life-Changing Magic of Tidying Up",
-   "cover": "https://image.aladin.co.kr/product/90/36/cover500/8995737069_2.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=903605",
-   "field": "일·경영",
+   "cover": "https://image.aladin.co.kr/product/22949/43/cover500/8901234483_1.jpg",
+   "publisher": "웅진지식하우스",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=229494332",
+   "kyobo": "",
+   "field": "자기계발",
    "tags": [
-    "창의적사고/두뇌계발",
-    "CEO/비즈니스맨을 위한 능력계발",
-    "기획/정보/문서관리",
-    "시간관리/정보관리",
-    "정보관리"
+    "정리"
    ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "곤도 마리에의 정리법 실천편",
+   "topics": [
+    "정리",
+    "미니멀리즘"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2025-02",
    "addedAt": "",
    "similar": [
-    91,
-    93,
-    29,
-    136,
-    39,
-    69
+    0,
+    4,
+    5,
+    20,
+    26,
+    27
    ]
   },
   {
@@ -2286,8 +3355,20 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "kyobo": "",
    "field": "",
-   "tags": [],
+   "tags": [
+    "인프라"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "HTTP와 네트워크 기초를 그림으로 훑는 입문서",
+   "topics": [
+    "HTTP",
+    "네트워크"
+   ],
+   "form": "교재",
    "sources": [
     {
      "id": "company",
@@ -2297,7 +3378,9 @@
    "read": true,
    "readAt": "2025-01",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    108
+   ]
   },
   {
    "title": "아티스트의 탁구 노트",
@@ -2306,11 +3389,22 @@
    "cover": "https://image.aladin.co.kr/product/7113/79/cover500/k842434790_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=71137981",
+   "kyobo": "",
    "field": "건강·생활",
    "tags": [
-    "구기",
-    "기타"
+    "운동",
+    "성장"
    ],
+   "groups": [
+    "몸·취미",
+    "배우기·생각"
+   ],
+   "gist": "탁구에 빠진 화가의 십팔 개월 기록",
+   "topics": [
+    "탁구",
+    "취미"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "paper",
@@ -2321,11 +3415,12 @@
    "readAt": "2025-01",
    "addedAt": "",
    "similar": [
-    24,
     70,
     113,
+    58,
+    24,
     114,
-    128
+    127
    ]
   },
   {
@@ -2335,21 +3430,31 @@
    "cover": "https://image.aladin.co.kr/product/14799/66/cover500/8932473803_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=147996667",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "교양 인문학"
+    "건축"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "우리가 사는 공간의 기준을 다시 묻는 건축 이야기",
+   "topics": [
+    "건축",
+    "도시"
+   ],
+   "form": "에세이",
    "sources": [],
    "read": true,
    "readAt": "2025-01",
    "addedAt": "",
    "similar": [
     10,
+    163,
     13,
     14,
-    40,
-    144,
-    50
+    34,
+    40
    ]
   },
   {
@@ -2359,15 +3464,20 @@
    "cover": "https://image.aladin.co.kr/product/6865/38/cover500/8998046660_1.jpg",
    "publisher": "더클래식",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=68653840",
+   "kyobo": "",
    "field": "문학",
    "tags": [
-    "프랑스소설",
-    "서양고전문학",
-    "서양현대고전",
-    "세계의 문학",
-    "프랑스문학",
-    "테마문학"
+    "고전"
    ],
+   "groups": [
+    "문학"
+   ],
+   "gist": "사막에 불시착한 조종사가 만난 어린 왕자",
+   "topics": [
+    "고전",
+    "프랑스소설"
+   ],
+   "form": "소설",
    "sources": [
     {
      "id": "kyobo",
@@ -2378,12 +3488,12 @@
    "readAt": "2024-12",
    "addedAt": "",
    "similar": [
-    83,
-    118,
-    178,
     19,
-    56,
-    61
+    83,
+    117,
+    120,
+    164,
+    177
    ]
   },
   {
@@ -2393,23 +3503,32 @@
    "cover": "https://image.aladin.co.kr/product/38224/38/cover500/8936812629_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382243812",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "심리학/정신분석학",
-    "이론 심리학",
-    "인문 에세이"
+    "인생",
+    "철학"
    ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "아우슈비츠를 견딘 정신과 의사가 찾은 삶의 의미",
+   "topics": [
+    "의미",
+    "로고테라피"
+   ],
+   "form": "회고·전기",
    "sources": [],
    "read": true,
    "readAt": "2024-11",
    "addedAt": "",
    "similar": [
+    147,
+    149,
     14,
-    73,
-    140,
-    144,
-    170,
-    22
+    65,
+    19,
+    56
    ]
   },
   {
@@ -2419,13 +3538,20 @@
    "cover": "https://image.aladin.co.kr/product/8632/15/cover500/k312535674_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86321510",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "성공",
-    "성공학",
-    "시간관리/정보관리",
-    "시간관리"
+    "학습"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "시간이 아니라 의식적인 연습이 실력을 만든다",
+   "topics": [
+    "연습",
+    "학습"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -2436,12 +3562,12 @@
    "readAt": "2024-10",
    "addedAt": "",
    "similar": [
-    5,
-    91,
-    69,
     0,
-    4,
-    33
+    52,
+    53,
+    67,
+    28,
+    49
    ]
   },
   {
@@ -2451,11 +3577,19 @@
    "cover": "https://image.aladin.co.kr/product/29563/46/cover500/k762837255_2.jpg",
    "publisher": "위즈덤하우스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=295634618",
+   "kyobo": "",
    "field": "글쓰기·읽기",
    "tags": [
-    "책읽기/글쓰기",
-    "책읽기"
+    "독서"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "이동진이 책을 고르고 읽고 쌓아온 방식",
+   "topics": [
+    "독서"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kyobo",
@@ -2467,11 +3601,11 @@
    "addedAt": "",
    "similar": [
     93,
+    53,
+    69,
     12,
     21,
-    22,
-    23,
-    50
+    22
    ]
   },
   {
@@ -2481,12 +3615,22 @@
    "cover": "https://image.aladin.co.kr/product/37480/63/cover500/k932032019_1.jpg",
    "publisher": "민음사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374806339",
+   "kyobo": "",
    "field": "문학",
    "tags": [
-    "프랑스소설",
-    "세계의 문학",
-    "프랑스문학"
+    "고전",
+    "철학"
    ],
+   "groups": [
+    "문학",
+    "삶·교양"
+   ],
+   "gist": "어머니의 죽음에도 울지 않은 남자가 살인에 이르는 부조리",
+   "topics": [
+    "부조리",
+    "카뮈"
+   ],
+   "form": "소설",
    "sources": [
     {
      "id": "kyobo",
@@ -2497,12 +3641,12 @@
    "readAt": "2024-09",
    "addedAt": "",
    "similar": [
-    79,
-    118,
-    15,
+    164,
+    117,
     19,
-    56,
-    61
+    79,
+    120,
+    149
    ]
   },
   {
@@ -2512,24 +3656,32 @@
    "cover": "https://image.aladin.co.kr/product/32221/5/cover500/8993784787_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=322210531",
+   "kyobo": "",
    "field": "글쓰기·읽기",
    "tags": [
-    "스마트폰/태블릿/SNS",
-    "SNS",
-    "책읽기/글쓰기",
+    "노트·기록",
     "글쓰기"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "메모를 서로 연결해 글이 저절로 나오게 하는 노트 시스템",
+   "topics": [
+    "노트",
+    "글쓰기"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2024-09",
    "addedAt": "",
    "similar": [
+    172,
     12,
     21,
     22,
     23,
-    50,
-    82
+    50
    ]
   },
   {
@@ -2539,11 +3691,22 @@
    "cover": "https://image.aladin.co.kr/product/4313/29/cover500/8966261108_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=43132954",
+   "kyobo": "",
    "field": "일·경영",
    "tags": [
-    "기업 경영",
-    "조직/인력/성과관리"
+    "팀",
+    "개발 조직"
    ],
+   "groups": [
+    "일·조직",
+    "개발·기술"
+   ],
+   "gist": "소프트웨어 개발의 진짜 쟁점은 기술이 아니라 사람이라는 이야기",
+   "topics": [
+    "팀",
+    "조직"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -2554,12 +3717,12 @@
    "readAt": "2024-08",
    "addedAt": "",
    "similar": [
-    36,
-    32,
-    1,
-    48,
+    107,
+    60,
+    9,
     92,
-    136
+    121,
+    132
    ]
   },
   {
@@ -2569,23 +3732,31 @@
    "cover": "https://image.aladin.co.kr/product/10672/44/cover500/8937434083_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=106724468",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "시간관리/정보관리",
-    "시간관리",
-    "정보관리"
+    "시간 관리"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "방해 없이 깊게 몰입하는 시간을 확보하는 법",
+   "topics": [
+    "몰입",
+    "시간 관리"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2024-06",
    "addedAt": "",
    "similar": [
-    91,
-    182,
+    94,
+    181,
+    0,
+    4,
     5,
-    69,
-    81,
-    94
+    20
    ]
   },
   {
@@ -2595,12 +3766,20 @@
    "cover": "https://image.aladin.co.kr/product/33708/44/cover500/k472930471_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337084402",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "프로그래밍 개발/방법론",
-    "프로그래밍 기초/개발 방법론",
-    "객체지향 프로그래밍/UML"
+    "코드 품질"
    ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "코드를 언제 얼마나 정리할지 다룬 켄트 벡의 얇은 책",
+   "topics": [
+    "리팩터링",
+    "설계"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -2611,12 +3790,12 @@
    "readAt": "2024-05",
    "addedAt": "",
    "similar": [
-    171,
-    190,
+    160,
+    106,
+    122,
+    188,
     17,
-    90,
-    95,
-    102
+    18
    ]
   },
   {
@@ -2626,23 +3805,31 @@
    "cover": "https://image.aladin.co.kr/product/33038/40/cover500/k562937688_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330384053",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "명사에세이",
-    "방송연예인에세이",
-    "한국에세이"
+    "일상"
    ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "빠더너스 문상훈의 첫 산문집",
+   "topics": [
+    "산문",
+    "유튜브"
+   ],
+   "form": "에세이",
    "sources": [],
    "read": true,
    "readAt": "2024-04",
    "addedAt": "",
    "similar": [
+    6,
     8,
+    115,
+    11,
     30,
-    57,
-    46,
-    55,
-    109
+    44
    ]
   },
   {
@@ -2652,23 +3839,33 @@
    "cover": "https://image.aladin.co.kr/product/33375/15/cover500/8966264352_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=333751539",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "인공지능",
-    "컴퓨터 공학",
-    "데이터베이스 개론"
+    "ML",
+    "시스템 설계"
    ],
+   "groups": [
+    "데이터·AI",
+    "개발·기술"
+   ],
+   "gist": "머신러닝 시스템 설계를 면접 문제 형식으로 풀어본다",
+   "topics": [
+    "ML",
+    "시스템 설계"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2024-03",
    "addedAt": "",
    "similar": [
-    187,
-    18,
-    28,
-    32,
-    49,
-    51
+    179,
+    98,
+    104,
+    111,
+    134,
+    178
    ]
   },
   {
@@ -2678,11 +3875,20 @@
    "cover": "https://image.aladin.co.kr/product/20957/29/cover500/k512636276_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=209572978",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "프로그래밍 개발/방법론",
-    "프로그래밍 기초/개발 방법론"
+    "테크니컬 라이팅"
    ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "변수 이름·주석·에러 메시지부터 릴리스 노트까지",
+   "topics": [
+    "글쓰기",
+    "개발"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -2693,12 +3899,12 @@
    "readAt": "2024-02",
    "addedAt": "",
    "similar": [
+    103,
     17,
-    87,
-    95,
-    102,
-    138,
-    145
+    18,
+    28,
+    32,
+    35
    ]
   },
   {
@@ -2708,26 +3914,31 @@
    "cover": "https://image.aladin.co.kr/product/38221/28/cover500/k772034422_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382212819",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "성공",
-    "성공학",
-    "시간관리/정보관리",
-    "시간관리",
-    "정보관리",
-    "창의적사고/두뇌계발"
+    "노트·기록"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "기록학자가 정리한 기록하는 방법",
+   "topics": [
+    "기록",
+    "노트"
+   ],
+   "form": "가이드",
    "sources": [],
    "read": true,
    "readAt": "2024-02",
    "addedAt": "",
    "similar": [
-    5,
-    69,
-    81,
-    86,
-    182,
-    75
+    50,
+    84,
+    172,
+    0,
+    4,
+    5
    ]
   },
   {
@@ -2737,11 +3948,22 @@
    "cover": "https://image.aladin.co.kr/product/30369/69/cover500/k822839859_1.jpg",
    "publisher": "북스톤",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=303696963",
+   "kyobo": "",
    "field": "일·경영",
    "tags": [
-    "기업 경영",
-    "경영전략/혁신"
+    "창업",
+    "개발 조직"
    ],
+   "groups": [
+    "만들기",
+    "개발·기술"
+   ],
+   "gist": "토스팀이 만들어진 십 년의 기록",
+   "topics": [
+    "토스",
+    "창업"
+   ],
+   "form": "회고·전기",
    "sources": [
     {
      "id": "kyobo",
@@ -2752,12 +3974,12 @@
    "readAt": "2023-12",
    "addedAt": "",
    "similar": [
-    1,
-    48,
-    136,
-    17,
-    36,
-    85
+    9,
+    85,
+    107,
+    124,
+    129,
+    132
    ]
   },
   {
@@ -2767,14 +3989,19 @@
    "cover": "https://image.aladin.co.kr/product/39164/94/cover500/k752138963_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=391649440",
+   "kyobo": "",
    "field": "글쓰기·읽기",
    "tags": [
-    "책읽기/글쓰기",
-    "책읽기",
-    "시간관리/정보관리",
-    "정보관리",
-    "창의적사고/두뇌계발"
+    "독서"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "읽고 나서 남는 독서를 하는 법",
+   "topics": [
+    "독서"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -2785,12 +4012,12 @@
    "readAt": "2023-04",
    "addedAt": "",
    "similar": [
-    75,
-    91,
     82,
+    53,
     69,
-    86,
-    182
+    12,
+    21,
+    22
    ]
   },
   {
@@ -2800,11 +4027,20 @@
    "cover": "https://image.aladin.co.kr/product/18979/66/cover500/8934995254_1.jpg",
    "publisher": "김영사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=189796678",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "시간관리/정보관리",
-    "시간관리"
+    "시간 관리"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "하루에 하이라이트 하나를 정하는 시간 관리법",
+   "topics": [
+    "시간 관리",
+    "집중"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kyobo",
@@ -2815,12 +4051,12 @@
    "readAt": "2022-10",
    "addedAt": "",
    "similar": [
-    5,
-    81,
     86,
-    91,
-    182,
-    18
+    181,
+    135,
+    0,
+    4,
+    5
    ]
   },
   {
@@ -2830,15 +4066,20 @@
    "cover": "https://image.aladin.co.kr/product/29689/33/cover500/k962838585_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=296893356",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "컴퓨터 공학",
-    "소프트웨어 공학",
-    "취업/진로/유망직업",
-    "국내 진학/취업",
-    "프로그래밍 개발/방법론",
-    "프로그래밍 기초/개발 방법론"
+    "개발자 태도"
    ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "들인 노력 대비 성과가 큰 곳을 찾아내는 엔지니어의 기술",
+   "topics": [
+    "개발자",
+    "생산성"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -2849,12 +4090,12 @@
    "readAt": "2022-07",
    "addedAt": "",
    "similar": [
-    102,
     18,
-    145,
-    171,
-    187,
-    188
+    32,
+    106,
+    137,
+    146,
+    166
    ]
   },
   {
@@ -2864,8 +4105,20 @@
    "cover": "https://image.aladin.co.kr/product/32955/72/cover500/k222936240_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329557210",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "일·경영",
+   "tags": [
+    "사회"
+   ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "새 소비자이자 신입인 2000년대생 관찰기",
+   "topics": [
+    "세대",
+    "사회"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -2876,7 +4129,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    97
+    97,
+    148,
+    174,
+    1,
+    3,
+    9
    ]
   },
   {
@@ -2886,8 +4144,20 @@
    "cover": "https://image.aladin.co.kr/product/33730/69/cover500/k082939640_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337306986",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "일·경영",
+   "tags": [
+    "사회"
+   ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "조직과 시장에 들어온 90년대생 관찰기",
+   "topics": [
+    "세대",
+    "사회"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -2898,7 +4168,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    96
+    96,
+    148,
+    174,
+    1,
+    3,
+    9
    ]
   },
   {
@@ -2908,8 +4183,19 @@
    "cover": "https://image.aladin.co.kr/product/33040/41/cover500/8966264255_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330404121",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "시스템 설계"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "금융을 비롯한 대규모 시스템 설계 사례",
+   "topics": [
+    "시스템 설계"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -2919,7 +4205,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    89,
+    134,
+    178,
+    179,
+    17,
+    18
+   ]
   },
   {
    "title": "개발 7년차, 매니저 1일차",
@@ -2928,8 +4221,22 @@
    "cover": "https://image.aladin.co.kr/product/23096/5/cover500/k692637692_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=230960553",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "매니저",
+    "개발자 커리어"
+   ],
+   "groups": [
+    "일·조직",
+    "개발·기술"
+   ],
+   "gist": "개발자가 매니저가 되며 겪는 문제를 단계별로",
+   "topics": [
+    "매니저",
+    "리더십"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -2939,7 +4246,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    101,
+    102,
+    156,
+    175,
+    43,
+    159
+   ]
   },
   {
    "title": "개발자 원칙",
@@ -2948,8 +4262,20 @@
    "cover": "https://image.aladin.co.kr/product/34527/3/cover500/k112932855_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345270362",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "디자인",
+   "tags": [
+    "개발자 태도"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "아홉 명의 개발자가 각자 지켜온 원칙",
+   "topics": [
+    "개발자",
+    "커리어"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "company",
@@ -2959,7 +4285,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    18,
+    32,
+    52,
+    95,
+    106,
+    137
+   ]
   },
   {
    "title": "개발자로 살아남기",
@@ -2968,8 +4301,20 @@
    "cover": "https://image.aladin.co.kr/product/28501/32/cover500/k572835625_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=285013226",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "개발자 커리어"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "삼십 년 개발자가 정리한 단계별 역량",
+   "topics": [
+    "커리어",
+    "개발자"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -2979,7 +4324,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    99,
+    102,
+    156,
+    175,
+    43,
+    165
+   ]
   },
   {
    "title": "개발자를 넘어 기술 리더로 가는 길",
@@ -2988,15 +4340,22 @@
    "cover": "https://image.aladin.co.kr/product/31673/39/cover500/k032833674_1.jpg",
    "publisher": "한빛미디어",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=316733978",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "컴퓨터 공학",
-    "소프트웨어 공학",
-    "취업/진로/유망직업",
-    "국내 진학/취업",
-    "프로그래밍 개발/방법론",
-    "프로그래밍 기초/개발 방법론"
+    "개발자 커리어",
+    "리더십"
    ],
+   "groups": [
+    "개발·기술",
+    "일·조직"
+   ],
+   "gist": "매니저 말고 스태프 엔지니어라는 길",
+   "topics": [
+    "스태프 엔지니어",
+    "리더십"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kyobo",
@@ -3007,12 +4366,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    95,
-    171,
-    18,
-    145,
-    187,
-    188
+    99,
+    101,
+    156,
+    175,
+    9,
+    43
    ]
   },
   {
@@ -3022,8 +4381,20 @@
    "cover": "https://image.aladin.co.kr/product/26421/20/cover500/899792480x_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=264212092",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "테크니컬 라이팅"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "테크니컬 라이터가 정리한 개발 문서 쓰기",
+   "topics": [
+    "테크니컬 라이팅",
+    "글쓰기"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -3033,7 +4404,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    90,
+    17,
+    18,
+    28,
+    32,
+    35
+   ]
   },
   {
    "title": "개발자를 위한 필수 수학",
@@ -3042,8 +4420,21 @@
    "cover": "https://image.aladin.co.kr/product/34034/66/cover500/k662931262_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340346630",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "통계·수학",
+    "ML"
+   ],
+   "groups": [
+    "데이터·AI"
+   ],
+   "gist": "미적분·확률·통계·선형대수 기초를 코드와 함께",
+   "topics": [
+    "수학",
+    "ML"
+   ],
+   "form": "교재",
    "sources": [
     {
      "id": "company",
@@ -3053,7 +4444,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    111,
+    89,
+    65,
+    179,
+    17,
+    18
+   ]
   },
   {
    "title": "결국 해내는 사람들의 원칙",
@@ -3062,8 +4460,22 @@
    "cover": "https://image.aladin.co.kr/product/38560/24/cover500/k802135953_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385602478",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "자기계발",
+   "tags": [
+    "습관",
+    "성공"
+   ],
+   "groups": [
+    "마음·관계",
+    "일·조직"
+   ],
+   "gist": "목표를 의지가 아니라 시스템으로 바꾸는 법",
+   "topics": [
+    "목표",
+    "습관"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -3073,7 +4485,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    5,
+    21,
+    59,
+    0,
+    4,
+    20
+   ]
   },
   {
    "title": "구글 엔지니어는 이렇게 일한다",
@@ -3082,8 +4501,22 @@
    "cover": "https://image.aladin.co.kr/product/29414/60/cover500/k562837320_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=294146082",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "개발 조직",
+    "개발자 태도",
+    "코드 품질"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "코드베이스를 오래 살리는 구글의 엔지니어링 관행",
+   "topics": [
+    "개발 조직",
+    "엔지니어링"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -3093,7 +4526,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    18,
+    32,
+    60,
+    87,
+    95,
+    122
+   ]
   },
   {
    "title": "규칙 없음",
@@ -3102,8 +4542,23 @@
    "cover": "https://image.aladin.co.kr/product/24790/60/cover500/8925599635_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=247906056",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "일·경영",
+   "tags": [
+    "일하는 법",
+    "팀",
+    "개발 조직"
+   ],
+   "groups": [
+    "일·조직",
+    "개발·기술"
+   ],
+   "gist": "넷플릭스의 자유와 책임 문화가 어떻게 굴러가는가",
+   "topics": [
+    "조직문화",
+    "넷플릭스"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -3113,7 +4568,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    85,
+    132,
+    38,
+    60,
+    9,
+    92
+   ]
   },
   {
    "title": "그림으로 이해하는 도커와 쿠버네티스",
@@ -3122,8 +4584,20 @@
    "cover": "https://image.aladin.co.kr/product/37789/76/cover500/k922033662_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=377897689",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "인프라"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "도커와 쿠버네티스가 왜 그렇게 도는지 그림으로",
+   "topics": [
+    "도커",
+    "쿠버네티스"
+   ],
+   "form": "교재",
    "sources": [
     {
      "id": "company",
@@ -3133,21 +4607,37 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    76,
+    17,
+    18,
+    28,
+    32,
+    35
+   ]
   },
   {
    "title": "기분이 태도가 되지 않게",
-   "author": "레몬심리, 박영란",
+   "author": "레몬심리",
    "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/37535/62/cover500/8901297841_3.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375356292",
+   "cover": "https://image.aladin.co.kr/product/24368/89/cover500/8901243652_1.jpg",
+   "publisher": "갤리온",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=243688983",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "한국에세이",
-    "인간관계",
-    "교양심리학"
+    "심리",
+    "멘탈"
    ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "기분에 휘둘려 태도가 되지 않게 감정을 다루는 법",
+   "topics": [
+    "감정",
+    "심리"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "ridi",
@@ -3158,12 +4648,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    34,
+    153,
+    169,
+    37,
+    176,
     59,
-    119,
-    8,
-    30,
-    31
+    73
    ]
   },
   {
@@ -3173,8 +4663,20 @@
    "cover": "https://image.aladin.co.kr/product/35340/83/cover500/k992035681_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353408353",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "인문·심리",
+   "tags": [
+    "관계"
+   ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "주는 사람이 결국 위로 간다는 조직심리 연구",
+   "topics": [
+    "관계",
+    "성공"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -3184,7 +4686,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    34,
+    118,
+    1,
+    10,
+    13,
+    14
+   ]
   },
   {
    "title": "기초부터 다지는 통계학 교과서 with 파이썬",
@@ -3193,8 +4702,21 @@
    "cover": "https://image.aladin.co.kr/product/35363/43/cover500/896626462x_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353634346",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "통계·수학",
+    "ML"
+   ],
+   "groups": [
+    "데이터·AI"
+   ],
+   "gist": "통계적 학습 도구를 파이썬으로 다루는 교과서",
+   "topics": [
+    "통계",
+    "ML"
+   ],
+   "form": "교재",
    "sources": [
     {
      "id": "company",
@@ -3204,7 +4726,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    104,
+    89,
+    65,
+    179,
+    17,
+    18
+   ]
   },
   {
    "title": "나미야 잡화점의 기적",
@@ -3213,8 +4742,20 @@
    "cover": "https://image.aladin.co.kr/product/30768/99/cover500/k252830652_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=307689982",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "문학",
+   "tags": [
+    "일본소설"
+   ],
+   "groups": [
+    "문학"
+   ],
+   "gist": "시간을 건너 편지가 오가는 잡화점 이야기",
+   "topics": [
+    "일본소설",
+    "따뜻함"
+   ],
+   "form": "소설",
    "sources": [
     {
      "id": "paper",
@@ -3224,7 +4765,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    15,
+    7,
+    19,
+    56,
+    61,
+    63
+   ]
   },
   {
    "title": "남자 몸 만들기 4주 혁명",
@@ -3233,10 +4781,20 @@
    "cover": "https://image.aladin.co.kr/product/49/50/cover500/895757462x_1.jpg",
    "publisher": "랜덤하우스코리아",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=495064",
+   "kyobo": "",
    "field": "건강·생활",
    "tags": [
-    "헬스/피트니스"
+    "운동"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "체형을 셋으로 나눠 짠 운동 프로그램",
+   "topics": [
+    "운동",
+    "헬스"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kyobo",
@@ -3248,10 +4806,11 @@
    "addedAt": "",
    "similar": [
     70,
-    24,
     77,
+    58,
+    24,
     114,
-    128
+    127
    ]
   },
   {
@@ -3261,12 +4820,20 @@
    "cover": "https://image.aladin.co.kr/product/34558/45/cover500/k572933165_1.jpg",
    "publisher": "글항아리",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345584561",
+   "kyobo": "",
    "field": "건강·생활",
    "tags": [
-    "의학",
-    "질병치료와 예방",
-    "중풍과 치매"
+    "인생"
    ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "알츠하이머를 앓는 아버지를 기록한 의사 아들",
+   "topics": [
+    "돌봄",
+    "알츠하이머"
+   ],
+   "form": "회고·전기",
    "sources": [
     {
      "id": "kyobo",
@@ -3277,12 +4844,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    68,
-    71,
-    24,
-    70,
-    77,
-    113
+    19,
+    56,
+    57,
+    80,
+    142,
+    147
    ]
   },
   {
@@ -3292,11 +4859,20 @@
    "cover": "https://image.aladin.co.kr/product/29566/59/cover500/k702837352_2.jpg",
    "publisher": "열림원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=295665964",
+   "kyobo": "",
    "field": "문학",
    "tags": [
-    "시",
-    "한국시"
+    "일상"
    ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "나태주 신작 시 백일흔여섯 편",
+   "topics": [
+    "시",
+    "위로"
+   ],
+   "form": "시집",
    "sources": [
     {
      "id": "kyobo",
@@ -3308,11 +4884,11 @@
    "addedAt": "",
    "similar": [
     8,
+    6,
+    88,
     7,
     15,
-    19,
-    56,
-    61
+    19
    ]
   },
   {
@@ -3322,12 +4898,20 @@
    "cover": "https://image.aladin.co.kr/product/15831/44/cover500/895699336x_1.jpg",
    "publisher": "한문화",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=158314436",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "다이어트",
-    "건강정보",
-    "건강에세이/건강정보"
+    "건강"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "평생 유지되는 체중 관리 전략",
+   "topics": [
+    "다이어트",
+    "건강"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kyobo",
@@ -3338,33 +4922,13 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    74,
     71,
-    153,
+    74,
+    152,
     70,
-    6,
-    8
+    68,
+    6
    ]
-  },
-  {
-   "title": "더 나은 선택",
-   "author": "크레이그 그로쉘",
-   "englishTitle": "",
-   "cover": "",
-   "publisher": "규장",
-   "aladin": "",
-   "field": "",
-   "tags": [],
-   "sources": [
-    {
-     "id": "kyobo",
-     "link": ""
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": []
   },
   {
    "title": "데미안",
@@ -3373,15 +4937,20 @@
    "cover": "https://image.aladin.co.kr/product/26/0/cover500/s452139198_1.jpg",
    "publisher": "민음사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=260084",
+   "kyobo": "",
    "field": "문학",
    "tags": [
-    "독일소설",
-    "서양고전문학",
-    "서양현대고전",
-    "위대한 작가들",
-    "세계의 문학",
-    "독일문학"
+    "고전"
    ],
+   "groups": [
+    "문학"
+   ],
+   "gist": "껍질을 깨고 자기 자신에게 이르는 성장 소설",
+   "topics": [
+    "성장",
+    "헤세"
+   ],
+   "form": "소설",
    "sources": [
     {
      "id": "kyobo",
@@ -3400,12 +4969,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    56,
-    79,
+    83,
     19,
-    61,
-    121,
-    178
+    79,
+    120,
+    164,
+    177
    ]
   },
   {
@@ -3415,14 +4984,19 @@
    "cover": "https://image.aladin.co.kr/product/20945/79/cover500/s652933016_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=209457983",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "인간관계",
-    "성공",
-    "성공학",
-    "교양심리학",
-    "남녀관계"
+    "관계"
    ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "사람을 대하는 오래된 원칙들",
+   "topics": [
+    "인간관계"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "ridi",
@@ -3434,11 +5008,11 @@
    "addedAt": "",
    "similar": [
     34,
-    59,
-    109,
-    170,
-    0,
-    1
+    110,
+    1,
+    10,
+    13,
+    14
    ]
   },
   {
@@ -3448,8 +5022,20 @@
    "cover": "https://image.aladin.co.kr/product/14106/3/cover500/k202532130_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=141060330",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "디자인",
+   "tags": [
+    "UI/UX"
+   ],
+   "groups": [
+    "만들기"
+   ],
+   "gist": "복잡함과 단순함을 둘러싼 디자인의 쟁점",
+   "topics": [
+    "UI/UX",
+    "인지"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -3459,7 +5045,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    2,
+    62,
+    192,
+    48,
+    100,
+    134
+   ]
   },
   {
    "title": "돈키호테",
@@ -3468,14 +5061,20 @@
    "cover": "https://image.aladin.co.kr/product/4922/52/cover500/8932916802_1.jpg",
    "publisher": "시공사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49225289",
+   "kyobo": "",
    "field": "문학",
    "tags": [
-    "스페인/중남미소설",
-    "서양고전문학",
-    "서양근대문학",
-    "세계의 문학",
-    "스페인/중남미문학"
+    "고전"
    ],
+   "groups": [
+    "문학"
+   ],
+   "gist": "기사 소설에 빠진 노인이 길을 나선다",
+   "topics": [
+    "고전",
+    "스페인문학"
+   ],
+   "form": "소설",
    "sources": [
     {
      "id": "kyobo",
@@ -3487,11 +5086,11 @@
    "addedAt": "",
    "similar": [
     19,
-    61,
-    143,
-    178,
     79,
-    118
+    83,
+    117,
+    164,
+    177
    ]
   },
   {
@@ -3501,8 +5100,20 @@
    "cover": "https://image.aladin.co.kr/product/21011/79/cover500/k502636376_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=210117981",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "일·경영",
+   "tags": [
+    "팀"
+   ],
+   "groups": [
+    "일·조직"
+   ],
+   "gist": "심리적 안전감이 팀의 학습과 혁신을 만든다",
+   "topics": [
+    "심리적 안전",
+    "팀"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "company",
@@ -3512,7 +5123,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    85,
+    107,
+    60,
+    1,
+    3,
+    9
+   ]
   },
   {
    "title": "레거시 코드 활용 전략",
@@ -3521,8 +5139,20 @@
    "cover": "https://image.aladin.co.kr/product/16877/94/cover500/k022534070_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=168779479",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "코드 품질"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "테스트 없는 코드에 손대는 기법 스물네 가지",
+   "topics": [
+    "레거시",
+    "테스트"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -3532,7 +5162,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    87,
+    106,
+    160,
+    188,
+    17,
+    18
+   ]
   },
   {
    "title": "린 분석",
@@ -3541,8 +5178,22 @@
    "cover": "https://image.aladin.co.kr/product/3446/54/cover500/8968480699_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=34465476",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "일·경영",
+   "tags": [
+    "데이터 분석",
+    "프로덕트"
+   ],
+   "groups": [
+    "데이터·AI",
+    "만들기"
+   ],
+   "gist": "사업 모델과 성장 단계에 맞는 지표 고르기",
+   "topics": [
+    "지표",
+    "데이터"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -3552,7 +5203,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    129,
+    135,
+    167,
+    17,
+    35,
+    1
+   ]
   },
   {
    "title": "린 스타트업",
@@ -3561,8 +5219,20 @@
    "cover": "https://image.aladin.co.kr/product/2064/86/cover500/8966260578_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=20648680",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "일·경영",
+   "tags": [
+    "창업"
+   ],
+   "groups": [
+    "만들기"
+   ],
+   "gist": "만들고 재고 배우는 창업 방법론",
+   "topics": [
+    "창업",
+    "린"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -3572,7 +5242,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    92,
+    129,
+    1,
+    3,
+    9,
+    29
+   ]
   },
   {
    "title": "맛있는 일본어",
@@ -3581,8 +5258,20 @@
    "cover": "https://image.aladin.co.kr/product/34937/24/cover500/k732934364_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=349372427",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "여행",
+   "tags": [
+    "일본어"
+   ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "여행에서 바로 쓰는 일본어 표현",
+   "topics": [
+    "일본어",
+    "여행"
+   ],
+   "form": "교재",
    "sources": [
     {
      "id": "paper",
@@ -3592,7 +5281,10 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    151,
+    66
+   ]
   },
   {
    "title": "몽고DB 완벽 가이드",
@@ -3601,8 +5293,20 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "kyobo": "",
    "field": "",
-   "tags": [],
+   "tags": [
+    "DB"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "몽고DB 설계와 운영 안내서",
+   "topics": [
+    "MongoDB",
+    "DB"
+   ],
+   "form": "교재",
    "sources": [
     {
      "id": "company",
@@ -3612,7 +5316,9 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    189
+   ]
   },
   {
    "title": "백종원이 추천하는 집밥 메뉴 54",
@@ -3621,11 +5327,20 @@
    "cover": "https://image.aladin.co.kr/product/39356/43/cover500/k972138633_1.jpg",
    "publisher": "서울문화사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=393564333",
+   "kyobo": "",
    "field": "건강·생활",
    "tags": [
-    "생활요리",
-    "전문가/연예인/블로거 요리"
+    "음식"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "집밥 레시피 쉰네 가지",
+   "topics": [
+    "요리",
+    "레시피"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kyobo",
@@ -3636,11 +5351,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
+    30,
+    66,
     24,
     70,
     77,
-    113,
-    114
+    113
    ]
   },
   {
@@ -3650,11 +5366,20 @@
    "cover": "https://image.aladin.co.kr/product/30788/81/cover500/k382831366_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=307888132",
+   "kyobo": "",
    "field": "",
    "tags": [
-    "PC/게임/디지털 카메라",
-    "초보자를 위한 컴퓨터 책"
+    "IT"
    ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "컴퓨터 왕초보를 위한 기초",
+   "topics": [
+    "컴퓨터",
+    "입문"
+   ],
+   "form": "교재",
    "sources": [
     {
      "id": "ridi",
@@ -3673,11 +5398,21 @@
    "cover": "https://image.aladin.co.kr/product/35109/65/cover500/k982934606_2.jpg",
    "publisher": "비즈니스북스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351096536",
+   "kyobo": "",
    "field": "일·경영",
    "tags": [
-    "기업/경영자 스토리",
-    "국외 기업/경영자"
+    "프로덕트",
+    "창업"
    ],
+   "groups": [
+    "만들기"
+   ],
+   "gist": "아이팟과 네스트를 만든 토니 퍼델이 말하는 만드는 일",
+   "topics": [
+    "프로덕트",
+    "창업"
+   ],
+   "form": "회고·전기",
    "sources": [
     {
      "id": "kyobo",
@@ -3688,12 +5423,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    136,
-    17,
-    1,
-    3,
-    9,
-    29
+    92,
+    123,
+    124,
+    135,
+    167,
+    1
    ]
   },
   {
@@ -3703,11 +5438,20 @@
    "cover": "https://image.aladin.co.kr/product/35301/77/cover500/k022035973_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353017744",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "성공",
-    "성공학"
+    "사고법"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "완벽을 노리지 말고 작게 먼저 해보기",
+   "topics": [
+    "실행",
+    "실패"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "ridi",
@@ -3718,12 +5462,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    0,
     4,
-    5,
-    33,
-    37,
-    38
+    136,
+    154,
+    39,
+    0,
+    5
    ]
   },
   {
@@ -3733,8 +5477,22 @@
    "cover": "https://image.aladin.co.kr/product/14013/55/cover500/8934981210_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=140135544",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "인문·심리",
+   "tags": [
+    "의사결정",
+    "심리"
+   ],
+   "groups": [
+    "배우기·생각",
+    "마음·관계"
+   ],
+   "gist": "빠르게 판단하는 뇌와 느리게 따지는 뇌",
+   "topics": [
+    "행동경제학",
+    "판단"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -3744,7 +5502,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    59,
+    73,
+    109,
+    143,
+    153,
+    169
+   ]
   },
   {
    "title": "순서 파괴",
@@ -3753,8 +5518,22 @@
    "cover": "https://image.aladin.co.kr/product/26556/49/cover500/k972738931_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=265564975",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "일·경영",
+   "tags": [
+    "일하는 법",
+    "개발 조직"
+   ],
+   "groups": [
+    "일·조직",
+    "개발·기술"
+   ],
+   "gist": "아마존이 지켜온 일하는 방식 — 거꾸로 일하기와 여섯 장 문서",
+   "topics": [
+    "아마존",
+    "일하는 법"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -3764,7 +5543,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    107,
+    38,
+    9,
+    85,
+    92,
+    135
+   ]
   },
   {
    "title": "쉽게 보는 난중일기 완역본",
@@ -3773,8 +5559,20 @@
    "cover": "https://image.aladin.co.kr/product/30086/21/cover500/k562839575_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=300862118",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "문학",
+   "tags": [
+    "역사"
+   ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "이순신이 전장에서 쓴 일기",
+   "topics": [
+    "역사",
+    "이순신"
+   ],
+   "form": "자료",
    "sources": [
     {
      "id": "paper",
@@ -3784,7 +5582,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    47,
+    7,
+    15,
+    19,
+    56,
+    61
+   ]
   },
   {
    "title": "스타트업 서비스 설계는 처음인데요",
@@ -3793,8 +5598,21 @@
    "cover": "https://image.aladin.co.kr/product/37426/63/cover500/8966264956_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374266337",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "디자인",
+   "tags": [
+    "시스템 설계",
+    "설계·아키텍처"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "성능·유지보수·비용을 같이 보는 아키텍처 설계",
+   "topics": [
+    "시스템 설계",
+    "아키텍처"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -3804,7 +5622,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    163,
+    89,
+    98,
+    144,
+    162,
+    170
+   ]
   },
   {
    "title": "스프린트",
@@ -3813,15 +5638,22 @@
    "cover": "https://image.aladin.co.kr/product/7492/5/cover500/8934975954_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=74920583",
+   "kyobo": "",
    "field": "일·경영",
    "tags": [
-    "기업/경영자 스토리",
-    "국외 기업/경영자",
-    "기업 경영",
-    "경영전략/혁신",
-    "CEO/비즈니스맨을 위한 능력계발",
-    "기획/정보/문서관리"
+    "프로덕트",
+    "일하는 법"
    ],
+   "groups": [
+    "만들기",
+    "일·조직"
+   ],
+   "gist": "닷새 만에 아이디어를 시제품과 검증까지 밀어붙이는 방법",
+   "topics": [
+    "스프린트",
+    "기획"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "ridi",
@@ -3832,12 +5664,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    17,
-    1,
-    48,
-    75,
-    92,
-    130
+    107,
+    123,
+    129,
+    132,
+    167,
+    94
    ]
   },
   {
@@ -3847,8 +5679,20 @@
    "cover": "https://image.aladin.co.kr/product/31737/86/cover500/8901272032_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317378665",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "자기계발",
+   "tags": [
+    "사고법"
+   ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "아무 데나 신경 쓰지 말고 중요한 것만 고르기",
+   "topics": [
+    "태도",
+    "생각"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "paper",
@@ -3858,7 +5702,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    4,
+    130,
+    154,
+    39,
+    0,
+    5
+   ]
   },
   {
    "title": "실용주의 프로그래머(20주년 기념판)",
@@ -3867,11 +5718,20 @@
    "cover": "https://image.aladin.co.kr/product/28878/64/cover500/8966263364_1.jpg",
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=288786463",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "프로그래밍 개발/방법론",
-    "프로그래밍 기초/개발 방법론"
+    "개발자 태도"
    ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "프로그래머가 지녀야 할 태도와 실천",
+   "topics": [
+    "개발자",
+    "실천"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kyobo",
@@ -3882,12 +5742,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    17,
-    87,
-    90,
+    18,
+    32,
     95,
-    102,
-    145
+    106,
+    146,
+    166
    ]
   },
   {
@@ -3897,8 +5757,20 @@
    "cover": "https://image.aladin.co.kr/product/170/70/cover500/8991268382_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=1707009",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "애자일"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "회고를 설계하고 진행하는 법",
+   "topics": [
+    "회고",
+    "애자일"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -3908,7 +5780,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    49,
+    51,
+    158,
+    17,
+    18,
+    28
+   ]
   },
   {
    "title": "어떻게 공부할 것인가",
@@ -3917,13 +5796,20 @@
    "cover": "https://image.aladin.co.kr/product/4958/83/cover500/8937834863_1.jpg",
    "publisher": "와이즈베리",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49588358",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "심리학/정신분석학",
-    "뇌과학/인지심리학",
-    "교육학",
-    "교육 일반"
+    "학습"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "인지심리학이 밝힌, 실제로 남는 공부법",
+   "topics": [
+    "학습",
+    "인지"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "kyobo",
@@ -3934,23 +5820,36 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    73,
-    80,
-    144,
-    170,
-    10,
-    13
+    0,
+    28,
+    49,
+    52,
+    53,
+    67
    ]
   },
   {
    "title": "업",
-   "author": "장성락(REDICE STUDIO), 추공",
+   "author": "리멤버",
    "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/39905/20/cover500/k892130927_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399052013",
-   "field": "",
-   "tags": [],
+   "cover": "https://image.aladin.co.kr/product/38655/95/cover500/k832136514_1.jpg",
+   "publisher": "필름(Feelm)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=386559530",
+   "kyobo": "",
+   "field": "자기계발",
+   "tags": [
+    "커리어",
+    "일하는 법"
+   ],
+   "groups": [
+    "일·조직"
+   ],
+   "gist": "자기 기준을 세워 온 열다섯 사람의 이야기",
+   "topics": [
+    "일",
+    "커리어"
+   ],
+   "form": "인터뷰·대담",
    "sources": [
     {
      "id": "paper",
@@ -3960,7 +5859,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    20,
+    33,
+    38,
+    41,
+    42,
+    141
+   ]
   },
   {
    "title": "여백 사고",
@@ -3969,8 +5875,20 @@
    "cover": "https://image.aladin.co.kr/product/34574/77/cover500/k732933362_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345747701",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "자기계발",
+   "tags": [
+    "일하는 법"
+   ],
+   "groups": [
+    "일·조직"
+   ],
+   "gist": "더 채우지 않고 여백을 남기는 일하기",
+   "topics": [
+    "여백",
+    "일하는 법"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -3980,7 +5898,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    38,
+    41,
+    140,
+    7,
+    40,
+    107
+   ]
   },
   {
    "title": "연금술사",
@@ -3989,12 +5914,20 @@
    "cover": "https://image.aladin.co.kr/product/39702/10/cover500/k022130492_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=397021013",
+   "kyobo": "",
    "field": "문학",
    "tags": [
-    "스페인/중남미소설",
-    "세계의 문학",
-    "스페인/중남미문학"
+    "인생"
    ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "보물을 찾아 사막을 건넌 양치기 소년의 여정",
+   "topics": [
+    "자아",
+    "여정"
+   ],
+   "form": "소설",
    "sources": [
     {
      "id": "ridi",
@@ -4005,12 +5938,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    121,
-    15,
     19,
     56,
-    61,
-    79
+    149,
+    57,
+    80,
+    114
    ]
   },
   {
@@ -4020,12 +5953,21 @@
    "cover": "https://image.aladin.co.kr/product/34762/68/cover500/k342933922_1.jpg",
    "publisher": "북라이프",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=347626896",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "교양 인문학",
-    "심리학/정신분석학",
-    "교양 심리학"
+    "완벽주의",
+    "심리"
    ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "완벽주의가 어디서 오고 무엇을 망가뜨리는가",
+   "topics": [
+    "완벽주의",
+    "심리"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "kyobo",
@@ -4037,11 +5979,11 @@
    "addedAt": "",
    "similar": [
     73,
-    170,
-    10,
-    13,
-    14,
-    40
+    59,
+    109,
+    131,
+    153,
+    169
    ]
   },
   {
@@ -4051,15 +5993,21 @@
    "cover": "https://image.aladin.co.kr/product/39952/0/cover500/k422130420_1.jpg",
    "publisher": "골든래빗(주)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399520031",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "프로그래밍 개발/방법론",
-    "프로그래밍 기초/개발 방법론",
-    "컴퓨터 공학",
-    "소프트웨어 공학",
-    "자료구조/알고리즘",
-    "컴퓨터공학/전산학 개론"
+    "개발 조직",
+    "설계·아키텍처"
    ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "배민 개발자들이 실제로 고민하고 고른 트레이드오프",
+   "topics": [
+    "개발 조직",
+    "아키텍처"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kyobo",
@@ -4070,12 +6018,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    187,
-    188,
-    95,
-    102,
+    145,
+    60,
+    106,
     162,
-    171
+    170,
+    9
    ]
   },
   {
@@ -4085,8 +6033,23 @@
    "cover": "https://image.aladin.co.kr/product/36071/60/cover500/k502037248_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360716036",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "AI",
+    "MLOps",
+    "개발 조직"
+   ],
+   "groups": [
+    "데이터·AI",
+    "개발·기술"
+   ],
+   "gist": "배민이 실제 서비스에 AI를 붙인 사례들",
+   "topics": [
+    "AI",
+    "MLOps"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -4097,7 +6060,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    145
+    144,
+    28,
+    60,
+    106,
+    173,
+    185
    ]
   },
   {
@@ -4107,8 +6075,20 @@
    "cover": "https://image.aladin.co.kr/product/38466/66/cover500/k392135919_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=384666614",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "개발자 태도"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "AI가 코드를 쓰는 시대에 엉클 밥이 묻는 우리는 누구인가",
+   "topics": [
+    "개발자",
+    "직업윤리"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "paper",
@@ -4119,7 +6099,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    159
+    158,
+    18,
+    32,
+    95,
+    106,
+    137
    ]
   },
   {
@@ -4129,8 +6114,21 @@
    "cover": "https://image.aladin.co.kr/product/1284/8/cover500/8956605416_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=12840843",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "에세이",
+   "tags": [
+    "인생",
+    "철학"
+   ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "숲속 오두막에서 보낸 이 년의 기록",
+   "topics": [
+    "자연",
+    "사상"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "friend",
@@ -4140,7 +6138,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    80,
+    149,
+    57,
+    14,
+    19,
+    56
+   ]
   },
   {
    "title": "이상한 나라의 엘리트",
@@ -4149,28 +6154,20 @@
    "cover": "https://image.aladin.co.kr/product/17007/26/cover500/8988613759_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=170072646",
-   "field": "",
-   "tags": [],
-   "sources": [
-    {
-     "id": "paper",
-     "link": ""
-    }
+   "kyobo": "",
+   "field": "역사·사회",
+   "tags": [
+    "사회"
    ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": []
-  },
-  {
-   "title": "인생에 대하여",
-   "author": "레프 니콜라예비치 톨스토이, 이강은",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/25325/65/cover500/k182633502_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=253256526",
-   "field": "",
-   "tags": [],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "일본 엘리트 집단의 '입장' 화법을 파헤친다",
+   "topics": [
+    "사회",
+    "일본"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -4181,7 +6178,51 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    19
+    96,
+    97,
+    174,
+    16,
+    47
+   ]
+  },
+  {
+   "title": "인생에 대하여",
+   "author": "레프 니콜라예비치 톨스토이, 이강은",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/25325/65/cover500/k182633502_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=253256526",
+   "kyobo": "",
+   "field": "문학",
+   "tags": [
+    "인생",
+    "철학"
+   ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "톨스토이가 삶과 생명을 두고 쓴 사상 선집",
+   "topics": [
+    "인생",
+    "톨스토이"
+   ],
+   "form": "에세이",
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    19,
+    80,
+    147,
+    56,
+    83,
+    142
    ]
   },
   {
@@ -4191,8 +6232,20 @@
    "cover": "https://image.aladin.co.kr/product/31216/10/cover500/k092831152_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=312161010",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "자기계발",
+   "tags": [
+    "말하기"
+   ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "일터에서 단순하게 말하는 법",
+   "topics": [
+    "말하기",
+    "일"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -4202,7 +6255,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    27,
+    3,
+    25,
+    0,
+    4,
+    5
+   ]
   },
   {
    "title": "일본어 무작정 따라하기",
@@ -4211,8 +6271,20 @@
    "cover": "https://image.aladin.co.kr/product/30963/87/cover500/k212831201_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=309638760",
+   "kyobo": "",
    "field": "",
-   "tags": [],
+   "tags": [
+    "일본어"
+   ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "소리로 익히는 일본어 문법",
+   "topics": [
+    "일본어",
+    "문법"
+   ],
+   "form": "교재",
    "sources": [
     {
      "id": "paper",
@@ -4222,7 +6294,9 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    125
+   ]
   },
   {
    "title": "자세를 펴면 인생이 펴집니다",
@@ -4231,13 +6305,20 @@
    "cover": "https://image.aladin.co.kr/product/35197/33/cover500/k622934529_1.jpg",
    "publisher": "퍼스트펭귄",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351973338",
+   "kyobo": "",
    "field": "에세이",
    "tags": [
-    "건강정보",
-    "건강에세이/건강정보",
-    "건강운동",
-    "요가/체조/스트레칭"
+    "건강"
    ],
+   "groups": [
+    "몸·취미"
+   ],
+   "gist": "자세 교정과 재활 운동",
+   "topics": [
+    "자세",
+    "건강"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kyobo",
@@ -4251,9 +6332,9 @@
     71,
     74,
     116,
+    68,
     6,
-    8,
-    11
+    8
    ]
   },
   {
@@ -4263,8 +6344,21 @@
    "cover": "https://image.aladin.co.kr/product/8679/31/cover500/k372535696_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86793193",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "인문·심리",
+   "tags": [
+    "멘탈",
+    "심리"
+   ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "정신과 의사가 안내하는 자존감 셀프 코칭",
+   "topics": [
+    "자존감",
+    "심리"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -4274,7 +6368,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    109,
+    169,
+    37,
+    176,
+    59,
+    73
+   ]
   },
   {
    "title": "조훈현, 고수의 생각법",
@@ -4283,8 +6384,20 @@
    "cover": "https://image.aladin.co.kr/product/6136/36/cover500/k962433729_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=61363642",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "자기계발",
+   "tags": [
+    "사고법"
+   ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "바둑 기사가 자기 인생을 복기하며 정리한 생각법",
+   "topics": [
+    "생각",
+    "바둑"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "paper",
@@ -4294,7 +6407,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    4,
+    130,
+    136,
+    39,
+    0,
+    5
+   ]
   },
   {
    "title": "지적 대화를 위한 30분 고전",
@@ -4303,8 +6423,17 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "kyobo": "",
    "field": "",
-   "tags": [],
+   "tags": [
+    "인문"
+   ],
+   "groups": [
+    "삶·교양"
+   ],
+   "gist": "",
+   "topics": [],
+   "form": "",
    "sources": [
     {
      "id": "ridi",
@@ -4314,7 +6443,9 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    13
+   ]
   },
   {
    "title": "커리어 스킬",
@@ -4323,48 +6454,20 @@
    "cover": "https://image.aladin.co.kr/product/18782/34/cover500/k662635470_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=187823405",
-   "field": "",
-   "tags": [],
-   "sources": [
-    {
-     "id": "paper",
-     "link": ""
-    }
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "개발자 커리어"
    ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": []
-  },
-  {
-   "title": "클리어 씽킹",
-   "author": "셰인 패리시, 최호영",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/33690/64/cover500/8925575302_2.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336906409",
-   "field": "",
-   "tags": [],
-   "sources": [
-    {
-     "id": "paper",
-     "link": ""
-    }
+   "groups": [
+    "개발·기술"
    ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": []
-  },
-  {
-   "title": "클린 애자일",
-   "author": "로버트 C. 마틴, 정지용",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/25684/50/cover500/8966262864_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=256845084",
-   "field": "",
-   "tags": [],
+   "gist": "개발자 커리어 전반을 훑는 로드맵",
+   "topics": [
+    "커리어",
+    "개발자"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -4375,7 +6478,89 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    147
+    99,
+    101,
+    102,
+    175,
+    43,
+    165
+   ]
+  },
+  {
+   "title": "클리어 씽킹",
+   "author": "셰인 패리시, 최호영",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/33690/64/cover500/8925575302_2.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336906409",
+   "kyobo": "",
+   "field": "자기계발",
+   "tags": [
+    "의사결정"
+   ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "결정을 흐리는 힘을 걷어내고 판단하는 법",
+   "topics": [
+    "판단",
+    "사고"
+   ],
+   "form": "가이드",
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    54,
+    131,
+    0,
+    4,
+    5,
+    20
+   ]
+  },
+  {
+   "title": "클린 애자일",
+   "author": "로버트 C. 마틴, 정지용",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/25684/50/cover500/8966262864_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=256845084",
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "애자일"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "엉클 밥이 다시 정리한 애자일의 기본",
+   "topics": [
+    "애자일"
+   ],
+   "form": "이론서",
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    146,
+    49,
+    51,
+    138,
+    17,
+    18
    ]
   },
   {
@@ -4385,8 +6570,21 @@
    "cover": "https://image.aladin.co.kr/product/24310/7/cover500/8984077933_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=243100705",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "일·경영",
+   "tags": [
+    "리더십",
+    "매니저"
+   ],
+   "groups": [
+    "일·조직"
+   ],
+   "gist": "핵잠수함 함장이 명령 대신 의도를 말하게 만든 기록",
+   "topics": [
+    "리더십",
+    "권한 위임"
+   ],
+   "form": "회고·전기",
    "sources": [
     {
      "id": "company",
@@ -4396,7 +6594,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    9,
+    99,
+    102,
+    183,
+    184,
+    1
+   ]
   },
   {
    "title": "테스트 주도 개발",
@@ -4405,8 +6610,20 @@
    "cover": "https://image.aladin.co.kr/product/3746/97/cover500/8966261027_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=37469717",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "코드 품질"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "테스트가 코딩의 방향을 이끄는 방식",
+   "topics": [
+    "TDD",
+    "테스트"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -4417,7 +6634,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    87
+    87,
+    106,
+    122,
+    188,
+    17,
+    18
    ]
   },
   {
@@ -4427,15 +6649,20 @@
    "cover": "https://image.aladin.co.kr/product/24549/58/cover500/k822631873_3.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=245495826",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "컴퓨터 공학",
-    "자료구조/알고리즘",
-    "프로그래밍 개발/방법론",
-    "프로그래밍 기초/개발 방법론",
-    "프로그래밍 언어",
-    "파이썬"
+    "알고리즘"
    ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "코딩 테스트를 겨냥한 알고리즘 문제 이백여 개",
+   "topics": [
+    "알고리즘",
+    "코딩 테스트"
+   ],
+   "form": "교재",
    "sources": [
     {
      "id": "ridi",
@@ -4446,12 +6673,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    145,
-    171,
-    187,
-    95,
-    102,
-    188
+    182,
+    17,
+    18,
+    28,
+    32,
+    35
    ]
   },
   {
@@ -4461,48 +6688,20 @@
    "cover": "https://image.aladin.co.kr/product/27194/43/cover500/k012732190_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=271944317",
-   "field": "",
-   "tags": [],
-   "sources": [
-    {
-     "id": "paper",
-     "link": ""
-    }
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "설계·아키텍처"
    ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": []
-  },
-  {
-   "title": "패턴 랭귀지",
-   "author": "크리스토퍼 알렉산더, 사라 이시가와",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/2762/3/cover500/8966260810_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=27620362",
-   "field": "",
-   "tags": [],
-   "sources": [
-    {
-     "id": "company",
-     "link": ""
-    }
+   "groups": [
+    "개발·기술"
    ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": []
-  },
-  {
-   "title": "페스트",
-   "author": "알베르 카뮈, 김화영",
-   "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/1126/73/cover500/s937462672_2.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=11267326",
-   "field": "",
-   "tags": [],
+   "gist": "의존성을 낮추고 테스트를 살리는 아키텍처 패턴",
+   "topics": [
+    "아키텍처",
+    "패턴"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -4513,7 +6712,94 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    83
+    144,
+    170,
+    134,
+    163,
+    171,
+    17
+   ]
+  },
+  {
+   "title": "패턴 랭귀지",
+   "author": "크리스토퍼 알렉산더, 사라 이시가와",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/2762/3/cover500/8966260810_1.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=27620362",
+   "kyobo": "",
+   "field": "디자인",
+   "tags": [
+    "설계·아키텍처",
+    "건축"
+   ],
+   "groups": [
+    "개발·기술",
+    "몸·취미"
+   ],
+   "gist": "건축 패턴 이백쉰세 개 — 소프트웨어 패턴의 뿌리가 된 책",
+   "topics": [
+    "패턴",
+    "건축"
+   ],
+   "form": "이론서",
+   "sources": [
+    {
+     "id": "company",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    134,
+    10,
+    78,
+    144,
+    162,
+    170
+   ]
+  },
+  {
+   "title": "페스트",
+   "author": "알베르 카뮈, 김화영",
+   "englishTitle": "",
+   "cover": "https://image.aladin.co.kr/product/1126/73/cover500/s937462672_2.jpg",
+   "publisher": "",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=11267326",
+   "kyobo": "",
+   "field": "문학",
+   "tags": [
+    "고전",
+    "철학"
+   ],
+   "groups": [
+    "문학",
+    "삶·교양"
+   ],
+   "gist": "역병에 갇힌 도시에서 사람들이 각자 취하는 태도",
+   "topics": [
+    "부조리",
+    "카뮈"
+   ],
+   "form": "소설",
+   "sources": [
+    {
+     "id": "paper",
+     "link": ""
+    }
+   ],
+   "read": false,
+   "readAt": "",
+   "addedAt": "",
+   "similar": [
+    83,
+    19,
+    79,
+    117,
+    120,
+    149
    ]
   },
   {
@@ -4523,8 +6809,18 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "kyobo": "",
    "field": "",
-   "tags": [],
+   "tags": [
+    "개발자 태도",
+    "개발자 커리어"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "",
+   "topics": [],
+   "form": "",
    "sources": [
     {
      "id": "ridi",
@@ -4534,7 +6830,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    18,
+    32,
+    43,
+    52,
+    95,
+    99
+   ]
   },
   {
    "title": "프로그래밍 심리학",
@@ -4543,8 +6846,22 @@
    "cover": "https://image.aladin.co.kr/product/3422/82/cover500/8966260985_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=34228223",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "심리",
+    "개발자 태도"
+   ],
+   "groups": [
+    "마음·관계",
+    "개발·기술"
+   ],
+   "gist": "프로그래밍을 기술이 아니라 사람의 일로 본 고전",
+   "topics": [
+    "심리",
+    "개발"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -4555,9 +6872,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    9,
-    12,
-    29
+    18,
+    32,
+    95,
+    106,
+    137,
+    146
    ]
   },
   {
@@ -4567,8 +6887,20 @@
    "cover": "https://image.aladin.co.kr/product/23569/83/cover500/8984077844_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=235698335",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "일·경영",
+   "tags": [
+    "프로덕트"
+   ],
+   "groups": [
+    "만들기"
+   ],
+   "gist": "쿠팡 PO가 말하는 제품 만드는 일",
+   "topics": [
+    "프로덕트",
+    "PO"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -4578,7 +6910,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    123,
+    129,
+    135,
+    1,
+    3,
+    9
+   ]
   },
   {
    "title": "한석준의 대화의 기술",
@@ -4587,8 +6926,20 @@
    "cover": "https://image.aladin.co.kr/product/35090/55/cover500/k052934494_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=350905572",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "자기계발",
+   "tags": [
+    "대화"
+   ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "아나운서가 정리한 일상 대화법",
+   "topics": [
+    "대화",
+    "소통"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -4598,7 +6949,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    26,
+    31,
+    191,
+    0,
+    4,
+    5
+   ]
   },
   {
    "title": "행복 전환 연습",
@@ -4607,14 +6965,21 @@
    "cover": "https://image.aladin.co.kr/product/32054/88/cover500/k652834687_1.jpg",
    "publisher": "마인드빌딩",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320548892",
+   "kyobo": "",
    "field": "인문·심리",
    "tags": [
-    "심리학/정신분석학",
-    "교양 심리학",
-    "성공",
-    "성공학",
-    "행복론"
+    "심리",
+    "멘탈"
    ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "행복을 좇는 대신 감정을 받아들이는 연습",
+   "topics": [
+    "행복",
+    "수용"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kyobo",
@@ -4625,12 +6990,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    34,
+    109,
+    153,
+    37,
+    176,
     59,
-    73,
-    119,
-    144,
-    0
+    73
    ]
   },
   {
@@ -4640,15 +7005,20 @@
    "cover": "https://image.aladin.co.kr/product/29089/24/cover500/k212837767_1.jpg",
    "publisher": "한빛미디어",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=290892473",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "프로그래밍 개발/방법론",
-    "객체지향 프로그래밍/UML",
-    "컴퓨터 공학",
-    "소프트웨어 공학",
-    "프로그래밍 기초/개발 방법론",
-    "프로그래밍 언어"
+    "설계·아키텍처"
    ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "디자인 패턴을 이야기와 그림으로 익힌다",
+   "topics": [
+    "디자인 패턴",
+    "객체지향"
+   ],
+   "form": "교재",
    "sources": [
     {
      "id": "kyobo",
@@ -4659,12 +7029,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    102,
-    95,
-    145,
+    144,
     162,
-    187,
-    188
+    102,
+    134,
+    163,
+    171
    ]
   },
   {
@@ -4674,8 +7044,20 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "kyobo": "",
    "field": "",
-   "tags": [],
+   "tags": [
+    "설계·아키텍처"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "복잡도를 줄이는 설계 — 얕은 모듈 대신 깊은 모듈",
+   "topics": [
+    "설계",
+    "복잡도"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "kindle",
@@ -4685,7 +7067,13 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    134,
+    144,
+    162,
+    163,
+    170
+   ]
   },
   {
    "title": "A System for Writing",
@@ -4694,8 +7082,21 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "kyobo": "",
    "field": "",
-   "tags": [],
+   "tags": [
+    "노트·기록",
+    "글쓰기"
+   ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "제텔카스텐을 실제로 굴리는 방법",
+   "topics": [
+    "노트",
+    "글쓰기"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kindle",
@@ -4705,7 +7106,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    84,
+    12,
+    21,
+    22,
+    23,
+    50
+   ]
   },
   {
    "title": "AI 엔지니어링",
@@ -4714,8 +7122,20 @@
    "cover": "https://image.aladin.co.kr/product/37309/79/cover500/k622031756_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=373097975",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "AI"
+   ],
+   "groups": [
+    "데이터·AI"
+   ],
+   "gist": "파운데이션 모델을 실제 서비스로 잇는 전 과정",
+   "topics": [
+    "AI",
+    "엔지니어링"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -4725,7 +7145,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    28,
+    145,
+    17,
+    18,
+    32,
+    35
+   ]
   },
   {
    "title": "Animal Farm",
@@ -4734,10 +7161,22 @@
    "cover": "https://image.aladin.co.kr/product/87/27/cover500/8971724471_2.jpg",
    "publisher": "더클래식",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=872721",
+   "kyobo": "",
    "field": "",
    "tags": [
-    "영어독해"
+    "고전",
+    "사회"
    ],
+   "groups": [
+    "문학",
+    "삶·교양"
+   ],
+   "gist": "농장 동물들의 혁명이 변질되어 가는 우화",
+   "topics": [
+    "우화",
+    "오웰"
+   ],
+   "form": "소설",
    "sources": [
     {
      "id": "kyobo",
@@ -4748,7 +7187,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    79
+    79,
+    19,
+    83,
+    96,
+    97,
+    117
    ]
   },
   {
@@ -4758,11 +7202,20 @@
    "cover": "https://image.aladin.co.kr/product/741/54/cover500/8991268803_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=7415431",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "프로그래밍 개발/방법론",
-    "프로그래밍 기초/개발 방법론"
+    "개발자 커리어"
    ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "견습에서 숙련으로 가는 길을 패턴으로",
+   "topics": [
+    "성장",
+    "개발자"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kindle",
@@ -4773,23 +7226,36 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    17,
-    87,
-    90,
-    95,
+    99,
+    101,
     102,
-    138
+    156,
+    43,
+    165
    ]
   },
   {
    "title": "Big Feelings",
-   "author": "EBS",
+   "author": "Liz Fosslien, Mollie West Duffy",
    "englishTitle": "",
-   "cover": "https://image.aladin.co.kr/product/29381/32/cover500/895476570x_1.jpg",
-   "publisher": "",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=293813247",
+   "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9780593418239.jpg",
+   "publisher": "Portfolio",
+   "aladin": "",
+   "kyobo": "https://product.kyobobook.co.kr/detail/S000010437752",
    "field": "",
-   "tags": [],
+   "tags": [
+    "심리",
+    "멘탈"
+   ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "부러움·번아웃·불안 같은 큰 감정을 다룰 만한 크기로 만드는 법",
+   "topics": [
+    "감정",
+    "심리"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -4799,7 +7265,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    37,
+    109,
+    153,
+    169,
+    59,
+    73
+   ]
   },
   {
    "title": "David Copperfield",
@@ -4808,15 +7281,20 @@
    "cover": "https://image.aladin.co.kr/product/880/10/cover500/8949707314_2.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=8801063",
+   "kyobo": "",
    "field": "문학",
    "tags": [
-    "영미소설",
-    "서양고전문학",
-    "서양근대문학",
-    "세계의 문학",
-    "영국문학",
-    "테마문학"
+    "고전"
    ],
+   "groups": [
+    "문학"
+   ],
+   "gist": "디킨스가 자기 삶을 녹여 쓴 성장 소설",
+   "topics": [
+    "고전",
+    "디킨스"
+   ],
+   "form": "소설",
    "sources": [
     {
      "id": "kindle",
@@ -4827,12 +7305,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    61,
     19,
     79,
-    121,
-    56,
-    118
+    83,
+    117,
+    120,
+    164
    ]
   },
   {
@@ -4842,8 +7320,20 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "kyobo": "",
    "field": "",
-   "tags": [],
+   "tags": [
+    "시스템 설계"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "분산 데이터 시스템이 어떤 원리로 돌아가는가",
+   "topics": [
+    "분산 시스템",
+    "데이터"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "kindle",
@@ -4853,7 +7343,12 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    89,
+    98,
+    134,
+    179
+   ]
   },
   {
    "title": "Designing Machine Learning Systems",
@@ -4862,8 +7357,22 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "kyobo": "",
    "field": "",
-   "tags": [],
+   "tags": [
+    "ML",
+    "시스템 설계"
+   ],
+   "groups": [
+    "데이터·AI",
+    "개발·기술"
+   ],
+   "gist": "머신러닝 시스템을 실제로 굴리기 위한 설계",
+   "topics": [
+    "ML",
+    "시스템 설계"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kindle",
@@ -4873,7 +7382,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    89,
+    98,
+    104,
+    111,
+    134,
+    178
+   ]
   },
   {
    "title": "EQ 감성지능",
@@ -4882,8 +7398,20 @@
    "cover": "https://image.aladin.co.kr/product/270/69/cover500/8901088835_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2706952",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "인문·심리",
+   "tags": [
+    "심리"
+   ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "감정을 다루는 능력이 성과를 가른다",
+   "topics": [
+    "감성지능",
+    "심리"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "paper",
@@ -4893,7 +7421,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    59,
+    73,
+    109,
+    131,
+    143,
+    153
+   ]
   },
   {
    "title": "Getting Things Done",
@@ -4902,13 +7437,20 @@
    "cover": "https://image.aladin.co.kr/product/8683/83/cover500/8934975288_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86838333",
+   "kyobo": "",
    "field": "자기계발",
    "tags": [
-    "정리/심플라이프",
-    "시간관리/정보관리",
-    "시간관리",
-    "정보관리"
+    "시간 관리"
    ],
+   "groups": [
+    "배우기·생각"
+   ],
+   "gist": "머릿속을 비우고 할 일을 굴리는 GTD 방식",
+   "topics": [
+    "할 일 관리",
+    "GTD"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "google",
@@ -4920,11 +7462,11 @@
    "addedAt": "",
    "similar": [
     86,
-    91,
+    94,
+    0,
+    4,
     5,
-    69,
-    81,
-    94
+    20
    ]
   },
   {
@@ -4934,8 +7476,20 @@
    "cover": "https://image.aladin.co.kr/product/10598/25/cover500/896848354x_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=105982502",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "알고리즘"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "그림으로 훑는 알고리즘 입문",
+   "topics": [
+    "알고리즘",
+    "입문"
+   ],
+   "form": "교재",
    "sources": [
     {
      "id": "company",
@@ -4945,7 +7499,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    161,
+    17,
+    18,
+    28,
+    32,
+    35
+   ]
   },
   {
    "title": "High Output Management",
@@ -4954,8 +7515,20 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "kyobo": "",
    "field": "",
-   "tags": [],
+   "tags": [
+    "매니저"
+   ],
+   "groups": [
+    "일·조직"
+   ],
+   "gist": "인텔 앤디 그로브가 정리한 매니저의 생산성",
+   "topics": [
+    "매니저",
+    "생산성"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -4965,7 +7538,10 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    99,
+    159
+   ]
   },
   {
    "title": "Meta-Leadership",
@@ -4974,8 +7550,17 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "kyobo": "",
    "field": "",
-   "tags": [],
+   "tags": [
+    "리더십"
+   ],
+   "groups": [
+    "일·조직"
+   ],
+   "gist": "",
+   "topics": [],
+   "form": "",
    "sources": [
     {
      "id": "kindle",
@@ -4985,7 +7570,11 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    9,
+    102,
+    159
+   ]
   },
   {
    "title": "MLOps 구축 가이드북",
@@ -4994,8 +7583,20 @@
    "cover": "https://image.aladin.co.kr/product/34386/72/cover500/k332932509_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=343867281",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "MLOps"
+   ],
+   "groups": [
+    "데이터·AI"
+   ],
+   "gist": "데이터 수집부터 모델 학습까지 MLOps 파이프라인 실습",
+   "topics": [
+    "MLOps",
+    "실습"
+   ],
+   "form": "교재",
    "sources": [
     {
      "id": "company",
@@ -5005,7 +7606,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    145,
+    186,
+    17,
+    18,
+    28,
+    32
+   ]
   },
   {
    "title": "MLOps 실전 가이드",
@@ -5014,15 +7622,20 @@
    "cover": "https://image.aladin.co.kr/product/31975/62/cover500/k242834363_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=319756283",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "컴퓨터 공학",
-    "자료구조/알고리즘",
-    "데이터베이스 개론",
-    "소프트웨어 공학",
-    "프로그래밍 개발/방법론",
-    "프로그래밍 기초/개발 방법론"
+    "MLOps"
    ],
+   "groups": [
+    "데이터·AI"
+   ],
+   "gist": "MLOps와 데브옵스를 같이 놓고 본다",
+   "topics": [
+    "MLOps",
+    "DevOps"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "ridi",
@@ -5034,11 +7647,11 @@
    "addedAt": "",
    "similar": [
     145,
-    95,
-    102,
-    162,
-    171,
-    188
+    185,
+    17,
+    18,
+    28,
+    32
    ]
   },
   {
@@ -5048,14 +7661,19 @@
    "cover": "https://image.aladin.co.kr/product/36167/97/cover500/k622038191_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361679771",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "컴퓨터 공학",
-    "소프트웨어 공학",
-    "컴퓨터공학/전산학 개론",
-    "프로그래밍 개발/방법론",
-    "프로그래밍 기초/개발 방법론"
+    "개발 방법론"
    ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "소프트웨어 공학을 학습과 복잡도 관리의 문제로",
+   "topics": [
+    "소프트웨어 공학"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "kindle",
@@ -5066,33 +7684,13 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    145,
-    95,
-    102,
-    171,
-    187,
-    162
+    51,
+    17,
+    18,
+    28,
+    32,
+    35
    ]
-  },
-  {
-   "title": "On Prayer and The Contemplative Life",
-   "author": "",
-   "englishTitle": "",
-   "cover": "",
-   "publisher": "",
-   "aladin": "",
-   "field": "",
-   "tags": [],
-   "sources": [
-    {
-     "id": "ridi",
-     "link": "https://ridibooks.com/library/books/587336/"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": []
   },
   {
    "title": "Refactoring",
@@ -5101,12 +7699,20 @@
    "cover": "https://image.aladin.co.kr/product/23618/61/cover500/k932638523_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=236186172",
+   "kyobo": "",
    "field": "개발",
    "tags": [
-    "프로그래밍 개발/방법론",
-    "프로그래밍 기초/개발 방법론",
-    "객체지향 프로그래밍/UML"
+    "코드 품질"
    ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "코드를 고쳐 쓰는 리팩터링 카탈로그",
+   "topics": [
+    "리팩터링",
+    "설계"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "kindle",
@@ -5118,32 +7724,12 @@
    "addedAt": "",
    "similar": [
     87,
-    171,
+    106,
+    122,
+    160,
     17,
-    90,
-    95,
-    102
+    18
    ]
-  },
-  {
-   "title": "Robert C. Martin Series",
-   "author": "Robert C. Martin",
-   "englishTitle": "",
-   "cover": "",
-   "publisher": "",
-   "aladin": "",
-   "field": "",
-   "tags": [],
-   "sources": [
-    {
-     "id": "kindle",
-     "link": "https://www.amazon.com/dp/B001GSTOAM"
-    }
-   ],
-   "read": false,
-   "readAt": "",
-   "addedAt": "",
-   "similar": []
   },
   {
    "title": "SQL Antipatterns",
@@ -5152,8 +7738,20 @@
    "cover": "https://image.aladin.co.kr/product/1208/69/cover500/8966260047_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=12086993",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "개발",
+   "tags": [
+    "DB"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "SQL 설계에서 흔히 빠지는 함정들",
+   "topics": [
+    "SQL",
+    "DB"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -5163,7 +7761,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    126,
+    17,
+    18,
+    28,
+    32,
+    35
+   ]
   },
   {
    "title": "THE MISSING README",
@@ -5172,8 +7777,20 @@
    "cover": "",
    "publisher": "",
    "aladin": "",
+   "kyobo": "",
    "field": "",
-   "tags": [],
+   "tags": [
+    "개발자 태도"
+   ],
+   "groups": [
+    "개발·기술"
+   ],
+   "gist": "학교에서 안 가르치는 신입 개발자의 실무",
+   "topics": [
+    "개발자",
+    "신입"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -5183,17 +7800,36 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    18,
+    32,
+    52,
+    95,
+    100,
+    106
+   ]
   },
   {
    "title": "The Next Conversation",
-   "author": "",
+   "author": "Jefferson Fisher",
    "englishTitle": "",
-   "cover": "",
-   "publisher": "",
+   "cover": "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9798217045792.jpg",
+   "publisher": "Tarcher",
    "aladin": "",
+   "kyobo": "https://product.kyobobook.co.kr/detail/S000216226878",
    "field": "",
-   "tags": [],
+   "tags": [
+    "대화"
+   ],
+   "groups": [
+    "마음·관계"
+   ],
+   "gist": "말싸움에서 이기려 들지 않고 대화를 이어가는 법",
+   "topics": [
+    "대화",
+    "갈등"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "paper",
@@ -5203,7 +7839,11 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    26,
+    31,
+    168
+   ]
   },
   {
    "title": "UX/UI의 10가지 심리학 법칙",
@@ -5212,8 +7852,20 @@
    "cover": "https://image.aladin.co.kr/product/33764/78/cover500/k592930168_1.jpg",
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337647826",
-   "field": "",
-   "tags": [],
+   "kyobo": "",
+   "field": "디자인",
+   "tags": [
+    "UI/UX"
+   ],
+   "groups": [
+    "만들기"
+   ],
+   "gist": "디자인에 쓰이는 심리 법칙 열 가지",
+   "topics": [
+    "UI/UX",
+    "심리"
+   ],
+   "form": "가이드",
    "sources": [
     {
      "id": "company",
@@ -5223,7 +7875,14 @@
    "read": false,
    "readAt": "",
    "addedAt": "",
-   "similar": []
+   "similar": [
+    2,
+    62,
+    119,
+    48,
+    100,
+    134
+   ]
   }
  ]
 }
