@@ -17,6 +17,7 @@
   --border:#e8e6df; --line-strong:#d9d6cc;
   --text:#1e1c19; --muted:#6d6a63; --ink-3:#9c988e;
   --acc:#8c3b4a; --acc-bg:#f7edef;
+  --wood:#c3ac8c; --wood-sh:rgba(90,70,40,.3);
   --shadow-sm:0 1px 2px rgba(30,28,25,.05),0 1px 3px rgba(30,28,25,.05);
   --shadow-md:0 3px 10px rgba(30,28,25,.07),0 10px 28px rgba(30,28,25,.08);
   --sans:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;
@@ -27,6 +28,7 @@
   --border:#2c2a26; --line-strong:#3a3733;
   --text:#eceae5; --muted:#a09c93; --ink-3:#6e6a63;
   --acc:#c9808d; --acc-bg:#2b1c20;
+  --wood:#4a3d2c; --wood-sh:rgba(0,0,0,.5);
   --shadow-sm:0 1px 2px rgba(0,0,0,.25);
   --shadow-md:0 3px 10px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.34);
 }
@@ -35,26 +37,30 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:13
      letter-spacing:-.01em;-webkit-font-smoothing:antialiased;padding-bottom:56px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 18px;min-width:0}
 button,select,input{font-family:inherit;letter-spacing:inherit}
+img{display:block}
+/* hidden 은 display 지정에 밀린다 — 명시로 이긴다 */
+[hidden]{display:none !important}
 
 /* ── 상단바 ── */
 .top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
      backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .top .wrap{display:flex;align-items:center;gap:10px;padding-top:10px;padding-bottom:10px}
-.brand{font-weight:800;font-size:15px;letter-spacing:-.03em}
+.brand{font-weight:800;font-size:15px;letter-spacing:-.03em;border:0;background:none;color:inherit;
+       cursor:pointer;padding:0}
+.crumb{font-size:13px;color:var(--muted)}
+.crumb b{color:var(--text);font-weight:700}
 .count{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-left:auto}
 .themebtn{border:1px solid var(--border);background:var(--surface);color:var(--muted);
           border-radius:7px;width:28px;height:28px;cursor:pointer;font-size:12px;line-height:1;
           display:grid;place-items:center;flex:none}
 .themebtn:hover{border-color:var(--line-strong);color:var(--text)}
 
-/* ── 검색·필터 ── */
-.controls{padding-top:13px}
+/* ── 검색·거르개 ── */
+.controls{padding-top:14px}
 .search{width:100%;border:1px solid var(--border);background:var(--surface);color:var(--text);
-        border-radius:9px;padding:9px 12px;font-size:13.5px}
-.search:focus{outline:none;border-color:var(--acc)}
+        border-radius:9px;padding:9px 12px;font-size:13.5px;outline:none}
+.search:focus{border-color:var(--acc)}
 .search::placeholder{color:var(--ink-3)}
-
-/* 어디에 있는가 — 밑줄 탭 */
 .tabs{display:flex;gap:1px;margin-top:11px;overflow-x:auto;scrollbar-width:none;
       border-bottom:1px solid var(--border)}
 .tabs::-webkit-scrollbar{display:none}
@@ -65,8 +71,6 @@ button,select,input{font-family:inherit;letter-spacing:inherit}
 .tab.on{color:var(--text);font-weight:700;border-bottom-color:var(--acc)}
 .tab i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--ink-3);margin-left:4px}
 .tab.on i{color:var(--acc)}
-
-/* 주제 — 눌러서 켜고 끄는 글자 버튼. 아래 줄은 그 주제 안의 서브주제 */
 .fields{display:flex;gap:6px;margin-top:9px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
 .fields::-webkit-scrollbar{display:none}
 .fld{flex:none;border:1px solid transparent;background:none;color:var(--muted);font-size:12px;
@@ -74,80 +78,88 @@ button,select,input{font-family:inherit;letter-spacing:inherit}
 .fld:hover{color:var(--text);background:var(--surface2)}
 .fld.on{background:var(--acc-bg);color:var(--acc);border-color:var(--acc);font-weight:700}
 .fld i{font-style:normal;font-family:var(--mono);font-size:10.5px;opacity:.65;margin-left:4px}
-.subs{margin-top:3px;padding-left:11px;border-left:2px solid var(--acc-bg)}
-.subs .fld{font-size:11.5px;padding:2px 7px;color:var(--ink-3)}
-
-/* 도구 줄 */
 .bar{display:flex;align-items:center;gap:8px;padding:12px 0 2px;font-size:12px;color:var(--ink-3)}
 .bar .n{margin-right:auto;font-family:var(--mono)}
 .viewsw{display:flex;gap:2px}
 .viewsw button{border:0;background:none;color:var(--ink-3);font-size:12px;padding:3px 7px;
                border-radius:6px;cursor:pointer}
-.viewsw button:hover{color:var(--text);background:var(--surface2)}
-.viewsw button.on{color:var(--text);font-weight:700;background:var(--surface2)}
-.bar select{border:1px solid var(--border);background:var(--surface);color:var(--muted);
-            border-radius:6px;padding:3px 5px;font-size:12px;cursor:pointer;max-width:118px}
+.viewsw button:hover{color:var(--text)}
+.viewsw button.on{background:var(--surface2);color:var(--text);font-weight:700}
+select{border:1px solid var(--border);background:var(--surface);color:var(--muted);
+       border-radius:7px;padding:4px 7px;font-size:12px}
 
-/* ── 표지 보기 ── */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(98px,1fr));gap:17px 12px;
-      padding:12px 0 36px;min-width:0}
-@media(min-width:600px){.grid{grid-template-columns:repeat(auto-fill,minmax(122px,1fr));gap:24px 17px}}
-.book{cursor:pointer;border:0;background:none;padding:0;text-align:left;color:inherit;
-      display:flex;flex-direction:column;gap:6px;min-width:0}
-.cv{position:relative;aspect-ratio:2/3;border-radius:3px;overflow:hidden;background:var(--surface2);
-    box-shadow:var(--shadow-sm);transition:transform .18s ease,box-shadow .18s ease}
-.book:hover .cv{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-.cv img{width:100%;height:100%;object-fit:cover;display:block}
-.cv .ph{width:100%;height:100%;display:flex;align-items:flex-end;padding:8px;font-size:11px;
-        font-weight:700;line-height:1.32;letter-spacing:-.02em;word-break:keep-all;
-        color:rgba(255,255,255,.94);text-shadow:0 1px 2px rgba(0,0,0,.22)}
-.bt{font-size:12px;font-weight:600;line-height:1.32;letter-spacing:-.02em;word-break:keep-all;
-    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.ba{font-size:11px;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+/* ══ 쌓기 ══ 홈에서 주제를 표지 더미로 보여 준다 */
+.piles{margin-top:16px;border-top:1px solid var(--border)}
+.pile{display:flex;align-items:center;gap:18px;width:100%;text-align:left;cursor:pointer;
+      border:0;border-bottom:1px solid var(--border);background:none;color:inherit;
+      padding:15px 4px;font-family:inherit}
+.pile:hover{background:var(--surface2)}
+.fan{position:relative;width:112px;height:88px;flex:none}
+.fan img,.fan .ph{position:absolute;top:50%;left:0;width:54px;border-radius:2px;
+                  box-shadow:0 2px 8px rgba(0,0,0,.28);transform-origin:bottom left}
+.fan .ph{height:80px;display:grid;place-items:center;font-size:9px;color:#fff;padding:4px;
+         text-align:center;line-height:1.2;overflow:hidden}
+.pmeta{min-width:0}
+.pmeta .nm{font-size:15.5px;font-weight:800;letter-spacing:-.03em}
+.pmeta .n{font-family:var(--mono);font-size:11.5px;color:var(--acc);margin-top:2px}
+.pmeta .tg{font-size:11.5px;color:var(--ink-3);margin-top:5px;overflow:hidden;
+           text-overflow:ellipsis;white-space:nowrap}
 
-/* ── 목록 보기 ── */
-.list{padding:6px 0 36px;min-width:0}
-.row{display:flex;gap:11px;align-items:center;width:100%;padding:9px 2px;cursor:pointer;
-     border:0;border-bottom:1px solid var(--border);background:none;color:inherit;text-align:left;
-     min-width:0}
+/* ══ 서가 ══ 책등을 세워 늘어놓는다. 제목은 90도로 */
+.shelf{margin-top:14px}
+.srow{margin-bottom:22px}
+.slab{font-size:11.5px;font-weight:750;color:var(--acc);letter-spacing:-.02em;margin-bottom:7px}
+.books{display:flex;flex-wrap:wrap;align-items:flex-end;gap:4px;padding-bottom:11px;
+       border-bottom:6px solid var(--wood);box-shadow:0 6px 6px -5px var(--wood-sh)}
+.spine{flex:none;width:30px;border-radius:2px 2px 0 0;color:#fff;cursor:pointer;border:0;
+       writing-mode:vertical-rl;text-orientation:mixed;font-size:11px;font-weight:600;
+       padding:9px 5px;letter-spacing:-.02em;overflow:hidden;font-family:inherit;
+       box-shadow:inset -3px 0 5px rgba(0,0,0,.2),inset 1px 0 0 rgba(255,255,255,.14);
+       transition:transform .12s}
+.spine:hover{transform:translateY(-5px)}
+.spine.thin{width:24px}
+.spine.wide{width:36px}
+
+/* 표지·목록·표 */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:20px 14px;margin-top:14px}
+.gcard{border:0;background:none;padding:0;cursor:pointer;color:inherit;text-align:left;min-width:0}
+.cv{aspect-ratio:1/1.45;border-radius:3px;overflow:hidden;background:var(--surface2);
+    box-shadow:var(--shadow-sm)}
+.cv img{width:100%;height:100%;object-fit:cover}
+.ph2{width:100%;height:100%;display:grid;place-items:center;padding:8px;text-align:center;
+     font-size:10.5px;line-height:1.3;color:#fff;word-break:keep-all}
+.bt{font-size:12px;font-weight:650;line-height:1.3;margin-top:7px;letter-spacing:-.02em;
+    word-break:keep-all;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ba{font-size:11px;color:var(--ink-3);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.list{margin-top:12px;border-top:1px solid var(--border)}
+.row{display:flex;align-items:center;gap:12px;width:100%;border:0;border-bottom:1px solid var(--border);
+     background:none;color:inherit;text-align:left;padding:9px 2px;cursor:pointer;font-family:inherit}
 .row:hover{background:var(--surface2)}
-.row .cv{width:34px;flex:none;border-radius:2px;box-shadow:none}
-.row .cv .ph{padding:3px;font-size:7px;line-height:1.1;overflow:hidden}
+.row .cv{width:34px;flex:none}
 .row .mid{flex:1;min-width:0}
-.row .rt{font-size:13px;font-weight:600;letter-spacing:-.02em;line-height:1.35;
-         display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.row .rs{font-size:11.5px;color:var(--ink-3);margin-top:2px;white-space:nowrap;overflow:hidden;
-         text-overflow:ellipsis}
-.row .rr{flex:none;text-align:right;font-family:var(--mono);font-size:10.5px;color:var(--ink-3);
-         line-height:1.5}
-.row .rr b{display:block;font-weight:400;color:var(--muted)}
-/* ── 표 보기 — 표지 없이 촘촘하게 ── */
-.tblwrap{overflow-x:auto;padding:4px 0 36px;min-width:0}
+.row .rt{font-size:13px;font-weight:650;letter-spacing:-.02em;word-break:keep-all}
+.row .rs{font-size:11.5px;color:var(--ink-3);margin-top:2px;overflow:hidden;
+         text-overflow:ellipsis;white-space:nowrap}
+.row .rr{text-align:right;font-size:11px;color:var(--ink-3);font-family:var(--mono);flex:none}
+.row .rr b{display:block;font-weight:400;color:var(--muted);font-family:var(--sans);font-size:11.5px}
+.tblwrap{margin-top:12px;overflow-x:auto}
 .tbl{width:100%;border-collapse:collapse;font-size:12.5px;min-width:520px}
-.tbl th{text-align:left;font-weight:500;color:var(--ink-3);font-size:11.5px;padding:6px 10px 6px 0;
-        border-bottom:1px solid var(--line-strong);white-space:nowrap}
-.tbl td{padding:7px 10px 7px 0;border-bottom:1px solid var(--border);vertical-align:top}
-.tbl tr{cursor:pointer}
-.tbl tbody tr:hover td{background:var(--surface2)}
-.tbl .c-title{font-weight:600;letter-spacing:-.02em;line-height:1.35;width:42%}
+.tbl th{text-align:left;font-size:11px;color:var(--ink-3);font-weight:500;padding:0 10px 6px 0;
+        border-bottom:1px solid var(--border)}
+.tbl td{padding:7px 10px 7px 0;border-bottom:1px solid var(--border);cursor:pointer}
+.tbl tr:hover td{background:var(--surface2)}
+.tbl .c-title{font-weight:650;letter-spacing:-.02em}
 .tbl .c-author{color:var(--muted);width:22%}
-.tbl .c-field{color:var(--muted);width:15%;white-space:nowrap}
-.tbl .c-where{color:var(--muted);width:13%;white-space:nowrap}
-.tbl .c-read{font-family:var(--mono);font-size:11px;color:var(--ink-3);text-align:right;
-             white-space:nowrap;padding-right:0}
-.empty-msg{padding:56px 0;text-align:center;color:var(--ink-3);font-size:13px}
+.tbl .c-tag{color:var(--acc);width:20%;white-space:nowrap}
+.tbl .c-where{color:var(--muted);width:16%;white-space:nowrap}
+.tbl .c-read{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);text-align:right;white-space:nowrap}
 
 /* ── 상세 ── */
-.sheet{position:fixed;inset:0;z-index:40;display:none;align-items:center;justify-content:center;
-       padding:20px;background:rgba(30,28,25,.42)}
-.sheet.on{display:flex}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;
-      box-shadow:var(--shadow-md);max-width:430px;width:100%;max-height:86vh;overflow:auto;padding:19px}
-@media(max-width:520px){
-  .sheet{align-items:flex-end;padding:0}
-  .card{border-radius:15px 15px 0 0;max-width:none;max-height:90vh;
-        padding:18px 16px calc(18px + env(safe-area-inset-bottom))}
-}
+.sheet{position:fixed;inset:0;z-index:40;background:rgba(20,18,16,.4);backdrop-filter:blur(3px);
+       display:none;place-items:center;padding:20px}
+.sheet.on{display:grid}
+.card{background:var(--surface);border-radius:14px;box-shadow:var(--shadow-md);padding:20px;
+      width:min(460px,100%);max-height:86vh;overflow:auto}
 .chead{display:flex;gap:13px}
 .chead .cv{width:80px;flex:none}
 .ctitle{font-size:15.5px;font-weight:800;letter-spacing:-.03em;line-height:1.3;word-break:keep-all}
@@ -181,18 +193,36 @@ button,select,input{font-family:inherit;letter-spacing:inherit}
 
 .note{margin-top:12px;padding:11px 13px;background:var(--acc-bg);border-radius:9px;
       font-size:12px;color:var(--muted);line-height:1.55}
-.note b{color:var(--text);font-weight:700}
-.foot{padding:22px 0 8px;border-top:1px solid var(--border);font-size:11.5px;color:var(--ink-3)}
+.foot{padding:22px 0 8px;border-top:1px solid var(--border);font-size:11.5px;color:var(--ink-3);
+      margin-top:26px}
 .foot a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border)}
 .foot a:hover{color:var(--acc);border-bottom-color:currentColor}
 .theme-switching *{transition:none !important}
+
+/* ── 폰 ── */
+@media (max-width: 620px) {
+  .wrap{padding:0 13px}
+  body{font-size:13px}
+  .fan{width:92px;height:74px}
+  .fan img,.fan .ph{width:45px}
+  .fan .ph{height:66px}
+  .pile{gap:13px;padding:12px 2px}
+  .pmeta .nm{font-size:14.5px}
+  .spine{width:27px;font-size:10.5px}
+  .spine.thin{width:22px}
+  .spine.wide{width:32px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:16px 10px}
+  .simil-row{grid-template-columns:repeat(3,1fr)}
+  .card{padding:16px;border-radius:12px}
+}
 </style>
 </head>
 <body>
 
 <header class="top">
   <div class="wrap">
-    <span class="brand">책장</span>
+    <button class="brand" id="home">책장</button>
+    <span class="crumb" id="crumb"></span>
     <span class="count" id="count"></span>
     <button class="themebtn" id="theme" title="밝게/어둡게" aria-label="테마 전환">◐</button>
   </div>
@@ -200,23 +230,23 @@ button,select,input{font-family:inherit;letter-spacing:inherit}
 
 <main class="wrap">
   <div class="controls">
-    <input class="search" id="q" type="search" placeholder="제목·저자 검색" autocomplete="off" />
+    <input class="search" id="q" type="search" placeholder="제목·저자·태그 검색" autocomplete="off" />
     <nav class="tabs" id="tabs"></nav>
-    <div class="fields subs" id="subwhere" hidden></div>
-    <div class="fields" id="groups"></div>
-    <div class="fields subs" id="subtags" hidden></div>
-    <div class="bar">
+    <div class="fields" id="subwhere" hidden></div>
+    <div class="fields" id="subtags" hidden></div>
+    <div class="bar" id="bar" hidden>
       <span class="n" id="shown"></span>
       <div class="viewsw" id="viewsw">
+        <button data-v="spine">책등</button>
         <button data-v="grid">표지</button>
         <button data-v="list">목록</button>
         <button data-v="table">표</button>
       </div>
       <select id="sort" aria-label="정렬">
+        <option value="topic">주제 순</option>
         <option value="read">최근 읽은 순</option>
         <option value="title">제목 순</option>
         <option value="author">저자 순</option>
-        <option value="topic">주제 순</option>
       </select>
     </div>
     <div class="note" id="note" hidden></div>
@@ -239,33 +269,39 @@ button,select,input{font-family:inherit;letter-spacing:inherit}
 const $ = (s) => document.querySelector(s)
 const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))
 
-// 표지가 없는 책은 제목으로 색을 만들어 세워 둔다
-function hue(s) {
+// 주제마다 색 하나 — 책등과 표지 없는 자리가 같은 색을 쓴다
+const HUE = {
+  '개발·기술': '#3c4b63', '데이터·AI': '#2f5d50', '만들기': '#7a4b6b',
+  '일·조직': '#8c5a2b', '배우기·생각': '#4a5d2f', '마음·관계': '#8c3b4a',
+  '삶·교양': '#5b4a6b', '문학': '#7b3f3f', '몸·취미': '#2f6b6b', '그 밖': '#5a5a55',
+}
+const colorOf = (b) => HUE[(b.groups || [])[0]] || HUE['그 밖']
+// 제목에서 만든 값 — 책등 두께와 높이를 조금씩 달리해 실제 책처럼 보이게
+const seed = (s) => {
   let h = 0
-  for (const ch of String(s)) h = (h * 31 + ch.codePointAt(0)) % 360
+  for (const ch of String(s)) h = (h * 31 + ch.codePointAt(0)) % 997
   return h
 }
-const placeholder = (b) =>
-  `<div class="ph" style="background:linear-gradient(160deg,hsl(${hue(b.title)} 26% 46%),hsl(${(hue(b.title)+24)%360} 24% 34%))">${esc(b.title)}</div>`
-const coverHTML = (b) =>
-  b.cover
-    ? `<img src="${esc(b.cover)}" alt="" loading="lazy" onerror="this.parentNode.innerHTML=this.dataset.ph" data-ph="${esc(placeholder(b))}" />`
-    : placeholder(b)
 
-const state = { where: 'all', src: '', group: '', tag: '', sort: 'read', q: '',
-                view: localStorage.getItem('shelf-view') || 'grid' }
+const state = { where: 'all', src: '', group: '', tag: '', sort: 'topic', q: '',
+                view: localStorage.getItem('shelf-view') || 'spine' }
 let DATA = { books: [], services: [], wheres: [], groups: [], updatedAt: '' }
-// 주제 차례 — 태그 순 정렬과 서브주제 줄이 같은 차례를 쓴다
+
+const monthLabel = (m) => (m ? m.replace(/^(\d{4})-(\d{2})$/, (_, y, mo) => `${y}.${+mo}`) : '')
+const serviceName = (id) => (DATA.services.find((s) => s.id === id) || {}).name || id
 const tagRank = (t) => {
   let i = 0
   for (const g of DATA.groups) for (const x of g.tags) { if (x.name === t) return i; i++ }
   return 9999
 }
+const coverHTML = (b) =>
+  b.cover
+    ? `<img src="${esc(b.cover)}" alt="" loading="lazy" onerror="this.parentNode.innerHTML=this.dataset.ph" data-ph="${esc(ph(b))}">`
+    : ph(b)
+const ph = (b) => `<div class="ph2" style="background:${colorOf(b)}">${esc(b.title.slice(0, 22))}</div>`
 
-const monthLabel = (m) => (m ? m.replace(/^(\d{4})-(\d{2})$/, (_, y, mo) => `${y}.${+mo}`) : '')
-const serviceName = (id) => (DATA.services.find((s) => s.id === id) || {}).name || id
-
-function visible() {
+// 소장처·검색까지 건 뒤의 목록 — 주제 더미도 이 결과로 센다
+function afterWhere() {
   const q = state.q.trim().toLowerCase()
   return DATA.books.filter((b) => {
     if (state.where === 'none' && b.sources.length) return false
@@ -274,89 +310,151 @@ function visible() {
       if (g && !b.sources.some((s) => g.ids.includes(s.id))) return false
     }
     if (state.src && !b.sources.some((s) => s.id === state.src)) return false
-    if (state.group && !(b.groups || []).includes(state.group)) return false
-    if (state.tag && !(b.tags || []).includes(state.tag)) return false
     if (!q) return true
     return (b.title + ' ' + b.author + ' ' + b.englishTitle + ' ' + b.publisher + ' ' + (b.tags || []).join(' '))
       .toLowerCase().includes(q)
   })
 }
-
+function visible() {
+  return afterWhere().filter((b) => {
+    if (state.group && !(b.groups || []).includes(state.group)) return false
+    if (state.tag && !(b.tags || []).includes(state.tag)) return false
+    return true
+  })
+}
 function sorted(list) {
   const c = [...list]
   const ko = (a, b) => a.localeCompare(b, 'ko')
   if (state.sort === 'title') c.sort((a, b) => ko(a.title, b.title))
   else if (state.sort === 'author') c.sort((a, b) => ko(a.author || '힣', b.author || '힣'))
   else if (state.sort === 'topic') {
-    // 첫 태그의 차례로 줄 세운다 — 비슷한 주제가 붙어 나온다
     const key = (b) => Math.min(...((b.tags || []).map(tagRank).concat(9999)))
     c.sort((a, b) => key(a) - key(b) || ko(a.title, b.title))
-  }
-  else {
-    // 최근 읽은 순 — 읽은 달이 있는 책이 먼저, 아직 안 읽은 책은 제목 순으로 뒤에
+  } else {
     c.sort((a, b) => {
-      if (!a.readAt && !b.readAt) return ko(a.title, b.title)
-      if (!a.readAt) return 1
-      if (!b.readAt) return -1
-      return b.readAt.localeCompare(a.readAt)
+      const kx = a.readAt || a.addedAt || '', ky = b.readAt || b.addedAt || ''
+      return kx !== ky ? ky.localeCompare(kx) : ko(a.title, b.title)
     })
   }
   return c
 }
 
+// ── 홈 · 쌓기 ── 주제 하나가 표지 더미
+function drawPiles() {
+  const rows = afterWhere()
+  const piles = DATA.groups.map((g) => {
+    const mine = rows.filter((b) => (b.groups || []).includes(g.name))
+    return { name: g.name, books: mine }
+  }).filter((p) => p.books.length).sort((a, b) => b.books.length - a.books.length)
+
+  $('#out').innerHTML = `<div class="piles">${piles.map((p) => `
+    <button class="pile" data-g="${esc(p.name)}">
+      <div class="fan">
+        ${p.books.filter((b) => b.cover).slice(0, 4).map((b, i) => `
+          <img src="${esc(b.cover)}" alt=""
+               style="left:${i * 17}px;transform:translateY(-50%) rotate(${-9 + i * 6}deg);z-index:${4 - i}">`).join('')
+        || `<div class="ph" style="background:${HUE[p.name] || HUE['그 밖']};left:0;transform:translateY(-50%)">${esc(p.name)}</div>`}
+      </div>
+      <div class="pmeta">
+        <div class="nm">${esc(p.name)}</div>
+        <div class="n">${p.books.length}권</div>
+        <div class="tg">${esc([...new Set(p.books.flatMap((b) => b.tags || []))].slice(0, 4).join(' · '))}</div>
+      </div>
+    </button>`).join('')}</div>`
+}
+
+// ── 서가 ── 책등을 세우고 제목을 90도로
+function spineHTML(list) {
+  const cur = state.group
+  return list.map((b) => {
+    const s = seed(b.title)
+    const w = s % 7 === 0 ? ' wide' : s % 3 === 0 ? ' thin' : ''
+    const h = 116 + (s % 5) * 9
+    // 한 칸 안에서는 색을 맞추고, 다른 주제에도 걸친 책만 그 주제 색 띠를 머리에 얹는다
+    const base = cur ? (HUE[cur] || colorOf(b)) : colorOf(b)
+    const other = (b.groups || []).find((g) => g !== cur)
+    const band = cur && other ? `,inset 0 5px 0 ${HUE[other] || HUE['그 밖']}` : ''
+    return `<button class="spine${w}" data-i="${DATA.books.indexOf(b)}"
+      style="background:${base};height:${h}px;box-shadow:inset -3px 0 5px rgba(0,0,0,.2),inset 1px 0 0 rgba(255,255,255,.14)${band}"
+      title="${esc(b.title)}${other ? ' — ' + esc(other) + ' 에도' : ''}">${esc(b.title)}</button>`
+  }).join('')
+}
+
 function render() {
-  const list = sorted(visible())
-  const idx = (b) => DATA.books.indexOf(b)
+  const home = !state.group && !state.tag && !state.q.trim()
+  $('#bar').hidden = home
+  $('#crumb').textContent = home ? '' : (state.tag || state.group || '검색')
+  $('#subtags').hidden = !state.group
 
-  $('#out').innerHTML = !list.length
-    ? '<div class="empty-msg">찾는 책이 없어요</div>'
-    : state.view === 'grid'
-      ? `<div class="grid">${list.map((b) => `
-          <button class="book" data-i="${idx(b)}">
-            <div class="cv">${coverHTML(b)}</div>
-            <div class="bt">${esc(b.title)}</div>
-            <div class="ba">${esc(b.author || '저자 미상')}</div>
-          </button>`).join('')}</div>`
-      : state.view === 'table'
-      ? `<div class="tblwrap"><table class="tbl">
-          <thead><tr><th>제목</th><th>저자</th><th>주제</th><th>어디에</th><th style="text-align:right">읽음</th></tr></thead>
-          <tbody>${list.map((b) => `
-            <tr data-i="${idx(b)}">
-              <td class="c-title">${esc(b.title)}</td>
-              <td class="c-author">${esc(b.author || '')}</td>
-              <td class="c-field">${esc((b.tags || []).join(' · '))}</td>
-              <td class="c-where">${b.sources.map((s) => esc(serviceName(s.id))).join(' · ')}</td>
-              <td class="c-read">${b.readAt ? esc(monthLabel(b.readAt)) : ''}</td>
-            </tr>`).join('')}</tbody></table></div>`
-      : `<div class="list">${list.map((b) => `
-          <button class="row" data-i="${idx(b)}">
-            <div class="cv">${coverHTML(b)}</div>
-            <div class="mid">
-              <div class="rt">${esc(b.title)}</div>
-              <div class="rs">${esc(b.author || '저자 미상')}${b.tags?.length ? ' · ' + esc(b.tags.join(', ')) : ''}</div>
-            </div>
-            <div class="rr">
-              <b>${b.sources.length ? b.sources.map((s) => esc(serviceName(s.id))).join(' · ') : ''}</b>
-              ${b.readAt ? esc(monthLabel(b.readAt)) : ''}
-            </div>
-          </button>`).join('')}</div>`
+  if (home) {
+    drawPiles()
+  } else {
+    const list = sorted(visible())
+    const idx = (b) => DATA.books.indexOf(b)
+    if (state.view === 'spine') {
+      // 태그별로 한 칸씩 — 주제 순이 아니면 통째로 한 칸
+      let html = ''
+      if (state.sort === 'topic') {
+        const byTag = new Map()
+        for (const b of list) {
+          const t = [...(b.tags || [])].sort((x, y) => tagRank(x) - tagRank(y))[0] || '그 밖'
+          if (!byTag.has(t)) byTag.set(t, [])
+          byTag.get(t).push(b)
+        }
+        html = [...byTag.entries()].map(([t, rows]) =>
+          `<div class="srow"><div class="slab">${esc(t)} <span style="color:var(--ink-3)">${rows.length}</span></div>
+           <div class="books">${spineHTML(rows)}</div></div>`).join('')
+      } else {
+        html = `<div class="srow"><div class="books">${spineHTML(list)}</div></div>`
+      }
+      $('#out').innerHTML = `<div class="shelf">${html}</div>`
+    } else if (state.view === 'grid') {
+      $('#out').innerHTML = `<div class="grid">${list.map((b) => `
+        <button class="gcard" data-i="${idx(b)}">
+          <div class="cv">${coverHTML(b)}</div>
+          <div class="bt">${esc(b.title)}</div>
+          <div class="ba">${esc(b.author || '')}</div>
+        </button>`).join('')}</div>`
+    } else if (state.view === 'table') {
+      $('#out').innerHTML = `<div class="tblwrap"><table class="tbl">
+        <thead><tr><th>제목</th><th>저자</th><th>주제</th><th>어디에</th><th style="text-align:right">읽음</th></tr></thead>
+        <tbody>${list.map((b) => `
+          <tr data-i="${idx(b)}">
+            <td class="c-title">${esc(b.title)}</td>
+            <td class="c-author">${esc(b.author || '')}</td>
+            <td class="c-tag">${esc((b.tags || []).join(' · '))}</td>
+            <td class="c-where">${b.sources.map((s) => esc(serviceName(s.id))).join(' · ')}</td>
+            <td class="c-read">${b.readAt ? esc(monthLabel(b.readAt)) : ''}</td>
+          </tr>`).join('')}</tbody></table></div>`
+    } else {
+      $('#out').innerHTML = `<div class="list">${list.map((b) => `
+        <button class="row" data-i="${idx(b)}">
+          <div class="cv">${coverHTML(b)}</div>
+          <div class="mid">
+            <div class="rt">${esc(b.title)}</div>
+            <div class="rs">${esc(b.author || '저자 미상')}${b.tags?.length ? ' · ' + esc(b.tags.join(', ')) : ''}</div>
+          </div>
+          <div class="rr">
+            <b>${b.sources.length ? esc(serviceName(b.sources[0].id)) : ''}</b>
+            ${b.readAt ? esc(monthLabel(b.readAt)) : ''}
+          </div>
+        </button>`).join('')}</div>`
+    }
+    $('#shown').textContent = `${list.length}권`
+  }
 
-  $('#shown').textContent = `${list.length}권`
   $('#tabs').querySelectorAll('.tab').forEach((t) => t.classList.toggle('on', t.dataset.f === state.where))
-  // 소장처 묶음을 고르면 그 안의 서비스 줄이 열린다 (하나뿐이면 열 것이 없다)
   const w = (DATA.wheres || []).find((x) => x.id === state.where)
   $('#subwhere').hidden = !w || w.services.length < 2
   if (w && w.services.length > 1) {
     $('#subwhere').innerHTML = w.services.map((s) =>
       `<button class="fld${s.id === state.src ? ' on' : ''}" data-src="${esc(s.id)}">${esc(s.name)}<i>${s.count}</i></button>`).join('')
   }
-  $('#groups').querySelectorAll('.fld').forEach((f) => f.classList.toggle('on', f.dataset.group === state.group))
-  // 주제를 고르면 그 안의 서브주제 줄이 열린다
   const g = (DATA.groups || []).find((x) => x.name === state.group)
-  $('#subtags').hidden = !g
   if (g) {
-    $('#subtags').innerHTML = g.tags.map((t) =>
-      `<button class="fld${t.name === state.tag ? ' on' : ''}" data-tag="${esc(t.name)}">${esc(t.name)}<i>${t.count}</i></button>`).join('')
+    $('#subtags').innerHTML = `<button class="fld${!state.tag ? ' on' : ''}" data-tag="">전체<i>${g.count}</i></button>`
+      + g.tags.map((t) =>
+        `<button class="fld${t.name === state.tag ? ' on' : ''}" data-tag="${esc(t.name)}">${esc(t.name)}<i>${t.count}</i></button>`).join('')
   }
   $('#viewsw').querySelectorAll('button').forEach((v) => v.classList.toggle('on', v.dataset.v === state.view))
 }
@@ -402,19 +500,23 @@ const closeBook = () => $('#sheet').classList.remove('on')
 
 // ── 이벤트 ──
 $('#out').addEventListener('click', (e) => {
+  const pile = e.target.closest('[data-g]')
+  if (pile) { state.group = pile.dataset.g; state.tag = ''; render(); window.scrollTo(0, 0); return }
   const el = e.target.closest('[data-i]')
   if (el) openBook(DATA.books[+el.dataset.i])
+})
+$('#home').addEventListener('click', () => {
+  state.group = ''; state.tag = ''; state.q = ''; $('#q').value = ''
+  render(); window.scrollTo(0, 0)
 })
 $('#sheet').addEventListener('click', (e) => {
   const tag = e.target.closest('[data-tag]')
   if (tag) {
-    // 태그를 누르면 그 태그가 속한 주제까지 같이 열어 준다
     const t = tag.dataset.tag
     const g = (DATA.groups || []).find((x) => x.tags.some((y) => y.name === t))
     state.group = g ? g.name : ''
     state.tag = t
-    closeBook()
-    render()
+    closeBook(); render(); window.scrollTo(0, 0)
     return
   }
   const go = e.target.closest('[data-go]')
@@ -425,34 +527,43 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBook(
 $('#q').addEventListener('input', (e) => { state.q = e.target.value; render() })
 $('#sort').addEventListener('change', (e) => { state.sort = e.target.value; render() })
 $('#viewsw').addEventListener('click', (e) => {
-  const b = e.target.closest('[data-v]')
+  const b = e.target.closest('button')
   if (!b) return
   state.view = b.dataset.v
   localStorage.setItem('shelf-view', state.view)
   render()
 })
+$('#subtags').addEventListener('click', (e) => {
+  const f = e.target.closest('.fld')
+  if (!f) return
+  state.tag = f.dataset.tag
+  render()
+})
+$('#subwhere').addEventListener('click', (e) => {
+  const f = e.target.closest('.fld')
+  if (!f) return
+  state.src = state.src === f.dataset.src ? '' : f.dataset.src
+  render()
+})
 
-// 테마 — 전환 순간 transition 을 꺼서 카드가 하나씩 밀리지 않게
-const setTheme = (t) => {
-  document.documentElement.classList.add('theme-switching')
+function setTheme(t) {
   document.documentElement.dataset.theme = t
   localStorage.setItem('shelf-theme', t)
-  requestAnimationFrame(() => requestAnimationFrame(() =>
-    document.documentElement.classList.remove('theme-switching')))
 }
+document.body.classList.add('theme-switching')
+setTimeout(() => document.body.classList.remove('theme-switching'), 60)
 $('#theme').addEventListener('click', () =>
   setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'))
-const saved = localStorage.getItem('shelf-theme')
-if (saved) document.documentElement.dataset.theme = saved
-else if (matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.dataset.theme = 'dark'
+const savedTheme = localStorage.getItem('shelf-theme')
+if (savedTheme) setTheme(savedTheme)
+else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark')
 
-// ── 데이터 ──
+// ── 시작 ──
 fetch('data/library.json?v=' + Date.now())
   .then((r) => r.json())
   .then((d) => {
     DATA = d
     const none = d.books.filter((b) => !b.sources.length).length
-    // 어디에 있는가 — 온라인·종이책·빌린 것으로 감싸고, 누르면 그 안이 열린다
     const tabs = [{ id: 'all', name: '전체', count: d.books.length }]
       .concat((d.wheres || []).map((w) => ({ id: w.id, name: w.name, count: w.count })))
     if (none) tabs.push({ id: 'none', name: '소장처 미확인', count: none })
@@ -465,41 +576,11 @@ fetch('data/library.json?v=' + Date.now())
       state.src = ''
       render()
     })
-    $('#subwhere').addEventListener('click', (e) => {
-      const f = e.target.closest('.fld')
-      if (!f) return
-      state.src = state.src === f.dataset.src ? '' : f.dataset.src
-      render()
-    })
-
-    $('#groups').innerHTML = [{ name: '', label: '주제 전체', count: '' }]
-      .concat((d.groups || []).map((g) => ({ name: g.name, label: g.name, count: g.count })))
-      .map((g) => `<button class="fld" data-group="${esc(g.name)}">${esc(g.label)}${g.count ? `<i>${g.count}</i>` : ''}</button>`)
-      .join('')
-    $('#groups').addEventListener('click', (e) => {
-      const f = e.target.closest('.fld')
-      if (!f) return
-      // 이미 켜진 주제를 다시 누르면 끈다. 주제를 바꾸면 서브주제는 풀린다.
-      state.group = state.group === f.dataset.group ? '' : f.dataset.group
-      state.tag = ''
-      render()
-    })
-    $('#subtags').addEventListener('click', (e) => {
-      const f = e.target.closest('.fld')
-      if (!f) return
-      state.tag = state.tag === f.dataset.tag ? '' : f.dataset.tag
-      render()
-    })
-
     $('#count').textContent = `${d.total}권`
     $('#updated').textContent = `${d.updatedAt} 갱신`
-    if (!d.services.length) {
-      $('#note').hidden = false
-      $('#note').innerHTML = '아직 <b>읽은 기록</b>만 들어와 있어요.'
-    }
+    $('#sort').value = state.sort
     render()
   })
-  .catch(() => { $('#out').innerHTML = '<div class="empty-msg">데이터를 불러오지 못했어요</div>' })
 </script>
 </body>
 </html>
