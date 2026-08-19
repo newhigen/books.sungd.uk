@@ -7151,13 +7151,13 @@
   },
   {
    "title": "포프TV 1권",
-   "author": "",
+   "author": "Pope Kim (김포프)",
    "englishTitle": "",
-   "cover": "",
-   "publisher": "",
+   "cover": "https://img.ridicdn.net/cover/2493000003/xxlarge",
+   "publisher": "연두미디어",
    "aladin": "",
    "kyobo": "",
-   "ridi": "",
+   "ridi": "https://ridibooks.com/books/2493000003",
    "field": "",
    "tags": [
     "개발자 태도",
@@ -7166,9 +7166,12 @@
    "groups": [
     "개발·기술"
    ],
-   "gist": "",
-   "topics": [],
-   "form": "",
+   "gist": "인문학도 출신 프로그래머 김포프가 유튜브에서 풀던 이야기",
+   "topics": [
+    "개발자",
+    "생각"
+   ],
+   "form": "에세이",
    "sources": [
     {
      "id": "ridi",
