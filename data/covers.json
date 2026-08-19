@@ -1246,15 +1246,6 @@
   "match": 0.38,
   "uncertain": true
  },
- "지적 대화를 위한 30분 고전": {
-  "title": "지적 대화를 위한 30분 고전",
-  "author": "",
-  "publisher": "웅진지식하우스",
-  "cover": "",
-  "ridi": "https://ridibooks.com/books/111017867",
-  "match": 1.0,
-  "note": "전 50권 세트라 단행본 검색에 안 걸린다 — 리디 세트 페이지에서 확인했다"
- },
  "크리스천의 성 토크": {
   "title": "크리스천의 性 TALK (성 토크)",
   "author": "박수웅",
@@ -1811,5 +1802,14 @@
   "kyobo": "https://product.kyobobook.co.kr/detail/S000010437752",
   "match": 1.0,
   "note": "알라딘에 없다 — 교보에서 확인했다"
+ },
+ "아퀴나스의 신학대전": {
+  "title": "아퀴나스의 신학대전",
+  "author": "유대칠",
+  "publisher": "웅진지식하우스",
+  "cover": "https://img.ridicdn.net/cover/606001949/xxlarge",
+  "ridi": "https://ridibooks.com/books/606001949",
+  "match": 1.0,
+  "note": "지적 대화를 위한 30분 고전 03 · 원작 토마스 아퀴나스"
  }
 }
