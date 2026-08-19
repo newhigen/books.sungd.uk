@@ -123,20 +123,26 @@ const COLS = [
 const nameOf = (id) => (DATA.services.find((s) => s.id === id) || {}).name || id
 const whereText = (b) => (b.sources.length ? b.sources.map((s) => nameOf(s.id)).join(' · ') : '—')
 
-function visible() {
-  const q = state.q.trim().toLowerCase()
-  return DATA.books.filter((b) => {
-    if (state.read === 'yes' && !b.read) return false
-    if (state.read === 'no' && b.read) return false
-    if (state.where === 'none' && b.sources.length) return false
-    if (state.where !== 'all' && state.where !== 'none') {
-      const g = DATA.wheres.find((w) => w.id === state.where)
-      if (g && !b.sources.some((s) => g.ids.includes(s.id))) return false
-    }
-    if (!q) return true
-    return (b.title + ' ' + b.author + ' ' + (b.tags || []).join(' ')).toLowerCase().includes(q)
-  })
+// 한 축의 숫자는 '나머지 축을 건 결과' 로 센다. 그래야 온라인을 고르면
+// 읽음 수도 온라인 안에서의 수로 바뀐다.
+const inWhere = (b, w) => {
+  if (w === 'all') return true
+  if (w === 'none') return !b.sources.length
+  const g = DATA.wheres.find((x) => x.id === w)
+  return !g || b.sources.some((s) => g.ids.includes(s.id))
 }
+const inRead = (b, r) => (r === 'yes' ? !!b.read : r === 'no' ? !b.read : true)
+const inQ = (b, q) =>
+  !q || (b.title + ' ' + b.author + ' ' + (b.tags || []).join(' ')).toLowerCase().includes(q)
+
+function filtered({ skipWhere = false, skipRead = false } = {}) {
+  const q = state.q.trim().toLowerCase()
+  return DATA.books.filter((b) =>
+    (skipWhere || inWhere(b, state.where)) &&
+    (skipRead || inRead(b, state.read)) &&
+    inQ(b, q))
+}
+const visible = () => filtered()
 
 function sorted(list) {
   const ko = (a, b) => String(a).localeCompare(String(b), 'ko')
@@ -159,6 +165,31 @@ function sorted(list) {
   return c
 }
 
+function drawFilters() {
+  // 소장처 수 — 읽음·검색만 건 결과에서 센다
+  const forWhere = filtered({ skipWhere: true })
+  const none = forWhere.filter((b) => !b.sources.length).length
+  const tabs = [{ id: 'all', name: '전체', count: forWhere.length }]
+    .concat((DATA.wheres || []).map((w) => ({
+      id: w.id, name: w.name,
+      count: forWhere.filter((b) => b.sources.some((s) => w.ids.includes(s.id))).length,
+    })))
+  if (none || state.where === 'none') tabs.push({ id: 'none', name: '미확인', count: none })
+  $('#where').innerHTML = tabs.map((t) =>
+    `<button data-w="${t.id}"${t.id === state.where ? ' class="on"' : ''}>${
+      esc(t.name)}<i>${t.count}</i></button>`).join('')
+
+  // 읽음 수 — 소장처·검색만 건 결과에서 센다
+  const forRead = filtered({ skipRead: true })
+  const yes = forRead.filter((b) => b.read).length
+  $('#readf').innerHTML = [
+    { id: 'all', name: '읽음 상관없이', count: '' },
+    { id: 'yes', name: '읽음', count: yes },
+    { id: 'no', name: '아직', count: forRead.length - yes },
+  ].map((t) => `<button data-r="${t.id}"${t.id === state.read ? ' class="on"' : ''}>${
+    esc(t.name)}${t.count !== '' ? `<i>${t.count}</i>` : ''}</button>`).join('')
+}
+
 function draw() {
   const list = sorted(visible())
   $('#th').innerHTML = COLS.map((c) =>
@@ -173,8 +204,7 @@ function draw() {
       <td class="d num${b.readAt ? '' : ' none'}">${b.readAt ? esc(ym(b.readAt)) : '—'}</td>
     </tr>`).join('')
   $('#n').textContent = `${list.length}권`
-  $('#where').querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.w === state.where))
-  $('#readf').querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.r === state.read))
+  drawFilters()
 }
 
 $('#th').addEventListener('click', (e) => {
@@ -206,21 +236,10 @@ fetch('data/library.json?v=' + Date.now())
   .then((r) => r.json())
   .then((d) => {
     DATA = d
-    const none = d.books.filter((b) => !b.sources.length).length
-    const tabs = [{ id: 'all', name: '전체', count: d.books.length }]
-      .concat((d.wheres || []).map((w) => ({ id: w.id, name: w.name, count: w.count })))
-    if (none) tabs.push({ id: 'none', name: '미확인', count: none })
-    $('#where').innerHTML = tabs.map((t) =>
-      `<button data-w="${t.id}">${esc(t.name)}<i>${t.count}</i></button>`).join('')
-    const read = d.books.filter((b) => b.read).length
-    $('#readf').innerHTML = [
-      { id: 'all', name: '읽음 상관없이', count: '' },
-      { id: 'yes', name: '읽음', count: read },
-      { id: 'no', name: '아직', count: d.books.length - read },
-    ].map((t) => `<button data-r="${t.id}">${esc(t.name)}${t.count !== '' ? `<i>${t.count}</i>` : ''}</button>`).join('')
+
     $('#foot').innerHTML = `${esc(d.updatedAt)} 갱신 · 머리글을 누르면 그 기준으로 줄을 세운다.<br>`
       + `<b>산 날짜·빌린 날짜는 아직 없다</b> — 모을 때 제목만 긁어서 그렇다. `
-      + `지금 있는 날짜는 읽은 달 하나이고 ${read}권에 붙어 있다. · `
+      + `지금 있는 날짜는 읽은 달 하나이고 ${d.books.filter((b) => b.read).length}권에 붙어 있다. · `
       + `<a href="./">서가로 보기</a>`
     draw()
     // 표 머리글을 머리 아래에 붙인다
