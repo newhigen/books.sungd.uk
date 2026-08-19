@@ -46,6 +46,7 @@ h1{font-size:14px;font-weight:800;letter-spacing:-.03em}
 .seg button:hover{color:var(--text)}
 .seg button.on{color:var(--text);font-weight:700;border-bottom-color:var(--acc)}
 .seg button i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-left:3px}
+.sep{width:1px;height:14px;background:var(--rule2);margin:0 3px}
 select{border:1px solid var(--rule2);background:none;color:var(--muted);border-radius:5px;padding:3px 5px}
 
 /* ── 표 ── 장식 없이 줄만 */
@@ -72,6 +73,8 @@ tr:hover td{background:color-mix(in srgb,var(--acc) 4%,transparent)}
   .wrap{padding:0 11px 36px}
   /* 좁으면 저자·태그를 접는다 — 머리글도 같이 접어야 열이 안 어긋난다 */
   .a,.g,thead th:nth-child(2),thead th:nth-child(4){display:none}
+  /* 줄이 접히면 칸막이가 줄 끝에 떠서 어색하다 */
+  .sep{display:none}
   .w{width:auto}
   td,thead th{padding-right:6px}
 }
@@ -89,6 +92,8 @@ tr:hover td{background:color-mix(in srgb,var(--acc) 4%,transparent)}
   <div class="frow">
     <input id="q" type="search" placeholder="제목·저자·태그" autocomplete="off" />
     <div class="seg" id="where"></div>
+    <span class="sep"></span>
+    <div class="seg" id="readf"></div>
   </div>
 </header>
 
@@ -106,7 +111,7 @@ const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'
 const ym = (m) => (m ? m.replace(/^(\d{4})-(\d{2})$/, (_, y, mo) => `${y}.${+mo}`) : '')
 
 let DATA = { books: [], wheres: [], services: [] }
-const state = { where: 'all', q: '', sort: 'read', desc: true }
+const state = { where: 'all', read: 'all', q: '', sort: 'read', desc: true }
 
 const COLS = [
   { key: 'title', label: '제목', cls: 't' },
@@ -121,6 +126,8 @@ const whereText = (b) => (b.sources.length ? b.sources.map((s) => nameOf(s.id)).
 function visible() {
   const q = state.q.trim().toLowerCase()
   return DATA.books.filter((b) => {
+    if (state.read === 'yes' && !b.read) return false
+    if (state.read === 'no' && b.read) return false
     if (state.where === 'none' && b.sources.length) return false
     if (state.where !== 'all' && state.where !== 'none') {
       const g = DATA.wheres.find((w) => w.id === state.where)
@@ -167,6 +174,7 @@ function draw() {
     </tr>`).join('')
   $('#n').textContent = `${list.length}권`
   $('#where').querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.w === state.where))
+  $('#readf').querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.r === state.read))
 }
 
 $('#th').addEventListener('click', (e) => {
@@ -179,6 +187,10 @@ $('#th').addEventListener('click', (e) => {
 $('#where').addEventListener('click', (e) => {
   const b = e.target.closest('button')
   if (b) { state.where = b.dataset.w; draw() }
+})
+$('#readf').addEventListener('click', (e) => {
+  const b = e.target.closest('button')
+  if (b) { state.read = b.dataset.r; draw() }
 })
 $('#q').addEventListener('input', (e) => { state.q = e.target.value; draw() })
 $('#theme').addEventListener('click', () => {
@@ -200,7 +212,12 @@ fetch('data/library.json?v=' + Date.now())
     if (none) tabs.push({ id: 'none', name: '미확인', count: none })
     $('#where').innerHTML = tabs.map((t) =>
       `<button data-w="${t.id}">${esc(t.name)}<i>${t.count}</i></button>`).join('')
-    const read = d.books.filter((b) => b.readAt).length
+    const read = d.books.filter((b) => b.read).length
+    $('#readf').innerHTML = [
+      { id: 'all', name: '읽음 상관없이', count: '' },
+      { id: 'yes', name: '읽음', count: read },
+      { id: 'no', name: '아직', count: d.books.length - read },
+    ].map((t) => `<button data-r="${t.id}">${esc(t.name)}${t.count !== '' ? `<i>${t.count}</i>` : ''}</button>`).join('')
     $('#foot').innerHTML = `${esc(d.updatedAt)} 갱신 · 머리글을 누르면 그 기준으로 줄을 세운다.<br>`
       + `<b>산 날짜·빌린 날짜는 아직 없다</b> — 모을 때 제목만 긁어서 그렇다. `
       + `지금 있는 날짜는 읽은 달 하나이고 ${read}권에 붙어 있다. · `
