@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>어디에 뒀나</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='5' y='7' width='22' height='18' rx='2' fill='none' stroke='%231e1c19' stroke-width='2.2'/%3E%3Crect x='11' y='13' width='10' height='6' rx='1' fill='%238c3b4a'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500&display=swap" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#141414;--sec:#3d3d3a;--muted:#6a6a66;--faint:#9b9b96;
+      --rule:#f0f0ee;--rule2:#e3e3e0;--acc:#8c3b4a;--acc-bg:#fbf2f4;--ok:#3f7d58;
+      --sans:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;
+      --mono:'Google Sans Code',ui-monospace,Menlo,monospace}
+html{color-scheme:light}
+body{background:#fff;color:var(--ink);font-family:var(--sans);font-size:12.5px;line-height:1.45;
+     -webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 14px 40px}
+button,input,select{font-family:inherit;letter-spacing:inherit;font-size:inherit}
+[hidden]{display:none !important}
+
+.head{position:sticky;top:0;z-index:20;background:#fff;padding-top:11px}
+.head::after{content:'';display:block;height:2px;background:var(--rule);position:relative}
+.hrow{display:flex;align-items:center;gap:8px}
+h1{font-size:13.5px;font-weight:800;letter-spacing:-.03em;white-space:nowrap}
+.count{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap}
+.count b{color:var(--ok);font-weight:500}
+.save{border:1px solid var(--ink);background:var(--ink);color:#fff;padding:3px 10px 4px;
+      border-radius:5px;cursor:pointer}
+.save.dirty{background:var(--acc);border-color:var(--acc)}
+.save:disabled{opacity:.4;cursor:default}
+.ghost{border:1px solid var(--rule2);background:#fff;color:var(--muted);padding:3px 8px 4px;
+       border-radius:5px;cursor:pointer}
+.fill{position:absolute;left:0;bottom:0;height:2px;background:var(--ok);width:0;transition:width .25s}
+.frow{display:flex;align-items:center;gap:5px;padding:7px 0 8px}
+.frow input[type=search]{flex:1;border:1px solid var(--rule2);border-radius:5px;padding:3px 8px 4px;
+                         outline:none;min-width:0}
+.frow input:focus{border-color:var(--acc)}
+.toggle{border:1px solid var(--rule2);background:#fff;color:var(--muted);padding:3px 8px 4px;
+        border-radius:5px;cursor:pointer;white-space:nowrap}
+.toggle.on{border-color:var(--acc);color:var(--acc);font-weight:650}
+.note{font-size:11px;color:var(--faint);padding:0 0 9px;line-height:1.5}
+.note b{color:var(--muted);font-weight:650}
+
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+.w-b{width:27%}.w-p{width:auto}.w-m{width:23%}
+td{padding:6px 8px 7px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+tr.set td{background:#f7fbf8}
+.c-b b{font-weight:650;letter-spacing:-.02em;line-height:1.35;word-break:keep-all;
+       overflow-wrap:anywhere}
+.c-b em{font-style:normal;color:var(--faint);font-size:11px;display:block;margin-top:1px}
+.c-b i{font-style:normal;font-size:11px;color:var(--muted);display:block;margin-top:3px}
+
+/* 어디에 뒀나 — 한 책이 여러 곳에 있을 수 있어 여러 개 고를 수 있다 */
+.pick{display:inline-flex;align-items:center;border-radius:4px;padding:2px 8px 3px;font-size:11.5px;
+      margin:0 3px 3px 0;cursor:pointer;border:1px dashed var(--rule2);background:none;
+      color:var(--faint);line-height:1.35}
+.pick:hover{border-color:var(--acc);border-style:solid;color:var(--acc);background:var(--acc-bg)}
+.pick.on{background:var(--acc);border-color:var(--acc);border-style:solid;color:#fff;font-weight:600}
+.grp{display:inline-block;font-size:10px;color:var(--faint);margin:0 4px 0 2px;
+     font-family:var(--mono);vertical-align:1px}
+.c-m textarea{width:100%;min-width:0;border:1px solid var(--rule2);border-radius:4px;
+              padding:3px 6px;font-family:inherit;font-size:11.5px;line-height:1.4;resize:vertical;
+              min-height:26px;outline:none;color:var(--sec);background:#fff;display:block}
+.c-m textarea:focus{border-color:var(--acc);min-height:56px}
+.c-m textarea:not(:placeholder-shown){border-color:var(--acc);background:var(--acc-bg);color:var(--ink)}
+.c-m textarea::placeholder{color:#cecbc6}
+.done{text-align:center;padding:34px 0;color:var(--faint);font-size:12.5px}
+
+@media (max-width: 700px) {
+  .wrap{padding:0 11px 30px}
+  table,tbody,tr,td{display:block;width:auto}
+  tr{border-bottom:1px solid var(--rule2);padding:9px 0 10px}
+  td{border:0;padding:0}
+  .c-p{padding-top:6px}
+  .c-m{padding-top:5px}
+  .pick{font-size:12.5px;padding:4px 10px 5px;margin:0 4px 4px 0}
+  .c-b b{font-size:13.5px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="head">
+  <div class="hrow">
+    <h1>어디에 뒀나</h1>
+    <span class="count" id="count"></span>
+    <button class="ghost" id="revert" title="쓰던 것을 버리고 저장된 상태로">되돌리기</button>
+    <button class="save" id="save" disabled>저장</button>
+  </div>
+  <div class="frow">
+    <input type="search" id="q" placeholder="제목·저자" autocomplete="off" />
+    <button class="toggle on" id="onlynone">아직 안 정한 것만</button>
+  </div>
+  <div class="fill" id="fill"></div>
+</header>
+
+<p class="note">한 책이 <b>여러 곳</b>에 있을 수 있다 — 종이책으로도 갖고 있고 구글 북스에도 있으면 둘 다 누른다.
+  고른 것은 <b>data/where-manual.json</b> 에 담기고, 다음 빌드에서 책장에 반영된다.
+  애매하면 오른쪽 <b>메모</b>에 적어 두면 내가 읽고 처리한다.</p>
+
+<table>
+  <colgroup><col class="w-b" /><col class="w-p" /><col class="w-m" /></colgroup>
+  <tbody id="rows"></tbody>
+</table>
+
+</div>
+<script>
+const $ = (s) => document.querySelector(s)
+const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))
+
+// 고를 수 있는 자리 — 묶음별로 늘어놓는다
+const PLACES = [
+  ['온라인', [['ridi', '리디북스'], ['kyobo', '교보 sam'], ['kindle', '킨들'],
+              ['google', '구글 북스'], ['pdf', 'PDF']]],
+  ['내 것', [['paper', '종이책']]],
+  ['빌림', [['company', '회사'], ['friend', '지인'], ['library', '도서관']]],
+]
+const ALL = PLACES.flatMap(([, list]) => list)
+const nameOf = (id) => (ALL.find(([x]) => x === id) || [, id])[1]
+
+let BOOKS = []        // 소장처를 모르는 책 (+ 손으로 정한 것)
+let WHERE = {}        // 제목 → [어디에]
+let NOTES = {}        // 제목 → 메모
+let dirty = false
+let onlyNone = true
+
+const LOCAL = 'where-draft'
+function keep() {
+  try { localStorage.setItem(LOCAL, JSON.stringify({ where: WHERE, notes: NOTES })) } catch (e) {}
+}
+function markDirty() {
+  dirty = true
+  keep()
+  const b = $('#save')
+  b.disabled = false
+  b.classList.add('dirty')
+  b.textContent = '저장'
+}
+
+function visible() {
+  const q = $('#q').value.trim().toLowerCase()
+  return BOOKS.filter((b) => {
+    if (onlyNone && (WHERE[b.title] || []).length) return false
+    if (!q) return true
+    return (b.title + ' ' + (b.author || '')).toLowerCase().includes(q)
+  })
+}
+
+function draw() {
+  document.querySelectorAll('textarea[data-m]').forEach((ta) => { NOTES[ta.dataset.m] = ta.value })
+  const list = visible()
+  $('#rows').innerHTML = list.length ? list.map((b) => {
+    const mine = WHERE[b.title] || []
+    return `<tr data-t="${esc(b.title)}"${mine.length ? ' class="set"' : ''}>
+      <td class="c-b"><b>${esc(b.title)}</b>
+        ${b.author ? `<em>${esc(b.author)}</em>` : ''}
+        ${b.gist ? `<i>${esc(b.gist)}</i>` : ''}</td>
+      <td class="c-p">
+        ${PLACES.map(([g, list]) => `<span class="grp">${esc(g)}</span>` + list.map(([id, nm]) =>
+          `<button class="pick${mine.includes(id) ? ' on' : ''}" data-p="${id}">${esc(nm)}</button>`).join('')).join('')}
+      </td>
+      <td class="c-m"><textarea data-m="${esc(b.title)}" rows="1" placeholder="메모">${esc(NOTES[b.title] || '')}</textarea></td>
+    </tr>`
+  }).join('') : `<tr><td colspan="3" class="done">${
+    onlyNone ? '다 정했다. 위 단추를 눌러 전체를 볼 수 있다.' : '찾는 책이 없다.'}</td></tr>`
+
+  const all = BOOKS.length
+  const set = BOOKS.filter((b) => (WHERE[b.title] || []).length).length
+  const pct = all ? Math.round((set / all) * 100) : 0
+  $('#fill').style.width = pct + '%'
+  $('#count').innerHTML = `<b>${set}</b>/${all} (${pct}%)`
+}
+
+$('#rows').addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-p]')
+  if (!btn) return
+  const title = e.target.closest('tr').dataset.t
+  const id = btn.dataset.p
+  const cur = new Set(WHERE[title] || [])
+  if (cur.has(id)) cur.delete(id)
+  else cur.add(id)
+  WHERE[title] = [...cur]
+  if (!WHERE[title].length) delete WHERE[title]
+  markDirty()
+  // 다 정한 책은 '안 정한 것만' 에서 사라지므로, 그 자리만 다시 그린다
+  draw()
+})
+$('#rows').addEventListener('input', (e) => {
+  const ta = e.target.closest('textarea[data-m]')
+  if (!ta) return
+  NOTES[ta.dataset.m] = ta.value
+  markDirty()
+})
+$('#q').addEventListener('input', draw)
+$('#onlynone').addEventListener('click', () => {
+  onlyNone = !onlyNone
+  $('#onlynone').classList.toggle('on', onlyNone)
+  $('#onlynone').textContent = onlyNone ? '아직 안 정한 것만' : '전체 보기'
+  draw()
+})
+$('#save').addEventListener('click', async () => {
+  const b = $('#save')
+  b.textContent = '저장 중…'
+  const r = await fetch('../api/tags', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ where: WHERE, notes: NOTES }),
+  }).then((x) => x.json()).catch(() => ({}))
+  if (r.ok) {
+    dirty = false
+    localStorage.removeItem(LOCAL)
+    b.classList.remove('dirty'); b.disabled = true; b.textContent = '저장됨'
+  } else b.textContent = r.error || '실패'
+})
+$('#revert').addEventListener('click', () => {
+  if (dirty && !window.confirm('쓰던 것을 버리고 저장된 상태로 돌아간다. 계속할까?')) return
+  localStorage.removeItem(LOCAL)
+  location.reload()
+})
+
+Promise.all([
+  fetch('../data/library.json?v=' + Date.now()).then((r) => r.json()),
+  fetch('../data/where-manual.json?v=' + Date.now()).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+  fetch('../data/notes.json?v=' + Date.now()).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+]).then(([lib, where, notes]) => {
+  WHERE = where || {}
+  NOTES = notes || {}
+  // 아직 못 잡은 책 + 이미 손으로 정해 둔 책
+  BOOKS = lib.books.filter((b) => !b.sources.length || WHERE[b.title])
+  try {
+    const draft = JSON.parse(localStorage.getItem(LOCAL) || 'null')
+    if (draft) {
+      Object.assign(WHERE, draft.where || {})
+      Object.assign(NOTES, draft.notes || {})
+      markDirty()
+      $('#save').textContent = '저장 (쓰던 것 있음)'
+    }
+  } catch (e) {}
+  draw()
+})
+</script>
+</body>
+</html>

@@ -218,6 +218,18 @@ for (const book of books.values()) {
   book.tags = tags.slice(0, 6)
 }
 
+// ---- 어디에 뒀는지 손으로 정한 것 (data/where-manual.json) ----
+// 수집 원본이 못 잡은 책은 사람이 찍어 준다. 원본을 고치지 않고 여기서 얹는다.
+const WHERE = join(repo, 'data', 'where-manual.json')
+const whereManual = existsSync(WHERE) ? JSON.parse(readFileSync(WHERE, 'utf8')) : {}
+for (const [title, ids] of Object.entries(whereManual)) {
+  const book = books.get(keyOf(title))
+  if (!book) continue
+  for (const id of ids) {
+    if (!book.sources.some((s) => s.id === id)) book.sources.push({ id })
+  }
+}
+
 // ---- 태그는 손으로 붙인 것이 먼저 (data/tags.json) ----
 // 서점 분류에서 뽑은 태그는 '성공학' 처럼 진열대 말이라, 있으면 내 태그로 갈아 끼운다.
 const MINE = join(repo, 'data', 'tags.json')
