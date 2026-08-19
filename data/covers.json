@@ -1256,7 +1256,13 @@
   "confirmedBy": "사람 확인 2026-08-13 — 표기만 다름"
  },
  "포프TV 1권": {
-  "notfound": true
+  "title": "포프TV 1권",
+  "author": "Pope Kim (김포프)",
+  "publisher": "연두미디어",
+  "cover": "https://img.ridicdn.net/cover/2493000003/xxlarge",
+  "ridi": "https://ridibooks.com/books/2493000003",
+  "match": 1.0,
+  "note": "알라딘·교보에 없다 — 리디 상품 페이지에서 확인했다"
  },
  "A Philosophy of Software Design, 2nd Edition": {
   "notfound": true
