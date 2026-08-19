@@ -458,7 +458,7 @@
    "tags": [
     {
      "name": "고전",
-     "count": 8
+     "count": 9
     },
     {
      "name": "한국소설",
@@ -477,7 +477,7 @@
      "count": 5
     }
    ],
-   "count": 18
+   "count": 19
   },
   {
    "name": "몸·취미",
@@ -527,6 +527,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385415808",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "학습"
@@ -566,6 +567,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=389594657",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "관계"
@@ -605,6 +607,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=343608885",
    "kyobo": "",
+   "ridi": "",
    "field": "디자인",
    "tags": [
     "디자인",
@@ -644,6 +647,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=331172752",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "말하기"
@@ -683,6 +687,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=59172854",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "사고법"
@@ -721,6 +726,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379447436",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "습관"
@@ -764,6 +770,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340824147",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "일상"
@@ -803,6 +810,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=212921347",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "한국소설",
@@ -844,6 +852,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=178600244",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "일상"
@@ -882,6 +891,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=22740964",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "리더십",
@@ -923,6 +933,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=339900718",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "건축"
@@ -962,6 +973,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=262494588",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "INFJ"
@@ -1000,6 +1012,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=354985363",
    "kyobo": "",
+   "ridi": "",
    "field": "글쓰기·읽기",
    "tags": [
     "글쓰기"
@@ -1039,6 +1052,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=228728501",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "인문"
@@ -1078,6 +1092,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=331480497",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "철학",
@@ -1119,6 +1134,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399902905",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "일본소설"
@@ -1158,6 +1174,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355857744",
    "kyobo": "",
+   "ridi": "",
    "field": "역사·사회",
    "tags": [
     "법"
@@ -1192,6 +1209,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317047184",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "데이터 분석"
@@ -1231,6 +1249,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385359128",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "개발자 태도"
@@ -1270,6 +1289,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=376867245",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "고전",
@@ -1310,6 +1330,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=334864077",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "커리어"
@@ -1348,6 +1369,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=111601879",
    "kyobo": "",
+   "ridi": "",
    "field": "글쓰기·읽기",
    "tags": [
     "글쓰기",
@@ -1388,6 +1410,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=118070490",
    "kyobo": "",
+   "ridi": "",
    "field": "글쓰기·읽기",
    "tags": [
     "글쓰기"
@@ -1426,6 +1449,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=283768718",
    "kyobo": "",
+   "ridi": "",
    "field": "글쓰기·읽기",
    "tags": [
     "글쓰기"
@@ -1464,6 +1488,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=339950299",
    "kyobo": "",
+   "ridi": "",
    "field": "건강·생활",
    "tags": [
     "사진"
@@ -1501,6 +1526,7 @@
    "publisher": "인포더북스",
    "aladin": "",
    "kyobo": "https://product.kyobobook.co.kr/detail/S000001551449",
+   "ridi": "",
    "field": "",
    "tags": [
     "말하기"
@@ -1536,6 +1562,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=172514897",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "대화"
@@ -1574,6 +1601,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=162576111",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "말하기"
@@ -1612,6 +1640,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=367690703",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "AI",
@@ -1653,6 +1682,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=22740732",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "문제 해결"
@@ -1691,6 +1721,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=365686101",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "음식"
@@ -1730,6 +1761,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=277570173",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "대화"
@@ -1768,6 +1800,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=378401803",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "개발자 태도",
@@ -1809,6 +1842,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332803864",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "커리어"
@@ -1848,6 +1882,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=188280906",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "관계"
@@ -1887,6 +1922,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=265658321",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "데이터 분석"
@@ -1926,6 +1962,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317337987",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "HR"
@@ -1964,6 +2001,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=344261992",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "멘탈",
@@ -2004,6 +2042,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340409751",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "일하는 법",
@@ -2044,6 +2083,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=327769788",
    "kyobo": "",
+   "ridi": "",
    "field": "글쓰기·읽기",
    "tags": [
     "사고법"
@@ -2083,6 +2123,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=338092098",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "일하는 법",
@@ -2124,6 +2165,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=260233162",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "일하는 법"
@@ -2163,6 +2205,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=309085697",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "커리어"
@@ -2202,6 +2245,7 @@
    "publisher": "",
    "aladin": "",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "개발자 커리어"
@@ -2240,6 +2284,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=291109856",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "예술"
@@ -2278,6 +2323,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372311844",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "예술",
@@ -2318,6 +2364,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=176756346",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "여행"
@@ -2356,6 +2403,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320914582",
    "kyobo": "",
+   "ridi": "",
    "field": "역사·사회",
    "tags": [
     "여행",
@@ -2396,6 +2444,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310883870",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "UI/UX"
@@ -2434,6 +2483,7 @@
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=175977462",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "애자일",
@@ -2479,6 +2529,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=156835614",
    "kyobo": "",
+   "ridi": "",
    "field": "글쓰기·읽기",
    "tags": [
     "노트·기록"
@@ -2518,6 +2569,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=979171",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "개발 방법론",
@@ -2558,6 +2610,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=68729431",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "학습",
@@ -2599,6 +2652,7 @@
    "publisher": "21세기북스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=363740383",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "학습",
@@ -2639,6 +2693,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364124045",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "의사결정"
@@ -2677,6 +2732,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=368175533",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "INFJ",
@@ -2718,6 +2774,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=363875410",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "인생"
@@ -2757,6 +2814,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361141292",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "인생"
@@ -2796,6 +2854,7 @@
    "publisher": "문학사상",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=3020589",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "운동",
@@ -2839,6 +2898,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=17810770",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "심리",
@@ -2879,6 +2939,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353072248",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "팀",
@@ -2920,6 +2981,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=41640064",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "추리"
@@ -2958,6 +3020,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49274393",
    "kyobo": "",
+   "ridi": "",
    "field": "디자인",
    "tags": [
     "UI/UX"
@@ -2997,6 +3060,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=350931",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "추리"
@@ -3035,6 +3099,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=136863291",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "여행"
@@ -3073,6 +3138,7 @@
    "publisher": "김영사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=354932983",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "통계·수학",
@@ -3114,6 +3180,7 @@
    "publisher": "책밥",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336637033",
    "kyobo": "",
+   "ridi": "",
    "field": "여행",
    "tags": [
     "여행",
@@ -3154,6 +3221,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355774608",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "학습"
@@ -3193,6 +3261,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=184006846",
    "kyobo": "",
+   "ridi": "",
    "field": "과학",
    "tags": [
     "건강"
@@ -3229,6 +3298,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=133779316",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "독서"
@@ -3268,6 +3338,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=306554256",
    "kyobo": "",
+   "ridi": "",
    "field": "건강·생활",
    "tags": [
     "운동"
@@ -3306,6 +3377,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329204106",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "건강"
@@ -3344,6 +3416,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340097859",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "돈"
@@ -3383,6 +3456,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=314782464",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "완벽주의",
@@ -3423,6 +3497,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=395976130",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "건강"
@@ -3462,6 +3537,7 @@
    "publisher": "웅진지식하우스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=229494332",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "정리"
@@ -3500,6 +3576,7 @@
    "publisher": "",
    "aladin": "",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "인프라"
@@ -3534,6 +3611,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=71137981",
    "kyobo": "",
+   "ridi": "",
    "field": "건강·생활",
    "tags": [
     "운동",
@@ -3575,6 +3653,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=147996667",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "건축"
@@ -3613,6 +3692,7 @@
    "publisher": "더클래식",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=68653840",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "고전"
@@ -3652,6 +3732,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382243812",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "인생",
@@ -3691,6 +3772,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86321510",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "학습"
@@ -3730,6 +3812,7 @@
    "publisher": "위즈덤하우스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=295634618",
    "kyobo": "",
+   "ridi": "",
    "field": "글쓰기·읽기",
    "tags": [
     "독서"
@@ -3768,6 +3851,7 @@
    "publisher": "민음사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374806339",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "고전",
@@ -3809,6 +3893,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=322210531",
    "kyobo": "",
+   "ridi": "",
    "field": "글쓰기·읽기",
    "tags": [
     "노트·기록",
@@ -3848,6 +3933,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=43132954",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "팀",
@@ -3889,6 +3975,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=106724468",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "시간 관리"
@@ -3927,6 +4014,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337084402",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "코드 품질"
@@ -3966,6 +4054,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330384053",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "일상"
@@ -4004,6 +4093,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=333751539",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "ML",
@@ -4044,6 +4134,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=209572978",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "테크니컬 라이팅"
@@ -4083,6 +4174,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382212819",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "노트·기록"
@@ -4121,6 +4213,7 @@
    "publisher": "북스톤",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=303696963",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "창업",
@@ -4162,6 +4255,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=391649440",
    "kyobo": "",
+   "ridi": "",
    "field": "글쓰기·읽기",
    "tags": [
     "독서"
@@ -4200,6 +4294,7 @@
    "publisher": "김영사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=189796678",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "시간 관리"
@@ -4239,6 +4334,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=296893356",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "개발자 태도"
@@ -4278,6 +4374,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329557210",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "사회"
@@ -4317,6 +4414,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337306986",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "사회"
@@ -4356,6 +4454,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330404121",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "시스템 설계"
@@ -4394,6 +4493,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=230960553",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "매니저",
@@ -4435,6 +4535,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345270362",
    "kyobo": "",
+   "ridi": "",
    "field": "디자인",
    "tags": [
     "개발자 태도"
@@ -4474,6 +4575,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=285013226",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "개발자 커리어"
@@ -4513,6 +4615,7 @@
    "publisher": "한빛미디어",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=316733978",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "개발자 커리어",
@@ -4554,6 +4657,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=264212092",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "테크니컬 라이팅"
@@ -4593,6 +4697,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340346630",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "통계·수학",
@@ -4633,6 +4738,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385602478",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "습관",
@@ -4674,6 +4780,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=294146082",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "개발 조직",
@@ -4715,6 +4822,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=247906056",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "일하는 법",
@@ -4757,6 +4865,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=377897689",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "인프라"
@@ -4796,6 +4905,7 @@
    "publisher": "갤리온",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=243688983",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "심리",
@@ -4836,6 +4946,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353408353",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "관계"
@@ -4875,6 +4986,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353634346",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "통계·수학",
@@ -4915,6 +5027,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=307689982",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "일본소설"
@@ -4954,6 +5067,7 @@
    "publisher": "랜덤하우스코리아",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=495064",
    "kyobo": "",
+   "ridi": "",
    "field": "건강·생활",
    "tags": [
     "운동"
@@ -4993,6 +5107,7 @@
    "publisher": "글항아리",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345584561",
    "kyobo": "",
+   "ridi": "",
    "field": "건강·생활",
    "tags": [
     "인생"
@@ -5032,6 +5147,7 @@
    "publisher": "열림원",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=295665964",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "일상"
@@ -5071,6 +5187,7 @@
    "publisher": "한문화",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=158314436",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "건강"
@@ -5110,6 +5227,7 @@
    "publisher": "민음사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=260084",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "고전"
@@ -5157,6 +5275,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=209457983",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "관계"
@@ -5195,6 +5314,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=141060330",
    "kyobo": "",
+   "ridi": "",
    "field": "디자인",
    "tags": [
     "UI/UX"
@@ -5234,6 +5354,7 @@
    "publisher": "시공사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49225289",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "고전"
@@ -5273,6 +5394,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=210117981",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "팀"
@@ -5312,6 +5434,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=168779479",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "코드 품질"
@@ -5351,6 +5474,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=34465476",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "데이터 분석",
@@ -5392,6 +5516,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=20648680",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "창업"
@@ -5431,6 +5556,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=349372427",
    "kyobo": "",
+   "ridi": "",
    "field": "여행",
    "tags": [
     "일본어"
@@ -5466,6 +5592,7 @@
    "publisher": "",
    "aladin": "",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "DB"
@@ -5500,6 +5627,7 @@
    "publisher": "서울문화사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=393564333",
    "kyobo": "",
+   "ridi": "",
    "field": "건강·생활",
    "tags": [
     "음식"
@@ -5539,6 +5667,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=307888132",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "IT"
@@ -5571,6 +5700,7 @@
    "publisher": "비즈니스북스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351096536",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "프로덕트",
@@ -5611,6 +5741,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=353017744",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "사고법"
@@ -5650,6 +5781,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=140135544",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "의사결정",
@@ -5691,6 +5823,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=265564975",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "일하는 법",
@@ -5732,6 +5865,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=300862118",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "역사"
@@ -5771,6 +5905,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374266337",
    "kyobo": "",
+   "ridi": "",
    "field": "디자인",
    "tags": [
     "시스템 설계",
@@ -5811,6 +5946,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=74920583",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "프로덕트",
@@ -5852,6 +5988,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317378665",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "사고법"
@@ -5891,6 +6028,7 @@
    "publisher": "인사이트",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=288786463",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "개발자 태도"
@@ -5930,6 +6068,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=1707009",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "애자일"
@@ -5969,6 +6108,7 @@
    "publisher": "와이즈베리",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=49588358",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "학습"
@@ -6008,6 +6148,7 @@
    "publisher": "필름(Feelm)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=386559530",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "커리어",
@@ -6048,6 +6189,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345747701",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "일하는 법"
@@ -6087,6 +6229,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=397021013",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "인생"
@@ -6126,6 +6269,7 @@
    "publisher": "북라이프",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=347626896",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "완벽주의",
@@ -6166,6 +6310,7 @@
    "publisher": "골든래빗(주)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399520031",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "개발 조직",
@@ -6206,6 +6351,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360716036",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "AI",
@@ -6248,6 +6394,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=384666614",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "개발자 태도"
@@ -6287,6 +6434,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=12840843",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "인생",
@@ -6327,6 +6475,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=170072646",
    "kyobo": "",
+   "ridi": "",
    "field": "역사·사회",
    "tags": [
     "사회"
@@ -6365,6 +6514,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=253256526",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "인생",
@@ -6405,6 +6555,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=312161010",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "말하기"
@@ -6444,6 +6595,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=309638760",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "일본어"
@@ -6478,6 +6630,7 @@
    "publisher": "퍼스트펭귄",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351973338",
    "kyobo": "",
+   "ridi": "",
    "field": "에세이",
    "tags": [
     "건강"
@@ -6517,6 +6670,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86793193",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "멘탈",
@@ -6557,6 +6711,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=61363642",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "사고법"
@@ -6593,19 +6748,25 @@
    "author": "",
    "englishTitle": "",
    "cover": "",
-   "publisher": "",
+   "publisher": "웅진지식하우스",
    "aladin": "",
    "kyobo": "",
+   "ridi": "https://ridibooks.com/books/111017867",
    "field": "",
    "tags": [
-    "인문"
+    "인문",
+    "고전"
    ],
    "groups": [
-    "삶·교양"
+    "삶·교양",
+    "문학"
    ],
-   "gist": "",
-   "topics": [],
-   "form": "",
+   "gist": "철학·역사·과학 고전 오십 권을 한 권에 삼십 분씩 (전 50권 세트)",
+   "topics": [
+    "고전",
+    "교양"
+   ],
+   "form": "이론서",
    "sources": [
     {
      "id": "ridi",
@@ -6616,7 +6777,12 @@
    "readAt": "",
    "addedAt": "",
    "similar": [
-    13
+    13,
+    19,
+    79,
+    83,
+    117,
+    120
    ]
   },
   {
@@ -6627,6 +6793,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=187823405",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "개발자 커리어"
@@ -6666,6 +6833,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336906409",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "의사결정"
@@ -6705,6 +6873,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=256845084",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "애자일"
@@ -6743,6 +6912,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=243100705",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "리더십",
@@ -6783,6 +6953,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=37469717",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "코드 품질"
@@ -6822,6 +6993,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=245495826",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "알고리즘"
@@ -6861,6 +7033,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=271944317",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "설계·아키텍처"
@@ -6900,6 +7073,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=27620362",
    "kyobo": "",
+   "ridi": "",
    "field": "디자인",
    "tags": [
     "설계·아키텍처",
@@ -6941,6 +7115,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=11267326",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "고전",
@@ -6982,6 +7157,7 @@
    "publisher": "",
    "aladin": "",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "개발자 태도",
@@ -7019,6 +7195,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=34228223",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "심리",
@@ -7060,6 +7237,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=235698335",
    "kyobo": "",
+   "ridi": "",
    "field": "일·경영",
    "tags": [
     "프로덕트"
@@ -7099,6 +7277,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=350905572",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "대화"
@@ -7138,6 +7317,7 @@
    "publisher": "마인드빌딩",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320548892",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "심리",
@@ -7178,6 +7358,7 @@
    "publisher": "한빛미디어",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=290892473",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "설계·아키텍처"
@@ -7217,6 +7398,7 @@
    "publisher": "",
    "aladin": "",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "설계·아키텍처"
@@ -7255,6 +7437,7 @@
    "publisher": "",
    "aladin": "",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "노트·기록",
@@ -7295,6 +7478,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=373097975",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "AI"
@@ -7334,6 +7518,7 @@
    "publisher": "더클래식",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=872721",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "고전",
@@ -7375,6 +7560,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=7415431",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "개발자 커리어"
@@ -7414,6 +7600,7 @@
    "publisher": "Portfolio",
    "aladin": "",
    "kyobo": "https://product.kyobobook.co.kr/detail/S000010437752",
+   "ridi": "",
    "field": "",
    "tags": [
     "심리",
@@ -7454,6 +7641,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=8801063",
    "kyobo": "",
+   "ridi": "",
    "field": "문학",
    "tags": [
     "고전"
@@ -7493,6 +7681,7 @@
    "publisher": "",
    "aladin": "",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "시스템 설계"
@@ -7530,6 +7719,7 @@
    "publisher": "",
    "aladin": "",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "ML",
@@ -7571,6 +7761,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2706952",
    "kyobo": "",
+   "ridi": "",
    "field": "인문·심리",
    "tags": [
     "심리"
@@ -7610,6 +7801,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=86838333",
    "kyobo": "",
+   "ridi": "",
    "field": "자기계발",
    "tags": [
     "시간 관리"
@@ -7649,6 +7841,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=105982502",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "알고리즘"
@@ -7688,6 +7881,7 @@
    "publisher": "",
    "aladin": "",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "매니저"
@@ -7723,6 +7917,7 @@
    "publisher": "",
    "aladin": "",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "리더십"
@@ -7756,6 +7951,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=343867281",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "MLOps"
@@ -7795,6 +7991,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=319756283",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "MLOps"
@@ -7834,6 +8031,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361679771",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "개발 방법론"
@@ -7872,6 +8070,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=236186172",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "코드 품질"
@@ -7911,6 +8110,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=12086993",
    "kyobo": "",
+   "ridi": "",
    "field": "개발",
    "tags": [
     "DB"
@@ -7950,6 +8150,7 @@
    "publisher": "",
    "aladin": "",
    "kyobo": "",
+   "ridi": "",
    "field": "",
    "tags": [
     "개발자 태도"
@@ -7989,6 +8190,7 @@
    "publisher": "Tarcher",
    "aladin": "",
    "kyobo": "https://product.kyobobook.co.kr/detail/S000216226878",
+   "ridi": "",
    "field": "",
    "tags": [
     "대화"
@@ -8025,6 +8227,7 @@
    "publisher": "",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=337647826",
    "kyobo": "",
+   "ridi": "",
    "field": "디자인",
    "tags": [
     "UI/UX"
