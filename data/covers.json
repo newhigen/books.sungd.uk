@@ -1247,7 +1247,13 @@
   "uncertain": true
  },
  "지적 대화를 위한 30분 고전": {
-  "notfound": true
+  "title": "지적 대화를 위한 30분 고전",
+  "author": "",
+  "publisher": "웅진지식하우스",
+  "cover": "",
+  "ridi": "https://ridibooks.com/books/111017867",
+  "match": 1.0,
+  "note": "전 50권 세트라 단행본 검색에 안 걸린다 — 리디 세트 페이지에서 확인했다"
  },
  "크리스천의 성 토크": {
   "title": "크리스천의 性 TALK (성 토크)",
