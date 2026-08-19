@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>가진 책</title>
+<meta name="description" content="어떤 책을 가지고 있는지, 어디에 있는지 한 장으로." />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='5' y='8' width='22' height='2.6' fill='%231e1c19'/%3E%3Crect x='5' y='15' width='22' height='2.6' fill='%231e1c19'/%3E%3Crect x='5' y='22' width='14' height='2.6' fill='%238c3b4a'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500&display=swap" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fff; --text:#141414; --muted:#6a6a66; --faint:#9b9b96;
+  --rule:#f0f0ee; --rule2:#e0e0dc; --acc:#8c3b4a;
+  --sans:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;
+  --mono:'Google Sans Code',ui-monospace,Menlo,monospace;
+}
+[data-theme="dark"]{
+  --bg:#131211; --text:#e9e7e2; --muted:#9d9a93; --faint:#6b6862;
+  --rule:#232120; --rule2:#33302d; --acc:#c9808d;
+}
+html{color-scheme:light}
+[data-theme="dark"]{color-scheme:dark}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:13px;line-height:1.45;
+     -webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 14px 48px}
+button,input,select{font-family:inherit;font-size:inherit;letter-spacing:inherit}
+
+/* ── 머리 ── 스크롤해도 붙어 있다 */
+.head{position:sticky;top:0;z-index:10;background:var(--bg);padding-top:12px;
+      border-bottom:1px solid var(--rule2)}
+.hrow{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+h1{font-size:14px;font-weight:800;letter-spacing:-.03em}
+.n{font-family:var(--mono);font-size:11.5px;color:var(--faint)}
+.themebtn{margin-left:auto;border:1px solid var(--rule2);background:none;color:var(--muted);
+          border-radius:5px;width:24px;height:24px;cursor:pointer;line-height:1}
+.frow{display:flex;align-items:center;gap:5px;padding:8px 0 9px;flex-wrap:wrap}
+.frow input{flex:1;min-width:130px;border:1px solid var(--rule2);background:none;color:var(--text);
+            border-radius:5px;padding:4px 8px 5px;outline:none}
+.frow input:focus{border-color:var(--acc)}
+.seg{display:flex;gap:1px}
+.seg button{border:0;background:none;color:var(--muted);padding:4px 8px 5px;cursor:pointer;
+            border-bottom:2px solid transparent}
+.seg button:hover{color:var(--text)}
+.seg button.on{color:var(--text);font-weight:700;border-bottom-color:var(--acc)}
+.seg button i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-left:3px}
+select{border:1px solid var(--rule2);background:none;color:var(--muted);border-radius:5px;padding:3px 5px}
+
+/* ── 표 ── 장식 없이 줄만 */
+table{width:100%;border-collapse:collapse}
+thead th{position:sticky;top:var(--headh,84px);background:var(--bg);text-align:left;font-weight:500;
+         font-size:11px;color:var(--faint);padding:7px 8px 6px 0;border-bottom:1px solid var(--rule2);
+         white-space:nowrap;cursor:pointer;user-select:none}
+thead th:hover{color:var(--text)}
+thead th.on{color:var(--acc)}
+thead th.num,td.num{text-align:right;padding-right:0}
+td{padding:6px 8px 6px 0;border-bottom:1px solid var(--rule);vertical-align:baseline}
+tr:hover td{background:color-mix(in srgb,var(--acc) 4%,transparent)}
+.t{font-weight:600;letter-spacing:-.02em;word-break:keep-all}
+.a{color:var(--faint);font-size:11.5px;width:22%}
+.w{color:var(--muted);font-size:12px;white-space:nowrap;width:15%}
+.g{color:var(--muted);font-size:11.5px;width:20%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.d{font-family:var(--mono);font-size:11.5px;color:var(--faint);white-space:nowrap;width:64px}
+.d.none{color:var(--rule2)}
+.foot{padding:16px 0 0;font-size:11.5px;color:var(--faint);line-height:1.6}
+.foot a{color:var(--muted)}
+.foot b{color:var(--muted);font-weight:600}
+
+@media (max-width: 640px) {
+  .wrap{padding:0 11px 36px}
+  /* 좁으면 저자·태그를 접는다 — 머리글도 같이 접어야 열이 안 어긋난다 */
+  .a,.g,thead th:nth-child(2),thead th:nth-child(4){display:none}
+  .w{width:auto}
+  td,thead th{padding-right:6px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="head">
+  <div class="hrow">
+    <h1>가진 책</h1>
+    <span class="n" id="n"></span>
+    <button class="themebtn" id="theme" title="밝게/어둡게">◐</button>
+  </div>
+  <div class="frow">
+    <input id="q" type="search" placeholder="제목·저자·태그" autocomplete="off" />
+    <div class="seg" id="where"></div>
+  </div>
+</header>
+
+<table>
+  <thead><tr id="th"></tr></thead>
+  <tbody id="rows"></tbody>
+</table>
+
+<p class="foot" id="foot"></p>
+
+</div>
+<script>
+const $ = (s) => document.querySelector(s)
+const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))
+const ym = (m) => (m ? m.replace(/^(\d{4})-(\d{2})$/, (_, y, mo) => `${y}.${+mo}`) : '')
+
+let DATA = { books: [], wheres: [], services: [] }
+const state = { where: 'all', q: '', sort: 'read', desc: true }
+
+const COLS = [
+  { key: 'title', label: '제목', cls: 't' },
+  { key: 'author', label: '저자', cls: 'a' },
+  { key: 'where', label: '어디에', cls: 'w' },
+  { key: 'tags', label: '태그', cls: 'g' },
+  { key: 'read', label: '읽은 때', cls: 'd num' },
+]
+const nameOf = (id) => (DATA.services.find((s) => s.id === id) || {}).name || id
+const whereText = (b) => (b.sources.length ? b.sources.map((s) => nameOf(s.id)).join(' · ') : '—')
+
+function visible() {
+  const q = state.q.trim().toLowerCase()
+  return DATA.books.filter((b) => {
+    if (state.where === 'none' && b.sources.length) return false
+    if (state.where !== 'all' && state.where !== 'none') {
+      const g = DATA.wheres.find((w) => w.id === state.where)
+      if (g && !b.sources.some((s) => g.ids.includes(s.id))) return false
+    }
+    if (!q) return true
+    return (b.title + ' ' + b.author + ' ' + (b.tags || []).join(' ')).toLowerCase().includes(q)
+  })
+}
+
+function sorted(list) {
+  const ko = (a, b) => String(a).localeCompare(String(b), 'ko')
+  const c = [...list]
+  const dir = state.desc ? -1 : 1
+  if (state.sort === 'title') c.sort((a, b) => ko(a.title, b.title) * (state.desc ? -1 : 1))
+  else if (state.sort === 'author') c.sort((a, b) => ko(a.author || '힣', b.author || '힣') * (state.desc ? -1 : 1))
+  else if (state.sort === 'where') c.sort((a, b) => ko(whereText(a), whereText(b)) * (state.desc ? -1 : 1) || ko(a.title, b.title))
+  else if (state.sort === 'tags') c.sort((a, b) => ko((a.tags || []).join(), (b.tags || []).join()) * (state.desc ? -1 : 1) || ko(a.title, b.title))
+  else {
+    // 읽은 때 — 없는 것은 늘 뒤로 민다
+    c.sort((a, b) => {
+      const x = a.readAt || '', y = b.readAt || ''
+      if (!x && !y) return ko(a.title, b.title)
+      if (!x) return 1
+      if (!y) return -1
+      return x < y ? -dir : x > y ? dir : ko(a.title, b.title)
+    })
+  }
+  return c
+}
+
+function draw() {
+  const list = sorted(visible())
+  $('#th').innerHTML = COLS.map((c) =>
+    `<th class="${c.cls.includes('num') ? 'num ' : ''}${state.sort === c.key ? 'on' : ''}" data-k="${c.key}">${
+      esc(c.label)}${state.sort === c.key ? (state.desc ? ' ↓' : ' ↑') : ''}</th>`).join('')
+  $('#rows').innerHTML = list.map((b) => `
+    <tr>
+      <td class="t">${esc(b.title)}</td>
+      <td class="a">${esc((b.author || '').split(',')[0])}</td>
+      <td class="w">${esc(whereText(b))}</td>
+      <td class="g">${esc((b.tags || []).join(' · '))}</td>
+      <td class="d num${b.readAt ? '' : ' none'}">${b.readAt ? esc(ym(b.readAt)) : '—'}</td>
+    </tr>`).join('')
+  $('#n').textContent = `${list.length}권`
+  $('#where').querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.w === state.where))
+}
+
+$('#th').addEventListener('click', (e) => {
+  const th = e.target.closest('th')
+  if (!th) return
+  if (state.sort === th.dataset.k) state.desc = !state.desc
+  else { state.sort = th.dataset.k; state.desc = th.dataset.k === 'read' }
+  draw()
+})
+$('#where').addEventListener('click', (e) => {
+  const b = e.target.closest('button')
+  if (b) { state.where = b.dataset.w; draw() }
+})
+$('#q').addEventListener('input', (e) => { state.q = e.target.value; draw() })
+$('#theme').addEventListener('click', () => {
+  const t = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'
+  document.documentElement.dataset.theme = t
+  localStorage.setItem('shelf-theme', t)
+})
+const saved = localStorage.getItem('shelf-theme')
+if (saved) document.documentElement.dataset.theme = saved
+else if (window.matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.dataset.theme = 'dark'
+
+fetch('data/library.json?v=' + Date.now())
+  .then((r) => r.json())
+  .then((d) => {
+    DATA = d
+    const none = d.books.filter((b) => !b.sources.length).length
+    const tabs = [{ id: 'all', name: '전체', count: d.books.length }]
+      .concat((d.wheres || []).map((w) => ({ id: w.id, name: w.name, count: w.count })))
+    if (none) tabs.push({ id: 'none', name: '미확인', count: none })
+    $('#where').innerHTML = tabs.map((t) =>
+      `<button data-w="${t.id}">${esc(t.name)}<i>${t.count}</i></button>`).join('')
+    const read = d.books.filter((b) => b.readAt).length
+    $('#foot').innerHTML = `${esc(d.updatedAt)} 갱신 · 머리글을 누르면 그 기준으로 줄을 세운다.<br>`
+      + `<b>산 날짜·빌린 날짜는 아직 없다</b> — 모을 때 제목만 긁어서 그렇다. `
+      + `지금 있는 날짜는 읽은 달 하나이고 ${read}권에 붙어 있다. · `
+      + `<a href="./">서가로 보기</a>`
+    draw()
+    // 표 머리글을 머리 아래에 붙인다
+    const h = document.querySelector('.head').offsetHeight
+    document.documentElement.style.setProperty('--headh', h + 'px')
+  })
+</script>
+</body>
+</html>
