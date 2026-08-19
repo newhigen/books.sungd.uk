@@ -12,13 +12,13 @@
    "id": "kyobo",
    "name": "교보 sam",
    "kind": "ebook",
-   "count": 26
+   "count": 38
   },
   {
    "id": "kindle",
    "name": "킨들",
    "kind": "ebook",
-   "count": 9
+   "count": 10
   },
   {
    "id": "google",
@@ -27,22 +27,34 @@
    "count": 2
   },
   {
+   "id": "pdf",
+   "name": "PDF",
+   "kind": "file",
+   "count": 1
+  },
+  {
    "id": "paper",
    "name": "종이책",
    "kind": "paper",
-   "count": 82
+   "count": 88
   },
   {
    "id": "company",
    "name": "회사 대여",
    "kind": "borrowed",
-   "count": 28
+   "count": 31
   },
   {
    "id": "friend",
    "name": "지인 대여",
    "kind": "borrowed",
-   "count": 2
+   "count": 3
+  },
+  {
+   "id": "library",
+   "name": "도서관",
+   "kind": "borrowed",
+   "count": 13
   }
  ],
  "wheres": [
@@ -53,9 +65,10 @@
     "ridi",
     "kyobo",
     "kindle",
-    "google"
+    "google",
+    "pdf"
    ],
-   "count": 47,
+   "count": 61,
    "services": [
     {
      "id": "ridi",
@@ -65,17 +78,22 @@
     {
      "id": "kyobo",
      "name": "교보 sam",
-     "count": 26
+     "count": 38
     },
     {
      "id": "kindle",
      "name": "킨들",
-     "count": 9
+     "count": 10
     },
     {
      "id": "google",
      "name": "구글 북스",
      "count": 2
+    },
+    {
+     "id": "pdf",
+     "name": "PDF",
+     "count": 1
     }
    ]
   },
@@ -85,12 +103,12 @@
    "ids": [
     "paper"
    ],
-   "count": 82,
+   "count": 88,
    "services": [
     {
      "id": "paper",
      "name": "종이책",
-     "count": 82
+     "count": 88
     }
    ]
   },
@@ -99,19 +117,25 @@
    "name": "빌린 것",
    "ids": [
     "company",
-    "friend"
+    "friend",
+    "library"
    ],
-   "count": 30,
+   "count": 47,
    "services": [
     {
      "id": "company",
      "name": "회사 대여",
-     "count": 28
+     "count": 31
     },
     {
      "id": "friend",
      "name": "지인 대여",
-     "count": 2
+     "count": 3
+    },
+    {
+     "id": "library",
+     "name": "도서관",
+     "count": 13
     }
    ]
   }
@@ -672,7 +696,11 @@
     "태도"
    ],
    "form": "소설",
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper"
+    }
+   ],
    "read": true,
    "readAt": "2026-05",
    "addedAt": "",
@@ -829,7 +857,11 @@
     "일상"
    ],
    "form": "에세이",
-   "sources": [],
+   "sources": [
+    {
+     "id": "kyobo"
+    }
+   ],
    "read": true,
    "readAt": "2026-05",
    "addedAt": "",
@@ -943,7 +975,11 @@
     "INFJ"
    ],
    "form": "에세이",
-   "sources": [],
+   "sources": [
+    {
+     "id": "kyobo"
+    }
+   ],
    "read": true,
    "readAt": "2026-04",
    "addedAt": "",
@@ -1135,7 +1171,11 @@
     "법"
    ],
    "form": "자료",
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper"
+    }
+   ],
    "read": true,
    "readAt": "2026-03",
    "addedAt": "",
@@ -1245,7 +1285,11 @@
     "톨스토이"
    ],
    "form": "소설",
-   "sources": [],
+   "sources": [
+    {
+     "id": "kyobo"
+    }
+   ],
    "read": true,
    "readAt": "2026-03",
    "addedAt": "",
@@ -1279,7 +1323,11 @@
     "실패"
    ],
    "form": "회고·전기",
-   "sources": [],
+   "sources": [
+    {
+     "id": "kyobo"
+    }
+   ],
    "read": true,
    "readAt": "2026-03",
    "addedAt": "",
@@ -1315,7 +1363,11 @@
     "습관"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "library"
+    }
+   ],
    "read": true,
    "readAt": "2026-02",
    "addedAt": "",
@@ -1349,7 +1401,11 @@
     "기록"
    ],
    "form": "에세이",
-   "sources": [],
+   "sources": [
+    {
+     "id": "library"
+    }
+   ],
    "read": true,
    "readAt": "2026-02",
    "addedAt": "",
@@ -1383,7 +1439,11 @@
     "은유"
    ],
    "form": "이론서",
-   "sources": [],
+   "sources": [
+    {
+     "id": "library"
+    }
+   ],
    "read": true,
    "readAt": "2026-02",
    "addedAt": "",
@@ -1417,7 +1477,11 @@
     "스마트폰"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "kyobo"
+    }
+   ],
    "read": true,
    "readAt": "2026-02",
    "addedAt": "",
@@ -1450,7 +1514,11 @@
     "논리"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "library"
+    }
+   ],
    "read": true,
    "readAt": "2026-02",
    "addedAt": "",
@@ -1481,7 +1549,11 @@
     "관계"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "library"
+    }
+   ],
    "read": true,
    "readAt": "2026-02",
    "addedAt": "",
@@ -1515,7 +1587,11 @@
     "태도"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "kyobo"
+    }
+   ],
    "read": true,
    "readAt": "2026-02",
    "addedAt": "",
@@ -1590,7 +1666,11 @@
     "사고"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "company"
+    }
+   ],
    "read": true,
    "readAt": "2026-01",
    "addedAt": "",
@@ -1663,7 +1743,11 @@
     "갈등"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "library"
+    }
+   ],
    "read": true,
    "readAt": "2026-01",
    "addedAt": "",
@@ -1855,7 +1939,11 @@
     "HR"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "company"
+    }
+   ],
    "read": true,
    "readAt": "2025-12",
    "addedAt": "",
@@ -1931,7 +2019,11 @@
     "조직"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "company"
+    }
+   ],
    "read": true,
    "readAt": "2025-11",
    "addedAt": "",
@@ -2123,7 +2215,11 @@
     "커리어"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "pdf"
+    }
+   ],
    "read": true,
    "readAt": "2025-10",
    "addedAt": "",
@@ -2157,7 +2253,11 @@
     "모마"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "library"
+    }
+   ],
    "read": true,
    "readAt": "2025-09",
    "addedAt": "",
@@ -2193,7 +2293,11 @@
     "상실"
    ],
    "form": "에세이",
-   "sources": [],
+   "sources": [
+    {
+     "id": "library"
+    }
+   ],
    "read": true,
    "readAt": "2025-09",
    "addedAt": "",
@@ -2227,7 +2331,11 @@
     "여행"
    ],
    "form": "에세이",
-   "sources": [],
+   "sources": [
+    {
+     "id": "library"
+    }
+   ],
    "read": true,
    "readAt": "2025-09",
    "addedAt": "",
@@ -2263,7 +2371,11 @@
     "도시사"
    ],
    "form": "이론서",
-   "sources": [],
+   "sources": [
+    {
+     "id": "library"
+    }
+   ],
    "read": true,
    "readAt": "2025-09",
    "addedAt": "",
@@ -2297,7 +2409,11 @@
     "관찰"
    ],
    "form": "에세이",
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper"
+    }
+   ],
    "read": true,
    "readAt": "2025-09",
    "addedAt": "",
@@ -2817,7 +2933,11 @@
     "셜록"
    ],
    "form": "소설",
-   "sources": [],
+   "sources": [
+    {
+     "id": "kyobo"
+    }
+   ],
    "read": true,
    "readAt": "2025-05",
    "addedAt": "",
@@ -2890,7 +3010,11 @@
     "크리스티"
    ],
    "form": "소설",
-   "sources": [],
+   "sources": [
+    {
+     "id": "kyobo"
+    }
+   ],
    "read": true,
    "readAt": "2025-04",
    "addedAt": "",
@@ -2924,7 +3048,11 @@
     "유럽"
    ],
    "form": "만화",
-   "sources": [],
+   "sources": [
+    {
+     "id": "kyobo"
+    }
+   ],
    "read": true,
    "readAt": "2025-04",
    "addedAt": "",
@@ -3078,7 +3206,11 @@
     "뇌과학"
    ],
    "form": "이론서",
-   "sources": [],
+   "sources": [
+    {
+     "id": "kyobo"
+    }
+   ],
    "read": true,
    "readAt": "2025-03",
    "addedAt": "",
@@ -3149,7 +3281,11 @@
     "헬스"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "kyobo"
+    }
+   ],
    "read": true,
    "readAt": "2025-03",
    "addedAt": "",
@@ -3183,7 +3319,11 @@
     "건강"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "kyobo"
+    }
+   ],
    "read": true,
    "readAt": "2025-03",
    "addedAt": "",
@@ -3335,7 +3475,11 @@
     "미니멀리즘"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "library"
+    }
+   ],
    "read": true,
    "readAt": "2025-02",
    "addedAt": "",
@@ -3444,7 +3588,11 @@
     "도시"
    ],
    "form": "에세이",
-   "sources": [],
+   "sources": [
+    {
+     "id": "library"
+    }
+   ],
    "read": true,
    "readAt": "2025-01",
    "addedAt": "",
@@ -3518,7 +3666,11 @@
     "로고테라피"
    ],
    "form": "회고·전기",
-   "sources": [],
+   "sources": [
+    {
+     "id": "library"
+    }
+   ],
    "read": true,
    "readAt": "2024-11",
    "addedAt": "",
@@ -3671,7 +3823,11 @@
     "글쓰기"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper"
+    }
+   ],
    "read": true,
    "readAt": "2024-09",
    "addedAt": "",
@@ -3746,7 +3902,11 @@
     "시간 관리"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "kindle"
+    }
+   ],
    "read": true,
    "readAt": "2024-06",
    "addedAt": "",
@@ -3819,7 +3979,11 @@
     "유튜브"
    ],
    "form": "에세이",
-   "sources": [],
+   "sources": [
+    {
+     "id": "friend"
+    }
+   ],
    "read": true,
    "readAt": "2024-04",
    "addedAt": "",
@@ -3855,7 +4019,11 @@
     "시스템 설계"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper"
+    }
+   ],
    "read": true,
    "readAt": "2024-03",
    "addedAt": "",
@@ -3928,7 +4096,11 @@
     "노트"
    ],
    "form": "가이드",
-   "sources": [],
+   "sources": [
+    {
+     "id": "paper"
+    }
+   ],
    "read": true,
    "readAt": "2024-02",
    "addedAt": "",
