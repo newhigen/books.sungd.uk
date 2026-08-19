@@ -8,8 +8,9 @@
     python3 scripts/serve.py --phone    # 폰에서도 (Tailscale 주소에만 연다)
 
 창구
-    POST /api/tags     {tags:{…}, notes:{…}, done:[…]}
+    POST /api/tags     {tags:{…}, notes:{…}, done:[…], where:{…}}
                        → data/tags.json · data/notes.json · data/done.json
+                       · data/where-manual.json
     GET  /api/search?q= 알라딘 검색           → 후보 목록
     POST /api/add      {title, sources:[…]}  → sources/manual.json 에 추가
 """
@@ -76,11 +77,13 @@ class Handler(SimpleHTTPRequestHandler):
 
         if u.path == "/api/tags":
             # 예전 형태({제목: [태그]})도 받아 준다
-            if "tags" not in data and "notes" not in data and "done" not in data:
+            if "tags" not in data and "notes" not in data and "done" not in data \
+                    and "where" not in data:
                 data = {"tags": data}
 
             out = {}
-            for key, name in (("tags", "tags.json"), ("notes", "notes.json"), ("done", "done.json")):
+            for key, name in (("tags", "tags.json"), ("notes", "notes.json"),
+                              ("done", "done.json"), ("where", "where-manual.json")):
                 # 안 보낸 것은 건드리지 않는다. 셋 다 덮어쓰면, 태그만 보낸 요청 하나에
                 # 메모가 통째로 날아간다(실제로 그랬다).
                 if key not in data:
@@ -92,6 +95,9 @@ class Handler(SimpleHTTPRequestHandler):
                     new = {k: v for k, v in new.items() if str(v).strip()}
                 elif key == "done":
                     new = sorted(set(new))
+                elif key == "where":
+                    # 어디에 뒀는지 — 한 책이 여러 곳에 있을 수 있다(종이책 + 구글 북스)
+                    new = {k: sorted(set(v)) for k, v in new.items() if v}
                 # 있던 것을 통째로 비우는 저장은 실수일 가능성이 높다.
                 # 다 본 표시는 예외 — 전부 풀고 처음부터 훑는 건 정상이다.
                 if key != "done" and cur and not new:
