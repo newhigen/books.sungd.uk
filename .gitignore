@@ -3,3 +3,7 @@ __pycache__/
 
 # 태그 화면이 저장하는 것 — notes 는 나에게 주는 지시라 커밋하지 않는다
 data/notes.json
+
+# 감춘 책 — 목록도 원자료도 공개 저장소에 올리지 않는다
+data/hidden.json
+data/hidden-local.json
