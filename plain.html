@@ -15,6 +15,17 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+  // 내 기기 표시: 어느 사이트든 ?me=1 로 한 번 열면 .sungd.uk 쿠키가 심긴다 (?me=0 으로 해제)
+  (function(){
+    try {
+      var m = new URLSearchParams(location.search).get('me')
+      if (m === '1') document.cookie = 'sd_owner=1; domain=.sungd.uk; path=/; max-age=63072000; samesite=lax; secure'
+      if (m === '0') document.cookie = 'sd_owner=; domain=.sungd.uk; path=/; max-age=0; samesite=lax; secure'
+    } catch (e) {}
+    window.__sdOwner = /(?:^|;\s*)sd_owner=1(?:;|$)/.test(document.cookie)
+  })();
+  gtag('set', 'user_properties', { visitor_type: window.__sdOwner ? 'owner' : 'visitor' });
+
   gtag('config', 'G-5LN80GCB37');
 </script>
 <style>
