@@ -7,17 +7,20 @@
 index.html          화면 전부 (스타일·스크립트 인라인)
 data/library.json   화면이 읽는 유일한 데이터 — scripts/build.mjs 가 만든다
 data/covers.json    표지·저자 캐시 (알라딘 검색분)
-sources/            수집 원본. 여기만 갱신하면 된다
-  read-log.csv        읽은 책 — writing.sungd.uk 의 books.csv 사본
+sources/            서비스별 소장 목록 원본. 여기만 갱신하면 된다
   <service>.json      서비스별 소장 목록 (ridi·kyobo·kindle·google·pdf·paper)
-scripts/build.mjs   sources/* → data/library.json (같은 책 합치기)
+scripts/build.mjs   읽은 책(writing.sungd.uk) + sources/* → data/library.json (같은 책 합치기)
 scripts/enrich.py   제목만 있는 책에 표지·저자·출판사 붙이기
 ```
+
+읽은 책은 로컬에 사본을 두지 않는다 — `scripts/build.mjs` 가 매번
+[writing.sungd.uk 의 books.csv](https://github.com/newhigen/writing.sungd.uk/blob/main/src/data/books.csv)
+를 원격에서 받아온다. 그쪽이 정본이라 빌드에는 네트워크가 필요하다.
 
 ## 갱신
 
 ```sh
-node scripts/build.mjs      # 소스를 합쳐 화면 데이터로
+node scripts/build.mjs      # 원격 읽은 책 로그 + sources 를 합쳐 화면 데이터로
 python3 scripts/enrich.py   # 새로 들어온 책의 표지·저자 채우기 (이미 채운 건 건너뜀)
 node scripts/build.mjs      # 채운 값을 반영
 ```

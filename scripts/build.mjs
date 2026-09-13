@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // sources/* 를 하나로 합쳐 data/library.json 을 만든다.
 //
-//   sources/read-log.csv   읽은 책 (writing.sungd.uk 의 books.csv 사본)
+//   읽은 책               writing.sungd.uk 의 books.csv 를 매 빌드마다 원격에서 받아온다
+//                          (정본은 그쪽 repo — 여기 사본을 두지 않는다). 네트워크 필요.
 //   sources/<service>.json 서비스별 소장 목록 (수집기가 채운다)
 //                          → { service, collectedAt, books: [{title, author, cover, link, ...}] }
 //
@@ -13,6 +14,27 @@ import { fileURLToPath } from 'node:url'
 const repo = dirname(dirname(fileURLToPath(import.meta.url)))
 const SRC = join(repo, 'sources')
 const OUT = join(repo, 'data', 'library.json')
+
+// ---- 읽은 책 로그 원본 (writing.sungd.uk) ----
+const READ_LOG_URL = 'https://raw.githubusercontent.com/newhigen/writing.sungd.uk/main/src/data/books.csv'
+
+async function fetchReadLogText() {
+  let res
+  try {
+    res = await fetch(READ_LOG_URL)
+  } catch (err) {
+    console.error(`읽은 책 로그를 못 받아왔다 (네트워크): ${READ_LOG_URL}\n${err.message}`)
+    process.exit(1)
+  }
+  if (!res.ok) {
+    console.error(`읽은 책 로그 응답이 이상하다: ${res.status} ${res.statusText} (${READ_LOG_URL})`)
+    process.exit(1)
+  }
+  return res.text()
+}
+
+// readLog() 가 두 번 불리므로 한 번만 받아서 재사용한다.
+const readLogText = await fetchReadLogText()
 
 // 서비스 표시 이름·순서. 여기 없는 소스 파일은 파일명을 그대로 쓴다.
 const SERVICES = [
@@ -29,7 +51,7 @@ const SERVICES = [
 
 // ---- 제목 정규화 (같은 책 찾기) ----
 // 부제·판형·괄호를 떼고 공백·기호를 지운 것을 키로 쓴다.
-// 저자는 키에 넣지 않는다 — 읽은 기록(read-log.csv)에는 저자가 없어서, 저자를 섞으면
+// 저자는 키에 넣지 않는다 — 읽은 기록에는 저자가 없어서, 저자를 섞으면
 // 수집 목록과 읽은 기록이 같은 책인데도 영영 안 만난다.
 function keyOf(title) {
   const t = String(title || '')
@@ -42,11 +64,9 @@ function keyOf(title) {
   return t
 }
 
-// ---- 읽은 책 로그 (title, english-title, year, month) ----
+// ---- 읽은 책 로그 (title, english-title, year, month — pages 열은 무시) ----
 function readLog() {
-  const f = join(SRC, 'read-log.csv')
-  if (!existsSync(f)) return []
-  const lines = readFileSync(f, 'utf8').trim().split('\n')
+  const lines = readLogText.trim().split('\n')
   const head = lines.shift().split(',')
   return lines.map((line) => {
     // 따옴표 안 쉼표까지 다루는 최소 CSV 파서
