@@ -273,8 +273,17 @@ for (const book of books.values()) {
 // ---- 감출 것 빼기 ----
 // data/hidden.json 에 적힌 분야·제목은 공개 데이터에 싣지 않는다. 화면에서 가리는 게
 // 아니라 파일에서 빠지므로, 받아보더라도 흔적이 없다.
+// ⚠ hidden.json 은 gitignore 라 worktree·CI 에는 없다. 없는 채로 빌드하면 감출 책이
+// 조용히 공개 데이터에 실린다 — 실제로 2026-09 에 신앙 책 22권이 그렇게 새어 나갔다.
+// 그래서 없으면 멈춘다. 감추기는 빠져도 되는 단계가 아니다.
 const HIDDEN = join(repo, 'data', 'hidden.json')
-const hidden = existsSync(HIDDEN) ? JSON.parse(readFileSync(HIDDEN, 'utf8')) : {}
+if (!existsSync(HIDDEN)) {
+  console.error('감출 책 목록(data/hidden.json)이 없다. 빌드를 멈춘다.')
+  console.error('이 파일은 공개 저장소에 안 올라가므로 본 체크아웃에서 복사해 와야 한다:')
+  console.error('  cp <본 체크아웃>/data/hidden.json data/hidden.json')
+  process.exit(1)
+}
+const hidden = JSON.parse(readFileSync(HIDDEN, 'utf8'))
 const hidFields = new Set(hidden.fields || [])
 const hidTitles = new Set(hidden.titles || [])
 let hiddenCount = 0
