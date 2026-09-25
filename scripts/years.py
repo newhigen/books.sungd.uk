@@ -18,13 +18,18 @@ def get(url, enc="utf-8"):
     with urllib.request.urlopen(req, timeout=20) as r:
         return r.read().decode(enc, "replace")
 
-def korean_year(aladin_url):
-    """알라딘 상품 페이지의 JSON-LD 에 박힌 출간일."""
+def aladin_info(aladin_url):
+    """알라딘 상품 페이지에서 출간일과 원제를 한 번에 가져온다.
+
+    ⚠ 출간일은 그 상품의 것이라 개정판·리커버면 최근 해가 나온다(「연금술사」가
+    2026년으로). 번역서는 원제로 원서 연도를 따로 찾아야 제자리를 찾는다.
+    """
     if not aladin_url:
-        return ""
+        return "", ""
     html = get(aladin_url)
-    m = re.search(r'"datePublished"\s*:\s*"(\d{4})-(\d{2})-(\d{2})"', html)
-    return m.group(1) + "-" + m.group(2) if m else ""
+    d = re.search(r'"datePublished"\s*:\s*"(\d{4})-(\d{2})-(\d{2})"', html)
+    o = re.search(r"원제\s*[:：]\s*([^<\n]{2,60})", html)
+    return (d.group(1) + "-" + d.group(2) if d else ""), (o.group(1).strip() if o else "")
 
 def original_year(title, author=""):
     """Open Library 가 아는 초판 연도. 원제로 물어야 맞는 게 나온다."""
@@ -74,14 +79,17 @@ def main():
 
     for i, b in enumerate(todo, 1):
         rec = {}
+        aladin_title = ""
         try:
-            rec["ko"] = korean_year(b.get("aladin", ""))
+            rec["ko"], aladin_title = aladin_info(b.get("aladin", ""))
         except Exception as e:
             rec["ko"] = ""
             print(f"  ! 알라딘 {b['title']}: {type(e).__name__}")
         # 원제가 있으면 그것으로 묻는다. 「舟を編む」처럼 영어가 아니어도 그대로 물어야
         # 원작 연도가 나온다 — 영역본 제목으로 물으면 번역판이 나온 해가 잡힌다.
-        probe = b.get("englishTitle") or (b["title"] if re.fullmatch(r"[\x00-\x7f]+", b["title"]) else "")
+        # 물어볼 원제 — 우리가 적어 둔 것, 알라딘이 아는 것, 제목이 영어면 제목 차례로
+        probe = (b.get("englishTitle") or aladin_title
+                 or (b["title"] if re.fullmatch(r"[\x00-\x7f]+", b["title"]) else ""))
         if is_korean_book(b.get("author")):
             probe = ""
         if probe:
