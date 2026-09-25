@@ -372,7 +372,11 @@ const SORTERS = {
   newest: (a, b) => (b.year || '0000').localeCompare(a.year || '0000') || a.title.localeCompare(b.title, 'ko'),
 }
 const sorted = (list) => SORTERS[sortBy] ? [...list].sort(SORTERS[sortBy]) : list
-const decadeOf = (y) => y ? Math.floor(+y / 10) * 10 + '년대' : '연도 모름'
+/* 2010년부터는 해마다 나누고 그 이전은 연대로 묶는다 — 최근으로 올수록 책이 많아서
+   연대로 두면 한 줄에 백 권씩 쌓인다 */
+const YEAR_FROM = 2010
+const bucketOf = (y) => !y ? '연도 모름'
+  : +y >= YEAR_FROM ? y + '년' : Math.floor(+y / 10) * 10 + '년대'
 
 function makeSpine(b) {
   const btn = document.createElement('button')
@@ -441,7 +445,7 @@ function render() {
     // 연대로 묶는다 — 「2010년대」 안에서 다시 연도순
     const by = new Map()
     for (const b of sorted(found)) {
-      const d = decadeOf(b.year)
+      const d = bucketOf(b.year)
       if (!by.has(d)) by.set(d, [])
       by.get(d).push(b)
     }
