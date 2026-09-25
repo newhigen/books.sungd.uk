@@ -56,27 +56,45 @@ img{display:block;max-width:100%}
 .header{display:flex;align-items:center;gap:12px;margin-bottom:10px}
 h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
 .count{font-size:11px;white-space:nowrap;color:var(--mut)}
-.search{margin-left:auto;width:230px;min-width:0;border:0;border-bottom:1px solid var(--rule);
-        background:transparent;padding:7px 1px;border-radius:0;font-size:16px;color:#3c4233;outline:none}
-.search:focus{border-bottom-color:var(--acc)}
-.search::placeholder{color:var(--faint)}
 
-/* ── 거르개 ── */
-.filters{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:7px}
-.filters button{font-size:11.5px;padding:5px 10px;border-radius:20px;border:1px solid var(--rule);
-                color:var(--ink2);background:var(--card);min-height:30px;white-space:nowrap}
-.filters button span{font-variant-numeric:tabular-nums;opacity:.65;margin-left:4px}
-.filters button[aria-pressed=true]{background:var(--strong);border-color:var(--strong);color:#fff;font-weight:600}
-.filters button[aria-pressed=true] span{opacity:.8}
-.filter-note{font-size:11px;color:var(--faint);margin-bottom:8px}
-.searchnote{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--faint);margin-bottom:8px}
-.searchnote button{font-size:11px;padding:3px 9px;border-radius:14px;border:1px solid var(--rule);
-                   color:var(--ink2);background:var(--card);min-height:26px}
-.searchnote button[aria-pressed=true]{background:var(--strong);border-color:var(--strong);color:#fff;font-weight:600}
+/* ── 찾기 ── */
+.searchbar{display:flex;align-items:center;gap:8px;border-bottom:2px solid var(--rule);
+           padding-bottom:2px;margin-bottom:9px}
+.searchbar:focus-within{border-bottom-color:var(--acc)}
+.searchbar svg{flex:none;color:var(--faint)}
+.search{flex:1;min-width:0;border:0;background:transparent;padding:8px 0;border-radius:0;
+        font:400 19px/1.4 var(--sans);color:var(--ink);outline:none}
+.search::placeholder{color:var(--faint)}
+.search::-webkit-search-cancel-button{display:none}
+.search:focus-visible{outline:none}   /* 밑줄이 이미 포커스를 알린다 */
+.clear{color:var(--mut);font-size:12px;padding:7px 9px;border-radius:14px;min-height:32px}
+.clear:hover{background:var(--card)}
+.exact{font-size:11px;padding:6px 11px;border-radius:14px;border:1px solid var(--rule);
+       color:var(--ink2);background:var(--card);min-height:32px;white-space:nowrap}
+.exact[aria-pressed=true]{background:var(--strong);border-color:var(--strong);color:#fff;font-weight:600}
+
+/* ── 칩 줄 — 안 찾을 땐 소장처, 찾는 중엔 걸린 자리 ── */
+.chips{display:flex;gap:5px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.chips button{font-size:11.5px;padding:5px 10px;border-radius:20px;border:1px solid var(--rule);
+              color:var(--ink2);background:var(--card);min-height:30px;white-space:nowrap}
+.chips button span{font-variant-numeric:tabular-nums;opacity:.65;margin-left:5px}
+.chips button[aria-pressed=true]{background:var(--strong);border-color:var(--strong);color:#fff;font-weight:600}
+.chips button[aria-pressed=true] span{opacity:.8}
+.chips .sep{width:1px;height:18px;background:var(--line);margin-inline:3px}
+.chips .hint{font-size:11px;color:var(--faint)}
+.chip-note{font-size:11px;color:var(--faint);margin-bottom:8px}
 
 /* ── 책장 ── */
 .rack{display:grid;gap:14px;align-items:start}
 .column{min-width:0}
+/* 찾는 중 — 갈래마다 한 줄, 이름은 왼쪽에 한 번 */
+.rack.lanes{display:flex;flex-direction:column;align-items:stretch;gap:11px}
+.lane{display:grid;grid-template-columns:118px minmax(0,1fr);gap:12px;align-items:start}
+.lane .label{padding-top:2px}
+.lane .label b{display:block;font:600 12px/1.4 var(--sans);color:var(--ink2)}
+.lane .label i{font-style:normal;font-size:10.5px;color:var(--faint);font-variant-numeric:tabular-nums}
+.lane .label.near b{color:var(--mut);font-weight:500}
+.lane .bin{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:0 8px;align-content:start}
 .subject{margin:0;display:flex;gap:4px;align-items:center;justify-content:space-between;
          font:500 11px/1.3 var(--sans);height:24px;color:var(--ink2);white-space:nowrap}
 .subject span{font-weight:400;font-size:10px;color:var(--faint)}
@@ -103,7 +121,7 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
 .detail p{font-size:12px;margin:2px 0;color:var(--ink2)}
 .detail .where{color:#3f5a34}
 .detail .borrow{color:#8a6339}
-.detail .close{color:var(--mut)}min-height:32px;min-width:32px;padding:5px;font-size:11px}
+.detail .close{color:var(--mut);min-height:32px;min-width:32px;padding:5px;font-size:11px}
 
 /* ── 꼬리 ── */
 .foot{font-size:11px;color:var(--faint);margin-top:14px}
@@ -114,7 +132,9 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
   :root{--spine-font:11px}
   .header{gap:8px;flex-wrap:wrap;margin-bottom:6px}
   h1{font-size:19px}
-  .search{width:100%;margin:0;flex-basis:100%;padding:5px 0}
+  .search{font-size:17px;padding:7px 0}
+  .lane{grid-template-columns:1fr;gap:3px}
+  .lane .label{display:flex;gap:6px;align-items:baseline}
   .rack{gap:10px}
   .book{padding-inline:4px}
   .detail{grid-template-columns:32px minmax(0,1fr) auto;gap:7px}
@@ -135,20 +155,19 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
   <div class="header">
     <h1>내 책장</h1>
     <span class="count" id="count">읽는 중…</span>
-    <input class="search" id="q" type="search" placeholder="제목·저자·주제로 찾기" aria-label="제목, 저자, 주제로 찾기" />
   </div>
 
-  <div class="filters" id="filters">
-    <button type="button" data-filter="all" aria-pressed="true">전체 <span></span></button>
-    <button type="button" data-filter="owned" aria-pressed="false">소장한 책 <span></span></button>
-    <button type="button" data-filter="ebook" aria-pressed="false">전자책 <span></span></button>
-    <button type="button" data-filter="borrowed" aria-pressed="false">빌린 책 <span></span></button>
+  <div class="searchbar">
+    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4.5-4.5" /></svg>
+    <input class="search" id="q" type="search" placeholder="제목이나 저자, 주제로 찾기"
+           aria-label="제목이나 저자, 주제로 찾기" />
+    <button class="clear" id="clear" type="button" hidden>지우기</button>
+    <button class="exact" id="exact" type="button" aria-pressed="false">정확히</button>
   </div>
-  <p class="filter-note" id="note" hidden></p>
-  <p class="searchnote" id="snote" hidden>
-    <button type="button" id="exact" aria-pressed="false">정확히 찾기</button>
-    <span id="shint"></span>
-  </p>
+
+  <div class="chips" id="chips"></div>
+  <p class="chip-note" id="note" hidden></p>
 
   <div class="rack" id="rack"></div>
 
@@ -181,6 +200,7 @@ const NOTE = {
   ebook: '교보, 리디, 킨들, 구글북스와 PDF 에 있는 책이에요.',
   borrowed: '회사, 도서관, 지인에게 빌린 것으로 기록된 책이에요. 반납 여부는 구분하지 않아요.',
 }
+const FILTER_NAMES = [['all','전체'],['owned','소장한 책'],['ebook','전자책'],['borrowed','빌린 책']]
 const MAX_COLUMNS = 6
 
 /* 한글 초성 — 'ㄷㅇㅌ' 로 '데이터' 를 찾는다 */
@@ -247,7 +267,7 @@ const $ = (s) => document.querySelector(s)
 const rack = $('#rack'), detail = $('#detail')
 const safe = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
 
-let BOOKS = [], query = '', selected = null, active = 'all', lastWidth = 0, exact = false
+let BOOKS = [], query = '', selected = null, active = 'all', lane = null, lastWidth = 0, exact = false
 
 /* 대표 주제는 첫 번째 것 하나 — 한 책이 여러 칸에 나오면 밀도가 낭비된다 */
 const subjectOf = (b) => (b.groups || [])[0] || '미분류'
@@ -294,13 +314,54 @@ function showDetail() {
   document.body.style.paddingBottom = detail.offsetHeight + 'px'
 }
 
-function drawFilters(matches) {
-  document.querySelectorAll('[data-filter]').forEach((btn) => {
-    const key = btn.dataset.filter
-    btn.setAttribute('aria-pressed', String(key === active))
-    btn.querySelector('span').textContent = matches.filter((b) => inFilter(b, key)).length
-  })
-  const note = $('#note')
+/* 칸 하나를 만든다 */
+function chip(label, count, on, click) {
+  const btn = document.createElement('button')
+  btn.type = 'button'
+  btn.setAttribute('aria-pressed', String(on))
+  btn.innerHTML = `${safe(label)} <span>${count}</span>`
+  btn.onclick = click
+  return btn
+}
+
+/* 안 찾을 땐 소장처로 거르고, 찾는 중엔 걸린 자리로 거른다 — 줄이 하나로 유지된다 */
+function makeSpine(b) {
+  const btn = document.createElement('button')
+  btn.type = 'button'
+  btn.className = 'book'
+  btn.dataset.id = b.id
+  btn.textContent = b.title
+  btn.setAttribute('aria-label', b.title)
+  btn.setAttribute('aria-pressed', String(selected === b.id))
+  const color = bookColor(b)
+  btn.style.setProperty('--book-color', color)
+  btn.style.setProperty('--book-ink', ink(color))
+  btn.onclick = () => { selected = selected === b.id ? null : b.id; showDetail() }
+  return btn
+}
+
+function drawChips(matches, groups, searching) {
+  const chips = $('#chips'), note = $('#note')
+  chips.innerHTML = ''
+  if (searching) {
+    chips.append(chip('찾은 책', matches.filter((b) => inFilter(b, active)).length, lane === null,
+                      () => { lane = null; render() }))
+    const sep = document.createElement('span'); sep.className = 'sep'; chips.append(sep)
+    for (const g of groups) {
+      chips.append(chip(g.t.replace('에서', ''), g.items.length, lane === g.k,
+                        () => { lane = lane === g.k ? null : g.k; render() }))
+    }
+    const hint = document.createElement('span')
+    hint.className = 'hint'
+    hint.textContent = exact ? '글자 그대로 찾았어요' : '띄어쓰기와 부호는 무시하고 말끝이 달라도 찾아요'
+    chips.append(hint)
+    note.hidden = true
+    return
+  }
+  for (const [key, label] of FILTER_NAMES) {
+    chips.append(chip(label, matches.filter((b) => inFilter(b, key)).length, key === active,
+                      () => { active = key; lane = null; render() }))
+  }
   note.hidden = active === 'all'
   note.textContent = NOTE[active] || ''
 }
@@ -317,28 +378,46 @@ function render() {
     b.near = hit ? hit.near : false
     matches.push(b)
   }
-  drawFilters(matches)
-  $('#snote').hidden = !searching
+  $('#clear').hidden = !searching
   const found = matches.filter((b) => inFilter(b, active))
   $('#count').textContent = found.length + '권' + (query ? ' 찾음' : '')
-  rack.style.gridTemplateColumns = `repeat(${n},minmax(0,1fr))`
-  rack.innerHTML = ''
-  if (!found.length) {
-    rack.innerHTML = `<div class="empty">찾은 책이 없어요.${exact ? ' 정확히 찾기를 꺼 보세요.' : ''}</div>`
-    $('#shint').textContent = ''
-    selected = null; showDetail(); return
-  }
 
   // 찾는 중이면 무엇으로 걸렸는지로 묶고, 아니면 주제로 묶는다
   const groups = searching
     ? [...['제목','저자','주제','정리'].map((f) =>
-          ({ t: f + '에서', items: found.filter((b) => b.hit === f && !b.near) })),
-       { t: '말끝만 다른 것', items: found.filter((b) => b.near) }].filter((g) => g.items.length)
-    : TOPICS.map((t) => ({ t, items: found.filter((b) => subjectOf(b) === t) })).filter((g) => g.items.length)
-  if (searching) {
-    const parts = groups.map((g) => g.t.replace('에서', '') + ' ' + g.items.length)
-    $('#shint').textContent = parts.join(' · ') + (exact ? '' : ' — 띄어쓰기·부호를 무시하고 말끝이 달라도 찾아요')
+          ({ k: f, t: f + '에서', items: found.filter((b) => b.hit === f && !b.near) })),
+       { k: 'near', t: '말끝만 다른 것', items: found.filter((b) => b.near) }].filter((g) => g.items.length)
+    : TOPICS.map((t) => ({ k: t, t, items: found.filter((b) => subjectOf(b) === t) })).filter((g) => g.items.length)
+  if (lane && !groups.some((g) => g.k === lane)) lane = null
+  drawChips(matches, groups, searching)
+
+  rack.innerHTML = ''
+  rack.classList.toggle('lanes', searching)
+  if (!found.length) {
+    rack.classList.remove('lanes')
+    rack.innerHTML = `<div class="empty">찾은 책이 없어요.${exact ? ' 「정확히」를 꺼 보세요.' : ''}</div>`
+    selected = null; showDetail(); return
   }
+
+  // 찾는 중 — 갈래마다 한 줄, 이름은 왼쪽에 한 번. 칸이 남으면 여러 열로 채운다
+  if (searching) {
+    for (const g of (lane ? groups.filter((x) => x.k === lane) : groups)) {
+      const row = document.createElement('section')
+      row.className = 'lane'
+      const label = document.createElement('h2')
+      label.className = 'label' + (g.k === 'near' ? ' near' : '')
+      label.innerHTML = `<b>${safe(g.t.replace('에서', ''))}</b><i>${g.items.length}권</i>`
+      const bin = document.createElement('div')
+      bin.className = 'bin'
+      for (const b of g.items) bin.append(makeSpine(b))
+      row.append(label, bin)
+      rack.append(row)
+    }
+    if (selected !== null && !found.some((b) => b.id === selected)) { selected = null; showDetail() }
+    return
+  }
+
+  rack.style.gridTemplateColumns = `repeat(${n},minmax(0,1fr))`
   const capacity = Math.ceil((found.length + groups.length) / n) + 1
   let column = null, used = 0, colIndex = -1
   const newColumn = () => { column = document.createElement('section'); column.className = 'column'; rack.append(column); used = 0; colIndex++ }
@@ -355,26 +434,16 @@ function render() {
     heading(group.t, group.items.length, false)
     for (const b of group.items) {
       if (used >= capacity && colIndex < n - 1) { newColumn(); heading(group.t, group.items.length, true) }
-      const btn = document.createElement('button')
-      btn.type = 'button'
-      btn.className = 'book'
-      btn.dataset.id = b.id
-      btn.textContent = b.title
-      btn.setAttribute('aria-label', b.title)
-      btn.setAttribute('aria-pressed', String(selected === b.id))
-      const color = bookColor(b)
-      btn.style.setProperty('--book-color', color)
-      btn.style.setProperty('--book-ink', ink(color))
-      btn.onclick = () => { selected = selected === b.id ? null : b.id; showDetail() }
-      column.append(btn); used++
+      column.append(makeSpine(b)); used++
     }
   }
   if (selected !== null && !found.some((b) => b.id === selected)) { selected = null; showDetail() }
 }
 
-document.querySelectorAll('[data-filter]').forEach((btn) =>
-  btn.addEventListener('click', () => { active = btn.dataset.filter; render() }))
-$('#q').addEventListener('input', (e) => { query = e.target.value.trim(); render() })
+$('#q').addEventListener('input', (e) => { query = e.target.value.trim(); lane = null; render() })
+$('#clear').addEventListener('click', () => {
+  $('#q').value = ''; query = ''; lane = null; render(); $('#q').focus()
+})
 $('#exact').addEventListener('click', () => {
   exact = !exact
   $('#exact').setAttribute('aria-pressed', String(exact))
