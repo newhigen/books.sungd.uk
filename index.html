@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>책장</title>
 <meta name="description" content="종이책과 리디·교보·킨들·구글북스에 흩어진 책을 한 곳에서 본다. books.sungd.uk" />
-<meta name="color-scheme" content="light dark" />
+<meta name="color-scheme" content="light" />
 <link rel="canonical" href="https://books.sungd.uk/" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='6' width='5' height='16' rx='2.5' fill='%231e1c19'/%3E%3Crect x='13' y='9' width='5' height='13' rx='2.5' fill='%231e1c19'/%3E%3Crect x='20' y='7' width='5' height='15' rx='2.5' fill='%238c3b4a'/%3E%3Crect x='4' y='24' width='24' height='2.4' rx='1.2' fill='%231e1c19'/%3E%3C/svg%3E" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500&display=swap" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='5' y='6' width='22' height='4' rx='1' fill='%23687fa2'/%3E%3Crect x='5' y='12' width='22' height='4' rx='1' fill='%238a7e9e'/%3E%3Crect x='5' y='18' width='22' height='4' rx='1' fill='%23a38b65'/%3E%3Crect x='5' y='24' width='22' height='3' rx='1' fill='%2382966d'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap" />
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=GT-KT4BFVVJ"></script>
 <script>
@@ -32,579 +32,279 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#faf9f6; --surface:#fff; --surface2:#f2f1ec;
-  --border:#e8e6df; --line-strong:#d9d6cc;
-  --text:#1e1c19; --muted:#6d6a63; --ink-3:#9c988e;
-  --acc:#8c3b4a; --acc-bg:#f7edef;
-  --wood:#c3ac8c; --wood-sh:rgba(90,70,40,.3);
-  --shadow-sm:0 1px 2px rgba(30,28,25,.05),0 1px 3px rgba(30,28,25,.05);
-  --shadow-md:0 3px 10px rgba(30,28,25,.07),0 10px 28px rgba(30,28,25,.08);
-  --sans:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;
-  --mono:'Google Sans Code',ui-monospace,'SF Mono',Menlo,monospace;
+  --bg:#f4f0e7; --ink:#292c24; --ink2:#5a6050; --mut:#6e7164; --faint:#838575;
+  --rule:#c8baa5; --line:#cecbbb; --card:#fffdf6; --acc:#2b59c3;
+  --spine-height:24px; --spine-font:12px;
+  --sans:'Wanted Sans Variable','Wanted Sans',-apple-system,system-ui,sans-serif;
+  --serif:'Noto Serif KR',Georgia,serif;
 }
-[data-theme="dark"]{
-  --bg:#12110f; --surface:#1b1a17; --surface2:#242220;
-  --border:#2c2a26; --line-strong:#3a3733;
-  --text:#eceae5; --muted:#a09c93; --ink-3:#6e6a63;
-  --acc:#c9808d; --acc-bg:#2b1c20;
-  --wood:#4a3d2c; --wood-sh:rgba(0,0,0,.5);
-  --shadow-sm:0 1px 2px rgba(0,0,0,.25);
-  --shadow-md:0 3px 10px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.34);
-}
-html{scrollbar-gutter:stable}
-body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:13.5px;line-height:1.5;
-     letter-spacing:-.01em;-webkit-font-smoothing:antialiased;padding-bottom:56px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 18px;min-width:0}
-button,select,input{font-family:inherit;letter-spacing:inherit}
-img{display:block}
-/* hidden 은 display 지정에 밀린다 — 명시로 이긴다 */
+html{color-scheme:light;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:12px/1.5 var(--sans);word-break:keep-all;
+     -webkit-font-smoothing:antialiased}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+img{display:block;max-width:100%}
 [hidden]{display:none !important}
+.wrap{padding:12px 12px 26px}
 
-/* ── 상단바 ── */
-.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
-     backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-.top .wrap{display:flex;align-items:center;gap:10px;padding-top:10px;padding-bottom:10px}
-.brand{font-weight:800;font-size:15px;letter-spacing:-.03em;border:0;background:none;color:inherit;
-       cursor:pointer;padding:0}
-.crumb{font-size:13px;color:var(--muted)}
-.crumb b{color:var(--text);font-weight:700}
-.count{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-left:auto}
-.themebtn{border:1px solid var(--border);background:var(--surface);color:var(--muted);
-          border-radius:7px;width:28px;height:28px;cursor:pointer;font-size:12px;line-height:1;
-          display:grid;place-items:center;flex:none}
-.themebtn:hover{border-color:var(--line-strong);color:var(--text)}
+/* ── 머리 ── */
+.header{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
+.count{font-size:11px;white-space:nowrap;color:var(--mut)}
+.search{margin-left:auto;width:230px;min-width:0;border:0;border-bottom:1px solid #b9b9a9;
+        background:transparent;padding:7px 1px;border-radius:0;font-size:16px;color:#3c4233;outline:none}
+.search:focus{border-bottom-color:var(--acc)}
+.search::placeholder{color:#9c9c8c}
 
-/* ── 검색·거르개 ── */
-.controls{padding-top:14px}
-.search{width:100%;border:1px solid var(--border);background:var(--surface);color:var(--text);
-        border-radius:9px;padding:9px 12px;font-size:13.5px;outline:none}
-.search:focus{border-color:var(--acc)}
-.search::placeholder{color:var(--ink-3)}
-.tabs{display:flex;gap:1px;margin-top:11px;overflow-x:auto;scrollbar-width:none;
-      border-bottom:1px solid var(--border)}
-.tabs::-webkit-scrollbar{display:none}
-.tab{flex:none;border:0;background:none;color:var(--muted);font-size:12.5px;
-     padding:7px 10px;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;
-     margin-bottom:-1px}
-.tab:hover{color:var(--text)}
-.tab.on{color:var(--text);font-weight:700;border-bottom-color:var(--acc)}
-.tab i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--ink-3);margin-left:4px}
-.tab.on i{color:var(--acc)}
-.fields{display:flex;gap:6px;margin-top:9px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
-.fields::-webkit-scrollbar{display:none}
-.fld{flex:none;border:1px solid transparent;background:none;color:var(--muted);font-size:12px;
-     padding:3px 8px;border-radius:6px;cursor:pointer;white-space:nowrap}
-.fld:hover{color:var(--text);background:var(--surface2)}
-.fld.on{background:var(--acc-bg);color:var(--acc);border-color:var(--acc);font-weight:700}
-.fld i{font-style:normal;font-family:var(--mono);font-size:10.5px;opacity:.65;margin-left:4px}
-.bar{display:flex;align-items:center;gap:8px;padding:12px 0 2px;font-size:12px;color:var(--ink-3)}
-.bar .n{margin-right:auto;font-family:var(--mono)}
-.viewsw{display:flex;gap:2px}
-.viewsw button{border:0;background:none;color:var(--ink-3);font-size:12px;padding:3px 7px;
-               border-radius:6px;cursor:pointer}
-.viewsw button:hover{color:var(--text)}
-.viewsw button.on{background:var(--surface2);color:var(--text);font-weight:700}
-select{border:1px solid var(--border);background:var(--surface);color:var(--muted);
-       border-radius:7px;padding:4px 7px;font-size:12px}
+/* ── 거르개 ── */
+.filters{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:7px}
+.filters button{font-size:11.5px;padding:5px 10px;border-radius:20px;border:1px solid #cfc7b6;
+                color:var(--ink2);background:#fbf9f3;min-height:30px;white-space:nowrap}
+.filters button span{font-variant-numeric:tabular-nums;opacity:.65;margin-left:4px}
+.filters button[aria-pressed=true]{background:#40453a;border-color:#40453a;color:#fbf9f3;font-weight:600}
+.filters button[aria-pressed=true] span{opacity:.8}
+.filter-note{font-size:11px;color:var(--faint);margin-bottom:8px}
 
-/* ══ 쌓기 ══ 홈에서 주제를 표지 더미로 보여 준다 */
-.piles{margin-top:16px;border-top:1px solid var(--border)}
-.pile{display:flex;align-items:center;gap:18px;width:100%;text-align:left;cursor:pointer;
-      border:0;border-bottom:1px solid var(--border);background:none;color:inherit;
-      padding:15px 4px;font-family:inherit}
-.pile:hover{background:var(--surface2)}
-.fan{position:relative;width:112px;height:88px;flex:none}
-.fan img,.fan .ph{position:absolute;top:50%;left:0;width:54px;border-radius:2px;
-                  box-shadow:0 2px 8px rgba(0,0,0,.28);transform-origin:bottom left}
-.fan .ph{height:80px;display:grid;place-items:center;font-size:9px;color:#fff;padding:4px;
-         text-align:center;line-height:1.2;overflow:hidden}
-.pmeta{min-width:0}
-.pmeta .nm{font-size:15.5px;font-weight:800;letter-spacing:-.03em}
-.pmeta .n{font-family:var(--mono);font-size:11.5px;color:var(--acc);margin-top:2px}
-.pmeta .tg{font-size:11.5px;color:var(--ink-3);margin-top:5px;overflow:hidden;
-           text-overflow:ellipsis;white-space:nowrap}
+/* ── 책장 ── */
+.rack{display:grid;gap:5px;align-items:start}
+.column{min-width:0;border-right:2px solid var(--rule);padding-right:4px}
+.column:last-child{border:0;padding-right:0}
+.subject{margin:0;display:flex;gap:4px;align-items:center;justify-content:space-between;
+         font:500 11px/1.3 var(--sans);height:24px;color:var(--ink2);white-space:nowrap}
+.subject span{font-weight:400;font-size:10px;color:var(--faint)}
+.book{display:block;width:100%;height:var(--spine-height);margin:0 0 2px;padding:2px 6px;
+      border-left:3px solid #ffffff30;border-right:2px solid #00000010;border-radius:2px 3px 3px 2px;
+      background:var(--book-color);color:var(--book-ink);
+      box-shadow:inset 0 1px 0 #ffffff24,inset 0 -1px 0 #00000014;
+      text-align:left;font-size:var(--spine-font);line-height:1.4;white-space:nowrap;
+      overflow:hidden;text-overflow:ellipsis;touch-action:manipulation}
+.book:hover{filter:brightness(1.07)}
+.book[aria-pressed=true]{outline:2px solid var(--acc);outline-offset:1px;position:relative;z-index:1}
+.book:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.empty{padding:30px 0;color:#737a65}
 
-/* ══ 서가 ══ 책등을 세워 늘어놓는다. 제목은 90도로 */
-.shelf{margin-top:14px}
-.srow{margin-bottom:22px}
-.slab{font-size:11.5px;font-weight:750;color:var(--acc);letter-spacing:-.02em;margin-bottom:7px}
-.books{display:flex;flex-wrap:wrap;align-items:flex-end;gap:4px;padding-bottom:11px;
-       border-bottom:6px solid var(--wood);box-shadow:0 6px 6px -5px var(--wood-sh)}
-.spine{flex:none;width:30px;border-radius:2px 2px 0 0;color:#fff;cursor:pointer;border:0;
-       writing-mode:vertical-rl;text-orientation:mixed;font-size:11px;font-weight:600;
-       padding:9px 5px;letter-spacing:-.02em;overflow:hidden;font-family:inherit;
-       white-space:nowrap;text-align:start;
-       box-shadow:inset -3px 0 5px rgba(0,0,0,.2),inset 1px 0 0 rgba(255,255,255,.14);
-       transition:transform .12s}
-.spine:hover{transform:translateY(-5px)}
-.spine.thin{width:24px}
-.spine.wide{width:36px}
+/* ── 고른 책 — 아래에 붙어 스크롤을 따라온다 ── */
+.detail{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--card);
+        border-top:1px solid var(--line);
+        padding:9px 12px calc(9px + env(safe-area-inset-bottom, 0px));
+        display:grid;grid-template-columns:39px minmax(0,1fr) auto;gap:10px;align-items:center;
+        box-shadow:0 -4px 18px rgba(41,44,36,.16)}
+.detail img{width:39px;height:56px;object-fit:cover}
+.detail .noimg{width:39px;height:56px;background:#eae5d9}
+.detail h2{font:500 15px/1.4 var(--serif);overflow-wrap:anywhere}
+.detail p{font-size:12px;margin:2px 0;color:#686e5c}
+.detail .where{color:#515d43}
+.detail .borrow{color:#8a6339}
+.detail .close{color:#6e765f;min-height:32px;min-width:32px;padding:5px;font-size:11px}
 
-/* 표지·목록·표 */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:20px 14px;margin-top:14px}
-.gcard{border:0;background:none;padding:0;cursor:pointer;color:inherit;text-align:left;min-width:0}
-.cv{aspect-ratio:1/1.45;border-radius:3px;overflow:hidden;background:var(--surface2);
-    box-shadow:var(--shadow-sm)}
-.cv img{width:100%;height:100%;object-fit:cover}
-.ph2{width:100%;height:100%;display:grid;place-items:center;padding:8px;text-align:center;
-     font-size:10.5px;line-height:1.3;color:#fff;word-break:keep-all}
-.bt{font-size:12px;font-weight:650;line-height:1.3;margin-top:7px;letter-spacing:-.02em;
-    word-break:keep-all;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.ba{font-size:11px;color:var(--ink-3);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.list{margin-top:12px;border-top:1px solid var(--border)}
-.row{display:flex;align-items:center;gap:12px;width:100%;border:0;border-bottom:1px solid var(--border);
-     background:none;color:inherit;text-align:left;padding:9px 2px;cursor:pointer;font-family:inherit}
-.row:hover{background:var(--surface2)}
-.row .cv{width:34px;flex:none}
-.row .mid{flex:1;min-width:0}
-.row .rt{font-size:13px;font-weight:650;letter-spacing:-.02em;word-break:keep-all}
-.row .rs{font-size:11.5px;color:var(--ink-3);margin-top:2px;overflow:hidden;
-         text-overflow:ellipsis;white-space:nowrap}
-.row .rr{text-align:right;font-size:11px;color:var(--ink-3);font-family:var(--mono);flex:none}
-.row .rr b{display:block;font-weight:400;color:var(--muted);font-family:var(--sans);font-size:11.5px}
-.tblwrap{margin-top:12px;overflow-x:auto}
-.tbl{width:100%;border-collapse:collapse;font-size:12.5px;min-width:520px}
-.tbl th{text-align:left;font-size:11px;color:var(--ink-3);font-weight:500;padding:0 10px 6px 0;
-        border-bottom:1px solid var(--border)}
-.tbl td{padding:7px 10px 7px 0;border-bottom:1px solid var(--border);cursor:pointer}
-.tbl tr:hover td{background:var(--surface2)}
-.tbl .c-title{font-weight:650;letter-spacing:-.02em}
-.tbl .c-author{color:var(--muted);width:22%}
-.tbl .c-tag{color:var(--acc);width:20%;white-space:nowrap}
-.tbl .c-where{color:var(--muted);width:16%;white-space:nowrap}
-.tbl .c-read{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);text-align:right;white-space:nowrap}
+/* ── 꼬리 ── */
+.footer{font-size:11px;color:#777b6a;margin-top:9px}
+.foot{font-size:11px;color:var(--faint);margin-top:6px}
+.foot a{color:var(--mut)}
 
-/* ── 상세 ── */
-.sheet{position:fixed;inset:0;z-index:40;background:rgba(20,18,16,.4);backdrop-filter:blur(3px);
-       display:none;place-items:center;padding:20px}
-.sheet.on{display:grid}
-.card{background:var(--surface);border-radius:14px;box-shadow:var(--shadow-md);padding:20px;
-      width:min(460px,100%);max-height:86vh;overflow:auto}
-.chead{display:flex;gap:13px}
-.chead .cv{width:80px;flex:none}
-.ctitle{font-size:15.5px;font-weight:800;letter-spacing:-.03em;line-height:1.3;word-break:keep-all}
-.cmeta{font-size:12px;color:var(--muted);margin-top:4px}
-.cen{font-size:11.5px;color:var(--ink-3);font-style:italic;margin-top:2px}
-.cgist{margin-top:14px;font-size:13px;line-height:1.55;color:var(--muted);word-break:keep-all}
-.rows{margin-top:16px;border-top:1px solid var(--border)}
-.drow{display:flex;gap:11px;padding:8px 0;border-bottom:1px solid var(--border);font-size:12.5px}
-.drow dt{color:var(--ink-3);width:60px;flex:none;font-size:12px}
-.drow dd{flex:1;min-width:0}
-.where{display:flex;flex-wrap:wrap;gap:5px 0}
-.where a,.where span{font-size:12.5px;color:var(--acc);text-decoration:none;
-                     border-bottom:1px solid transparent}
-.where a:hover{border-bottom-color:currentColor}
-.where a:not(:last-child)::after,.where span:not(:last-child)::after{content:'·';color:var(--ink-3);margin:0 7px}
-.tags{display:flex;flex-wrap:wrap;gap:3px 0}
-.tags button{border:0;background:none;font-size:12.5px;color:var(--muted);cursor:pointer;padding:0}
-.tags button:hover{color:var(--acc)}
-.tags button:not(:last-child)::after{content:'·';color:var(--ink-3);margin:0 7px}
-.tnum{font-family:var(--mono);font-size:12px}
-.simil{margin-top:16px}
-.simil h4{font-size:12px;color:var(--ink-3);font-weight:500;margin-bottom:8px}
-.simil-row{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;min-width:0}
-.simil-row button{border:0;background:none;padding:0;cursor:pointer;color:inherit;text-align:left;min-width:0}
-.simil-row .st{font-size:10.5px;line-height:1.28;margin-top:4px;color:var(--muted);letter-spacing:-.02em;
-               display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.simil-row button:hover .st{color:var(--text)}
-.close{margin-top:15px;width:100%;border:1px solid var(--border);background:var(--surface2);
-       color:var(--muted);border-radius:8px;padding:9px;font-size:12.5px;cursor:pointer}
-.close:hover{color:var(--text);border-color:var(--line-strong)}
-
-.note{margin-top:12px;padding:11px 13px;background:var(--acc-bg);border-radius:9px;
-      font-size:12px;color:var(--muted);line-height:1.55}
-.foot{padding:22px 0 8px;border-top:1px solid var(--border);font-size:11.5px;color:var(--ink-3);
-      margin-top:26px}
-.foot a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border)}
-.foot a:hover{color:var(--acc);border-bottom-color:currentColor}
-.theme-switching *{transition:none !important}
-
-/* ── 폰 ── */
-@media (max-width: 620px) {
-  .wrap{padding:0 13px}
-  body{font-size:13px}
-  /* 표지 넉 장이 부채꼴로 벌어지면 96px 이 필요하다 — 좁으면 주제 이름을 침범한다 */
-  .fan{width:104px;height:74px}
-  .fan img,.fan .ph{width:45px}
-  .fan .ph{height:66px}
-  .pile{gap:13px;padding:12px 2px}
-  .pmeta .nm{font-size:14.5px}
-  .spine{width:27px;font-size:10.5px}
-  .spine.thin{width:22px}
-  .spine.wide{width:32px}
-  .grid{grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:16px 10px}
-  .simil-row{grid-template-columns:repeat(3,1fr)}
-  .card{padding:16px;border-radius:12px}
+@media (max-width:550px){
+  .wrap{padding:9px 9px 24px}
+  :root{--spine-font:11px}
+  .header{gap:8px;flex-wrap:wrap;margin-bottom:6px}
+  h1{font-size:19px}
+  .search{width:100%;margin:0;flex-basis:100%;padding:5px 0}
+  .column{padding-right:3px;border-width:1px}
+  .book{padding-inline:4px}
+  .detail{grid-template-columns:32px minmax(0,1fr) auto;gap:7px}
+  .detail img,.detail .noimg{width:32px;height:46px}
+  .detail h2{font-size:14px}
+  .detail .close{min-width:44px;min-height:44px}
+  .subject{height:25px}
+}
+@media (pointer:coarse){
+  .book{min-height:44px}
+  .detail .close{min-width:44px;min-height:44px}
 }
 </style>
 </head>
 <body>
 
-<header class="top">
-  <div class="wrap">
-    <button class="brand" id="home">책장</button>
-    <span class="crumb" id="crumb"></span>
-    <span class="count" id="count"></span>
-    <button class="themebtn" id="theme" title="밝게/어둡게" aria-label="테마 전환">◐</button>
-  </div>
-</header>
-
-<main class="wrap">
-  <div class="controls">
-    <input class="search" id="q" type="search" placeholder="제목·저자·태그 검색" autocomplete="off" />
-    <nav class="tabs" id="tabs"></nav>
-    <div class="fields" id="subwhere" hidden></div>
-    <div class="fields" id="subtags" hidden></div>
-    <div class="bar" id="bar" hidden>
-      <span class="n" id="shown"></span>
-      <div class="viewsw" id="viewsw">
-        <button data-v="spine">책등</button>
-        <button data-v="grid">표지</button>
-        <button data-v="list">목록</button>
-        <button data-v="table">표</button>
-      </div>
-      <select id="sort" aria-label="정렬">
-        <option value="topic">주제 순</option>
-        <option value="read">최근 읽은 순</option>
-        <option value="title">제목 순</option>
-        <option value="author">저자 순</option>
-      </select>
-    </div>
-    <div class="note" id="note" hidden></div>
+<div class="wrap">
+  <div class="header">
+    <h1>내 책장</h1>
+    <span class="count" id="count">읽는 중…</span>
+    <input class="search" id="q" type="search" placeholder="제목이나 저자로 찾기" aria-label="제목이나 저자로 찾기" />
   </div>
 
-  <div id="out"></div>
+  <div class="filters" id="filters">
+    <button type="button" data-filter="all" aria-pressed="true">전체 <span></span></button>
+    <button type="button" data-filter="owned" aria-pressed="false">소장한 책 <span></span></button>
+    <button type="button" data-filter="ebook" aria-pressed="false">전자책 <span></span></button>
+    <button type="button" data-filter="borrowed" aria-pressed="false">빌린 책 <span></span></button>
+  </div>
+  <p class="filter-note" id="note" hidden></p>
 
-  <div class="foot">
+  <div class="rack" id="rack"></div>
+
+  <p class="footer">책등 색은 주제별로 묶었어요. 책을 누르면 실제 표지와 전체 제목이 보여요. 여러 주제의 책은 첫 주제에 한 번만 놓았어요.</p>
+  <p class="foot">
     <span id="updated"></span> ·
     <a href="plain.html">간단히 보기</a> ·
     <a href="https://writing.sungd.uk/books">읽은 기록</a> ·
     <a href="https://sungd.uk">sungd.uk</a>
-  </div>
-</main>
-
-<div class="sheet" id="sheet" role="dialog" aria-modal="true">
-  <div class="card" id="card"></div>
+  </p>
 </div>
 
+<div class="detail" id="detail" hidden></div>
+
 <script>
+const TOPICS = ['개발·기술','데이터·AI','만들기','배우기·생각','일·조직','삶·교양','문학','마음·관계','몸·취미','미분류']
+const PALETTE = {
+  '개발·기술':['#cedbef','#687fa2'], '데이터·AI':['#d2e0f1','#6685a5'], '만들기':['#d5e5ea','#698f9a'],
+  '배우기·생각':['#e1dced','#8a7e9e'], '일·조직':['#e6dfeb','#938099'], '삶·교양':['#ecdfc9','#a38b65'],
+  '문학':['#f0e1ce','#ab8b65'], '마음·관계':['#dce6d5','#82966d'], '몸·취미':['#d6e5dc','#719385'],
+  '미분류':['#e2e2dd','#95978b'],
+}
+const SRC_NAME = { paper:'종이책', company:'회사에서 빌림', library:'도서관에서 빌림', friend:'지인에게 빌림',
+                   kyobo:'교보', ridi:'리디', kindle:'킨들', google:'구글북스', pdf:'PDF' }
+const SRC_FILTER = {
+  owned: ['paper','kyobo','ridi','kindle','google','pdf'],
+  ebook: ['kyobo','ridi','kindle','google','pdf'],
+  borrowed: ['company','library','friend'],
+}
+const NOTE = {
+  owned: '종이책과 전자책, PDF 로 소장처가 기록된 책이에요.',
+  ebook: '교보, 리디, 킨들, 구글북스와 PDF 에 있는 책이에요.',
+  borrowed: '회사, 도서관, 지인에게 빌린 것으로 기록된 책이에요. 반납 여부는 구분하지 않아요.',
+}
+const MAX_COLUMNS = 6
+
 const $ = (s) => document.querySelector(s)
-const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))
+const rack = $('#rack'), detail = $('#detail')
+const safe = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
 
-// 주제마다 색 하나 — 책등과 표지 없는 자리가 같은 색을 쓴다
-const HUE = {
-  '개발·기술': '#3c4b63', '데이터·AI': '#2f5d50', '만들기': '#7a4b6b',
-  '일·조직': '#8c5a2b', '배우기·생각': '#4a5d2f', '마음·관계': '#8c3b4a',
-  '삶·교양': '#5b4a6b', '문학': '#7b3f3f', '몸·취미': '#2f6b6b', '그 밖': '#5a5a55',
+let BOOKS = [], query = '', selected = null, active = 'all', lastWidth = 0
+
+/* 대표 주제는 첫 번째 것 하나 — 한 책이 여러 칸에 나오면 밀도가 낭비된다 */
+const subjectOf = (b) => (b.groups || [])[0] || '미분류'
+const idsOf = (b) => (b.sources || []).map((s) => s.id)
+const inFilter = (b, key) => key === 'all' || idsOf(b).some((id) => SRC_FILTER[key].includes(id))
+
+/* 같은 주제 안에서는 옅은 명도 차이만 둔다 */
+function bookColor(b) {
+  const base = (PALETTE[subjectOf(b)] || PALETTE['미분류'])[0]
+  const hash = Array.from(b.title).reduce((n, c) => (n + c.codePointAt(0)) % 997, 0)
+  const shift = [-9, -4, 0, 4, 8][hash % 5]
+  return '#' + [1, 3, 5].map((i) =>
+    Math.max(0, Math.min(255, parseInt(base.slice(i, i + 2), 16) + shift)).toString(16).padStart(2, '0')).join('')
 }
-const colorOf = (b) => HUE[(b.groups || [])[0]] || HUE['그 밖']
-// 제목에서 만든 값 — 책등 두께와 높이를 조금씩 달리해 실제 책처럼 보이게
-const seed = (s) => {
-  let h = 0
-  for (const ch of String(s)) h = (h * 31 + ch.codePointAt(0)) % 997
-  return h
+/* 배경 밝기에 맞춰 글자색을 고른다 */
+function ink(hex) {
+  const c = hex.slice(1)
+  const a = [0, 2, 4].map((i) => parseInt(c.slice(i, i + 2), 16) / 255)
+                     .map((v) => v <= 0.04045 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4))
+  return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2] > 0.179 ? '#171a16' : '#ffffff'
 }
 
-const state = { where: 'all', src: '', group: '', tag: '', sort: 'topic', q: '',
-                view: localStorage.getItem('shelf-view') || 'spine' }
-let DATA = { books: [], services: [], wheres: [], groups: [], updatedAt: '' }
-
-const monthLabel = (m) => (m ? m.replace(/^(\d{4})-(\d{2})$/, (_, y, mo) => `${y}.${+mo}`) : '')
-const serviceName = (id) => (DATA.services.find((s) => s.id === id) || {}).name || id
-const tagRank = (t) => {
-  let i = 0
-  for (const g of DATA.groups) for (const x of g.tags) { if (x.name === t) return i; i++ }
-  return 9999
-}
-const coverHTML = (b) =>
-  b.cover
-    ? `<img src="${esc(b.cover)}" alt="" loading="lazy" onerror="this.parentNode.innerHTML=this.dataset.ph" data-ph="${esc(ph(b))}">`
-    : ph(b)
-const ph = (b) => `<div class="ph2" style="background:${colorOf(b)}">${esc(b.title.slice(0, 22))}</div>`
-
-// 소장처·검색까지 건 뒤의 목록 — 주제 더미도 이 결과로 센다
-function afterWhere() {
-  const q = state.q.trim().toLowerCase()
-  return DATA.books.filter((b) => {
-    if (state.where === 'none' && b.sources.length) return false
-    if (state.where !== 'all' && state.where !== 'none') {
-      const g = DATA.wheres.find((w) => w.id === state.where)
-      if (g && !b.sources.some((s) => g.ids.includes(s.id))) return false
-    }
-    if (state.src && !b.sources.some((s) => s.id === state.src)) return false
-    if (!q) return true
-    return (b.title + ' ' + b.author + ' ' + b.englishTitle + ' ' + b.publisher + ' ' + (b.tags || []).join(' '))
-      .toLowerCase().includes(q)
-  })
-}
-function visible() {
-  return afterWhere().filter((b) => {
-    if (state.group && !(b.groups || []).includes(state.group)) return false
-    if (state.tag && !(b.tags || []).includes(state.tag)) return false
-    return true
-  })
-}
-function sorted(list) {
-  const c = [...list]
-  const ko = (a, b) => a.localeCompare(b, 'ko')
-  if (state.sort === 'title') c.sort((a, b) => ko(a.title, b.title))
-  else if (state.sort === 'author') c.sort((a, b) => ko(a.author || '힣', b.author || '힣'))
-  else if (state.sort === 'topic') {
-    const key = (b) => Math.min(...((b.tags || []).map(tagRank).concat(9999)))
-    c.sort((a, b) => key(a) - key(b) || ko(a.title, b.title))
-  } else {
-    c.sort((a, b) => {
-      const kx = a.readAt || a.addedAt || '', ky = b.readAt || b.addedAt || ''
-      return kx !== ky ? ky.localeCompare(kx) : ko(a.title, b.title)
-    })
+function showDetail() {
+  detail.hidden = selected === null
+  rack.querySelectorAll('.book').forEach((e) => e.setAttribute('aria-pressed', String(e.dataset.id === selected)))
+  if (selected === null) { document.body.style.paddingBottom = ''; return }
+  const b = BOOKS.find((x) => x.id === selected)
+  if (!b) return
+  const where = idsOf(b).map((id) =>
+    `<span class="${SRC_FILTER.borrowed.includes(id) ? 'borrow' : ''}">${safe(SRC_NAME[id] || id)}</span>`
+  ).join(' / ') || '소장처 미확인'
+  detail.innerHTML =
+    (b.cover ? `<img src="${safe(b.cover)}" alt="${safe(b.title)} 표지" loading="lazy" />` : '<span class="noimg"></span>') +
+    `<div><h2>${safe(b.title)}</h2>` +
+    `<p>${safe(b.author || '저자 미등록')}${b.gist ? ' — ' + safe(b.gist) : ''}</p>` +
+    `<p class="where">${where}</p></div>` +
+    '<button class="close" type="button" aria-label="책 정보 닫기">닫기</button>'
+  detail.querySelector('button').onclick = () => {
+    const id = selected
+    selected = null
+    showDetail()
+    rack.querySelector(`[data-id="${CSS.escape(id)}"]`)?.focus({ preventScroll: true })
   }
-  return c
+  document.body.style.paddingBottom = detail.offsetHeight + 'px'
 }
 
-// ── 홈 · 쌓기 ── 주제 하나가 표지 더미
-function drawPiles() {
-  const rows = afterWhere()
-  const piles = DATA.groups.map((g) => {
-    const mine = rows.filter((b) => (b.groups || []).includes(g.name))
-    return { name: g.name, books: mine }
-  }).filter((p) => p.books.length).sort((a, b) => b.books.length - a.books.length)
-
-  $('#out').innerHTML = `<div class="piles">${piles.map((p) => `
-    <button class="pile" data-g="${esc(p.name)}">
-      <div class="fan">
-        ${p.books.filter((b) => b.cover).slice(0, 4).map((b, i) => `
-          <img src="${esc(b.cover)}" alt=""
-               style="left:${i * 17}px;transform:translateY(-50%) rotate(${-9 + i * 6}deg);z-index:${4 - i}">`).join('')
-        || `<div class="ph" style="background:${HUE[p.name] || HUE['그 밖']};left:0;transform:translateY(-50%)">${esc(p.name)}</div>`}
-      </div>
-      <div class="pmeta">
-        <div class="nm">${esc(p.name)}</div>
-        <div class="n">${p.books.length}권</div>
-        <div class="tg">${esc([...new Set(p.books.flatMap((b) => b.tags || []))].slice(0, 4).join(' · '))}</div>
-      </div>
-    </button>`).join('')}</div>`
-}
-
-// ── 서가 ── 책등을 세우고 제목을 90도로
-function spineHTML(list) {
-  const cur = state.group
-  return list.map((b) => {
-    const s = seed(b.title)
-    const w = s % 7 === 0 ? ' wide' : s % 3 === 0 ? ' thin' : ''
-    // 세로쓰기에서 한글은 글자 높이만큼, 영문·숫자는 눕혀 쓰여 그 절반쯤 나아간다
-    const run = [...b.title].reduce((a, c) => a + (/[가-힣ㄱ-ㅎ\u3000-\u9fff]/.test(c) ? 11.6 : 5.8), 0)
-    const h = Math.round(Math.min(208, Math.max(104, run + 26)))
-    // 한 칸 안에서는 색을 맞추고, 다른 주제에도 걸친 책만 그 주제 색 띠를 머리에 얹는다
-    const base = cur ? (HUE[cur] || colorOf(b)) : colorOf(b)
-    const other = (b.groups || []).find((g) => g !== cur)
-    const band = cur && other ? `,inset 0 5px 0 ${HUE[other] || HUE['그 밖']}` : ''
-    return `<button class="spine${w}" data-i="${DATA.books.indexOf(b)}"
-      style="background:${base};height:${h}px;box-shadow:inset -3px 0 5px rgba(0,0,0,.2),inset 1px 0 0 rgba(255,255,255,.14)${band}"
-      title="${esc(b.title)}${other ? ' — ' + esc(other) + ' 에도' : ''}">${esc(b.title)}</button>`
-  }).join('')
+function drawFilters(matches) {
+  document.querySelectorAll('[data-filter]').forEach((btn) => {
+    const key = btn.dataset.filter
+    btn.setAttribute('aria-pressed', String(key === active))
+    btn.querySelector('span').textContent = matches.filter((b) => inFilter(b, key)).length
+  })
+  const note = $('#note')
+  note.hidden = active === 'all'
+  note.textContent = NOTE[active] || ''
 }
 
 function render() {
-  const home = !state.group && !state.tag && !state.q.trim()
-  $('#bar').hidden = home
-  $('#crumb').textContent = home ? '' : (state.tag || state.group || '검색')
-  $('#subtags').hidden = !state.group
+  const width = rack.getBoundingClientRect().width
+  const n = Math.min(MAX_COLUMNS, Math.max(2, Math.floor((width + 6) / 150)))
+  const q = query.toLocaleLowerCase()
+  const matches = BOOKS.filter((b) => (b.title + ' ' + (b.author || '')).toLocaleLowerCase().includes(q))
+  drawFilters(matches)
+  const found = matches.filter((b) => inFilter(b, active))
+  $('#count').textContent = found.length + '권' + (query ? ' 찾음' : '')
+  rack.style.gridTemplateColumns = `repeat(${n},minmax(0,1fr))`
+  rack.innerHTML = ''
+  if (!found.length) {
+    rack.innerHTML = '<div class="empty">찾은 책이 없어요.</div>'
+    selected = null; showDetail(); return
+  }
 
-  if (home) {
-    drawPiles()
-  } else {
-    const list = sorted(visible())
-    const idx = (b) => DATA.books.indexOf(b)
-    if (state.view === 'spine') {
-      // 태그별로 한 칸씩 — 주제 순이 아니면 통째로 한 칸
-      let html = ''
-      if (state.sort === 'topic') {
-        const byTag = new Map()
-        for (const b of list) {
-          const t = [...(b.tags || [])].sort((x, y) => tagRank(x) - tagRank(y))[0] || '그 밖'
-          if (!byTag.has(t)) byTag.set(t, [])
-          byTag.get(t).push(b)
-        }
-        html = [...byTag.entries()].map(([t, rows]) =>
-          `<div class="srow"><div class="slab">${esc(t)} <span style="color:var(--ink-3)">${rows.length}</span></div>
-           <div class="books">${spineHTML(rows)}</div></div>`).join('')
-      } else {
-        html = `<div class="srow"><div class="books">${spineHTML(list)}</div></div>`
-      }
-      $('#out').innerHTML = `<div class="shelf">${html}</div>`
-    } else if (state.view === 'grid') {
-      $('#out').innerHTML = `<div class="grid">${list.map((b) => `
-        <button class="gcard" data-i="${idx(b)}">
-          <div class="cv">${coverHTML(b)}</div>
-          <div class="bt">${esc(b.title)}</div>
-          <div class="ba">${esc(b.author || '')}</div>
-        </button>`).join('')}</div>`
-    } else if (state.view === 'table') {
-      $('#out').innerHTML = `<div class="tblwrap"><table class="tbl">
-        <thead><tr><th>제목</th><th>저자</th><th>주제</th><th>어디에</th><th style="text-align:right">읽음</th></tr></thead>
-        <tbody>${list.map((b) => `
-          <tr data-i="${idx(b)}">
-            <td class="c-title">${esc(b.title)}</td>
-            <td class="c-author">${esc(b.author || '')}</td>
-            <td class="c-tag">${esc((b.tags || []).join(' · '))}</td>
-            <td class="c-where">${b.sources.map((s) => esc(serviceName(s.id))).join(' · ')}</td>
-            <td class="c-read">${b.readAt ? esc(monthLabel(b.readAt)) : ''}</td>
-          </tr>`).join('')}</tbody></table></div>`
-    } else {
-      $('#out').innerHTML = `<div class="list">${list.map((b) => `
-        <button class="row" data-i="${idx(b)}">
-          <div class="cv">${coverHTML(b)}</div>
-          <div class="mid">
-            <div class="rt">${esc(b.title)}</div>
-            <div class="rs">${esc(b.author || '저자 미상')}${b.tags?.length ? ' · ' + esc(b.tags.join(', ')) : ''}</div>
-          </div>
-          <div class="rr">
-            <b>${b.sources.length ? esc(serviceName(b.sources[0].id)) : ''}</b>
-            ${b.readAt ? esc(monthLabel(b.readAt)) : ''}
-          </div>
-        </button>`).join('')}</div>`
+  const groups = TOPICS.map((t) => ({ t, items: found.filter((b) => subjectOf(b) === t) })).filter((g) => g.items.length)
+  const capacity = Math.ceil((found.length + groups.length) / n) + 1
+  let column = null, used = 0, colIndex = -1
+  const newColumn = () => { column = document.createElement('section'); column.className = 'column'; rack.append(column); used = 0; colIndex++ }
+  const heading = (t, count, continued) => {
+    const h = document.createElement('h2')
+    h.className = 'subject'
+    h.innerHTML = safe(t.replaceAll('·', ' / ')) + `<span>${continued ? '계속' : count + '권'}</span>`
+    column.append(h); used++
+  }
+
+  newColumn()
+  for (const group of groups) {
+    if (used + 3 > capacity && colIndex < n - 1) newColumn()
+    heading(group.t, group.items.length, false)
+    for (const b of group.items) {
+      if (used >= capacity && colIndex < n - 1) { newColumn(); heading(group.t, group.items.length, true) }
+      const btn = document.createElement('button')
+      btn.type = 'button'
+      btn.className = 'book'
+      btn.dataset.id = b.id
+      btn.textContent = b.title
+      btn.setAttribute('aria-label', b.title)
+      btn.setAttribute('aria-pressed', String(selected === b.id))
+      const color = bookColor(b)
+      btn.style.setProperty('--book-color', color)
+      btn.style.setProperty('--book-ink', ink(color))
+      btn.onclick = () => { selected = selected === b.id ? null : b.id; showDetail() }
+      column.append(btn); used++
     }
-    $('#shown').textContent = `${list.length}권`
   }
-
-  $('#tabs').querySelectorAll('.tab').forEach((t) => t.classList.toggle('on', t.dataset.f === state.where))
-  const w = (DATA.wheres || []).find((x) => x.id === state.where)
-  $('#subwhere').hidden = !w || w.services.length < 2
-  if (w && w.services.length > 1) {
-    $('#subwhere').innerHTML = w.services.map((s) =>
-      `<button class="fld${s.id === state.src ? ' on' : ''}" data-src="${esc(s.id)}">${esc(s.name)}<i>${s.count}</i></button>`).join('')
-  }
-  const g = (DATA.groups || []).find((x) => x.name === state.group)
-  if (g) {
-    $('#subtags').innerHTML = `<button class="fld${!state.tag ? ' on' : ''}" data-tag="">전체<i>${g.count}</i></button>`
-      + g.tags.map((t) =>
-        `<button class="fld${t.name === state.tag ? ' on' : ''}" data-tag="${esc(t.name)}">${esc(t.name)}<i>${t.count}</i></button>`).join('')
-  }
-  $('#viewsw').querySelectorAll('button').forEach((v) => v.classList.toggle('on', v.dataset.v === state.view))
+  if (selected !== null && !found.some((b) => b.id === selected)) { selected = null; showDetail() }
 }
 
-function openBook(b) {
-  const simil = (b.similar || []).map((i) => DATA.books[i]).filter(Boolean).slice(0, 4)
-  const where = b.sources.length
-    ? b.sources.map((s) => s.link
-        ? `<a href="${esc(s.link)}" target="_blank" rel="noopener">${esc(serviceName(s.id))}</a>`
-        : `<span>${esc(serviceName(s.id))}</span>`).join('')
-    : '<span style="color:var(--ink-3)">아직 확인 안 됨</span>'
+document.querySelectorAll('[data-filter]').forEach((btn) =>
+  btn.addEventListener('click', () => { active = btn.dataset.filter; render() }))
+$('#q').addEventListener('input', (e) => { query = e.target.value.trim(); render() })
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && selected !== null) { selected = null; showDetail() } })
 
-  $('#card').innerHTML = `
-    <div class="chead">
-      <div class="cv">${coverHTML(b)}</div>
-      <div>
-        <div class="ctitle">${esc(b.title)}</div>
-        ${b.englishTitle ? `<div class="cen">${esc(b.englishTitle)}</div>` : ''}
-        <div class="cmeta">${esc(b.author || '저자 미상')}${b.publisher ? ' · ' + esc(b.publisher) : ''}</div>
-      </div>
-    </div>
-    ${b.gist ? `<p class="cgist">${esc(b.gist)}</p>` : ''}
-    <dl class="rows">
-      <div class="drow"><dt>어디에</dt><dd class="where">${where}</dd></div>
-      <div class="drow"><dt>읽음</dt><dd class="tnum">${b.read ? (monthLabel(b.readAt) || '읽음') : '아직'}</dd></div>
-      ${b.groups?.length ? `<div class="drow"><dt>주제</dt><dd>${esc(b.groups.join(' · '))}</dd></div>` : ''}
-      ${b.tags?.length ? `<div class="drow"><dt>태그</dt><dd class="tags">${b.tags.map((t) => `<button data-tag="${esc(t)}">${esc(t)}</button>`).join('')}</dd></div>` : ''}
-      ${b.form ? `<div class="drow"><dt>어떤 꼴</dt><dd>${esc(b.form)}</dd></div>` : ''}
-      ${b.aladin || b.kyobo || b.ridi ? `<div class="drow"><dt>책 정보</dt><dd class="where">${
-        b.aladin ? `<a href="${esc(b.aladin)}" target="_blank" rel="noopener">알라딘</a>` : ''
-      }${b.kyobo ? `<a href="${esc(b.kyobo)}" target="_blank" rel="noopener">교보</a>` : ''
-      }${b.ridi ? `<a href="${esc(b.ridi)}" target="_blank" rel="noopener">리디</a>` : ''}</dd></div>` : ''}
-    </dl>
-    ${simil.length ? `<div class="simil"><h4>비슷한 책</h4><div class="simil-row">${simil.map((s) => `
-      <button data-go="${DATA.books.indexOf(s)}">
-        <div class="cv">${coverHTML(s)}</div>
-        <div class="st">${esc(s.title)}</div>
-      </button>`).join('')}</div></div>` : ''}
-    <button class="close">닫기</button>`
-  $('#sheet').classList.add('on')
-  $('#card').scrollTop = 0
-}
-const closeBook = () => $('#sheet').classList.remove('on')
-
-// ── 이벤트 ──
-$('#out').addEventListener('click', (e) => {
-  const pile = e.target.closest('[data-g]')
-  if (pile) { state.group = pile.dataset.g; state.tag = ''; render(); window.scrollTo(0, 0); return }
-  const el = e.target.closest('[data-i]')
-  if (el) openBook(DATA.books[+el.dataset.i])
-})
-$('#home').addEventListener('click', () => {
-  state.group = ''; state.tag = ''; state.q = ''; $('#q').value = ''
-  render(); window.scrollTo(0, 0)
-})
-$('#sheet').addEventListener('click', (e) => {
-  const tag = e.target.closest('[data-tag]')
-  if (tag) {
-    const t = tag.dataset.tag
-    const g = (DATA.groups || []).find((x) => x.tags.some((y) => y.name === t))
-    state.group = g ? g.name : ''
-    state.tag = t
-    closeBook(); render(); window.scrollTo(0, 0)
-    return
-  }
-  const go = e.target.closest('[data-go]')
-  if (go) return openBook(DATA.books[+go.dataset.go])
-  if (e.target === $('#sheet') || e.target.classList.contains('close')) closeBook()
-})
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBook() })
-$('#q').addEventListener('input', (e) => { state.q = e.target.value; render() })
-$('#sort').addEventListener('change', (e) => { state.sort = e.target.value; render() })
-$('#viewsw').addEventListener('click', (e) => {
-  const b = e.target.closest('button')
-  if (!b) return
-  state.view = b.dataset.v
-  localStorage.setItem('shelf-view', state.view)
-  render()
-})
-$('#subtags').addEventListener('click', (e) => {
-  const f = e.target.closest('.fld')
-  if (!f) return
-  state.tag = f.dataset.tag
-  render()
-})
-$('#subwhere').addEventListener('click', (e) => {
-  const f = e.target.closest('.fld')
-  if (!f) return
-  state.src = state.src === f.dataset.src ? '' : f.dataset.src
-  render()
-})
-
-function setTheme(t) {
-  document.documentElement.dataset.theme = t
-  localStorage.setItem('shelf-theme', t)
-}
-document.body.classList.add('theme-switching')
-setTimeout(() => document.body.classList.remove('theme-switching'), 60)
-$('#theme').addEventListener('click', () =>
-  setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'))
-const savedTheme = localStorage.getItem('shelf-theme')
-if (savedTheme) setTheme(savedTheme)
-else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark')
-
-// ── 시작 ──
-fetch('data/library.json?v=' + Date.now())
+fetch('data/library.json')
   .then((r) => r.json())
   .then((d) => {
-    DATA = d
-    const none = d.books.filter((b) => !b.sources.length).length
-    const tabs = [{ id: 'all', name: '전체', count: d.books.length }]
-      .concat((d.wheres || []).map((w) => ({ id: w.id, name: w.name, count: w.count })))
-    if (none) tabs.push({ id: 'none', name: '소장처 미확인', count: none })
-    $('#tabs').innerHTML = tabs.map((t) =>
-      `<button class="tab" data-f="${t.id}">${esc(t.name)}<i>${t.count}</i></button>`).join('')
-    $('#tabs').addEventListener('click', (e) => {
-      const t = e.target.closest('.tab')
-      if (!t) return
-      state.where = t.dataset.f
-      state.src = ''
-      render()
-    })
-    $('#count').textContent = `${d.total}권`
+    // 제목이 안정적인 열쇠다 — 배열 자리는 데이터가 바뀌면 흔들린다
+    BOOKS = d.books.map((b) => ({ ...b, id: b.title }))
     $('#updated').textContent = `${d.updatedAt} 갱신`
-    $('#sort').value = state.sort
     render()
+    new ResizeObserver(() => {
+      const w = Math.round(rack.getBoundingClientRect().width)
+      if (w !== lastWidth) { lastWidth = w; render() }
+    }).observe(rack)
+  })
+  .catch(() => {
+    $('#count').textContent = ''
+    rack.innerHTML = '<div class="empty">책 목록을 불러오지 못했어요. 새로 고쳐 주세요.</div>'
   })
 </script>
 </body>
