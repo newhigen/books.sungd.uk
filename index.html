@@ -128,6 +128,15 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
 .detail p{font-size:12px;margin:2px 0;color:var(--ink2)}
 .detail .where{color:#3f5a34}
 .detail .borrow{color:#8a6339}
+.detail a{color:inherit;text-decoration:none}
+.detail img{transition:opacity .12s}
+.detail a:hover img{opacity:.82}
+.detail h2 a:hover{text-decoration:underline;text-underline-offset:2px}
+.acts{display:flex;flex-direction:column;align-items:stretch;gap:4px}
+.detail .store{font-size:11.5px;font-weight:600;color:#fff;background:var(--acc);
+               border-radius:16px;padding:7px 12px;min-height:32px;text-align:center;white-space:nowrap;
+               display:flex;align-items:center;justify-content:center}
+.detail .store:hover{filter:brightness(1.08)}
 .detail .close{color:var(--mut);min-height:32px;min-width:32px;padding:5px;font-size:11px}
 
 /* ── 꼬리 ── */
@@ -161,6 +170,7 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
   .detail img,.detail .noimg{width:32px;height:46px}
   .detail h2{font-size:14px}
   .detail .close{min-width:44px;min-height:44px}
+  .detail .store{min-height:34px;padding:6px 10px;font-size:11px}
   .subject{height:25px}
 }
 /* 손가락 최소 크기 — 폰은 좁아서 위 550px 규칙이 36px 로 줄인다 */
@@ -169,6 +179,7 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
 }
 @media (pointer:coarse){
   .detail .close{min-width:44px;min-height:44px}
+  .detail .store{min-height:34px;padding:6px 10px;font-size:11px}
 }
 </style>
 </head>
@@ -318,6 +329,13 @@ function ink(hex) {
   return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2] > 0.179 ? '#171a16' : '#ffffff'
 }
 
+/* 어느 서점으로 보낼까 — 있는 것 중 알라딘, 교보, 리디 차례로 */
+const STORES = [['aladin','알라딘'], ['kyobo','교보문고'], ['ridi','리디']]
+const storeOf = (b) => {
+  for (const [key, name] of STORES) if (b[key]) return { url: b[key], name }
+  return null
+}
+
 /* 원서가 먼저 나온 책은 두 해를 다 보인다 */
 function yearText(b) {
   if (!b.koYear && !b.origYear) return ''
@@ -334,12 +352,20 @@ function showDetail() {
   const where = idsOf(b).map((id) =>
     `<span class="${SRC_FILTER.borrowed.includes(id) ? 'borrow' : ''}">${safe(SRC_NAME[id] || id)}</span>`
   ).join(' / ') || '소장처 미확인'
+  const store = storeOf(b)
+  const cover = b.cover
+    ? `<img src="${safe(b.cover)}" alt="${safe(b.title)} 표지" loading="lazy" />`
+    : '<span class="noimg"></span>'
+  const link = (inner) => store
+    ? `<a href="${safe(store.url)}" target="_blank" rel="noopener noreferrer">${inner}</a>` : inner
   detail.innerHTML =
-    (b.cover ? `<img src="${safe(b.cover)}" alt="${safe(b.title)} 표지" loading="lazy" />` : '<span class="noimg"></span>') +
-    `<div><h2>${safe(b.title)}</h2>` +
+    link(cover) +
+    `<div><h2>${link(safe(b.title))}</h2>` +
     `<p>${safe(b.author || '저자 미등록')}${yearText(b)}${b.gist ? ' — ' + safe(b.gist) : ''}</p>` +
     `<p class="where">${where}</p></div>` +
-    '<button class="close" type="button" aria-label="책 정보 닫기">닫기</button>'
+    '<div class="acts">' +
+    (store ? `<a class="store" href="${safe(store.url)}" target="_blank" rel="noopener noreferrer">${safe(store.name)} ↗</a>` : '') +
+    '<button class="close" type="button" aria-label="책 정보 닫기">닫기</button></div>'
   detail.querySelector('button').onclick = () => {
     const id = selected
     selected = null

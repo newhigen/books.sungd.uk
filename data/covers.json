@@ -763,8 +763,8 @@
   "title": "백종원이 추천하는 집밥 메뉴 52 + 54 + 56 세트 - 전3권",
   "author": "백종원",
   "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/39356/43/cover500/k972138633_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=393564333",
+  "cover": "https://image.aladin.co.kr/product/7458/2/cover500/8926396851_2.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=74580263",
   "match": 0.76
  },
  "복음 안에서 발견한 참된 자유": {
@@ -883,8 +883,8 @@
   "title": "요즘 우아한 백엔드 개발",
   "author": "우아한형제들",
   "publisher": "",
-  "cover": "https://image.aladin.co.kr/product/39952/0/cover500/k422130420_1.jpg",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399520031",
+  "cover": "https://image.aladin.co.kr/product/32492/9/cover500/k392935609_1.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=324920954",
   "match": 0.82
  },
  "위험한 기도": {
@@ -1450,7 +1450,8 @@
   "publisher": "",
   "cover": "https://image.aladin.co.kr/product/34937/24/cover500/k732934364_1.jpg",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=349372427",
-  "match": 0.86
+  "match": 0.86,
+  "uncertain": true
  },
  "몽고DB 완벽 가이드": {
   "title": "몽고DB 8.0 인 액션",
@@ -1571,7 +1572,8 @@
   "publisher": "",
   "cover": "https://image.aladin.co.kr/product/30963/87/cover500/k212831201_1.jpg",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=309638760",
-  "match": 0.91
+  "match": 0.91,
+  "uncertain": true
  },
  "자존감 수업": {
   "title": "자존감 수업",
