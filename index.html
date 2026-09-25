@@ -54,7 +54,7 @@ img{display:block;max-width:100%}
 
 /* ── 머리 ── */
 .header{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
+h1{font:600 21px/1.3 var(--sans);letter-spacing:-.01em;white-space:nowrap}
 .count{font-size:11px;white-space:nowrap;color:var(--mut)}
 
 /* ── 찾기 ── */
@@ -148,30 +148,30 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
   :root{--spine-font:11px}
   .header{gap:7px;flex-wrap:wrap;margin-bottom:4px}
   h1{font-size:19px}
-  .searchbar{gap:6px;margin-bottom:7px}
+  .searchbar{gap:6px;margin-bottom:6px}
   .search{font-size:17px;padding:6px 0}
   .clear{padding:6px 7px;min-height:30px}
   .exact{padding:5px 9px;min-height:30px}
   /* 폰에서는 칩 열한 개가 줄을 넘어 층층이 쌓인다 — 두 줄로 세우고 각 줄은 옆으로 민다 */
-  .chipbar{flex-direction:column;align-items:stretch;gap:5px;margin-bottom:6px}
+  .chipbar{flex-direction:column;align-items:stretch;gap:4px;margin-bottom:5px}
   .chips,.sorts{flex-wrap:nowrap;overflow-x:auto;gap:4px;margin-left:0;
                 scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .chips::-webkit-scrollbar,.sorts::-webkit-scrollbar{display:none}
-  .chips button,.sorts button{flex:none;min-height:28px;padding:4px 9px}
+  .chips button,.sorts button{flex:none;min-height:22px;padding:1px 7px;font-size:10.5px}
+  .chips button span{margin-left:4px}
   .sorts > span{flex:none}
-  .chips button{min-height:28px;padding:4px 9px}
   .lane{grid-template-columns:1fr;gap:2px}
   .lane .label{display:flex;gap:6px;align-items:baseline}
   .lane .bin{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:0 5px}
-  .rack{gap:10px}
-  .rack.lanes{gap:8px}
-  .book{padding-inline:5px;min-height:36px}
+  .rack{gap:8px}
+  .rack.lanes{gap:7px}
+  .book{padding:0 4px;min-height:25px;margin-bottom:1px}
   .detail{grid-template-columns:32px minmax(0,1fr) auto;gap:7px}
   .detail img,.detail .noimg{width:32px;height:46px}
   .detail h2{font-size:14px}
   .detail .close{min-width:44px;min-height:44px}
   .detail .store{min-height:34px;padding:6px 10px;font-size:11px}
-  .subject{height:25px}
+  .subject{height:20px}
 }
 /* 손가락 최소 크기 — 폰은 좁아서 위 550px 규칙이 36px 로 줄인다 */
 @media (pointer:coarse) and (min-width:551px){
