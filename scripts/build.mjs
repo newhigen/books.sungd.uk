@@ -286,12 +286,24 @@ if (!existsSync(HIDDEN)) {
 const hidden = JSON.parse(readFileSync(HIDDEN, 'utf8'))
 const hidFields = new Set(hidden.fields || [])
 const hidTitles = new Set(hidden.titles || [])
+const hidAuthors = hidden.authors || []
 let hiddenCount = 0
 for (const [key, b] of books) {
-  if (hidFields.has(b.field) || hidTitles.has(b.title)) {
+  // 저자는 이름이 들어 있기만 하면 걸린다 — 역자가 붙어도("팀 켈러, 윤종석") 막히고,
+  // 그 저자의 다음 책도 제목을 적지 않아도 자동으로 막힌다.
+  const byAuthor = hidAuthors.some((a) => (b.author || '').includes(a))
+  if (hidFields.has(b.field) || hidTitles.has(b.title) || byAuthor) {
     books.delete(key)
     hiddenCount++
   }
+}
+
+// 분야가 빈 책은 fields 방어선이 통하지 않는다 — 제목이나 저자로 걸러야 하므로 눈에 띄게 센다.
+// 2026-09 에 신앙 책 넷이 이 틈으로 새어 나갔다.
+const blankField = [...books.values()].filter((b) => !b.field)
+if (blankField.length) {
+  console.log(`  ⚠ 분야가 빈 책 ${blankField.length}권 — 분야로는 못 거르니 눈으로 볼 것:`)
+  for (const b of blankField) console.log(`      ${b.title}${b.author ? ' — ' + b.author : ''}`)
 }
 
 // ---- 출력 ----
