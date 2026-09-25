@@ -328,6 +328,17 @@ const all = [...books.values()].map((b) => ({
   addedAt: b.addedAt || '',
 }))
 
+// 출간 연도 — scripts/years.py 가 모아 둔 것을 얹는다. 없으면 빈칸이고 화면이 알아서 뒤로 민다.
+// year 는 정렬에 쓰는 하나의 값이다: 원서 연도가 있으면 그것, 없으면 한국어판이 나온 해.
+const YEARS = join(repo, 'data', 'years.json')
+const years = existsSync(YEARS) ? JSON.parse(readFileSync(YEARS, 'utf8')) : {}
+for (const b of all) {
+  const y = years[b.title] || {}
+  b.koYear = (y.ko || '').slice(0, 4)
+  b.origYear = y.orig || ''
+  b.year = b.origYear || b.koYear || ''
+}
+
 // 정렬: 읽은 달 최신 → 들인 달 최신 → 제목
 all.sort((x, y) => {
   const kx = x.readAt || x.addedAt || ''
