@@ -128,23 +128,33 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
 .foot a{color:var(--mut)}
 
 @media (max-width:550px){
-  .wrap{padding:9px 9px 24px}
+  .wrap{padding:7px 7px 20px}
   :root{--spine-font:11px}
-  .header{gap:8px;flex-wrap:wrap;margin-bottom:6px}
+  .header{gap:7px;flex-wrap:wrap;margin-bottom:4px}
   h1{font-size:19px}
-  .search{font-size:17px;padding:7px 0}
-  .lane{grid-template-columns:1fr;gap:3px}
+  .searchbar{gap:6px;margin-bottom:7px}
+  .search{font-size:17px;padding:6px 0}
+  .clear{padding:6px 7px;min-height:30px}
+  .exact{padding:5px 9px;min-height:30px}
+  .chips{gap:4px;margin-bottom:6px}
+  .chips button{min-height:28px;padding:4px 9px}
+  .lane{grid-template-columns:1fr;gap:2px}
   .lane .label{display:flex;gap:6px;align-items:baseline}
+  .lane .bin{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:0 5px}
   .rack{gap:10px}
-  .book{padding-inline:4px}
+  .rack.lanes{gap:8px}
+  .book{padding-inline:5px;min-height:36px}
   .detail{grid-template-columns:32px minmax(0,1fr) auto;gap:7px}
   .detail img,.detail .noimg{width:32px;height:46px}
   .detail h2{font-size:14px}
   .detail .close{min-width:44px;min-height:44px}
   .subject{height:25px}
 }
-@media (pointer:coarse){
+/* 손가락 최소 크기 — 폰은 좁아서 위 550px 규칙이 36px 로 줄인다 */
+@media (pointer:coarse) and (min-width:551px){
   .book{min-height:44px}
+}
+@media (pointer:coarse){
   .detail .close{min-width:44px;min-height:44px}
 }
 </style>
