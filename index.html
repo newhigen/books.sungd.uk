@@ -76,13 +76,12 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
 /* ── 칩 줄 — 안 찾을 땐 소장처, 찾는 중엔 걸린 자리 ── */
 .chipbar{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
 .chips{display:flex;gap:5px;flex-wrap:wrap;align-items:center;flex:1;min-width:0}
-.sort{display:flex;align-items:center;gap:5px;flex:none;font-size:11px;color:var(--faint);
-      white-space:nowrap;margin-left:auto}
-.sort select{font:inherit;font-size:11.5px;color:var(--ink2);background:var(--card);
-             border:1px solid var(--rule);border-radius:20px;padding:6px 8px;min-height:30px;
-             cursor:pointer;-webkit-appearance:none;appearance:none;padding-right:22px;
-             background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6' viewBox='0 0 9 6'%3E%3Cpath d='M1 1l3.5 3.5L8 1' fill='none' stroke='%236b7079' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
-             background-repeat:no-repeat;background-position:right 9px center}
+/* 순서 — 거르개와 다른 일을 하니 눌린 모양도 다르게(먹 대신 강조색) */
+.sorts{display:flex;gap:5px;flex-wrap:wrap;align-items:center;margin-left:auto}
+.sorts > span{font-size:11px;color:var(--faint);white-space:nowrap;margin-right:1px}
+.sorts button{font-size:11.5px;padding:5px 10px;border-radius:20px;border:1px solid var(--rule);
+              color:var(--ink2);background:var(--card);min-height:30px;white-space:nowrap}
+.sorts button[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
 .chips button{font-size:11.5px;padding:5px 10px;border-radius:20px;border:1px solid var(--rule);
               color:var(--ink2);background:var(--card);min-height:30px;white-space:nowrap}
 .chips button span{font-variant-numeric:tabular-nums;opacity:.65;margin-left:5px}
@@ -144,9 +143,13 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
   .search{font-size:17px;padding:6px 0}
   .clear{padding:6px 7px;min-height:30px}
   .exact{padding:5px 9px;min-height:30px}
-  .chipbar{flex-wrap:wrap;gap:6px;margin-bottom:6px}
-  .chips{gap:4px}
-  .sort select{min-height:28px;padding:4px 20px 4px 8px}
+  /* 폰에서는 칩 열한 개가 줄을 넘어 층층이 쌓인다 — 두 줄로 세우고 각 줄은 옆으로 민다 */
+  .chipbar{flex-direction:column;align-items:stretch;gap:5px;margin-bottom:6px}
+  .chips,.sorts{flex-wrap:nowrap;overflow-x:auto;gap:4px;margin-left:0;
+                scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .chips::-webkit-scrollbar,.sorts::-webkit-scrollbar{display:none}
+  .chips button,.sorts button{flex:none;min-height:28px;padding:4px 9px}
+  .sorts > span{flex:none}
   .chips button{min-height:28px;padding:4px 9px}
   .lane{grid-template-columns:1fr;gap:2px}
   .lane .label{display:flex;gap:6px;align-items:baseline}
@@ -188,15 +191,7 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
 
   <div class="chipbar">
     <div class="chips" id="chips"></div>
-    <label class="sort">순서
-      <select id="sort">
-        <option value="topic">주제별</option>
-        <option value="oldest">나온 순</option>
-        <option value="newest">최근 나온 순</option>
-        <option value="title">제목 순</option>
-        <option value="author">저자 순</option>
-      </select>
-    </label>
+    <div class="sorts" id="sorts"><span>순서</span></div>
   </div>
   <p class="chip-note" id="note" hidden></p>
 
@@ -298,12 +293,14 @@ const $ = (s) => document.querySelector(s)
 const rack = $('#rack'), detail = $('#detail')
 const safe = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
 
-let BOOKS = [], query = '', selected = null, active = 'all', lane = null, lastWidth = 0, exact = false, sortBy = 'topic'
+let BOOKS = [], query = '', selected = null, active = 'all', lane = null, lastWidth = 0, exact = false, sortBy = 'topic', readOnly = null
 
 /* 대표 주제는 첫 번째 것 하나 — 한 책이 여러 칸에 나오면 밀도가 낭비된다 */
 const subjectOf = (b) => (b.groups || [])[0] || '미분류'
 const idsOf = (b) => (b.sources || []).map((s) => s.id)
 const inFilter = (b, key) => key === 'all' || idsOf(b).some((id) => SRC_FILTER[key].includes(id))
+/* 읽음은 소장처와 다른 축이라 따로 건다 — 「소장한 책 중 안 읽은 것」 처럼 겹쳐 쓸 수 있다 */
+const passRead = (b) => !readOnly || (readOnly === 'read' ? !!b.read : !b.read)
 
 /* 같은 주제 안에서는 옅은 명도 차이만 둔다 */
 function bookColor(b) {
@@ -364,6 +361,7 @@ function chip(label, count, on, click) {
 
 /* 안 찾을 땐 소장처로 거르고, 찾는 중엔 걸린 자리로 거른다 — 줄이 하나로 유지된다 */
 /* 고른 순서대로 책을 세운다. 연도가 없는 책은 언제나 뒤로 민다 */
+const SORT_NAMES = [['topic','주제별'],['newest','최신순'],['oldest','오래된순'],['title','제목순'],['author','저자순']]
 const SORTERS = {
   topic: null,   // 빌드가 매긴 순서(읽은 달 최신)를 그대로 쓴다
   title: (a, b) => a.title.localeCompare(b.title, 'ko'),
@@ -397,7 +395,7 @@ function drawChips(matches, groups, searching) {
   const chips = $('#chips'), note = $('#note')
   chips.innerHTML = ''
   if (searching) {
-    chips.append(chip('찾은 책', matches.filter((b) => inFilter(b, active)).length, lane === null,
+    chips.append(chip('찾은 책', matches.filter((b) => inFilter(b, active) && passRead(b)).length, lane === null,
                       () => { lane = null; render() }))
     const sep = document.createElement('span'); sep.className = 'sep'; chips.append(sep)
     for (const g of groups) {
@@ -411,12 +409,32 @@ function drawChips(matches, groups, searching) {
     note.hidden = true
     return
   }
+  // 읽음이 왼쪽, 소장처가 오른쪽. 개수는 서로의 거르개를 통과한 것만 센다
+  for (const [key, label, want] of [['read','읽은 책',true], ['unread','안 읽은 책',false]]) {
+    chips.append(chip(label, matches.filter((b) => inFilter(b, active) && !!b.read === want).length,
+                      readOnly === key, () => { readOnly = readOnly === key ? null : key; lane = null; render() }))
+  }
+  const sep = document.createElement('span'); sep.className = 'sep'; chips.append(sep)
   for (const [key, label] of FILTER_NAMES) {
-    chips.append(chip(label, matches.filter((b) => inFilter(b, key)).length, key === active,
+    chips.append(chip(label, matches.filter((b) => passRead(b) && inFilter(b, key)).length, key === active,
                       () => { active = key; lane = null; render() }))
   }
   note.hidden = active === 'all'
   note.textContent = NOTE[active] || ''
+}
+
+/* 순서 칩 — 찾는 중에도 그대로 보인다 */
+function drawSorts() {
+  const box = $('#sorts')
+  box.querySelectorAll('button').forEach((b) => b.remove())
+  for (const [key, label] of SORT_NAMES) {
+    const btn = document.createElement('button')
+    btn.type = 'button'
+    btn.textContent = label
+    btn.setAttribute('aria-pressed', String(key === sortBy))
+    btn.onclick = () => { sortBy = key; lane = null; render() }
+    box.append(btn)
+  }
 }
 
 function render() {
@@ -432,7 +450,7 @@ function render() {
     matches.push(b)
   }
   $('#clear').hidden = !searching
-  const found = matches.filter((b) => inFilter(b, active))
+  const found = matches.filter((b) => inFilter(b, active) && passRead(b))
   $('#count').textContent = found.length + '권' + (query ? ' 찾음' : '')
 
   // 찾는 중이면 걸린 자리로, 아니면 고른 순서에 맞는 묶음으로 나눈다
@@ -458,6 +476,7 @@ function render() {
   for (const g of groups) if (searching) g.items = sorted(g.items)
   if (lane && !groups.some((g) => g.k === lane)) lane = null
   drawChips(matches, groups, searching)
+  drawSorts()
 
   const asLanes = searching || sortBy === 'oldest' || sortBy === 'newest'
   rack.innerHTML = ''
@@ -520,7 +539,6 @@ $('#q').addEventListener('input', (e) => { query = e.target.value.trim(); lane =
 $('#clear').addEventListener('click', () => {
   $('#q').value = ''; query = ''; lane = null; render(); $('#q').focus()
 })
-$('#sort').addEventListener('change', (e) => { sortBy = e.target.value; lane = null; render() })
 $('#exact').addEventListener('click', () => {
   exact = !exact
   $('#exact').setAttribute('aria-pressed', String(exact))
