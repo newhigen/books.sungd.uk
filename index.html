@@ -74,7 +74,15 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
 .exact[aria-pressed=true]{background:var(--strong);border-color:var(--strong);color:#fff;font-weight:600}
 
 /* ── 칩 줄 — 안 찾을 땐 소장처, 찾는 중엔 걸린 자리 ── */
-.chips{display:flex;gap:5px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.chipbar{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+.chips{display:flex;gap:5px;flex-wrap:wrap;align-items:center;flex:1;min-width:0}
+.sort{display:flex;align-items:center;gap:5px;flex:none;font-size:11px;color:var(--faint);
+      white-space:nowrap;margin-left:auto}
+.sort select{font:inherit;font-size:11.5px;color:var(--ink2);background:var(--card);
+             border:1px solid var(--rule);border-radius:20px;padding:6px 8px;min-height:30px;
+             cursor:pointer;-webkit-appearance:none;appearance:none;padding-right:22px;
+             background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6' viewBox='0 0 9 6'%3E%3Cpath d='M1 1l3.5 3.5L8 1' fill='none' stroke='%236b7079' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+             background-repeat:no-repeat;background-position:right 9px center}
 .chips button{font-size:11.5px;padding:5px 10px;border-radius:20px;border:1px solid var(--rule);
               color:var(--ink2);background:var(--card);min-height:30px;white-space:nowrap}
 .chips button span{font-variant-numeric:tabular-nums;opacity:.65;margin-left:5px}
@@ -136,7 +144,9 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
   .search{font-size:17px;padding:6px 0}
   .clear{padding:6px 7px;min-height:30px}
   .exact{padding:5px 9px;min-height:30px}
-  .chips{gap:4px;margin-bottom:6px}
+  .chipbar{flex-wrap:wrap;gap:6px;margin-bottom:6px}
+  .chips{gap:4px}
+  .sort select{min-height:28px;padding:4px 20px 4px 8px}
   .chips button{min-height:28px;padding:4px 9px}
   .lane{grid-template-columns:1fr;gap:2px}
   .lane .label{display:flex;gap:6px;align-items:baseline}
@@ -176,7 +186,18 @@ h1{font:500 21px/1.3 var(--serif);white-space:nowrap}
     <button class="exact" id="exact" type="button" aria-pressed="false">정확히</button>
   </div>
 
-  <div class="chips" id="chips"></div>
+  <div class="chipbar">
+    <div class="chips" id="chips"></div>
+    <label class="sort">순서
+      <select id="sort">
+        <option value="topic">주제별</option>
+        <option value="oldest">나온 순</option>
+        <option value="newest">최근 나온 순</option>
+        <option value="title">제목 순</option>
+        <option value="author">저자 순</option>
+      </select>
+    </label>
+  </div>
   <p class="chip-note" id="note" hidden></p>
 
   <div class="rack" id="rack"></div>
@@ -277,7 +298,7 @@ const $ = (s) => document.querySelector(s)
 const rack = $('#rack'), detail = $('#detail')
 const safe = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
 
-let BOOKS = [], query = '', selected = null, active = 'all', lane = null, lastWidth = 0, exact = false
+let BOOKS = [], query = '', selected = null, active = 'all', lane = null, lastWidth = 0, exact = false, sortBy = 'topic'
 
 /* 대표 주제는 첫 번째 것 하나 — 한 책이 여러 칸에 나오면 밀도가 낭비된다 */
 const subjectOf = (b) => (b.groups || [])[0] || '미분류'
@@ -300,6 +321,13 @@ function ink(hex) {
   return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2] > 0.179 ? '#171a16' : '#ffffff'
 }
 
+/* 원서가 먼저 나온 책은 두 해를 다 보인다 */
+function yearText(b) {
+  if (!b.koYear && !b.origYear) return ''
+  if (b.origYear && b.koYear && b.origYear !== b.koYear) return ` · ${b.koYear} (원서 ${b.origYear})`
+  return ` · ${b.koYear || b.origYear}`
+}
+
 function showDetail() {
   detail.hidden = selected === null
   rack.querySelectorAll('.book').forEach((e) => e.setAttribute('aria-pressed', String(e.dataset.id === selected)))
@@ -312,7 +340,7 @@ function showDetail() {
   detail.innerHTML =
     (b.cover ? `<img src="${safe(b.cover)}" alt="${safe(b.title)} 표지" loading="lazy" />` : '<span class="noimg"></span>') +
     `<div><h2>${safe(b.title)}</h2>` +
-    `<p>${safe(b.author || '저자 미등록')}${b.gist ? ' — ' + safe(b.gist) : ''}</p>` +
+    `<p>${safe(b.author || '저자 미등록')}${yearText(b)}${b.gist ? ' — ' + safe(b.gist) : ''}</p>` +
     `<p class="where">${where}</p></div>` +
     '<button class="close" type="button" aria-label="책 정보 닫기">닫기</button>'
   detail.querySelector('button').onclick = () => {
@@ -335,6 +363,17 @@ function chip(label, count, on, click) {
 }
 
 /* 안 찾을 땐 소장처로 거르고, 찾는 중엔 걸린 자리로 거른다 — 줄이 하나로 유지된다 */
+/* 고른 순서대로 책을 세운다. 연도가 없는 책은 언제나 뒤로 민다 */
+const SORTERS = {
+  topic: null,   // 빌드가 매긴 순서(읽은 달 최신)를 그대로 쓴다
+  title: (a, b) => a.title.localeCompare(b.title, 'ko'),
+  author: (a, b) => (a.author || 'ㅎㅎ').localeCompare(b.author || 'ㅎㅎ', 'ko') || a.title.localeCompare(b.title, 'ko'),
+  oldest: (a, b) => (a.year || '9999').localeCompare(b.year || '9999') || a.title.localeCompare(b.title, 'ko'),
+  newest: (a, b) => (b.year || '0000').localeCompare(a.year || '0000') || a.title.localeCompare(b.title, 'ko'),
+}
+const sorted = (list) => SORTERS[sortBy] ? [...list].sort(SORTERS[sortBy]) : list
+const decadeOf = (y) => y ? Math.floor(+y / 10) * 10 + '년대' : '연도 모름'
+
 function makeSpine(b) {
   const btn = document.createElement('button')
   btn.type = 'button'
@@ -392,25 +431,41 @@ function render() {
   const found = matches.filter((b) => inFilter(b, active))
   $('#count').textContent = found.length + '권' + (query ? ' 찾음' : '')
 
-  // 찾는 중이면 무엇으로 걸렸는지로 묶고, 아니면 주제로 묶는다
-  const groups = searching
-    ? [...['제목','저자','주제','정리'].map((f) =>
+  // 찾는 중이면 걸린 자리로, 아니면 고른 순서에 맞는 묶음으로 나눈다
+  let groups
+  if (searching) {
+    groups = [...['제목','저자','주제','정리'].map((f) =>
           ({ k: f, t: f + '에서', items: found.filter((b) => b.hit === f && !b.near) })),
        { k: 'near', t: '말끝만 다른 것', items: found.filter((b) => b.near) }].filter((g) => g.items.length)
-    : TOPICS.map((t) => ({ k: t, t, items: found.filter((b) => subjectOf(b) === t) })).filter((g) => g.items.length)
+  } else if (sortBy === 'oldest' || sortBy === 'newest') {
+    // 연대로 묶는다 — 「2010년대」 안에서 다시 연도순
+    const by = new Map()
+    for (const b of sorted(found)) {
+      const d = decadeOf(b.year)
+      if (!by.has(d)) by.set(d, [])
+      by.get(d).push(b)
+    }
+    groups = [...by].map(([d, items]) => ({ k: d, t: d, items }))
+  } else if (sortBy === 'topic') {
+    groups = TOPICS.map((t) => ({ k: t, t, items: found.filter((b) => subjectOf(b) === t) })).filter((g) => g.items.length)
+  } else {
+    groups = [{ k: 'all', t: '', items: sorted(found) }]
+  }
+  for (const g of groups) if (searching) g.items = sorted(g.items)
   if (lane && !groups.some((g) => g.k === lane)) lane = null
   drawChips(matches, groups, searching)
 
+  const asLanes = searching || sortBy === 'oldest' || sortBy === 'newest'
   rack.innerHTML = ''
-  rack.classList.toggle('lanes', searching)
+  rack.classList.toggle('lanes', asLanes)
   if (!found.length) {
     rack.classList.remove('lanes')
     rack.innerHTML = `<div class="empty">찾은 책이 없어요.${exact ? ' 「정확히」를 꺼 보세요.' : ''}</div>`
     selected = null; showDetail(); return
   }
 
-  // 찾는 중 — 갈래마다 한 줄, 이름은 왼쪽에 한 번. 칸이 남으면 여러 열로 채운다
-  if (searching) {
+  // 갈래마다 한 줄, 이름은 왼쪽에 한 번. 칸이 남으면 여러 열로 채운다
+  if (asLanes) {
     for (const g of (lane ? groups.filter((x) => x.k === lane) : groups)) {
       const row = document.createElement('section')
       row.className = 'lane'
@@ -440,6 +495,13 @@ function render() {
 
   newColumn()
   for (const group of groups) {
+    if (!group.t) {   // 제목·저자 순 — 묶음이 하나뿐이라 머리를 달지 않는다
+      for (const b of group.items) {
+        if (used >= capacity && colIndex < n - 1) newColumn()
+        column.append(makeSpine(b)); used++
+      }
+      continue
+    }
     if (used + 3 > capacity && colIndex < n - 1) newColumn()
     heading(group.t, group.items.length, false)
     for (const b of group.items) {
@@ -454,6 +516,7 @@ $('#q').addEventListener('input', (e) => { query = e.target.value.trim(); lane =
 $('#clear').addEventListener('click', () => {
   $('#q').value = ''; query = ''; lane = null; render(); $('#q').focus()
 })
+$('#sort').addEventListener('change', (e) => { sortBy = e.target.value; lane = null; render() })
 $('#exact').addEventListener('click', () => {
   exact = !exact
   $('#exact').setAttribute('aria-pressed', String(exact))
